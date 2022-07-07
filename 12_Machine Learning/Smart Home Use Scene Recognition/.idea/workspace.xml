@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="86959ffb-9c8a-471f-aafc-ae40df5df522" name="变更" comment="Update Struct of Project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseline.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseline.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/features.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/params.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/params.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../U202015533_CS2008_徐瑞达_智能家居使用场景识别.docx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2ApbHg3GYwcznLnIiqH4RNLvOCu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/HUST-Courses/12_Machine Learning/Smart Home Use Scene Recognition&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\HUST-Courses\12_Machine Learning\Smart Home Use Scene Recognition\src" />
+      <recent name="D:\HUST-Courses\12_Machine Learning\Smart Home Use Scene Recognition" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Smart Home Use Scene Recognition" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="86959ffb-9c8a-471f-aafc-ae40df5df522" name="变更" comment="" />
+      <created>1655709398239</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655709398239</updated>
+      <workItem from="1655709400093" duration="1855000" />
+      <workItem from="1656120274735" duration="137000" />
+      <workItem from="1656120426949" duration="431000" />
+      <workItem from="1656120879915" duration="95000" />
+      <workItem from="1656121037085" duration="16000" />
+      <workItem from="1656121089315" duration="128000" />
+      <workItem from="1656121291438" duration="134000" />
+      <workItem from="1656121453236" duration="3079000" />
+      <workItem from="1656134900732" duration="6441000" />
+      <workItem from="1656145190860" duration="1158000" />
+      <workItem from="1656223861387" duration="11138000" />
+      <workItem from="1656237673322" duration="11967000" />
+      <workItem from="1656294803091" duration="327000" />
+      <workItem from="1656296430664" duration="6409000" />
+      <workItem from="1656308577724" duration="14051000" />
+      <workItem from="1656333247846" duration="16000" />
+      <workItem from="1656381734271" duration="418000" />
+      <workItem from="1656382968146" duration="6676000" />
+      <workItem from="1656395460685" duration="7636000" />
+      <workItem from="1656410168488" duration="9283000" />
+      <workItem from="1656423506026" duration="2433000" />
+      <workItem from="1656468524894" duration="843000" />
+      <workItem from="1656766100239" duration="8797000" />
+      <workItem from="1656823607465" duration="596000" />
+      <workItem from="1656824221562" duration="15142000" />
+      <workItem from="1656856426464" duration="3615000" />
+      <workItem from="1656860799865" duration="2176000" />
+      <workItem from="1656899504622" duration="7653000" />
+      <workItem from="1656929056764" duration="1789000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update Struct of Project">
+      <created>1656418295070</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1656418295070</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Update Struct of Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Struct of Project" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Smart_Home_Use_Scene_Recognition$main.coverage" NAME="main 覆盖结果" MODIFIED="1656923835657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Smart_Home_Use_Scene_Recognition$baseline.coverage" NAME="baseline 覆盖结果" MODIFIED="1656252330676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Smart_Home_Use_Scene_Recognition$testRead.coverage" NAME="testRead 覆盖结果" MODIFIED="1656316554016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Smart_Home_Use_Scene_Recognition$baseline__1_.coverage" NAME="baseline (1) 覆盖结果" MODIFIED="1656124372250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

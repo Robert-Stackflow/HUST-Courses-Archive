@@ -1,0 +1,35 @@
+#use <conio>
+#use <parse>
+#use <string>
+int lsr(int x,int n);
+
+int main()
+{	
+	bool flag=true;
+	while(flag)
+	{
+	println("Key false to exit or true to continue");
+	flag = *(parse_bool(readline()));
+	if(flag)
+	{
+		println("Input a num");
+		int x = *(parse_int(readline(), 10));
+		println("Input the right shift count");
+		int n = *(parse_int(readline(), 10));
+		int r=lsr(x,n);
+		string s= "";
+		string sign=">>";
+    	s = string_join(string_fromint(r), s);
+    	s = string_join("=", s);
+    	s = string_join(string_fromint(n), s);
+    	s = string_join(sign, s);
+    	s = string_join(string_fromint(x), s);
+    	println(s);
+    }
+    else
+    {
+    	println("Test is finished");
+    }
+	}
+    return 0;
+}

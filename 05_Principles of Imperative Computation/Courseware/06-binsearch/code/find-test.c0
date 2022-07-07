@@ -1,0 +1,87 @@
+/*
+ * Testing linear and binary search
+ *
+ * 15-122 Principle of Imperative Computation
+ * Frank Pfenning
+ */
+
+#use <conio>
+#use <rand>
+#use <util>
+
+int main () {
+  int[] A;
+  
+  /* Small unit tests */
+  print("Testing search with small examples\n");
+
+  A = alloc_array(int, 0);
+  for (int i = -10; i < 10; i++) {
+    assert(-1 == search(i, A, 0));
+  }
+
+  A = alloc_array(int, 1);
+  A[0] = 5;
+  for (int i = -10; i < 10; i++) {
+    assert(-1 == search(i, A, 0));
+    if (i == 5) {
+      assert(0 == search(i, A, 1));
+    } else {
+      assert(-1 == search(i, A, 1));
+    }
+  }
+
+  A = alloc_array(int, 3);
+  A[0] = -4;
+  A[1] = 0;
+  A[2] = 3;
+  for (int i = -10; i < 10; i++) {
+    if (i == -4) {
+      assert(0 == search(i, A, 3));
+    } else if (i == 0) {
+      assert(1 == search(i, A, 3));
+    } else if (i == 3) {
+      assert(2 == search(i, A, 3));
+    } else {
+      assert(-1 == search(i, A, 1));
+    }
+  }
+
+  /* Randomized tests */
+ 
+  int seed = 0x8badf00d;
+  rand_t gen = init_rand(seed);
+  int n = (1<<10)-1;            /* size of array */
+  int num_tests = 100;          /* number of tests to run */
+  A = alloc_array(int, n);
+
+  print("Testing search with "); printint(n); print(" elements, ");
+  printint(num_tests); print(" times\n");
+
+  /* generated sorted array */
+  A[0] = 0;
+  for (int i = 0; i < n-1; i++)
+    //@loop_invariant 0 <= i && i <= n-1;
+    {
+      int dx = abs(rand(gen) % (int_max()/n));
+      if (abs(rand(gen) % 8) != 0) dx = 0;  // create some duplicates
+      A[i+1] = A[i]+dx;
+    }
+
+  assert(is_sorted(A, 0, n));
+
+  /* testing search */
+  for (int i = 0; i < num_tests; i++) {
+    int j = abs(rand(gen) % n);
+    assert(A[search(A[j], A, n)] == A[j]);
+  }
+
+  for (int i = 0; i < num_tests; i++) {
+    int x = rand(gen);
+    search(x, A, n);
+  }
+
+  println("find passed");
+  println("Passed all tests!");
+  return 0;
+}

@@ -1,0 +1,11 @@
+/* pow1.c0 */
+
+int POW(int b, int e) 
+//@requires e >= 0;
+{
+  if (e == 0) {
+    return 1;
+  } else {
+    return b * POW(b,e-1);
+  }
+}

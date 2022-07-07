@@ -1,0 +1,37 @@
+/* Selection Sort
+ *
+ * Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning
+ */
+
+#use "sortutil.c0"
+
+int min_index(int[] A, int lower, int upper)
+//@requires 0 <= lower && lower < upper && upper <= \length(A);
+//@ensures lower <= \result && \result < upper;
+//@ensures le_seg(A[\result], A, lower, upper);
+{
+  int m = lower;
+  int min = A[lower];
+  for (int i = lower+1; i < upper; i++)
+    //@loop_invariant lower < i && i <= upper;
+    //@loop_invariant le_seg(min, A, lower, i);
+    //@loop_invariant A[m] == min;
+    if (A[i] < min) {
+      m = i;
+      min = A[i];
+    }
+  return m;
+}
+
+void sort(int[] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+//@ensures is_sorted(A, lower, upper);
+{
+  if (upper-lower <= 1) return;
+
+  int m = min_index(A, lower, upper);
+  //@assert le_seg(A[m], A, lower, upper);
+  swap(A, lower, m);
+  sort(A, lower+1, upper);
+}

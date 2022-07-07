@@ -1,0 +1,15 @@
+A:A1,AB,AD
+
+B:B1,AB,BC,BE
+
+C:C1,BC,DC,CG
+
+D:D1,AD,CD,DE
+
+E:E1,BE,DE,EF
+
+F:F1,EF,FH
+
+G:G1,CG,GH
+
+H:H1,GH,FH

@@ -1,0 +1,45 @@
+#use <string>
+#use "arrayutil.c0"
+#use "readfile.c0"
+#use "stringsearch.c0"
+
+int count_vocab(string[] vocab, int[] freq, int v, string filename, bool fast)
+//@requires v == \length(vocab) && v == \length(freq);
+//@requires is_sorted(vocab, 0, v);
+//@ensures \result >= 0;
+//@ensures v == \length(vocab) && v == \length(freq);
+{
+  int none = 0;
+  //use the lib readfile.c0 to read the file
+  string_bundle bund = read_words(filename);
+  int bund_length = string_bundle_length(bund);
+  string[] bund_array = string_bundle_array(bund);
+  //read the bund_array
+  for (int i = 0; i < bund_length; i++)
+  //@loop_invariant i >=0 && i <= bund_length;
+  {
+    if (fast == false)
+    { //choose linear search
+      if (linsearch(bund_array[i], vocab, v) == -1) 
+      {
+        none++;
+      }
+      else 
+      {
+        freq[linsearch(bund_array[i], vocab, v)]++; 
+      }
+    }
+    else if (fast == true) 
+    {//choose binary search
+      if (binsearch(bund_array[i], vocab, v) == -1)
+      {
+        none++;
+      }
+      else
+      {
+        freq[binsearch(bund_array[i], vocab, v)]++; 
+      }
+    }
+  }
+  return none;
+}

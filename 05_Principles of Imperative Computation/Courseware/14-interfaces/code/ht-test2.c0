@@ -1,0 +1,48 @@
+/* Testing hash tables
+ * 15-122 Principles of Imperative Computation
+ * Frank Pfenning
+ * Version with a bug.
+ */
+
+#use <conio>
+#use <string>
+
+int main () {
+  int n = (1<<10)+1;
+  int num_tests = 10;
+
+  print("Testing array of size "); printint(n/5);
+  print(" with "); printint(n); print(" values, ");
+  printint(num_tests); print(" times\n");
+  for (int j = 0; j < num_tests; j++) {
+    ht H = ht_new(n/5);		/* table will end up with load factor 5 */
+    elem e = NULL;
+    for (int i = 0; i < n; i++) {
+      e = alloc(struct word_with_color);
+      e->word = string_fromint(j*n+i);
+      e->color = string_fromint(j*n+i);
+      ht_insert(H, e);
+    }
+    for (int i = 0; i < n; i++) {
+      /* missing existing element? */
+      assert(string_equal(ht_lookup(H, string_fromint(j*n+i))->color,
+                          string_fromint(j*n+i)));
+    }
+    for (int i = 0; i < n; i++) {
+      /* finding nonexistent element? */
+      assert(ht_lookup(H, string_fromint((j+1)*n+i)) == NULL);
+    }
+    e->word = string_fromint(-1);
+    for (int i = 0; i < n; i++) {
+      /* missing existing element? */
+      assert(string_equal(ht_lookup(H, string_fromint(j*n+i))->color,
+                          string_fromint(j*n+i)));
+    }
+    for (int i = 0; i < n; i++) {
+      /* finding nonexistent element? */
+      assert(ht_lookup(H, string_fromint((j+1)*n+i)) == NULL);
+    }
+  }
+  print("All tests passed!\n");
+  return 0;
+}

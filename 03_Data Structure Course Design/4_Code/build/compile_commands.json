@@ -1,0 +1,22 @@
+[
+{
+  "directory": "D:/Documents/GitHub/DataStructure_Course_Design/4_Code/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/main.dir/includes_C.rsp -g -o CMakeFiles\\main.dir\\src\\dpll.c.obj -c D:\\Documents\\GitHub\\DataStructure_Course_Design\\4_Code\\src\\dpll.c",
+  "file": "D:/Documents/GitHub/DataStructure_Course_Design/4_Code/src/dpll.c"
+},
+{
+  "directory": "D:/Documents/GitHub/DataStructure_Course_Design/4_Code/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/main.dir/includes_C.rsp -g -o CMakeFiles\\main.dir\\src\\fin.c.obj -c D:\\Documents\\GitHub\\DataStructure_Course_Design\\4_Code\\src\\fin.c",
+  "file": "D:/Documents/GitHub/DataStructure_Course_Design/4_Code/src/fin.c"
+},
+{
+  "directory": "D:/Documents/GitHub/DataStructure_Course_Design/4_Code/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/main.dir/includes_C.rsp -g -o CMakeFiles\\main.dir\\src\\main.c.obj -c D:\\Documents\\GitHub\\DataStructure_Course_Design\\4_Code\\src\\main.c",
+  "file": "D:/Documents/GitHub/DataStructure_Course_Design/4_Code/src/main.c"
+},
+{
+  "directory": "D:/Documents/GitHub/DataStructure_Course_Design/4_Code/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-W\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/main.dir/includes_C.rsp -g -o CMakeFiles\\main.dir\\src\\sudoku.c.obj -c D:\\Documents\\GitHub\\DataStructure_Course_Design\\4_Code\\src\\sudoku.c",
+  "file": "D:/Documents/GitHub/DataStructure_Course_Design/4_Code/src/sudoku.c"
+}
+]

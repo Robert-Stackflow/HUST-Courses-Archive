@@ -1,0 +1,36 @@
+#use <conio>
+
+int rem(int x,int y);
+int quot(int x,int y);
+
+int main()
+{
+	assert(quot(20,5)==4);
+	assert(quot(20,6)==3);
+	assert(quot(-20,5)==-4);
+	assert(quot(-20,6)==-3);
+	assert(quot(-20,-5)==4);
+	assert(quot(-20,-6)==3);
+	assert(quot(20,-5)==-4);
+	assert(quot(20,-6)==-3);
+	print("All tests for FUNTION quot passed!\n");
+	assert(rem(20,5)==0);
+	assert(rem(20,6)==2);
+	assert(rem(-20,5)==0);
+	assert(rem(-20,6)==-2);
+	assert(rem(-20,-5)==0);
+	assert(rem(-20,-6)==-2);
+	assert(rem(20,-5)==0);
+	assert(rem(20,-6)==2);
+	print("All tests for FUNTION rem passed!\n");
+	assert(quot(20,5)*5+rem(20,5)==20);
+	assert(quot(20,6)*6+rem(20,6)==20);
+	assert(quot(-20,5)*5+rem(-20,5)==-20);
+	assert(quot(-20,6)*6+rem(-20,6)==-20);
+	assert(quot(-20,-5)*(-5)+rem(-20,-5)==-20);
+	assert(quot(-20,-6)*(-6)+rem(-20,-6)==-20);
+	assert(quot(20,-5)*(-5)+rem(20,-5)==20);
+	assert(quot(20,-6)*(-6)+rem(20,-6)==20);
+	print("All tests for FUNTIONS quot and rem passed!\n");
+	return 0;
+}

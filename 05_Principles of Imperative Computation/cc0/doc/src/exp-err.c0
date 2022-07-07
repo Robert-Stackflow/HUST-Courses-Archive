@@ -1,0 +1,10 @@
+/* file exp-err.c0 */
+
+int exp(int b, int e)
+//@requires e >= 0;
+{
+  if (e == 0)
+    return 1
+  else
+    return b * exp(b, e-1);
+}

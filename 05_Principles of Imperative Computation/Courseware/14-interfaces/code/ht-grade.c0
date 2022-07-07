@@ -1,0 +1,85 @@
+/*
+ * Testing hashtable implementation
+ *
+ * 15-122 Principles of Imperative Computation, Spring 2013
+ * Frank Pfenning
+ */
+
+#use <conio>
+#use <args>
+
+/* Tests */
+
+int main() {
+
+  ht H = ht_new(2);
+  
+  elem E1 = alloc(struct word_with_color);  E1->word = "";
+  elem EA1 = alloc(struct word_with_color); EA1->word = "a";
+  elem EA2 = alloc(struct word_with_color); EA2->word = "a";
+  elem EB1 = alloc(struct word_with_color); EB1->word = "b";
+  elem EB2 = alloc(struct word_with_color); EB2->word = "b"; 
+  elem EC1 = alloc(struct word_with_color); EC1->word = "c";
+  elem ED1 = alloc(struct word_with_color); ED1->word = "daun";
+
+  /* Qatar's tests */
+
+  elem r = ht_lookup(H, "a");
+  assert(r == NULL);
+
+  ht_insert(H, EA1);	
+  r = ht_lookup(H, "a");
+  assert(r != NULL);
+
+  ht_insert(H, EB1);
+  r = ht_lookup(H, "b");	
+  assert(r == EB1);
+
+  ht_insert(H, EC1);
+  ht_insert(H, ED1);
+  r = ht_lookup(H, "a");
+  assert(r == EA1);
+
+  ht_insert(H, EB2);
+  r = ht_lookup(H, "b");
+  assert(r == EB2);
+
+  r = ht_lookup(H, "a");
+  assert(r == EA1);
+
+  r = ht_lookup(H, "daun");
+  assert(r == ED1);
+
+  r = ht_lookup(H, "c");
+  assert(r == EC1);
+
+  ht_insert(H, EA2);
+  r = ht_lookup(H, "a");
+  assert(r == EA2);
+
+  /* Pittsburgh's tests */
+
+  H = ht_new(10);
+
+  assert(NULL == ht_lookup(H, ""));
+  assert(NULL == ht_lookup(H, "a"));
+  assert(NULL == ht_lookup(H, "b"));
+
+  ht_insert(H, EB1);
+  assert(NULL == ht_lookup(H, "a"));
+  assert(EB1 == ht_lookup(H, "b"));
+
+  ht_insert(H, E1);
+  assert(NULL == ht_lookup(H, "a"));
+  assert(E1 == ht_lookup(H, ""));
+  assert(E1 == ht_lookup(H, ""));
+  assert(EB1 == ht_lookup(H, "b"));
+  ht_insert(H, EB2);
+  
+  assert(NULL == ht_lookup(H, "a"));
+  assert(E1 == ht_lookup(H, ""));
+  assert(EB2 == ht_lookup(H, "b"));
+
+  println("All tests passed!");
+  return 0;
+}

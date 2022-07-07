@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# workaround for cluster machines binary-incompatible libstdc++ in /usr/local.
+# feel free to remove if the cluster machines' /usr/local/lib64/libstdc++.so.6
+# is made to be binary-compatible with libc0rt.so.  -wjl, 09-14-2011
+export LD_LIBRARY_PATH=/usr/lib64
+
+$0.bin "$@"

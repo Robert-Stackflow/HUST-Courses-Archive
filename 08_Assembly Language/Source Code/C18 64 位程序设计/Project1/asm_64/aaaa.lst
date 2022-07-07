@@ -1,0 +1,160 @@
+Microsoft (R) Macro Assembler (x64) Version 14.22.27905.0   11/29/19 09:55:24
+asm_64.asm						     Page 1 - 1
+
+
+
+				;.model flat, stdcall    ; X64 不能使用 model 
+				 ;ExitProcess PROTO STDCALL :DWORD    ; X32 的使用方式，不再用堆栈传递参数
+				 ;ExitProcess PROTO STDCALL
+				 extern ExitProcess:proc
+				 ;INCLUDELIB MSVCRTD.lib
+				;INCLUDELIB OLDNAMES.lib
+				;INCLUDELIB kernel32.lib
+				;INCLUDELIB user32.lib
+				;INCLUDELIB gdi32.lib
+				;INCLUDELIB winspool.lib
+				;INCLUDELIB comdlg32.lib
+				;INCLUDELIB advapi32.lib
+				;INCLUDELIB shell32.lib
+				;INCLUDELIB ole32.lib
+				;INCLUDELIB oleaut32.lib
+				;INCLUDELIB uuid.lib
+				;INCLUDELIB odbc32.lib
+				;INCLUDELIB odbccp32.lib
+
+				; includelib  kernel32.lib  ; ExitProcess 在 kernel32.lib中实现
+				; printf          PROTO C :VARARG
+				  ;printf          PROTO C    
+				 extern printf:proc
+				; includelib      msvcrt.lib  ; printf 在 msvcrt.lib中实现
+ 00000000			.DATA
+ 00000000 25 64 0A 0D 00	 lpFmt	db	"%d",0ah, 0dh, 0
+ 00000005 FF FF			 X      DB  0FFH,0FFH
+ 00000007			 dv    real8 3.4
+	   400B333333333333
+ 00000000			.CODE
+ 00000000			 mainp PROC 
+ 00000000  48/ B8		mov  rax,1234567887654321h
+	   1234567887654321
+ 0000000A  48/ BA		mov  rdx,1122334455667788h 
+	   1122334455667788
+ 00000014  50			push rax
+ 00000015  52			push rdx
+ 00000016  E8 000000CF		call  func1
+				 
+				 
+ 0000001B  48/ 0F B6 05		 movzx rax,x
+	   00000005 R
+ 00000023  48/ 0F BE 05		 movsx rax,x+1
+	   00000006 R
+ 0000002B  48/ 89 05		 mov  mmword ptr x,rax
+	   00000005 R
+ 00000032  48/ 89 15		 mov  mmword ptr x+8,rdx
+	   0000000D R
+				; cmpxchg16b x
+ 00000039  48/ B9		 mov rcx,100000001h
+	   0000000100000001
+ 00000043			 L2:
+ 00000043  48/ B8		 mov  rax,1234567887654321h
+	   1234567887654321
+ 0000004D  E2 F4		 loop l2
+ 0000004F  50			 push rax
+ 00000050  48/ C1 E0 04		 shl rax,4
+ 00000054  B0 07		 mov  al,7
+ 00000056  80 C4 13		 add  ah,13h
+ 00000059  66| C1 E0 02		 shl  ax, 2
+ 0000005D  66| BB 0002		 mov  bx,2
+ 00000061  F6 E3		 mul  bl
+ 00000063  66| 6B DB 02		 imul  bx,2
+ 00000067  93			 xchg  eax,ebx
+
+ 00000068  66| 3B C3		 cmp   ax,bx
+ 0000006B  74 06		 jz    l1
+ 0000006D  77 04		 ja    l1
+ 0000006F  78 02		 js    l1
+ 00000071  EB 00		 jmp   l1
+ 00000073			l1:
+ 00000073  48/ C7 C0		 mov  rax,0F0H
+	   000000F0
+ 0000007A  48/ 05		 add  rax,90000000H
+	   90000000
+ 00000080  8A 05 00000005 R	 mov  Al,X
+ 00000086  8A 1D 00000006 R	 mov  BL,X[1]
+ 0000008C  48/ B8		 MOV  RAX,1234567887654321H
+	   1234567887654321
+ 00000096  8D 05 00000005 R	 LEA  EAX,X
+ 0000009C  67& 8A 08		 MOV  CL,[EAX]
+
+ 0000009F  48/ 8D 05		 LEA  RAX,X
+	   00000005 R
+ 000000A6  40/ 8A 30		 MOV  SIL, [RAX]
+
+				 ; MOV  Cl,X[RAX]
+				; MOV  DL,X[RAX+RBX*4]
+				; MOV  CL,[RAX+1234567801H]
+ 000000A9  48/ 8D 05		   LEA  RAX, X
+	   00000005 R
+ 000000B0  8A 08		   MOV  CL,[RAX]
+
+
+				              ; eax=0; for (ebx=1;ebx<=100;ebx++) eax=eax+ebx;
+ 000000B2  48/ C7 C2		   mov  rdx, 0
+	   00000000
+ 000000B9  48/ C7 C3		   mov  rbx, 1
+	   00000001
+ 000000C0  48/ 83 FB 64		lp: cmp  rbx, 100
+ 000000C4  7F 09		   jg   exit
+ 000000C6  48/ 03 D3		   add  rdx, rbx
+ 000000C9  48/ 83 C3 01		   add  rbx, 1
+ 000000CD  EB F1		   jmp  lp
+ 000000CF			exit:
+ 000000CF  48/ B9		   mov   rcx, offset lpFmt
+	   0000000000000000 R
+
+ 000000D9  E8 00000000 E	   call printf
+				  ; invoke printf,offset lpFmt,eax
+ 000000DE  48/ C7 C2		  mov rdx, 0
+	   00000000
+ 000000E5  E8 00000000 E	  call ExitProcess
+				  ; invoke ExitProcess, 0
+ 000000EA			mainp endp
+
+ 000000EA			func1 proc
+ 000000EA  48/ 8B 5C 24		   mov  rbx,[rsp+8]
+	   08
+ 000000EF  48/ 8B 4C 24		   mov  rcx,[rsp+16]
+	   10
+ 000000F4  48/ 03 D9		   add  rbx, rcx
+ 000000F7  C3			   ret
+ 000000F8			func1 endp
+				end
+Microsoft (R) Macro Assembler (x64) Version 14.22.27905.0   11/29/19 09:55:24
+asm_64.asm						     Symbols 2 - 1
+
+
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+func1  . . . . . . . . . . . . .	P 	 000000EA _TEXT	Length= 0000000E Public
+mainp  . . . . . . . . . . . . .	P 	 00000000 _TEXT	Length= 000000EA Public
+  L2 . . . . . . . . . . . . . .	L 	 00000043 _TEXT	
+  l1 . . . . . . . . . . . . . .	L 	 00000073 _TEXT	
+  lp . . . . . . . . . . . . . .	L 	 000000C0 _TEXT	
+  exit . . . . . . . . . . . . .	L 	 000000CF _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	L 	 00000000 External
+X  . . . . . . . . . . . . . . .	Byte	 00000005 _DATA	
+dv . . . . . . . . . . . . . . .	QWord	 00000007 _DATA	
+lpFmt  . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+printf . . . . . . . . . . . . .	L 	 00000000 External
+
+	   0 Warnings
+	   0 Errors

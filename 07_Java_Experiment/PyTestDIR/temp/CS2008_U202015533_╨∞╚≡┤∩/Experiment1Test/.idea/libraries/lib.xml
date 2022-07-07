@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-databind-2.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cglib-src-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-annotations-2.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/bsh-2.0b6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/testng-6.14.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cglib-docs-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/testng-6.14.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cglib-nodep-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jcommander-1.72.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/testng-6.14.3-javadoc.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# simple config script for system-dependent build options
+#
+
+DIR=`dirname $0`
+C0PATH=`cd $DIR/.. && pwd`/
+
+echo ";; To configure the C0 emacs mode, put the following three lines"
+echo ";; into your .emacs configuration file:"
+echo ""
+echo ";; Setup for c0-mode" 
+echo "(setq c0-root \"$C0PATH\")"
+echo "(load (concat c0-root \"c0-mode/c0.el\"))"

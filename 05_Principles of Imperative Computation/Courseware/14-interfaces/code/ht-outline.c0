@@ -1,0 +1,52 @@
+/* Hash tables (fixed size)
+ * 
+ * Outline of interface
+ *
+ * 15-122 Principles of Imperative Computation, Summer One 2013
+ * Frank Pfenning  / Penny Anderson
+ */
+
+/******************************/
+/* client-side implementation */
+/******************************/
+
+// INVISIBLE TO LIBRARY CODE - WHY?
+
+/*************************/
+/* client-side interface */
+/*************************/
+// typedef ______* elem;
+// typedef ______ key;
+
+int hash(key k, int m)
+//@requires m > 0;
+//@ensures 0 <= \result && \result < m;
+  ;
+
+bool key_equal(key k1, key k2);
+
+key elem_key(elem e)
+//@requires e != NULL;
+  ;
+
+/**************************/
+/* library side interface */
+/**************************/
+struct ht_header;
+typedef struct ht_header* ht;
+
+ht ht_new(int capacity)
+//@requires capacity > 0;
+  ;
+elem ht_lookup(ht H, key k);	/* O(1) avg. */
+void ht_insert(ht H, elem e)	/* O(1) avg. */
+//@requires e != NULL;
+  ;
+int ht_size(ht H);              /* O(1) */
+void ht_stats(ht H);            /* Print debugging info about the table */  
+
+/*******************************/
+/* library-side implementation */
+/*******************************/
+
+// INVISIBLE TO CLIENT CODE - WHY?

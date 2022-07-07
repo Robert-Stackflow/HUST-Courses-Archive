@@ -1,0 +1,81 @@
+#use <string>
+
+bool open(string s) {
+  if (string_equal(s, "(")) return true;
+  if (string_equal(s, "{")) return true;
+  if (string_equal(s, "[")) return true;
+  return false;
+}
+
+bool close(string s) {
+  if (string_equal(s, ")")) return true;
+  if (string_equal(s, "}")) return true;
+  if (string_equal(s, "]")) return true;
+  return false;
+}
+
+bool matches(string l, string r)
+//@requires open(l) && close(r);
+{
+  if (string_equal(l, "(") && string_equal(r, ")")) return true;
+  if (string_equal(l, "{") && string_equal(r, "}")) return true;
+  if (string_equal(l, "[") && string_equal(r, "]")) return true;
+  return false;
+}
+
+bool stack_of_open_parens(stack S) {
+  stack S2 = stack_copy(S);
+  while (!stack_empty(S2)) {
+    string s = pop(S2);
+    if (!(open(s))) return false;
+  }
+  return true;
+}
+
+bool queue_of_parens(queue Q) {
+  queue Q2 = queue_copy_read_only(Q);
+  while (!queue_empty(Q2)) {
+    string s = deq(Q2);
+    if (!(open(s) || close(s))) return false;
+  }
+  return true;
+}
+
+bool matching_parens(string str)
+{
+  queue Q = queue_new();
+  
+  for (int i = 0; i < string_length(str); i++) 
+    //@loop_invariant 0 <= i;
+    //@loop_invariant queue_of_parens(Q);
+    {
+      string br = string_sub(str, i, i+1);
+      if (open(br) || close(br)) enq(Q, br);
+    }
+
+  stack S = stack_new();
+
+  while (!queue_empty(Q))
+    //@loop_invariant queue_of_parens(Q);
+    //@loop_invariant stack_of_open_parens(S);
+    {
+      string br = deq(Q);
+      if (open(br)) {
+        push(S, br);
+      } else {
+        //@assert close(br);
+        if (stack_empty(S)) {
+          // Nothing to match! Example: "((("
+          return false; 
+        }
+        
+        string br_left = pop(S);
+        if (!matches(br_left, br)) {
+          // Incompatible braces! Example: "{)"
+          return false;
+        }
+      }
+    }
+
+  return stack_empty(S);
+}

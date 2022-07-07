@@ -1,0 +1,55 @@
+/* Testing binary search trees
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning
+ */
+
+#use <args>
+#use <conio>
+#use <rand>
+#use <string>
+
+elem elem_fromint(int k) {
+  string s = string_fromint(k);
+  struct wcount* wc = alloc(struct wcount);
+  wc->word = s;
+  wc->count = k;
+  return wc;
+}
+
+int bst_time_rand(int n, int num_tests)
+//@requires 0 <= n && 0 <= num_tests;
+{
+  int seed = 0xc0c0ffee;
+  rand_t gen = init_rand(seed);
+  elem[] A = alloc_array(elem, n);
+  for (int i = 0; i < n; i++)
+    A[i] = elem_fromint(rand(gen));
+  
+  print("Testing bst of size "); printint(n);
+  print(" "); printint(num_tests); print(" times\n");
+  for (int j = 0; j < num_tests; j++) {
+    bst B = bst_new();
+    for (int i = 0; i < n; i++) {
+      elem e = A[(j+i) % n];
+      bst_insert(B, e);
+      assert(bst_lookup(B, elem_key(e)) == e); /* insert ok? */
+    }
+  }
+  return 0;
+}
+
+int main() {
+  int* n_ptr = alloc(int);
+  *n_ptr = 1<<9;
+  args_int("-n", n_ptr);
+  if(*n_ptr < 0) error("Size of array (-n <elems>) may not be negative");
+
+  int* r_ptr = alloc(int);
+  *r_ptr = 10;
+  args_int("-r", r_ptr);
+  if(*r_ptr < 0) error("Number of repetitions (-r <reps>) may not be negative");
+
+  args_parse();
+  return bst_time_rand(*n_ptr, *r_ptr);
+}
+

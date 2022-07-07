@@ -1,0 +1,17 @@
+﻿生成启动时间为 2019/07/08 19:23:20。
+     1>项目“G:\汇编语言新书实例\C12_窗口应用程序\显示安全的ASCII\显示安全的ASCII.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>_MASM:
+         Assembling KeyASCII.asm...
+         cmd.exe /C "C:\Users\Administrator\AppData\Local\Temp\tmp2b8c39dbb2474b939b95f6c2bed0e0e1.cmd"
+         ml.exe /c /nologo /Zi /Fo"Debug\KeyASCII.obj" /W3 /errorReport:prompt  /TaKeyASCII.asm
+     1>KeyASCII.asm(89): warning A6004: procedure argument or local not referenced : hPrevInst
+     1>KeyASCII.asm(89): warning A6004: procedure argument or local not referenced : CmdLine
+     1>KeyASCII.asm(89): warning A6004: procedure argument or local not referenced : CmdShow
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\汇编语言新书实例\C12_窗口应用程序\Debug\显示按键的ASCII.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\汇编语言新书实例\C12_窗口应用程序\Debug\显示按键的ASCII.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\汇编语言新书实例\C12_窗口应用程序\Debug\显示按键的ASCII.lib" /MACHINE:X86 Debug\KeyASCII.obj
+         显示安全的ASCII.vcxproj -> G:\汇编语言新书实例\C12_窗口应用程序\Debug\显示按键的ASCII.exe
+     1>已完成生成项目“G:\汇编语言新书实例\C12_窗口应用程序\显示安全的ASCII\显示安全的ASCII.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.68

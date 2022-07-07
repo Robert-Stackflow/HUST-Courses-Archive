@@ -1,0 +1,72 @@
+int rem(int x,int y);
+int quot(int x,int y);
+
+int rem(int a,int b)
+//@requires b!=0;
+//@ensures \result==(a%b);
+{
+	int x=a;
+	int y=b;
+	if(x==0)
+		return 0;
+	else
+	{
+		int fx=1;
+		int fy=1;
+		int z=0;
+		if(x<0)
+		{
+			x=-x;
+			fx=-1;
+		}
+		if(y<0)
+		{
+			y=-y;
+			fy=-1;
+		}
+		for (z = 0; x >= y; z++)
+    	//@loop_invariant x >= 0 && y > 0 && x+z*y== fx*a;
+    	{
+        	x = x - y;
+    	}
+    	x = fx*x;
+    	int temp=0;
+    	if(x<0) temp=-x;
+    	//@assert temp>=0&&temp<y;
+    	return x;
+     }
+}
+
+int quot(int a,int b)
+//@requires b!=0;
+//@ensures \result==(a/b);
+//@ensures \result*b+rem(a,b)==a;
+{
+	int x=a;
+	int y=b;
+	if(x==0)
+		return 0;
+	else
+	{
+		int fx=1;
+		int fy=1;
+		int z=0;
+		if(x<0)
+		{
+			x=-x;
+			fx=-1;
+		}
+		if(y<0)
+		{
+			y=-y;
+			fy=-1;
+		}
+		for (z = 0; x >= y; z++)
+    	//@loop_invariant x >= 0 && y > 0 && x+z*y== fx*a;
+    	{
+        	x = x - y;
+    	}
+    	z=fx*fy*z;
+    	return z;
+     }
+}

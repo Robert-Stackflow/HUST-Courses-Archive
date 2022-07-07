@@ -1,0 +1,4 @@
+﻿  Assembling sort.asm...
+  LINK : 已指定 /LTCG，但不需要生成代码；从链接命令行中移除 /LTCG 以提高链接器性能
+sort.obj : error LNK2026: 模块对于 SAFESEH 映像是不安全的。
+C:\新书示例\C07 循环程序设计\Release\sort.exe : fatal error LNK1281: 无法生成 SAFESEH 映像。

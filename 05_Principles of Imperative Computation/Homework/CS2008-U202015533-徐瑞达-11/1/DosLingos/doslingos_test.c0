@@ -1,0 +1,83 @@
+//cc0 -d -w -o doslingos.out readfile.c0 stringsearch.c0
+//doslingos.c0 doslingos_test.c0
+//./doslingos.out
+#use <parse>
+#use <string>
+#use <conio>
+void print_res(string[] vocab, int[] freq, int v)
+//@requires v == \length(vocab) && v == \length(freq);
+{
+//    println("----------------------------------------");
+    for(int i=0;i<v;i++)
+    {
+        print(vocab[i]);
+        print("\t");
+        println(string_fromint(freq[i]));
+    }
+    println("---------------------------------------");
+}
+int main()
+{
+    string file_vocab = "./texts/news_vocab_sorted.txt";
+    string file_scott = "./texts/scott_tweet.txt";
+    string file_1k = "./texts/twitter_1k.txt";
+    string file_200k = "./texts/twitter_200k.txt";
+    
+    //test scott to ensure the basic functions
+    string[] vocab_basic = parse_tokens("burrow his is of out");
+    int[] freq_basic = parse_ints("2 3 4 5 6", 10);
+    assert(count_vocab(vocab_basic, freq_basic, 5, file_scott, false) == 1);
+    assert(string_equal(vocab_basic[0], "burrow"));
+    assert(string_equal(vocab_basic[1], "his"));
+    assert(string_equal(vocab_basic[2], "is"));
+    assert(string_equal(vocab_basic[3], "of"));
+    assert(string_equal(vocab_basic[4], "out"));
+    assert(freq_basic[0] == 3);
+    assert(freq_basic[1] == 4);
+    assert(freq_basic[2] == 5);
+    assert(freq_basic[3] == 6);
+    assert(freq_basic[4] == 7);
+    println("The test for file scott_tweet success!");
+    print_res(vocab_basic,freq_basic,5);
+    
+    //test 1k use linsearch
+    string[] vocab_sl = parse_tokens("at day has off play zoo");
+    int[] freq_sl = parse_ints("4 23 45 68 75 180", 10);
+    int res = count_vocab(vocab_sl, freq_sl, 6, file_1k, false);
+    assert(res == 9352);
+    assert(string_equal(vocab_sl[0], "at"));
+    assert(string_equal(vocab_sl[1], "day"));
+    assert(string_equal(vocab_sl[2], "has"));
+    assert(string_equal(vocab_sl[3], "off"));
+    assert(string_equal(vocab_sl[4], "play"));
+    assert(string_equal(vocab_sl[5], "zoo"));
+    assert(freq_sl[0] == 40);
+    assert(freq_sl[1] == 50);
+    assert(freq_sl[2] == 57);
+    assert(freq_sl[3] == 84);
+    assert(freq_sl[4] == 81);
+    assert(freq_sl[5] == 180);
+    println("The test for file twitter_1k success!");
+    print_res(vocab_sl,freq_sl,6);
+    
+    //test 200k use binsearch
+    string[] vocab_lb = parse_tokens("at day has off play zoo");
+    int[] freq_lb = parse_ints("4 23 45 68 75 180", 10);
+    res = count_vocab(vocab_lb, freq_lb, 6, file_200k, true);
+    assert(res == 1910788);
+    assert(string_equal(vocab_lb[0], "at"));
+    assert(string_equal(vocab_lb[1], "day"));
+    assert(string_equal(vocab_lb[2], "has"));
+    assert(string_equal(vocab_lb[3], "off"));
+    assert(string_equal(vocab_lb[4], "play"));
+    assert(string_equal(vocab_lb[5], "zoo"));
+    assert(freq_lb[0] == 7466);
+    assert(freq_lb[1] == 4077);
+    assert(freq_lb[2] == 1564);
+    assert(freq_lb[3] == 2866);
+    assert(freq_lb[4] == 1063);
+    assert(freq_lb[5] == 206);
+    println("The test for file twitter_200k success!");
+    print_res(vocab_lb,freq_lb,6);
+    return 0;
+}

@@ -1,0 +1,7 @@
+typedef int pixel;
+
+struct img_header {
+  pixel[] data;      // field, not variable
+  int width;         // field, not variable
+  int height;        // field, not variable
+};

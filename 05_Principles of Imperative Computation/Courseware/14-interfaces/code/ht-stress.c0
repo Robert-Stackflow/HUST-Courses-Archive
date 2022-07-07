@@ -1,0 +1,29 @@
+#use <args>
+#use <util>
+#use "ht.c0"
+
+int main() {
+  int *n = alloc(int);
+  *n = 30000;
+  args_int("-n", n);
+
+  int *m = alloc(int);
+  *m = 10000;
+  args_int("-m", m);
+
+  print("Number of elements (n): "); printint(*n); println("");
+  print("Table size (m): "); printint(*m); println("");
+
+  ht H = ht_new(*m);
+
+  for(int i = 0; i < *n; i++) {
+    elem e = alloc(struct word_with_color);
+    e->word = int2hex(i);
+    ht_insert(H, e);
+  }
+
+  assert(ht_size(H) == *n);
+  
+  ht_stats(H);
+  return 0;
+}

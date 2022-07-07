@@ -1,0 +1,33 @@
+int search(int x, int[] A, int n)
+//@requires 0 <= n && n <= \length(A);
+//@requires is_sorted(A, 0, n);                  /* safe by (2) */
+/*@ensures (-1 == \result && !is_in(x, A, 0, n)) /* safe by (2) */
+        || ((0 <= \result && \result < n) 
+            && A[\result] == x);                 /* safe by (5) (2) */
+  @*/
+{
+  int lower = 0;
+  int upper = n;
+  while (lower < upper)
+    //@loop_invariant 0 <= lower && lower <= upper && upper <= n;
+    /*@loop_invariant lower == 0
+                      || A[lower-1] < x;         /* safe by (12) (13) (2) */
+    @*/
+    /*@loop_invariant upper == n
+                      || A[upper] > x;           /* safe by (12) (16) (2) */
+    @*/
+    {
+      int mid = lower + (upper-lower)/2;
+      //@assert lower <= mid && mid < upper;
+      if (A[mid] == x) {                         /* safe by (21) (12) (2) */
+        return mid;
+      } else if (A[mid] < x) {                   /* safe by (21) (12) (2) */
+	lower = mid+1;
+      } else {
+        //@assert A[mid] > x;                    /* safe by (21) (12) (2) */
+	upper = mid;
+      } 
+    }
+  //@assert lower == upper;
+  return -1;
+}

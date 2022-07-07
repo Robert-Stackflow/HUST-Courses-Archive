@@ -1,0 +1,13 @@
+/*
+ * Client implementation for priority queues
+ * Elements are chars
+ *
+ * 15-122 Principles of Imperative Computation */
+
+#use <string>
+
+typedef char elem;
+
+int elem_priority(elem c) {
+  return char_ord(c);
+}

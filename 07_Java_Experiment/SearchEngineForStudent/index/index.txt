@@ -1,0 +1,504 @@
+dictionary:[accord, according, action, activity, aged, agree, agreed, agreement, alleviate, announced, announcement, announcing, antarctic, antarctica, anthony, anymore, api, approaches, apps, april, argentine, asked, atoms, attached, attention, attrated, audio, australia, australian, authorities, away, bad, base, based, beautiful, beauty, begins, beijing, benefits, better, biases, bid, bing, bit, bond, boost, boron, bring, bringing, britain, british, brought, bryant, building, buses, bushfires, buy, called, calories, canberra, capital, card, care, cared, cares, cars, case, cases, cause, celsius, center, change, changes, charities, chicago, chief, chinese, chris, circumstances, city, clean, climate, closed, clothes, cloud, club, coffee, colleagues, combat, combined, comes, competitive, concerned, conditions, confirmed, congestion, conquer, consideration, considered, continent, continues, contracted, coronavirus, countries, country, court, coverd, create, creative, cut, dancing, danger, dany, data, davis, day, days, death, decided, declared, decorates, degrees, delay, department, destination, destroy, detect, devastated, developed, developers, die, died, different, difficulty, dinner, diseases, distance, doer, dog, dogs, doing, donated, drinks, dropping, early, easy, eat, eating, economic, electricity, email, embers, embodied, emergency, encouraging, energy, england, environmental, environments, establish, estimated, evaluation, example, existing, exiting, experts, eyes, facial, fahrenheit, fan, feel, feeling, figure, figures, filed, film, fingerprinting, fizzy, flames, food, forget, formally, format, founders, frank, free, friday, frozen, fruit, fuse, fusion, game, gender, generate, giannis, global, google, government, grail, green, guo, habits, half, hangzhou, harness, having, health, heavy, heinrich, hero, high, highest, hiking, history, hit, home, hopes, hora, hydrogen, identify, ignore, image, images, imposed, increase, increased, infected, infringed, ingored, inhospitable, initiate, inside, intention, international, interview, ireland, james, jams, juice, just, kennel, kind, kinds, kobe, labels, lacking, largest, lasers, latest, law, lebron, let, levels, life, liked, local, logged, lonely, longer, looked, looking, lots, love, lovely, luxembourg, machine, major, make, makes, making, man, mandarin, march, meals, means, medical, memory, meteorological, mike, mild, ministry, mobility, moment, month, months, morning, moved, nations, native, nearly, new, news, night, northern, notification, notified, novel, november, nsw, nuclear, number, objects, occur, officer, ofthese, old, ongoing, organization, outbreak, outcry, owners, paris, park, particles, patients, pay, peninsula, people, pet, picnic, plan, planet, pleasant, pollution, pompeo, population, possible, posted, powerful, preliminary, presence, previous, privacy, problems, process, producers, produces, professor, profile, projected, prospect, proud, public, pursuing, quarter, quiet, raise, reached, reaction, real, realized, realizing, reason, recent, recognition, record, recording, region, reinforce, relationship, release, released, releasing, reliably, replaced, reports, research, residents, revealed, right, rights, rise, risk, romance, roses, rural, safari, said, sake, saturday, say, scanning, schools, scientists, scotland, secondary, secretary, service, services, set, seven, severe, shops, showed, simply, single, sites, smallest, snacks, social, south, sparked, spirit, spokesperson, spread, square, start, state, states, stationed, strategy, street, studios, submit, suffers, sugar, sunday, surrounding, survey, symptoms, tail, taking, talking, taught, team, technically, technology, television, temperature, temperatures, territory, tested, theatrical, themed, thorough, thoughts, throw, time, toll, tops, totalled, trade, traffic, trains, trams, transport, trees, trip, true, typically, unconditional, underlying, united, university, use, used, uses, usually, victor, virus, vision, visitor, visitors, wagging, wales, walk, wants, warned, watching, water, way, wearing, week, weight, welsh, whitty, wildlife, winners, winning, withdraw, woke, woman, works, world, year, zhejiang]
+docId-----docPath mapping:
+0   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\1.txt
+1   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\10.txt
+2   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\11.txt
+3   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\12.txt
+4   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\13.txt
+5   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\14.txt
+6   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\15.txt
+7   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\2.txt
+8   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\3.txt
+9   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\4.txt
+10   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\5.txt
+11   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\6.txt
+12   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\7.txt
+13   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\8.txt
+14   ---->   D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\9.txt
+term-----postingList mapping:
+accord   ---->   {"docId":2,"freq":1,"positions":[30]}
+according   ---->   {"docId":0,"freq":2,"positions":[22, 104]}->{"docId":5,"freq":1,"positions":[73]}->{"docId":11,"freq":1,"positions":[61]}->{"docId":12,"freq":1,"positions":[27]}
+action   ---->   {"docId":5,"freq":1,"positions":[28]}
+activity   ---->   {"docId":7,"freq":1,"positions":[1]}
+aged   ---->   {"docId":0,"freq":1,"positions":[88]}
+agree   ---->   {"docId":8,"freq":1,"positions":[19]}
+agreed   ---->   {"docId":2,"freq":1,"positions":[71]}->{"docId":4,"freq":1,"positions":[112]}
+agreement   ---->   {"docId":2,"freq":4,"positions":[17, 32, 54, 68]}
+alleviate   ---->   {"docId":11,"freq":1,"positions":[54]}
+announced   ---->   {"docId":10,"freq":1,"positions":[2]}
+announcement   ---->   {"docId":6,"freq":1,"positions":[49]}
+announcing   ---->   {"docId":2,"freq":1,"positions":[41]}
+antarctic   ---->   {"docId":12,"freq":1,"positions":[42]}
+antarctica   ---->   {"docId":12,"freq":2,"positions":[13, 89]}
+anthony   ---->   {"docId":14,"freq":1,"positions":[62]}
+anymore   ---->   {"docId":8,"freq":1,"positions":[22]}
+api   ---->   {"docId":10,"freq":1,"positions":[36]}
+approaches   ---->   {"docId":4,"freq":1,"positions":[3]}
+apps   ---->   {"docId":10,"freq":1,"positions":[42]}
+april   ---->   {"docId":6,"freq":1,"positions":[34]}
+argentine   ---->   {"docId":12,"freq":1,"positions":[5]}
+asked   ---->   {"docId":4,"freq":1,"positions":[97]}
+atoms   ---->   {"docId":9,"freq":1,"positions":[51]}
+attached   ---->   {"docId":4,"freq":1,"positions":[46]}
+attention   ---->   {"docId":3,"freq":1,"positions":[45]}
+attrated   ---->   {"docId":8,"freq":1,"positions":[74]}
+audio   ---->   {"docId":5,"freq":1,"positions":[76]}
+australia   ---->   {"docId":1,"freq":1,"positions":[6]}
+australian   ---->   {"docId":1,"freq":1,"positions":[46]}
+authorities   ---->   {"docId":0,"freq":1,"positions":[107]}
+away   ---->   {"docId":9,"freq":1,"positions":[20]}
+bad   ---->   {"docId":3,"freq":4,"positions":[0, 13, 20, 92]}
+base   ---->   {"docId":12,"freq":1,"positions":[7]}
+based   ---->   {"docId":10,"freq":1,"positions":[64]}
+beautiful   ---->   {"docId":8,"freq":1,"positions":[66]}
+beauty   ---->   {"docId":8,"freq":2,"positions":[13, 111]}
+begins   ---->   {"docId":2,"freq":1,"positions":[20]}
+beijing   ---->   {"docId":5,"freq":1,"positions":[84]}
+benefits   ---->   {"docId":11,"freq":1,"positions":[60]}
+better   ---->   {"docId":7,"freq":1,"positions":[13]}
+biases   ---->   {"docId":10,"freq":1,"positions":[90]}
+bid   ---->   {"docId":13,"freq":1,"positions":[10]}
+bing   ---->   {"docId":5,"freq":1,"positions":[25]}
+bit   ---->   {"docId":4,"freq":1,"positions":[12]}
+bond   ---->   {"docId":6,"freq":1,"positions":[6]}
+boost   ---->   {"docId":13,"freq":1,"positions":[38]}
+boron   ---->   {"docId":9,"freq":1,"positions":[50]}
+bring   ---->   {"docId":11,"freq":1,"positions":[58]}
+bringing   ---->   {"docId":0,"freq":1,"positions":[73]}
+britain   ---->   {"docId":0,"freq":4,"positions":[12, 49, 78, 147]}
+british   ---->   {"docId":0,"freq":2,"positions":[30, 132]}
+brought   ---->   {"docId":2,"freq":1,"positions":[33]}
+bryant   ---->   {"docId":14,"freq":3,"positions":[15, 36, 78]}
+building   ---->   {"docId":9,"freq":1,"positions":[75]}
+buses   ---->   {"docId":11,"freq":1,"positions":[40]}
+bushfires   ---->   {"docId":1,"freq":1,"positions":[2]}
+buy   ---->   {"docId":4,"freq":1,"positions":[69]}
+called   ---->   {"docId":6,"freq":1,"positions":[60]}
+calories   ---->   {"docId":3,"freq":1,"positions":[73]}
+canberra   ---->   {"docId":1,"freq":1,"positions":[13]}
+capital   ---->   {"docId":1,"freq":3,"positions":[12, 38, 47]}
+card   ---->   {"docId":4,"freq":1,"positions":[17]}
+care   ---->   {"docId":0,"freq":1,"positions":[36]}->{"docId":4,"freq":1,"positions":[10]}
+cared   ---->   {"docId":14,"freq":1,"positions":[6]}
+cares   ---->   {"docId":7,"freq":1,"positions":[7]}
+cars   ---->   {"docId":8,"freq":1,"positions":[57]}
+case   ---->   {"docId":5,"freq":1,"positions":[47]}
+cases   ---->   {"docId":0,"freq":5,"positions":[18, 47, 111, 120, 145]}
+cause   ---->   {"docId":3,"freq":1,"positions":[78]}
+celsius   ---->   {"docId":12,"freq":2,"positions":[54, 65]}
+center   ---->   {"docId":14,"freq":1,"positions":[32]}
+change   ---->   {"docId":2,"freq":2,"positions":[29, 40]}->{"docId":10,"freq":1,"positions":[22]}->{"docId":11,"freq":1,"positions":[27]}
+changes   ---->   {"docId":14,"freq":1,"positions":[18]}
+charities   ---->   {"docId":14,"freq":1,"positions":[50]}
+chicago   ---->   {"docId":14,"freq":1,"positions":[60]}
+chief   ---->   {"docId":0,"freq":1,"positions":[99]}
+chinese   ---->   {"docId":5,"freq":1,"positions":[1]}->{"docId":13,"freq":1,"positions":[29]}
+chris   ---->   {"docId":0,"freq":1,"positions":[97]}
+circumstances   ---->   {"docId":12,"freq":1,"positions":[79]}
+city   ---->   {"docId":8,"freq":4,"positions":[61, 78, 90, 103]}
+clean   ---->   {"docId":8,"freq":1,"positions":[64]}->{"docId":9,"freq":1,"positions":[26]}
+climate   ---->   {"docId":2,"freq":2,"positions":[28, 39]}->{"docId":12,"freq":1,"positions":[0]}
+closed   ---->   {"docId":1,"freq":1,"positions":[7]}
+clothes   ---->   {"docId":10,"freq":1,"positions":[68]}
+cloud   ---->   {"docId":10,"freq":1,"positions":[34]}
+club   ---->   {"docId":4,"freq":1,"positions":[23]}
+coffee   ---->   {"docId":8,"freq":1,"positions":[68]}
+colleagues   ---->   {"docId":9,"freq":1,"positions":[36]}
+combat   ---->   {"docId":2,"freq":1,"positions":[38]}
+combined   ---->   {"docId":14,"freq":1,"positions":[22]}
+comes   ---->   {"docId":6,"freq":1,"positions":[50]}
+competitive   ---->   {"docId":14,"freq":1,"positions":[76]}
+concerned   ---->   {"docId":4,"freq":1,"positions":[122]}
+conditions   ---->   {"docId":0,"freq":1,"positions":[95]}
+confirmed   ---->   {"docId":0,"freq":3,"positions":[17, 45, 119]}
+congestion   ---->   {"docId":11,"freq":1,"positions":[56]}
+conquer   ---->   {"docId":3,"freq":1,"positions":[89]}
+consideration   ---->   {"docId":6,"freq":1,"positions":[39]}
+considered   ---->   {"docId":12,"freq":1,"positions":[75]}
+continent   ---->   {"docId":12,"freq":1,"positions":[26]}
+continues   ---->   {"docId":6,"freq":1,"positions":[17]}
+contracted   ---->   {"docId":0,"freq":1,"positions":[70]}
+coronavirus   ---->   {"docId":0,"freq":2,"positions":[2, 71]}->{"docId":6,"freq":1,"positions":[16]}
+countries   ---->   {"docId":11,"freq":1,"positions":[12]}->{"docId":13,"freq":1,"positions":[61]}
+country   ---->   {"docId":0,"freq":1,"positions":[65]}->{"docId":11,"freq":1,"positions":[44]}->{"docId":13,"freq":1,"positions":[23]}
+court   ---->   {"docId":5,"freq":1,"positions":[22]}
+coverd   ---->   {"docId":8,"freq":1,"positions":[80]}
+create   ---->   {"docId":10,"freq":1,"positions":[87]}->{"docId":14,"freq":1,"positions":[24]}
+creative   ---->   {"docId":7,"freq":1,"positions":[3]}
+cut   ---->   {"docId":2,"freq":1,"positions":[73]}
+dancing   ---->   {"docId":8,"freq":1,"positions":[51]}
+danger   ---->   {"docId":1,"freq":1,"positions":[43]}
+dany   ---->   {"docId":11,"freq":1,"positions":[63]}
+data   ---->   {"docId":12,"freq":1,"positions":[30]}
+davis   ---->   {"docId":14,"freq":1,"positions":[63]}
+day   ---->   {"docId":0,"freq":1,"positions":[56]}->{"docId":4,"freq":1,"positions":[2]}
+days   ---->   {"docId":6,"freq":1,"positions":[51]}
+death   ---->   {"docId":0,"freq":2,"positions":[3, 75]}
+decided   ---->   {"docId":8,"freq":1,"positions":[35]}
+declared   ---->   {"docId":1,"freq":1,"positions":[18]}
+decorates   ---->   {"docId":8,"freq":1,"positions":[70]}
+degrees   ---->   {"docId":12,"freq":3,"positions":[48, 53, 64]}
+delay   ---->   {"docId":6,"freq":1,"positions":[66]}
+department   ---->   {"docId":0,"freq":1,"positions":[31]}
+destination   ---->   {"docId":13,"freq":1,"positions":[27]}
+destroy   ---->   {"docId":3,"freq":1,"positions":[4]}
+detect   ---->   {"docId":10,"freq":1,"positions":[59]}
+devastated   ---->   {"docId":1,"freq":1,"positions":[5]}
+developed   ---->   {"docId":9,"freq":1,"positions":[30]}
+developers   ---->   {"docId":10,"freq":1,"positions":[29]}
+die   ---->   {"docId":6,"freq":1,"positions":[32]}
+died   ---->   {"docId":0,"freq":2,"positions":[72, 86]}
+different   ---->   {"docId":12,"freq":1,"positions":[78]}
+difficulty   ---->   {"docId":9,"freq":1,"positions":[72]}
+dinner   ---->   {"docId":4,"freq":1,"positions":[77]}
+diseases   ---->   {"docId":3,"freq":1,"positions":[9]}
+distance   ---->   {"docId":9,"freq":1,"positions":[19]}
+doer   ---->   {"docId":7,"freq":1,"positions":[6]}
+dog   ---->   {"docId":4,"freq":4,"positions":[34, 66, 100, 116]}
+dogs   ---->   {"docId":4,"freq":2,"positions":[7, 51]}
+doing   ---->   {"docId":3,"freq":1,"positions":[39]}->{"docId":7,"freq":1,"positions":[9]}
+donated   ---->   {"docId":14,"freq":1,"positions":[55]}
+drinks   ---->   {"docId":3,"freq":2,"positions":[60, 65]}
+dropping   ---->   {"docId":10,"freq":1,"positions":[79]}
+early   ---->   {"docId":8,"freq":1,"positions":[29]}
+easy   ---->   {"docId":10,"freq":1,"positions":[40]}
+eat   ---->   {"docId":3,"freq":1,"positions":[56]}
+eating   ---->   {"docId":3,"freq":4,"positions":[1, 14, 21, 93]}
+economic   ---->   {"docId":2,"freq":1,"positions":[59]}
+electricity   ---->   {"docId":9,"freq":1,"positions":[61]}
+email   ---->   {"docId":10,"freq":2,"positions":[27, 52]}
+embers   ---->   {"docId":1,"freq":1,"positions":[52]}
+embodied   ---->   {"docId":14,"freq":1,"positions":[79]}
+emergency   ---->   {"docId":1,"freq":1,"positions":[23]}
+encouraging   ---->   {"docId":9,"freq":1,"positions":[13]}
+energy   ---->   {"docId":9,"freq":1,"positions":[87]}
+england   ---->   {"docId":0,"freq":2,"positions":[103, 114]}
+environmental   ---->   {"docId":11,"freq":1,"positions":[59]}
+environments   ---->   {"docId":12,"freq":1,"positions":[98]}
+establish   ---->   {"docId":13,"freq":1,"positions":[21]}
+estimated   ---->   {"docId":0,"freq":1,"positions":[139]}
+evaluation   ---->   {"docId":6,"freq":1,"positions":[42]}
+example   ---->   {"docId":3,"freq":1,"positions":[31]}
+existing   ---->   {"docId":5,"freq":1,"positions":[37]}
+exiting   ---->   {"docId":2,"freq":1,"positions":[25]}
+experts   ---->   {"docId":12,"freq":1,"positions":[1]}
+eyes   ---->   {"docId":8,"freq":2,"positions":[9, 76]}
+facial   ---->   {"docId":5,"freq":1,"positions":[12]}
+fahrenheit   ---->   {"docId":12,"freq":1,"positions":[49]}
+fan   ---->   {"docId":6,"freq":1,"positions":[58]}
+feel   ---->   {"docId":4,"freq":1,"positions":[120]}->{"docId":5,"freq":1,"positions":[50]}
+feeling   ---->   {"docId":8,"freq":1,"positions":[94]}
+figure   ---->   {"docId":12,"freq":1,"positions":[56]}
+figures   ---->   {"docId":0,"freq":2,"positions":[26, 39]}
+filed   ---->   {"docId":5,"freq":1,"positions":[45]}
+film   ---->   {"docId":6,"freq":2,"positions":[7, 63]}
+fingerprinting   ---->   {"docId":5,"freq":1,"positions":[38]}
+fizzy   ---->   {"docId":3,"freq":1,"positions":[64]}
+flames   ---->   {"docId":1,"freq":2,"positions":[50, 84]}
+food   ---->   {"docId":3,"freq":1,"positions":[48]}
+forget   ---->   {"docId":3,"freq":1,"positions":[49]}
+formally   ---->   {"docId":2,"freq":1,"positions":[4]}
+format   ---->   {"docId":14,"freq":1,"positions":[17]}
+founders   ---->   {"docId":6,"freq":1,"positions":[54]}
+frank   ---->   {"docId":11,"freq":1,"positions":[64]}
+free   ---->   {"docId":11,"freq":1,"positions":[47]}->{"docId":14,"freq":1,"positions":[68]}
+friday   ---->   {"docId":0,"freq":1,"positions":[136]}->{"docId":1,"freq":1,"positions":[15]}
+frozen   ---->   {"docId":12,"freq":1,"positions":[25]}
+fruit   ---->   {"docId":3,"freq":1,"positions":[67]}
+fuse   ---->   {"docId":9,"freq":1,"positions":[46]}
+fusion   ---->   {"docId":9,"freq":2,"positions":[10, 68]}
+game   ---->   {"docId":14,"freq":2,"positions":[12, 26]}
+gender   ---->   {"docId":10,"freq":2,"positions":[63, 80]}
+generate   ---->   {"docId":9,"freq":1,"positions":[60]}
+giannis   ---->   {"docId":14,"freq":1,"positions":[46]}
+global   ---->   {"docId":2,"freq":1,"positions":[27]}->{"docId":6,"freq":1,"positions":[45]}
+google   ---->   {"docId":10,"freq":3,"positions":[0, 53, 73]}
+government   ---->   {"docId":0,"freq":1,"positions":[133]}->{"docId":11,"freq":1,"positions":[49]}->{"docId":13,"freq":1,"positions":[18]}
+grail   ---->   {"docId":9,"freq":1,"positions":[24]}
+green   ---->   {"docId":8,"freq":2,"positions":[83, 89]}
+guo   ---->   {"docId":5,"freq":2,"positions":[24, 66]}
+habits   ---->   {"docId":3,"freq":4,"positions":[2, 15, 22, 94]}
+half   ---->   {"docId":1,"freq":1,"positions":[74]}->{"docId":4,"freq":1,"positions":[41]}
+hangzhou   ---->   {"docId":5,"freq":1,"positions":[30]}
+harness   ---->   {"docId":9,"freq":1,"positions":[85]}
+having   ---->   {"docId":3,"freq":2,"positions":[35, 59]}->{"docId":4,"freq":1,"positions":[114]}
+health   ---->   {"docId":0,"freq":3,"positions":[33, 94, 106]}->{"docId":3,"freq":2,"positions":[6, 86]}
+heavy   ---->   {"docId":11,"freq":1,"positions":[55]}
+heinrich   ---->   {"docId":9,"freq":1,"positions":[32]}
+hero   ---->   {"docId":14,"freq":1,"positions":[58]}
+high   ---->   {"docId":3,"freq":1,"positions":[71]}
+highest   ---->   {"docId":12,"freq":1,"positions":[18]}
+hiking   ---->   {"docId":12,"freq":1,"positions":[85]}
+history   ---->   {"docId":14,"freq":1,"positions":[5]}
+hit   ---->   {"docId":12,"freq":1,"positions":[45]}
+home   ---->   {"docId":1,"freq":1,"positions":[65]}->{"docId":12,"freq":1,"positions":[93]}
+hopes   ---->   {"docId":11,"freq":1,"positions":[50]}
+hora   ---->   {"docId":9,"freq":1,"positions":[33]}
+hydrogen   ---->   {"docId":9,"freq":1,"positions":[48]}
+identify   ---->   {"docId":10,"freq":2,"positions":[11, 46]}
+ignore   ---->   {"docId":3,"freq":1,"positions":[29]}
+image   ---->   {"docId":10,"freq":1,"positions":[5]}
+images   ---->   {"docId":10,"freq":2,"positions":[14, 49]}
+imposed   ---->   {"docId":2,"freq":1,"positions":[56]}
+increase   ---->   {"docId":0,"freq":1,"positions":[42]}
+increased   ---->   {"docId":13,"freq":1,"positions":[57]}
+infected   ---->   {"docId":0,"freq":1,"positions":[144]}
+infringed   ---->   {"docId":5,"freq":1,"positions":[59]}
+ingored   ---->   {"docId":8,"freq":1,"positions":[109]}
+inhospitable   ---->   {"docId":12,"freq":1,"positions":[97]}
+initiate   ---->   {"docId":9,"freq":1,"positions":[81]}
+inside   ---->   {"docId":1,"freq":1,"positions":[57]}
+intention   ---->   {"docId":2,"freq":1,"positions":[11]}
+international   ---->   {"docId":13,"freq":1,"positions":[14]}
+interview   ---->   {"docId":5,"freq":1,"positions":[80]}
+ireland   ---->   {"docId":0,"freq":1,"positions":[130]}
+james   ---->   {"docId":6,"freq":1,"positions":[5]}
+jams   ---->   {"docId":11,"freq":1,"positions":[20]}
+juice   ---->   {"docId":3,"freq":1,"positions":[68]}
+just   ---->   {"docId":4,"freq":1,"positions":[108]}->{"docId":8,"freq":1,"positions":[108]}->{"docId":12,"freq":2,"positions":[15, 44]}
+kennel   ---->   {"docId":4,"freq":1,"positions":[22]}
+kind   ---->   {"docId":9,"freq":1,"positions":[7]}
+kinds   ---->   {"docId":9,"freq":1,"positions":[65]}
+kobe   ---->   {"docId":14,"freq":1,"positions":[14]}
+labels   ---->   {"docId":10,"freq":1,"positions":[81]}
+lacking   ---->   {"docId":8,"freq":1,"positions":[6]}
+largest   ---->   {"docId":0,"freq":1,"positions":[51]}
+lasers   ---->   {"docId":9,"freq":1,"positions":[44]}
+latest   ---->   {"docId":0,"freq":1,"positions":[25]}
+law   ---->   {"docId":5,"freq":1,"positions":[17]}
+lebron   ---->   {"docId":14,"freq":1,"positions":[43]}
+let   ---->   {"docId":4,"freq":1,"positions":[53]}
+levels   ---->   {"docId":2,"freq":1,"positions":[82]}
+life   ---->   {"docId":3,"freq":1,"positions":[25]}->{"docId":8,"freq":1,"positions":[15]}
+liked   ---->   {"docId":8,"freq":1,"positions":[92]}
+local   ---->   {"docId":14,"freq":1,"positions":[49]}
+logged   ---->   {"docId":12,"freq":1,"positions":[16]}
+lonely   ---->   {"docId":4,"freq":1,"positions":[92]}
+longer   ---->   {"docId":0,"freq":1,"positions":[165]}->{"docId":10,"freq":1,"positions":[10]}
+looked   ---->   {"docId":8,"freq":1,"positions":[62]}
+looking   ---->   {"docId":13,"freq":1,"positions":[43]}
+lots   ---->   {"docId":3,"freq":2,"positions":[7, 18]}
+love   ---->   {"docId":4,"freq":2,"positions":[81, 127]}
+lovely   ---->   {"docId":8,"freq":1,"positions":[106]}
+luxembourg   ---->   {"docId":11,"freq":1,"positions":[6]}
+machine   ---->   {"docId":9,"freq":1,"positions":[77]}
+major   ---->   {"docId":11,"freq":1,"positions":[18]}
+make   ---->   {"docId":4,"freq":2,"positions":[87, 118]}
+makes   ---->   {"docId":10,"freq":1,"positions":[38]}
+making   ---->   {"docId":5,"freq":1,"positions":[8]}
+man   ---->   {"docId":10,"freq":1,"positions":[17]}
+mandarin   ---->   {"docId":13,"freq":1,"positions":[0]}
+march   ---->   {"docId":11,"freq":1,"positions":[30]}->{"docId":12,"freq":1,"positions":[68]}
+meals   ---->   {"docId":3,"freq":1,"positions":[36]}
+means   ---->   {"docId":3,"freq":1,"positions":[41]}
+medical   ---->   {"docId":0,"freq":1,"positions":[100]}
+memory   ---->   {"docId":14,"freq":1,"positions":[21]}
+meteorological   ---->   {"docId":12,"freq":1,"positions":[37]}
+mike   ---->   {"docId":2,"freq":1,"positions":[50]}
+mild   ---->   {"docId":0,"freq":1,"positions":[161]}
+ministry   ---->   {"docId":11,"freq":1,"positions":[69]}
+mobility   ---->   {"docId":11,"freq":1,"positions":[71]}
+moment   ---->   {"docId":8,"freq":1,"positions":[99]}
+month   ---->   {"docId":2,"freq":1,"positions":[45]}
+months   ---->   {"docId":6,"freq":1,"positions":[14]}
+morning   ---->   {"docId":8,"freq":1,"positions":[32]}
+moved   ---->   {"docId":6,"freq":1,"positions":[25]}
+nations   ---->   {"docId":2,"freq":2,"positions":[8, 36]}
+native   ---->   {"docId":14,"freq":1,"positions":[61]}
+nearly   ---->   {"docId":1,"freq":1,"positions":[73]}
+new   ---->   {"docId":0,"freq":1,"positions":[38]}->{"docId":1,"freq":1,"positions":[31]}->{"docId":5,"freq":1,"positions":[42]}->{"docId":6,"freq":1,"positions":[4]}->{"docId":9,"freq":1,"positions":[6]}->{"docId":13,"freq":1,"positions":[35]}
+news   ---->   {"docId":5,"freq":1,"positions":[85]}
+night   ---->   {"docId":14,"freq":1,"positions":[28]}
+northern   ---->   {"docId":0,"freq":1,"positions":[129]}->{"docId":12,"freq":1,"positions":[10]}
+notification   ---->   {"docId":2,"freq":1,"positions":[19]}
+notified   ---->   {"docId":2,"freq":1,"positions":[5]}
+novel   ---->   {"docId":0,"freq":1,"positions":[1]}
+november   ---->   {"docId":6,"freq":1,"positions":[36]}
+nsw   ---->   {"docId":9,"freq":1,"positions":[41]}
+nuclear   ---->   {"docId":9,"freq":2,"positions":[9, 67]}
+number   ---->   {"docId":0,"freq":2,"positions":[15, 142]}
+objects   ---->   {"docId":10,"freq":1,"positions":[47]}
+occur   ---->   {"docId":3,"freq":1,"positions":[10]}
+officer   ---->   {"docId":0,"freq":1,"positions":[101]}
+ofthese   ---->   {"docId":3,"freq":1,"positions":[91]}
+old   ---->   {"docId":8,"freq":1,"positions":[49]}
+ongoing   ---->   {"docId":1,"freq":1,"positions":[1]}
+organization   ---->   {"docId":12,"freq":1,"positions":[38]}
+outbreak   ---->   {"docId":0,"freq":1,"positions":[62]}
+outcry   ---->   {"docId":5,"freq":1,"positions":[6]}
+owners   ---->   {"docId":4,"freq":1,"positions":[101]}
+paris   ---->   {"docId":2,"freq":2,"positions":[16, 67]}
+park   ---->   {"docId":5,"freq":2,"positions":[3, 32]}
+particles   ---->   {"docId":9,"freq":1,"positions":[54]}
+patients   ---->   {"docId":0,"freq":2,"positions":[68, 84]}
+pay   ---->   {"docId":3,"freq":1,"positions":[44]}
+peninsula   ---->   {"docId":12,"freq":1,"positions":[43]}
+people   ---->   {"docId":0,"freq":1,"positions":[156]}->{"docId":4,"freq":2,"positions":[5, 62]}->{"docId":8,"freq":2,"positions":[0, 50]}->{"docId":10,"freq":1,"positions":[12]}->{"docId":13,"freq":1,"positions":[30]}
+pet   ---->   {"docId":4,"freq":1,"positions":[49]}
+picnic   ---->   {"docId":12,"freq":1,"positions":[83]}
+plan   ---->   {"docId":2,"freq":1,"positions":[43]}
+planet   ---->   {"docId":12,"freq":1,"positions":[101]}
+pleasant   ---->   {"docId":12,"freq":1,"positions":[76]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[76]}
+pompeo   ---->   {"docId":2,"freq":1,"positions":[51]}
+population   ---->   {"docId":11,"freq":1,"positions":[2]}
+possible   ---->   {"docId":10,"freq":1,"positions":[57]}
+posted   ---->   {"docId":5,"freq":1,"positions":[81]}
+powerful   ---->   {"docId":9,"freq":1,"positions":[43]}
+preliminary   ---->   {"docId":12,"freq":1,"positions":[29]}
+presence   ---->   {"docId":13,"freq":1,"positions":[58]}
+previous   ---->   {"docId":12,"freq":1,"positions":[59]}
+privacy   ---->   {"docId":5,"freq":1,"positions":[55]}
+problems   ---->   {"docId":3,"freq":1,"positions":[80]}
+process   ---->   {"docId":2,"freq":1,"positions":[23]}
+producers   ---->   {"docId":6,"freq":1,"positions":[21]}
+produces   ---->   {"docId":9,"freq":1,"positions":[89]}
+professor   ---->   {"docId":5,"freq":2,"positions":[18, 23]}
+profile   ---->   {"docId":13,"freq":1,"positions":[15]}
+projected   ---->   {"docId":1,"freq":1,"positions":[53]}
+prospect   ---->   {"docId":4,"freq":1,"positions":[93]}
+proud   ---->   {"docId":14,"freq":1,"positions":[37]}
+public   ---->   {"docId":11,"freq":2,"positions":[34, 73]}
+pursuing   ---->   {"docId":9,"freq":1,"positions":[4]}
+quarter   ---->   {"docId":4,"freq":1,"positions":[111]}
+quiet   ---->   {"docId":8,"freq":1,"positions":[44]}
+raise   ---->   {"docId":13,"freq":1,"positions":[12]}
+reached   ---->   {"docId":0,"freq":1,"positions":[6]}
+reaction   ---->   {"docId":9,"freq":1,"positions":[83]}
+real   ---->   {"docId":14,"freq":1,"positions":[72]}
+realized   ---->   {"docId":8,"freq":1,"positions":[59]}
+realizing   ---->   {"docId":8,"freq":1,"positions":[11]}
+reason   ---->   {"docId":10,"freq":1,"positions":[84]}
+recent   ---->   {"docId":9,"freq":1,"positions":[0]}->{"docId":14,"freq":1,"positions":[4]}
+recognition   ---->   {"docId":5,"freq":1,"positions":[13]}->{"docId":10,"freq":1,"positions":[6]}
+record   ---->   {"docId":12,"freq":2,"positions":[21, 60]}
+recording   ---->   {"docId":5,"freq":1,"positions":[77]}
+region   ---->   {"docId":1,"freq":1,"positions":[59]}
+reinforce   ---->   {"docId":10,"freq":1,"positions":[89]}
+relationship   ---->   {"docId":4,"freq":1,"positions":[39]}
+release   ---->   {"docId":6,"freq":3,"positions":[1, 27, 68]}
+released   ---->   {"docId":0,"freq":1,"positions":[27]}
+releasing   ---->   {"docId":9,"freq":1,"positions":[52]}
+reliably   ---->   {"docId":9,"freq":1,"positions":[80]}
+replaced   ---->   {"docId":5,"freq":1,"positions":[35]}
+reports   ---->   {"docId":9,"freq":1,"positions":[1]}
+research   ---->   {"docId":4,"freq":1,"positions":[95]}->{"docId":12,"freq":1,"positions":[6]}
+residents   ---->   {"docId":1,"freq":1,"positions":[71]}
+revealed   ---->   {"docId":10,"freq":1,"positions":[24]}
+right   ---->   {"docId":7,"freq":1,"positions":[11]}
+rights   ---->   {"docId":5,"freq":1,"positions":[56]}
+rise   ---->   {"docId":0,"freq":1,"positions":[52]}
+risk   ---->   {"docId":1,"freq":1,"positions":[79]}
+romance   ---->   {"docId":4,"freq":1,"positions":[106]}
+roses   ---->   {"docId":4,"freq":1,"positions":[71]}
+rural   ---->   {"docId":1,"freq":1,"positions":[27]}
+safari   ---->   {"docId":5,"freq":1,"positions":[31]}
+said   ---->   {"docId":0,"freq":2,"positions":[96, 134]}->{"docId":2,"freq":1,"positions":[52]}->{"docId":4,"freq":1,"positions":[42]}->{"docId":5,"freq":1,"positions":[72]}->{"docId":6,"freq":1,"positions":[22]}->{"docId":10,"freq":2,"positions":[54, 75]}
+sake   ---->   {"docId":3,"freq":1,"positions":[83]}
+saturday   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[61]}
+say   ---->   {"docId":8,"freq":1,"positions":[2]}->{"docId":12,"freq":1,"positions":[80]}
+scanning   ---->   {"docId":5,"freq":1,"positions":[14]}
+schools   ---->   {"docId":13,"freq":1,"positions":[7]}
+scientists   ---->   {"docId":9,"freq":1,"positions":[3]}
+scotland   ---->   {"docId":0,"freq":1,"positions":[122]}
+secondary   ---->   {"docId":13,"freq":1,"positions":[6]}
+secretary   ---->   {"docId":2,"freq":1,"positions":[47]}
+service   ---->   {"docId":1,"freq":1,"positions":[29]}
+services   ---->   {"docId":10,"freq":1,"positions":[44]}
+set   ---->   {"docId":12,"freq":1,"positions":[66]}
+seven   ---->   {"docId":6,"freq":1,"positions":[13]}
+severe   ---->   {"docId":1,"freq":1,"positions":[41]}
+shops   ---->   {"docId":8,"freq":1,"positions":[69]}
+showed   ---->   {"docId":0,"freq":1,"positions":[40]}
+simply   ---->   {"docId":10,"freq":1,"positions":[65]}
+single   ---->   {"docId":0,"freq":1,"positions":[55]}->{"docId":4,"freq":1,"positions":[89]}
+sites   ---->   {"docId":6,"freq":1,"positions":[59]}
+smallest   ---->   {"docId":11,"freq":1,"positions":[11]}
+snacks   ---->   {"docId":3,"freq":1,"positions":[38]}
+social   ---->   {"docId":0,"freq":1,"positions":[35]}
+south   ---->   {"docId":1,"freq":1,"positions":[32]}
+sparked   ---->   {"docId":5,"freq":1,"positions":[5]}
+spirit   ---->   {"docId":14,"freq":1,"positions":[77]}
+spokesperson   ---->   {"docId":11,"freq":1,"positions":[66]}
+spread   ---->   {"docId":1,"freq":1,"positions":[55]}->{"docId":6,"freq":1,"positions":[19]}
+square   ---->   {"docId":8,"freq":1,"positions":[54]}
+start   ---->   {"docId":0,"freq":1,"positions":[59]}
+state   ---->   {"docId":1,"freq":2,"positions":[21, 35]}->{"docId":2,"freq":1,"positions":[49]}
+states   ---->   {"docId":2,"freq":2,"positions":[2, 64]}
+stationed   ---->   {"docId":12,"freq":1,"positions":[2]}
+strategy   ---->   {"docId":13,"freq":1,"positions":[36]}
+street   ---->   {"docId":8,"freq":1,"positions":[41]}
+studios   ---->   {"docId":6,"freq":1,"positions":[64]}
+submit   ---->   {"docId":5,"freq":1,"positions":[10]}
+suffers   ---->   {"docId":11,"freq":1,"positions":[16]}
+sugar   ---->   {"docId":3,"freq":1,"positions":[75]}
+sunday   ---->   {"docId":14,"freq":1,"positions":[27]}
+surrounding   ---->   {"docId":1,"freq":1,"positions":[36]}
+survey   ---->   {"docId":4,"freq":1,"positions":[19]}
+symptoms   ---->   {"docId":0,"freq":1,"positions":[162]}
+tail   ---->   {"docId":4,"freq":1,"positions":[85]}
+taking   ---->   {"docId":5,"freq":2,"positions":[19, 27]}
+talking   ---->   {"docId":12,"freq":1,"positions":[91]}
+taught   ---->   {"docId":13,"freq":1,"positions":[3]}
+team   ---->   {"docId":14,"freq":2,"positions":[42, 45]}
+technically   ---->   {"docId":14,"freq":1,"positions":[38]}
+technology   ---->   {"docId":5,"freq":1,"positions":[43]}->{"docId":9,"freq":3,"positions":[11, 29, 69]}
+television   ---->   {"docId":3,"freq":1,"positions":[33]}
+temperature   ---->   {"docId":12,"freq":1,"positions":[19]}
+temperatures   ---->   {"docId":12,"freq":2,"positions":[39, 72]}
+territory   ---->   {"docId":1,"freq":2,"positions":[48, 63]}
+tested   ---->   {"docId":0,"freq":1,"positions":[167]}
+theatrical   ---->   {"docId":6,"freq":1,"positions":[46]}
+themed   ---->   {"docId":13,"freq":1,"positions":[50]}
+thorough   ---->   {"docId":6,"freq":1,"positions":[41]}
+thoughts   ---->   {"docId":4,"freq":1,"positions":[104]}
+throw   ---->   {"docId":14,"freq":1,"positions":[69]}
+time   ---->   {"docId":6,"freq":1,"positions":[30]}
+toll   ---->   {"docId":0,"freq":2,"positions":[4, 76]}
+tops   ---->   {"docId":12,"freq":1,"positions":[57]}
+totalled   ---->   {"docId":0,"freq":1,"positions":[19]}
+trade   ---->   {"docId":13,"freq":1,"positions":[39]}
+traffic   ---->   {"docId":11,"freq":1,"positions":[19]}
+trains   ---->   {"docId":11,"freq":1,"positions":[37]}
+trams   ---->   {"docId":11,"freq":1,"positions":[38]}
+transport   ---->   {"docId":11,"freq":1,"positions":[35]}
+trees   ---->   {"docId":8,"freq":1,"positions":[84]}
+trip   ---->   {"docId":12,"freq":1,"positions":[86]}
+true   ---->   {"docId":0,"freq":1,"positions":[141]}->{"docId":10,"freq":1,"positions":[62]}
+typically   ---->   {"docId":12,"freq":1,"positions":[24]}
+unconditional   ---->   {"docId":4,"freq":1,"positions":[80]}
+underlying   ---->   {"docId":0,"freq":1,"positions":[93]}
+united   ---->   {"docId":2,"freq":3,"positions":[1, 7, 63]}->{"docId":14,"freq":1,"positions":[31]}
+university   ---->   {"docId":5,"freq":1,"positions":[69]}->{"docId":9,"freq":1,"positions":[39]}
+use   ---->   {"docId":10,"freq":1,"positions":[31]}
+used   ---->   {"docId":9,"freq":1,"positions":[58]}
+uses   ---->   {"docId":9,"freq":1,"positions":[42]}
+usually   ---->   {"docId":3,"freq":1,"positions":[70]}->{"docId":8,"freq":1,"positions":[112]}
+victor   ---->   {"docId":14,"freq":1,"positions":[73]}
+virus   ---->   {"docId":0,"freq":1,"positions":[170]}
+vision   ---->   {"docId":10,"freq":1,"positions":[35]}
+visitor   ---->   {"docId":13,"freq":1,"positions":[26]}
+visitors   ---->   {"docId":5,"freq":1,"positions":[9]}
+wagging   ---->   {"docId":4,"freq":1,"positions":[84]}
+wales   ---->   {"docId":0,"freq":1,"positions":[125]}->{"docId":1,"freq":1,"positions":[33]}
+walk   ---->   {"docId":8,"freq":1,"positions":[39]}
+wants   ---->   {"docId":13,"freq":1,"positions":[19]}
+warned   ---->   {"docId":1,"freq":1,"positions":[39]}
+watching   ---->   {"docId":3,"freq":1,"positions":[32]}
+water   ---->   {"docId":3,"freq":1,"positions":[63]}
+way   ---->   {"docId":4,"freq":1,"positions":[59]}
+wearing   ---->   {"docId":10,"freq":1,"positions":[71]}
+week   ---->   {"docId":8,"freq":1,"positions":[24]}
+weight   ---->   {"docId":3,"freq":1,"positions":[79]}
+welsh   ---->   {"docId":13,"freq":2,"positions":[5, 17]}
+whitty   ---->   {"docId":0,"freq":1,"positions":[98]}
+wildlife   ---->   {"docId":5,"freq":1,"positions":[2]}
+winners   ---->   {"docId":14,"freq":1,"positions":[40]}
+winning   ---->   {"docId":14,"freq":2,"positions":[9, 67]}
+withdraw   ---->   {"docId":2,"freq":1,"positions":[13]}
+woke   ---->   {"docId":8,"freq":1,"positions":[26]}
+woman   ---->   {"docId":10,"freq":1,"positions":[20]}
+works   ---->   {"docId":11,"freq":1,"positions":[74]}
+world   ---->   {"docId":12,"freq":1,"positions":[36]}
+year   ---->   {"docId":13,"freq":1,"positions":[51]}
+zhejiang   ---->   {"docId":5,"freq":1,"positions":[68]}

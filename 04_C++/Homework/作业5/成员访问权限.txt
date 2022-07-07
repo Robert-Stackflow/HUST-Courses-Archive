@@ -1,0 +1,9 @@
+照抄原有内容
+根据继承类型写出继承后的内容
+考虑权限变化
+
+struct无private成员
+struct缺省为pulic继承
+class缺省为private继承
+protected将保护和公有成员继承为protected成员
+public将保护和公有成员继承为pulic成员

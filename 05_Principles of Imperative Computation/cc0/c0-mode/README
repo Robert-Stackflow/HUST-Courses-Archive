@@ -1,0 +1,61 @@
+C0 mode - Major mode for editing and debugging C0
+
+Author: Jakob Uecker <jakob.uecker@gmail.com>
+
+----------------------------------------------------------------------
+Installation
+----------------------------------------------------------------------
+Run './configure' from this directory to obtain the necessary
+lines to add to your .emacs file.  It will be something like
+
+;; Setup for c0-mode
+(setq c0-root "/Users/fp/programs/c0/cc0/")
+(load (concat c0-root "c0-mode/c0.el"))
+
+----------------------------------------------------------------------
+Editing
+----------------------------------------------------------------------
+Visiting a file with extension ".c0" or ".h0" will switch to C0 mode,
+which is derive from C mode.  This provides syntax highlighting,
+matching parentheses, and indentation.  The latter is particularly
+useful and invoked simply with the <tab> key while the cursor is on a
+line of code.  I routinely hit <return><tab> at the end of a line.
+It's not perfect, but very helpful
+
+----------------------------------------------------------------------
+Debugging
+----------------------------------------------------------------------
+In C0 mode, you can also invoke the debugger called 'codex' (derived
+from 'C0 DEbugger').  To use 'codex', visit the file with the 'main'
+function and type C-c C-d (CTRL-c CTRL-d).  Add the '-d' option at the
+prompt to the arguments of 'codex' to enable dynamic checking of
+contracts.
+
+A second buffer *codex-locals* will be created with the current values
+for all local variables (initiall empty), or error messages.  Also
+keep an eye on the mini-buffer at the bottom of your frame for
+messages.
+
+SYNTAX OR TYPE ERRORS.  If your program has a syntax or type error, an
+error message will be displayed and the putative error region
+highlighted in pink.  Edit the file, go back to the buffer with
+'main', and try C-c C-d again.
+
+STEPPING.  Once your program parses and type-checks, you can step
+through it with simple keystrokes.  They are:
+
+  n             - next command, skipping over function calls
+  <return> or s - step to the next command or into function call
+  e <exp>       - evaluate expression <exp> in the current local environment
+  q             - quit the execution
+  ? or h        - display a short help message
+
+While stepping through your program, codex will continuously display
+the values of all local variables in the buffer *codex-locals*.
+
+EXCEPTIONS.  If an exception is raised or the program is aborted due
+to a failed contract, an error message is displayed and the codex
+process is terminated.  In case of a contract violation, the
+particular contract is highlighted in pink.  You can get rid of the
+highlight with C-c C-g, if you need to.  You can always restart
+codex by going to the file with the 'main' function and typing C-c C-d.

@@ -1,0 +1,96 @@
+/* 
+ * Stacks of string
+ * 
+ * 15-122 Principles of Imperative Computation */
+
+/*** Interface ***/
+
+// typedef _______ stack;
+typedef struct stack_header* stack;
+
+bool stack_empty(stack S);	/* O(1) */
+stack stack_new();		/* O(1) */
+void push(stack S, string x);	/* O(1) */
+string pop(stack S)		/* O(1) */
+/*@requires !stack_empty(S); @*/ ;
+
+
+/*** Implementation ***/
+
+/* Aux structure of linked lists of integers */
+struct ilist_node {
+  string data;
+  struct ilist_node* next;
+};
+typedef struct ilist_node ilist;
+
+/* is_segment_ilist(start, end) will diverge if list is circular! */
+bool is_segment_ilist(ilist* start, ilist* end) {
+  ilist* p = start;
+  while (p != end) {
+    if (p == NULL) return false;
+    p = p->next;
+  }
+  return true;
+}
+
+/* Stacks of integers */
+
+struct stack_header {
+  ilist* top;
+  ilist* bottom;
+};
+
+bool is_stack(stack S) {
+  if (S == NULL) return false;
+  if (S->top == NULL || S->bottom == NULL) return false;
+  if (!is_segment_ilist(S->top, S->bottom)) return false;
+  return true;
+}
+
+bool stack_empty(stack S)
+//@requires is_stack(S);
+{
+  return S->top == S->bottom;
+}
+
+stack stack_new()
+//@ensures is_stack(\result);
+//@ensures stack_empty(\result);
+{
+  stack S = alloc(struct stack_header);
+  ilist* l = alloc(struct ilist_node);	/* does not need to be initialized! */
+  S->top = l;
+  S->bottom = l;
+  return S;
+}
+
+void push(stack S, string x)
+//@requires is_stack(S);
+//@ensures is_stack(S);
+{
+  ilist* l = alloc(struct ilist_node);
+  l->data = x;
+  l->next = S->top;
+  S->top = l;
+}
+
+string pop(stack S)
+//@requires is_stack(S);
+//@requires !stack_empty(S);
+//@ensures is_stack(S);
+{
+  string e = S->top->data;
+  S->top = S->top->next;
+  return e;
+}
+
+stack stack_copy(stack S) 
+//@requires is_stack(S);
+//@ensures is_stack(\result);
+{
+  stack S2 = alloc(struct stack_header);
+  S2->top = S->top;
+  S2->bottom = S->bottom;
+  return S2;
+}

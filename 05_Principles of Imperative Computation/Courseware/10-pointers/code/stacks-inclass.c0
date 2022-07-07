@@ -1,0 +1,116 @@
+/* 
+ * Stacks of string
+ * 
+ * 15-122 Principles of Imperative Computation */
+
+typedef string elem;
+
+/*** Interface ***/
+
+// typedef _______ stack;
+typedef struct stack_header* stack;
+
+bool stack_empty(stack S);	/* O(1) */
+stack stack_new();		/* O(1) */
+void push(stack S, elem x);	/* O(1) */
+elem pop(stack S)		/* O(1) */
+/*@requires !stack_empty(S); @*/ ;
+
+
+/*** Implementation ***/
+
+/* Aux structure of linked lists of integers */
+
+struct list_node {
+  elem data;
+  struct list_node* next;
+};
+typedef struct list_node list;
+
+bool is_cyclic(list* start, list* end) {
+  if (start == NULL) return false;
+  list* a = start->next;
+  list* t = start;
+  while (a != t) {
+    if (a == NULL || a->next == NULL) return false;
+    a = a->next->next;
+    //@assert t != NULL;   // because achilles is faster and will hit NULL end quicker
+    t = t->next;
+  }
+  //@assert a == t;
+  return true;
+}
+
+bool is_segment(list* start, list* end)
+{
+  if (is_cyclic(start, end)) return false;
+  list* p = start;
+  while (p != NULL) {
+    if (p == end) return true;
+    p = p->next;
+    if (p == start) return false;
+  }
+  return false;
+}
+
+
+/* Stacks of elems */
+
+struct stack_header {
+  list* top;
+  list* bottom;
+};
+
+bool is_stack(stack S) {
+  if (S == NULL) return false;
+  if (S->top == NULL || S->bottom == NULL) return false;
+  if (!is_segment(S->top, S->bottom)) return false;
+  return true;
+}
+
+bool stack_empty(stack S)
+//@requires is_stack(S);
+{
+  return S->top == S->bottom;
+}
+
+stack stack_new()
+//@ensures is_stack(\result);
+//@ensures stack_empty(\result);
+{
+  stack S = alloc(struct stack_header);
+  list* l = alloc(struct list_node);	/* does not need to be initialized! */
+  S->top = l;
+  S->bottom = l;
+  return S;
+}
+
+void push(stack S, elem x)
+//@requires is_stack(S);
+//@ensures is_stack(S);
+{
+  list* l = alloc(struct list_node);
+  l->data = x;
+  l->next = S->top;
+  S->top = l;
+}
+
+elem pop(stack S)
+//@requires is_stack(S);
+//@requires !stack_empty(S);
+//@ensures is_stack(S);
+{
+  elem e = S->top->data;
+  S->top = S->top->next;
+  return e;
+}
+
+stack stack_copy(stack S) 
+//@requires is_stack(S);
+//@ensures is_stack(\result);
+{
+  stack S2 = alloc(struct stack_header);
+  S2->top = S->top;
+  S2->bottom = S->bottom;
+  return S2;
+}

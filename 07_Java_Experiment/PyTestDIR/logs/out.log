@@ -1,0 +1,7 @@
+2022-05-31-14:55:23       INFO   开始自动测试D:\HUST-Courses\07_Java_Experiment\PyTestDIR\下的所有学生代码
+2022-05-31-14:55:23       INFO   ---->测试D:\HUST-Courses\07_Java_Experiment\PyTestDIR\CS2008_U202015533_徐瑞达.zip下的学生代码
+2022-05-31-14:55:23       INFO   -------->学生信息:学号=U202015533,班级=CS2008,姓名=徐瑞达
+2022-05-31-14:55:23       INFO   -------->解压D:\HUST-Courses\07_Java_Experiment\PyTestDIR\CS2008_U202015533_徐瑞达.zip到目标文件夹D:\HUST-Courses\07_Java_Experiment\PyTestDIR\temp
+2022-05-31-14:55:23       INFO   ---------------->开始测试学号=U202015533,班级=CS2008,姓名=徐瑞达的代码
+2022-05-31-14:55:27       INFO   ---------------->学号=U202015533,班级=CS2008,姓名=徐瑞达的代码测试结果为：测试总数=106,失败个数=0,忽略个数=0
+2022-05-31-14:55:27       INFO   测试完毕

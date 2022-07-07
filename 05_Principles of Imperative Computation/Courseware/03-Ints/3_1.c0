@@ -1,0 +1,34 @@
+int quot(int x, int y)
+//@requires y!=0;
+//@ensures \result == x / y;
+{
+  int a = x;
+  int b = y;
+  int s_a = 1;
+  int s_b = 1;
+  int c;
+
+  if (a < 0) {
+    s_a = -1;
+    a = -a;
+  }
+
+  if (b < 0) {
+    s_b = -1;
+    b = -b;
+  }
+
+  for (c=0; a>=b; c++)
+    //@loop_invariant a>=0 && b>0 && c*b+a==s_a*x;
+    {
+      a = a - b;
+    }
+  if (s_a * s_b < 0 && a != 0)
+    {
+      c = s_a*s_b*c - 1;
+    }
+  else
+      c = s_a*s_b*c;
+  //@assert c*y+a == s_a*x
+  return c;
+}

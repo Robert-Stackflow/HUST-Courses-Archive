@@ -1,0 +1,39 @@
+<mxfile host="65bd71144e">
+    <diagram id="1TDbxBZ_JOEDpRoGHgfZ" name="第 1 页">
+        <mxGraphModel dx="990" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="380" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="calculate" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="335" y="70" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="43">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="使用ecx作为N组数据中待计算数据的索引" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="110" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="43" target="73">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="使用eax存储计算结果" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="180" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="ret" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="335" y="320" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="73" target="72">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&#9;&lt;/span&gt;imul eax, stream[ecx].SDA,5&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&#9;&lt;/span&gt;add&amp;nbsp; eax, stream[ecx].SDB&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&#9;&lt;/span&gt;sub&amp;nbsp; eax, stream[ecx].SDC&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&#9;&lt;/span&gt;add&amp;nbsp; eax, 100&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&#9;&lt;/span&gt;sar&amp;nbsp; eax, 7&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="220" width="160" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,38 @@
+/* Selection Sort
+ *
+ * Principles of Imperative Computation
+ * Frank Pfenning
+ */
+
+int min_index(int[] A, int lower, int upper)
+//@requires 0 <= lower && lower < upper && upper <= \length(A);
+//@ensures lower <= \result && \result < upper;
+//@ensures le_seg(A[\result], A, lower, upper);
+{
+  int min = lower;
+  for (int i = lower; i < upper; i++)
+    //@loop_invariant lower <= i && i <= upper;
+    //@loop_invariant le_seg(A[min], A, lower, i);
+    if (A[i] < A[min]) {
+      min = i;
+    }
+  return min;
+}
+
+//trustme I only swap;
+void sort(int[] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+//@ensures is_sorted(A, lower, upper);
+{
+  for (int i = lower; i < upper; i++)
+    //@loop_invariant lower <= i && i <= upper;
+    //@loop_invariant is_sorted(A, lower, i);
+    //@loop_invariant le_segs(A, lower, i, A, i, upper);
+    {
+      int min = min_index(A, i, upper);
+      //@assert le_seg(A[min], A, i, upper);
+      swap(A, min, i);
+    }
+}
+
+

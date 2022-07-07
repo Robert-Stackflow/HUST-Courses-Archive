@@ -1,0 +1,33 @@
+struct list {
+  int data;
+  struct list* next;
+};
+
+typedef struct list* list;
+
+list nil() {
+  return NULL;
+}
+
+list cons(int x, list l) {
+  list p = alloc(struct list);
+  p->data = x;
+  p->next = l;
+  return p;
+}
+
+/* length(l) = length of l */
+/* l must be acyclic and shorter than 2^31 elements */
+int length(list l)
+//@ensures \result >= 0;
+{
+  int result = 0;
+  while (l != NULL)
+    //@loop_invariant result >= 0;
+    {
+      result = result+1;
+      assert(result > 0);
+      l = l->next;
+    }
+  return result;
+}

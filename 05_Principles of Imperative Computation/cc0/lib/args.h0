@@ -1,0 +1,43 @@
+/* Library args */
+/* Functions for parsing command line arguments to cc0 executables */
+/* Not supported by coin */
+
+/* Add a flag with the given name. During parsing if that flag is set
+ * (with -name on the command line), it writes the value true to the
+ * location given by ptr.
+ */
+void args_flag(string name, bool *ptr)
+  //@requires ptr != NULL;
+  ;
+
+/* Add an integer option with the given name. During parsing if that
+ * option is given (with -name <int>) it attempts to parse it as an
+ * integer and write it to the location given by ptr.
+ */
+void args_int(string name, int *ptr)
+  //@requires ptr != NULL;
+  ;
+
+/* Add an string option with the given name. During parsing if that
+ * option is given (with -name <string>) it write it to the location
+ * given by ptr.
+ */
+void args_string(string name, string *ptr)
+  //@requires ptr != NULL;
+  ;
+
+struct args {
+    int argc;
+    string[] argv;
+};
+typedef struct args* args_t;
+
+/* Parse the program's arguments according to any flags and options
+ * set up by previous calls. Any unrecognized arguments are
+ * returned in order in \result->argv.
+ *
+ * If there is an error, args_parse will return NULL.
+ */
+args_t args_parse()
+  //@ensures \result == NULL || \result->argc == \length(\result->argv);
+  ;

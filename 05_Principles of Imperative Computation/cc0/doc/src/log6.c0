@@ -1,0 +1,17 @@
+int log(int x)
+//@requires x >= 1;
+//@ensures \result >= 0;
+//@ensures (1 << \result) <= x;
+{ int r = 0;
+  int y = x;
+  while (y > 1)
+    //@loop_invariant y >= 1 && r >= 0;
+    //@loop_invariant y * (1 << r) <= x;
+    {
+      y = y / 2;
+      //@assert r < x;
+      r = r + 1;
+    }
+  return r;
+}
+

@@ -1,0 +1,17 @@
+/* file exp-test.c0 */
+
+#use <conio>
+
+int main() {
+  assert(exp(0,0) == 1);
+  assert(exp(0,1) == 0);
+  assert(exp(1,0) == 1);
+  assert(exp(1,17) == 1);
+  assert(exp(2,7) == 128);
+  assert(exp(-2,7) == -128);
+  assert(exp(3,4) == 81);
+  assert(exp(-3,4) == 81);
+  assert(exp(2,30) == (1<<30)); /* exp(2,k) == (1 << k) */
+  print("All tests passed!\n");
+  return 0;
+}

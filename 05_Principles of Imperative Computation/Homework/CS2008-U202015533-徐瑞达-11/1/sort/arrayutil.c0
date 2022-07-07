@@ -1,0 +1,212 @@
+/* Utility functions for working with arrays of strings
+ * Mostly specification functions, but swap is effectful
+ * 
+ * 15-122 Principles of Imperative Computation */
+
+#use <string>
+
+/*** Interface ***/
+
+/* is_in: x in A[lower,upper) */
+bool is_in(string x, string[] A, int lower, int upper)
+/*@requires 0 <= lower  && lower <= upper && upper <= \length(A); @*/ ;
+
+/* is_sorted: A[lower,upper) SORTED */
+bool is_sorted(string[] A, int lower, int upper)
+/*@requires 0 <= lower  && lower <= upper && upper <= \length(A); @*/ ;
+
+/* swap(A, i, j) has the effect of switching A[i] and A[j] */
+void swap(string[] A, int i, int j)
+/*@ requires 0 <= i && i < \length(A) && 0 <= j && j < \length(A); @*/ ;
+
+
+/* gt_seg: x > A[lower,upper) */
+bool gt_seg(string x, string[] A, int lower, int upper)
+/*@requires 0 <= lower && lower <= upper && upper <= \length(A); @*/ ;
+
+/* ge_seg: x >= A[lower,upper) */
+bool ge_seg(string x, string[] A, int lower, int upper)
+/*@requires 0 <= lower && lower <= upper && upper <= \length(A); @*/ ;
+
+/* lt_seg: x < A[lower,upper) */
+bool lt_seg(string x, string[] A, int lower, int upper)
+/*@requires 0 <= lower && lower <= upper && upper <= \length(A); @*/ ;
+
+/* le_seg: x <= A[lower,upper) */
+bool le_seg(string x, string[] A, int lower, int upper)
+/*@requires 0 <= lower && lower <= upper && upper <= \length(A); @*/ ;
+
+
+/* gt_segs: A[lower1,upper1) > B[lower2,upper2) */
+bool gt_segs(string[] A, int lower1, int upper1, 
+             string[] B, int lower2, int upper2)
+/*@requires 0 <= lower1 && lower1 <= upper1 && upper1 <= \length(A); @*/ 
+/*@requires 0 <= lower2 && lower2 <= upper2 && upper2 <= \length(B); @*/ ;
+
+/* ge_segs: A[lower1,upper1) >= B[lower2,upper2) */
+bool ge_segs(string[] A, int lower1, int upper1, 
+             string[] B, int lower2, int upper2)
+/*@requires 0 <= lower1 && lower1 <= upper1 && upper1 <= \length(A); @*/ 
+/*@requires 0 <= lower2 && lower2 <= upper2 && upper2 <= \length(B); @*/ ;
+
+/* lt_segs: A[lower1,upper1) < B[lower2,upper2) */
+bool lt_segs(string[] A, int lower1, int upper1,
+             string[] B, int lower2, int upper2)
+/*@requires 0 <= lower1 && lower1 <= upper1 && upper1 <= \length(A); @*/ 
+/*@requires 0 <= lower2 && lower2 <= upper2 && upper2 <= \length(B); @*/ ;
+
+/* le_segs: A[lower1,upper1) <= B[lower2,upper2) */
+bool le_segs(string[] A, int lower1, int upper1, 
+             string[] B, int lower2, int upper2)
+/*@requires 0 <= lower1 && lower1 <= upper1 && upper1 <= \length(A); @*/ 
+/*@requires 0 <= lower2 && lower2 <= upper2 && upper2 <= \length(B); @*/ ;
+
+
+/*** Implementation ***/
+
+bool is_in(string x, string[] A, int lower, int upper)
+/*@requires 0 <= lower 
+         && lower <= upper 
+         && upper <= \length(A); @*/
+{
+  for (int i = lower; i < upper; i++) 
+    //@loop_invariant lower <= i && i <= upper;
+    {
+      if (string_equal(x, A[i])) return true;
+    }
+
+  return false;
+}
+
+bool is_sorted(string[] A, 
+               int lower, 
+               int upper)
+/*@requires 0 <= lower 
+         && lower <= upper 
+         && upper <= \length(A); @*/
+{
+  for(int i = lower; i < upper-1; i++)
+    //@loop_invariant lower <= i;
+    {
+      if(!(string_compare(A[i+1], A[i]) >= 0)) return false;
+    }
+
+  return true;
+}
+
+void swap(string[] A, int i, int j)
+//@requires 0 <= i && i < \length(A);
+//@requires 0 <= j && j < \length(A);
+{
+  string tmp = A[i];
+  A[i] = A[j];
+  A[j] = tmp;
+}
+
+bool gt_seg(string x, string[] A, int lower, int upper) 
+/*@requires 0 <= lower 
+         && lower <= upper 
+         && upper <= \length(A); @*/
+{
+  for (int i = lower; i < upper; i++) 
+    //@loop_invariant lower <= i && i <= upper;
+    {
+      if (!(string_compare(x, A[i]) > 0)) return false;
+    }
+
+  return true;
+}
+
+bool ge_seg(string x, string[] A, int lower, int upper) 
+/*@requires 0 <= lower 
+         && lower <= upper 
+         && upper <= \length(A); @*/
+{
+  for (int i = lower; i < upper; i++) 
+    //@loop_invariant lower <= i && i <= upper;
+    {
+      if (!(string_compare(x, A[i]) >= 0)) return false;
+    }
+
+  return true;
+}
+
+bool lt_seg(string x, string[] A, int lower, int upper) 
+/*@requires 0 <= lower 
+         && lower <= upper 
+         && upper <= \length(A); @*/
+{
+  for (int i = lower; i < upper; i++) 
+    //@loop_invariant lower <= i && i <= upper;
+    {
+      if (!(string_compare(x, A[i]) < 0)) return false;
+    }
+
+  return true;
+}
+
+bool le_seg(string x, string[] A, int lower, int upper) 
+/*@requires 0 <= lower 
+         && lower <= upper 
+         && upper <= \length(A); @*/
+{
+  for (int i = lower; i < upper; i++) 
+    //@loop_invariant lower <= i && i <= upper;
+    {
+      if (!(string_compare(x, A[i]) <= 0)) return false;
+    }
+
+  return true;
+}
+
+bool gt_segs(string[] A, int lower1, int upper1, 
+             string[] B, int lower2, int upper2)
+//@requires 0 <= lower1 && lower1 <= upper1 && upper1 <= \length(A);
+//@requires 0 <= lower2 && lower2 <= upper2 && upper2 <= \length(B);
+{
+  for (int i = lower1; i < upper1; i++)
+    //@loop_invariant 0 <= lower1 && lower1 <= upper1;
+    for (int j = lower2; j < upper2; j++)
+      //@loop_invariant 0 <= lower2 && lower2 <= upper2;
+      if (!(string_compare(A[i], B[j]) > 0)) return false;
+  return true;
+}
+
+bool ge_segs(string[] A, int lower1, int upper1, 
+             string[] B, int lower2, int upper2)
+//@requires 0 <= lower1 && lower1 <= upper1 && upper1 <= \length(A);
+//@requires 0 <= lower2 && lower2 <= upper2 && upper2 <= \length(B);
+{
+  for (int i = lower1; i < upper1; i++)
+    //@loop_invariant 0 <= lower1 && lower1 <= upper1;
+    for (int j = lower2; j < upper2; j++)
+      //@loop_invariant 0 <= lower2 && lower2 <= upper2;
+      if (!(string_compare(A[i], B[j]) >= 0)) return false;
+  return true;
+}
+
+bool lt_segs(string[] A, int lower1, int upper1, 
+             string[] B, int lower2, int upper2)
+//@requires 0 <= lower1 && lower1 <= upper1 && upper1 <= \length(A);
+//@requires 0 <= lower2 && lower2 <= upper2 && upper2 <= \length(B);
+{
+  for (int i = lower1; i < upper1; i++)
+    //@loop_invariant 0 <= lower1 && lower1 <= upper1;
+    for (int j = lower2; j < upper2; j++)
+      //@loop_invariant 0 <= lower2 && lower2 <= upper2;
+      if (!(string_compare(A[i], B[j]) < 0)) return false;
+  return true;
+}
+
+bool le_segs(string[] A, int lower1, int upper1, 
+             string[] B, int lower2, int upper2)
+//@requires 0 <= lower1 && lower1 <= upper1 && upper1 <= \length(A);
+//@requires 0 <= lower2 && lower2 <= upper2 && upper2 <= \length(B);
+{
+  for (int i = lower1; i < upper1; i++)
+    //@loop_invariant 0 <= lower1 && lower1 <= upper1;
+    for (int j = lower2; j < upper2; j++)
+      //@loop_invariant 0 <= lower2 && lower2 <= upper2;
+      if (!(string_compare(A[i], B[j]) <= 0)) return false;
+  return true;
+}

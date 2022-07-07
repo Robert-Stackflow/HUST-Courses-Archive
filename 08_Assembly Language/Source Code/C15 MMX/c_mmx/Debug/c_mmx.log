@@ -1,0 +1,3 @@
+﻿  c_mmx.c
+C:\新书示例\MMX指令\c_mmx\c_mmx.c(21,18): warning C4244: “函数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  c_mmx.vcxproj -> C:\新书示例\MMX指令\Debug\c_mmx.exe

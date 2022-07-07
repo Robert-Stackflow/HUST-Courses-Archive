@@ -1,0 +1,36 @@
+int abs1(int x) {
+  if (x < 0) return -x;
+  return x;       /* indented here: no else clause */
+}
+
+int abs2(int x) {
+  if (x < 0)
+    return -x;    /* single-statement: no { ... } */
+  else
+    return x;
+}
+
+int abs3(int x) {
+  if (x < 0) {
+    return -x;    /* some prefer braces even for single statements */
+  } else {
+    return x;
+  }
+}
+
+/* abs1 - abs3 are problematic in that the result
+ * will be negative, on the minimal integer.  Exclude
+ * this from the domain, and abort if violated
+ */
+int abs(int x)
+//@requires x-1 < x;     /* x may not be minimal integer */
+//@ensures \result >= 0;
+{
+  if (x < 0) {
+    assert(-x > 0); /* abort on minimal integer */
+    return -x;
+  } else {
+    return x;
+  }
+}
+

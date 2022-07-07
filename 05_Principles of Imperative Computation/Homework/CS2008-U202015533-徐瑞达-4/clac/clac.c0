@@ -1,0 +1,186 @@
+//
+#use <parse>
+#use <string>
+#use <util>
+
+//modified code from recitation on stacks and queues
+int stack_len(stack S)
+//@requires S != NULL;
+{
+  if (stack_empty(S)) {
+    return 0;
+  }
+  int x = pop(S);
+  int i = stack_len(S);
+  i++;
+  push(S, x);
+  return i;
+}
+
+//modified code from lecture on contracts
+int POW(int x, int y)
+//@requires y >= 0;
+{
+  if (y == 0) {
+    return 1;
+  }
+  else {
+    return x*POW(x, y-1);
+  }
+}
+
+int power(int x, int y)
+//@requires y >= 0;
+//@ensures \result == POW(x,y);
+{
+  int r = 1;
+  int b = x;
+  int e = y;
+  while (e > 0)
+  //@loop_invariant e >= 0;
+  //@loop_invariant r*POW(b,e) == POW(x,y);
+  {
+    if (e%2 == 1) {
+      r = b*r;
+    }
+    b = b*b;
+    e = e/2;
+  }
+  //@assert e == 0;
+  return r;
+}
+
+bool eval(queue Q, stack S)
+//@requires S != NULL && Q != NULL;
+//@ensures queue_empty(Q);
+{
+  while (!queue_empty(Q)) {
+    string token = deq(Q);
+    if (parse_int(token, 10) != NULL) {  //int
+      int token_int = *parse_int(token, 10);
+      push(S, token_int);
+    }
+    else if (parse_int(token, 10) == NULL) {  //char
+      if(string_equal(token,"quit")){//quit
+        return false;
+      }
+      else if(string_equal(token,"print")){//print
+        int ans = pop(S);
+        println(string_fromint(ans));
+      }
+      else if(string_equal(token,"drop")){//drop
+        pop(S);
+      }
+      else if(string_equal(token,"dup")){//dup
+        int ans = pop(S);
+        push(S,ans);
+        push(S,ans);
+      }
+      else if(string_equal(token,"swap")){//swap
+        int high = pop(S);
+        int low = pop(S);
+        push(S,high);
+        push(S,low);
+      }
+      else if(string_equal(token,"rot")){//rot
+        int z = pop(S);
+        int y = pop(S);
+        int x = pop(S);
+        push(S,y);
+        push(S,z);
+        push(S,x);
+      }
+      else if(string_equal(token,"printstack")){//printstack
+        int len=stack_len(S);
+        int[] temp=alloc_array(int,len);
+        int i=0;
+        for(i=0;i<len;i++)
+        {
+            temp[i]=pop(S);
+        }
+        for(i=len-1;i>=0;i--)
+        {
+            push(S,temp[i]);
+        }
+        for(i=len-1;i>=0;i--)
+        {
+            print(string_fromint(temp[i]));
+            print(" ");
+        }
+        println("#");
+      }
+      else if(string_equal(token,"clear")){//clear
+        int len=stack_len(S);
+        int[] temp=alloc_array(int,len);
+        int i=0;
+        for(i=0;i<len;i++)
+        {
+            temp[i]=pop(S);
+        }
+      }
+      else if (stack_len(S) < 2) {
+        error("The stack is too short");
+      }
+      else {
+        int y = pop(S);
+        int x = pop(S);
+        if (string_equal(token,"+")) {
+          int new = x + y;
+          push(S, new);
+        }
+        else if (string_equal(token, "-")) {
+          int new = x - y;
+          push(S, new);
+        }
+        else if (string_equal(token, "*")) {
+          int new = x*y;
+          push(S, new);
+        }
+        else if (string_equal(token, "/")) {
+          if (y == 0) {
+            error("The Divisible cannot be zero!");
+          }
+          else if (x == int_min() && y == -1) {
+            error("!Division of int_min() by -1!");
+          }
+          else {
+            int new = x/y;
+            push(S, new);
+          }
+        }
+        else if (string_equal(token, "**")) {
+          if (y < 0) {
+            error("The Exopnential cannot be negative!");
+          }
+          int new = power(x, y);
+          push(S, new);
+        }
+        else if (string_equal(token, "%")) {
+          int new = x % y;
+          push(S, new);
+        }
+        else if (string_equal(token, "<")) {
+          int new;
+          if(x<y) new=1;
+          else new=0;
+          push(S, new);
+        }
+        else if (string_equal(token, ">")) {
+          int new;
+          if(x>y) new=1;
+          else new=0;
+          push(S, new);
+        }
+        else if (string_equal(token, "==")) {
+          int new;
+          if(x==y) new=1;
+          else new=0;
+          push(S, new);
+        }
+        else
+          error("The input is invalid!");
+        }
+      }
+  }
+  return true;
+}

@@ -1,0 +1,82 @@
+/*
+ * Creating queues of tokens for Clac
+ *
+ * 15-122 Principles of Imperative Computation
+ */
+
+#use <conio>
+#use <file>
+#use <string>
+#use "queues_string.c0"
+// The above line lets us use functions from queues_string.c0 even if
+// we don't include queues_string.c0 on the command line. It can
+// sometimes cause problems with the autograder if you do this in your
+// code, but it can also be a useful way of splitting your code into
+// multiple files.
+
+/*** Interface ***/
+
+// Read a line of standard input into a queue 
+void input_line(queue Q)
+/*@requires !eof(); @*/ ;
+
+// Read a whole file into a queue
+void input_file(string path, queue Q);
+
+// Read a string into a queue
+void input_string(string s, queue Q);
+
+
+/*** Implementation ***/
+
+bool is_whitespace(char c) {
+  return c == ' ' || c == '\t' || c == '\n' || c == '\r';
+}
+
+/* Convert a string into tokens, separated by
+ * whitespace, and enqueue nonempty tokens in Q
+ */
+void input_string(string s, queue Q)
+{
+  int len = string_length(s);
+  int cur = 0;
+  while (cur < len)
+    //@loop_invariant 0 <= cur && cur <= len;
+    { int i = cur;
+      /* skip leading whitespace */
+      while (i < len && is_whitespace(string_charat(s, i)))
+        //@loop_invariant cur <= i && i <= len;
+        i++;
+      cur = i;
+      /* find end of token */
+      while (i < len && !is_whitespace(string_charat(s, i)))
+        //@loop_invariant cur <= i && i <= len;
+        i++;
+      if (cur < i) enq(Q, string_sub(s, cur, i));
+      cur = i;
+    }
+  return;
+}
+
+/* Input one line from stdin and enqueue tokens in Q; 
+ * returns "false" if there is no more input to consider. */
+void input_line(queue Q)
+//@requires !eof();
+{
+  string line = readline();
+  input_string(line, Q);
+  return;
+}
+
+/* Input a file and enqueue tokens in Q */
+void input_file(string path, queue Q)
+{
+  file_t file = file_read(path);
+  if (file == NULL) error("Error: file does not exist");
+  while (!file_eof(file)) {
+    string line = file_readline(file);
+    input_string(line, Q);
+  }
+  file_close(file);
+  return;
+}

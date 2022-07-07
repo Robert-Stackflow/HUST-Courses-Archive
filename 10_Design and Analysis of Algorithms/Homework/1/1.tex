@@ -1,0 +1,113 @@
+\documentclass[a4paper]{article}
+\PassOptionsToPackage{quiet}{xeCJK}
+\usepackage[margin=1in]{geometry}
+\usepackage{ctex}
+\usepackage{xeCJK}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage[noend,ruled,noline]{algorithm2e}
+\title{\heiti\zihao{2} 算法设计与分析}
+\author{\songti CS2008班   U202015533  徐瑞达}
+\date{2022.03.08}
+\begin{document}
+\maketitle
+% \tableofcontents
+% \newpage
+\section{作业1:抄写伪代码}
+\subsection{INSERTIONSORT}
+\begin{algorithm}[H]
+    \setstretch{1.35}
+    \caption{INSERTION-SORT(A)}
+    \For {j=2 to A.length} {
+    $key=A[j]$\\
+    \tcp{INSERT $A[j]$ into the sorted sequence $A[1..j-1]$}
+    $i=j-1$\\
+    \While{i>0 and A[i]>key}{
+    $A[i+1]=A[i]$\\
+    $i=i-1$\\
+    }
+    \BlankLine
+    $A[i+1]=key$
+    }
+\end{algorithm}
+\subsection{MERGESORT}
+\begin{algorithm}
+    \setstretch{1.35}
+    \caption{MERGE-SORT($A,p,r$)}
+    \If{p<r}{
+        $ q= \lfloor (p+r)/2 \rfloor $\\
+        MERGE-SORT($A,p,q$)\\
+        MERGE-SORT($A,q+1,r$)\\
+        MERGE($A,p,q,r$)\\
+    }
+\end{algorithm}
+\newpage
+\subsection{MERGE}
+\begin{algorithm}
+    \setstretch{1.35}
+    \caption{MERGE-SORT(A,p,r)}
+    $n_{1}=q-p+1$\\
+    $n_{2}=r-q$\\
+    let $L[1..n_{1}+1]$ and $R[1..n_{2}+1]$ be new arrays\\
+    \For {i=1 to $n_{1}$} {
+    $L[i]=A[p+i-1]$
+    }
+    \For {j=1 to $n_{2}$} {
+    $R[j]=A[q+j]$
+    }
+    $L[n_{1}+1]=\infty$\\
+    $R[n_{2}+1]=\infty$\\
+    $i=1$\\
+    $j=1$\\
+    \For {$k=p to r$} {
+    \If{$L[i] \leq R[j]$}{
+    $A[k]=L[i]$\\
+    $i=i+1$\\
+    }
+    \BlankLine
+    \Else($A[k]=R[j]$){
+        $j=j+1$\\
+    }
+    }
+\end{algorithm}
+\section{作业2:$ Q \& A $}
+\subsection{1.2-2}
+\paragraph{Question:}
+\subparagraph{Suppose We are comparing implementations of insertion sort and merge sort on the same machine. For inputs of size $n$,insertion sort runs in $8n^2$ steps, while merge sort runs in $64n \lg n$ steps. For which values of $n$ does insertion sort beat merge sort?}
+\paragraph{Answer:}
+\subparagraph{$8n^2<64n \lg n$}
+\subparagraph{$2^n<n^8$}
+\subparagraph{$2 \leq n \leq 43$}
+\subsection{1.2-3}
+\subparagraph{What is the smallest value of $n$ such that an algorithm whose running time is $100n^2$ runs faster than an algorithm whose running time is $2^n$ on the same machine?}
+\paragraph{Answer:}
+\subparagraph{$100n^2<2^n$}
+\subparagraph{$n \geq 15$}
+\section{思考题:选择算法}
+\paragraph{Question:}
+\subparagraph{Consider sorting $n$ numbers stored in array $A$ by first finding the smallest element of $A$ and exchanging it with the element in $A[1]$. Then find the second smallest element of $A$, and exchange it with $A[2]$. Continue in this manner for the first $n-1$ elements of $A$.Write pseudocode for this algorithm, which is known as \textbf{selection sort}. What loop invariant does this algorithm maintain? Why does it need to run for only the first $n-1$ elements, rather than for all $n$ elements? Give the best-case and worst-case running times of selection sort in $\Theta$-notation.}
+\paragraph{Pseudocode:}
+\subparagraph{}
+\begin{algorithm}
+    \setstretch{1.35}
+    \caption{SELCTION-SORT}
+    $n=A.length$
+    \For {i=1 to n-1} {
+        $index=i$\\
+        \For {j=i+1 to n} {
+            \If{A[j]<A[index]}{
+                \BlankLine
+                $index=j$\\
+            }
+        }
+        \BlankLine
+        $swap(A[i],A[index])$\\
+    }
+\end{algorithm}
+\paragraph{Loop invariant:}
+\subparagraph{在循环初始，子数组$A[1..i-1]$由最小的$i-1$个元素有序排列而成}
+\paragraph{Why does it need to run for only the first $n-1$ elements, rather than for all $n$ elements?}
+\subparagraph{经过n-1次迭代，子数组$A[1..n-1]$由最小的$n-1$个元素有序排列而成,因此,$A[n]$仍然是最大的元素}
+\paragraph{Running time:}
+\subparagraph{$\Theta(n^2)$}
+\end{document}

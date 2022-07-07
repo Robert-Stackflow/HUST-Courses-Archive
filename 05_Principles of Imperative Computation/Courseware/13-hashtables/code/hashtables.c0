@@ -1,0 +1,236 @@
+/* Hash tables (fixed size)
+ * 15-122 Principles of Imperative Computation, Fall 2010 
+ * Frank Pfenning
+ */
+
+/*************************/
+/* Client types and code */
+/*************************/
+
+#use <string>
+
+/* elements */
+struct elem {
+  string word;			/* key */
+  int count;			/* information */
+};
+
+/* key comparison */
+bool equal(string s1, string s2) {
+  return string_equal(s1,s2);
+}
+
+/* testing elements */
+bool is_elem(struct elem* e) {
+  return e != NULL && e->count >= 0;
+}
+
+/* extracting keys from elements */
+string elem_key(struct elem* e)
+//@requires is_elem(e);
+{
+  return e->word;
+}
+
+/* hash function */
+/* uses pseudo-random number generation, deterministically */
+int hash(string s, int m)
+//@requires m > 1;
+//@ensures 0 <= \result && \result < m;
+{
+  int a = 1664525; int b = 1013904223; /* inlined random number generator */
+  int r = 0xdeadbeef;		       /* initial seed */
+  int len = string_length(s);
+  char[] C = string_to_chararray(s);
+  int h = 0;			/* empty string maps to 0 */
+  //@assert \length(C) == len+1;
+  for (int i = 0; i < len; i++)
+    //@loop_invariant 0 <= i && i <= \length(C);
+    {
+      h = r*h + char_ord(C[i]); /* mod 2^32 */
+      r = r*a + b;	        /* mod 2^32, linear congruential random no */
+    }
+  h = h % m;			/* reduce to range */
+  //@assert -m < h && h < m;
+  if (h < 0) h += m;		/* make positive, if necessary */
+  return h;
+}
+
+/* Interface type definitions */
+/* provided above by client and used below in implementation */
+typedef string key;
+typedef struct elem* elem;  /* NULL must be an elem */
+bool is_elem(elem e);	    /* intended for contract only */
+key elem_key(elem e);
+bool equal(key k1, key k2);
+
+/**************************/
+/* Library types and code */
+/**************************/
+
+/* Chains, implemented as linked lists */
+typedef struct chain* chain;
+chain chain_new ();
+elem chain_insert(chain C, elem e);
+elem chain_search(chain C, key k);
+
+struct list {
+  elem data;
+  struct list* next;
+};
+typedef struct list* list;
+/* linked lists may be NULL (= end of list) */
+
+/* may diverge on circular lists */
+bool is_list(list l) {
+  list p = l;
+  while (p != NULL) {
+    if (!(is_elem(p->data))) return false;
+    p = p->next;
+  }
+  return true;
+}
+
+struct chain {
+  list list;
+};
+
+/* valid chains are not null */
+bool is_chain(chain C) {
+  return C != NULL && is_list(C->list);
+}
+
+chain chain_new()
+//@ensures is_chain(\result);
+{
+  chain C = alloc(struct chain);
+  C->list = NULL;
+  return C;
+}
+
+/* chain_find(p, k) returns list element whose
+ * data field has key k, or NULL if none exists
+ */
+list chain_find(chain C, key k)
+//@requires is_chain(C);
+//@ensures \result == NULL || equal(k, elem_key(\result->data));
+{ list p = C->list;
+  while (p != NULL) {
+    if (equal(k, elem_key(p->data)))
+      return p;
+    p = p->next;
+  }
+  return NULL;
+}
+
+elem chain_insert(chain C, elem e)
+//@requires is_chain(C) && is_elem(e);
+//@ensures is_chain(C);
+{
+  list p = chain_find(C, elem_key(e));
+  if (p == NULL) {
+    /* insert new element at the beginning */
+    list new_item = alloc(struct list);
+    new_item->data = e;
+    new_item->next = C->list;
+    C->list = new_item;
+    return NULL;		/* did not overwrite entry */
+  } else {
+    /* overwrite existing entry with given key */
+    elem old_e = p->data;
+    p->data = e;
+    return old_e;		/* return old entry */
+  }
+}
+
+elem chain_search(chain C, key k)
+//@requires is_chain(C);
+//@ensures \result == NULL || equal(k, elem_key(\result));
+{
+  list p = chain_find(C, k);
+  if (p == NULL) return NULL;
+  else return p->data;
+}
+
+/* Hash table interface */
+typedef struct table* table;
+table table_new (int init_size);
+elem table_insert(table H, elem e);
+elem table_search(table H, key k);
+
+/* Hash table implementation */
+/* not adaptive */
+
+/* alpha = n/m = num_elems/size */
+struct table {
+  int size;			/* m */
+  int num_elems;		/* n */
+  chain[] array;		/* \length(array) == size */
+};
+
+/* is_h_chain(C, h, m) - all of chain C's keys are equal to h */
+/* keys should also be pairwise distinct, but we do not check that */
+/* table size is m */
+bool is_h_chain (chain C, int h, int m)
+//@requires is_chain(C);
+//@requires 0 <= h && h < m;
+{
+  list p = C->list;
+  while (p != NULL) {
+    if (hash(elem_key(p->data),m) != h)
+      return false;
+    p = p->next;
+  }
+  return true;
+}
+
+bool is_table(table H)
+//@requires H != NULL && H->size == \length(H->array);
+{
+  int i; int m;
+  /* array elements may be NULL or chains */
+  if (H == NULL) return false;
+  m = H->size;
+  if (!(m > 1)) return false;
+  for (i = 0; i < m; i++) {
+    chain C = H->array[i];
+    if (!(C == NULL || is_h_chain(C, i, m))) return false;
+  }
+  return true;
+}
+
+table table_new(int init_size)
+//@requires init_size > 1;
+//@ensures is_table(\result);
+{
+  chain[] A = alloc_array(chain, init_size);
+  table H = alloc(struct table);
+  H->size = init_size;
+  H->num_elems = 0;
+  H->array = A;			/* all initialized to NULL; */
+  return H;
+}
+
+elem table_insert(table H, elem e)
+//@requires is_table(H) && is_elem(e);
+//@ensures is_table(H);
+//@ensures \result == NULL || is_elem(\result);
+{ 
+  key k = elem_key(e);
+  int h = hash(k, H->size);
+  if (H->array[h] == NULL)
+    H->array[h] = chain_new();
+  elem old_e = chain_insert(H->array[h], e);
+  if (old_e != NULL) return old_e; /* key already present */
+  H->num_elems++;
+  return NULL;
+}
+
+elem table_search(table H, key k)
+//@requires is_table(H);
+//@ensures \result == NULL || (is_elem(\result) && equal(elem_key(\result), k));
+{
+  int h = hash(k, H->size);
+  if (H->array[h] == NULL) return NULL;
+  return chain_search(H->array[h], k);
+}

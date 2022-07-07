@@ -1,0 +1,84 @@
+/* 
+ * Pointers
+ * 
+ * 15-122 Principles of Imperative Computation */
+
+#use <util>
+
+typedef int pixel;
+
+struct point_header {
+  int x;
+  int y;
+};
+
+typedef struct point_header point;
+
+struct img_header {
+  int width;
+  int height; 
+  pixel[] pixels;
+};
+
+typedef struct img_header img;
+
+bool is_img(struct img_header* IMG) {
+  if (IMG == NULL) return false;
+  if (!(IMG->width > 0)) return false; 
+  if (!(IMG->height > 0)) return false; 
+  if (!(IMG->width <= int_max() / IMG->height)) return false; 
+  //@assert IMG->width * IMG->height == \length(IMG->pixels); 
+  return true;
+}
+
+struct list_node {
+  int data;
+  struct list_node* next;
+};
+
+typedef struct list_node list;
+
+// Doesn't (necessarily) terminate
+bool is_segment(list* head, list* tail) {
+  if (head == NULL) return false;
+  while (head != tail) {
+    if (head == NULL) return false;
+    head = head->next;
+  }
+  return true;
+}
+
+// Checks length
+bool is_segment_length(list* head, list* tail, int length) {
+  for (int i = 0; i < length; i++) {
+    if (head == NULL) return false;
+    head = head->next;
+  }
+  return head == tail;
+}
+
+// Checks circularity
+bool is_circular(list* l) {
+  if (l == NULL) return false;
+  list* t = l;
+  list* h = l->next;
+  while (h != t) 
+    //@loop_invariant is_segment(t, h);
+    {
+      if (h == NULL || h->next == NULL) return false;
+      t = t->next;
+      h = h->next->next;
+    }
+  return true;
+}
+
+// Always returns true or false
+bool is_segment_terminating(list* head, list* tail) {
+  if (is_circular(head)) return false;
+  if (head == NULL) return false;
+  while (head != tail) {
+    if (head == NULL) return false;
+    head = head->next;
+  }
+  return true;
+}

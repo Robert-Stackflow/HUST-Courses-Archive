@@ -1,0 +1,19 @@
+int search(int x, int[] A, int n)
+//@requires 0 <= n && n <= \length(A);
+//@requires is_sorted(A, 0, n);
+/*@ensures (-1 == \result && !is_in(x, A, 0, n)) /* by (14) (3) and (18) (17) (3) */
+        || ((0 <= \result && \result < n)        /* by (13) (10) (9) */
+            && A[\result] == x);                 /* by (13) */
+  @*/
+{
+  for (int i = 0; i < n; i++)
+    //@loop_invariant 0 <= i && i <= n;          /* by (10) (9) (2) */
+    //@loop_invariant i == 0 || x > A[i-1];      /* by (9) (15) */
+    {
+      if (A[i] == x) return i;
+      else if (x < A[i]) return -1;
+      //@assert A[i] < x;                        /* by (13) (14) */
+    }
+  //@assert n == 0 || x > A[n-1];                /* by (9) (10) (11) */
+  return -1;
+}

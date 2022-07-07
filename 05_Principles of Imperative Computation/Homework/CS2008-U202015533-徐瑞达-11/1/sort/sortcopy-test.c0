@@ -1,0 +1,32 @@
+//cc0 -d -w sort.c0 sortcopy-test.c0
+//./a.out
+#use <string>
+#use <conio>
+
+void print_res(string[] A, int alen)
+//@requires alen == \length(A);
+{
+    for (int i = 0; i < alen; i++)
+    //@loop_invariant 0 <= i && i <= alen;
+        println(A[i]);
+    printf("----------------------------\n");
+}
+
+int main()
+{
+    int len = 5;
+    string[] A = alloc_array(string, len);
+    A[0] = "abort";
+    A[1] = "zoo";
+    A[2] = "banana";
+    A[3] = "abortion";
+    A[4] = "down";
+    println("Before sortcopy A:");
+    print_res(A, len);
+    string[] B = sortcopy(A, 0, len);
+    println("After sortcopy A:");
+    print_res(A, len);
+    println("The sorted array is:");
+    print_res(B, len);
+    return 0;
+}

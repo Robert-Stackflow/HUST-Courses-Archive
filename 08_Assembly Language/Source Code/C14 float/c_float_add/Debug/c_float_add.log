@@ -1,0 +1,4 @@
+﻿  c_float_add.c
+C:\新书示例\C14_float\c_float_add\c_float_add.c(8,10): warning C4305: “=”: 从“double”到“float”截断
+C:\新书示例\C14_float\c_float_add\c_float_add.c(9,11): warning C4305: “=”: 从“double”到“float”截断
+  c_float_add.vcxproj -> C:\新书示例\C14_float\Debug\c_float_add.exe

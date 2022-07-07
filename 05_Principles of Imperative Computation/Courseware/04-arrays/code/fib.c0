@@ -1,0 +1,14 @@
+int[] fib(int n)
+//@requires n >= 0;
+//@ensures \length(\result) == n;
+{
+  int[] F = alloc_array(int, n);
+  if (n > 0) F[0] = 0;
+  if (n > 1) F[1] = 1;
+  for (int i = 0; i < n-2; i++)
+    //@loop_invariant i >= 0;
+    {
+      F[i+2] = F[i+1] + F[i];
+    }
+  return F;
+}

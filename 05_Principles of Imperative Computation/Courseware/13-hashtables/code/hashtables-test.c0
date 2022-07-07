@@ -1,0 +1,38 @@
+/* Testing hash tables
+ * 15-122 Principles of Imperative Computation
+ * Frank Pfenning
+ */
+
+// cc0 -lstring -lconio hashtables.c0 hashtables-test.c0 -d
+
+#use <conio>
+#use <string>
+
+int main () {
+  int n = (1<<9)+1; // start with 1<<10 for timing; 1<<9 for -d
+  int num_tests = 10; // start with 1000 for timing; 10 for -d
+  int i; int j;
+
+  print("Testing array of size "); printint(n/5);
+  print(" with "); printint(n); print(" values, ");
+  printint(num_tests); print(" times\n");
+  for (j = 0; j < num_tests; j++) {
+    table H = table_new(n/5);
+    for (i = 0; i < n; i++) {
+      elem e = alloc(struct elem);
+      e->word = string_fromint(j*n+i);
+      e->count = j*n+i;
+      table_insert(H, e);
+    }
+    for (i = 0; i < n; i++) {
+      /* missing existing element? */
+      assert(table_search(H, string_fromint(j*n+i))->count == j*n+i);
+    }
+    for (i = 0; i < n; i++) {
+      /* finding nonexistent element? */
+      assert(table_search(H, string_fromint((j+1)*n+i)) == NULL);
+    }
+  }
+  print("All tests passed!\n");
+  return 0;
+}

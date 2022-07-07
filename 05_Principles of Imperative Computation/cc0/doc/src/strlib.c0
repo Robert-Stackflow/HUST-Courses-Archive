@@ -1,0 +1,23 @@
+#use <string>
+
+char char_tolower(char c) {
+  int ccode = char_ord(c);
+  if (char_ord('A') <= ccode && ccode <= char_ord('Z')) {
+    int shift = char_ord('a') - char_ord('A');
+    return char_chr(ccode + shift);
+  } else {
+    return c;
+  }
+}
+
+string string_lower(string s)
+//@ensures string_length(s) == string_length(\result);
+{
+  int len = string_length(s);
+  char[] A = string_to_chararray(s);
+  char[] B = alloc_array(char, len+1);
+  for (int i = 0; i < len; i++)
+    B[i] = char_tolower(A[i]);
+  B[len] = '\0';  /* redundant */
+  return string_from_chararray(B);
+}

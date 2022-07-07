@@ -1,0 +1,8 @@
+/* 
+ * What is an element?
+ * 
+ * 15-122 Principles of Imperative Computation */
+
+
+// typedef _________ elem;
+typedef string elem;

@@ -1,0 +1,45 @@
+/**
+ * Merge Sort
+ */
+void merge(int[] A, int lower, int mid, int upper)
+//@requires 0 <= lower && lower < mid && mid < upper && upper <= \length(A);
+//@requires is_sorted(A, lower, mid) && is_sorted(A, mid, upper);
+//@ensures is_sorted(A, lower, upper);
+{ 
+  int[] B = alloc_array(int, upper-lower);
+  int i = lower; int j = mid; int k = 0;
+  while (i < mid && j < upper)
+    //@loop_invariant lower <= i && i <= mid;
+    //@loop_invariant mid <= j && j <= upper;
+    //@loop_invariant 0 <= k && k <= upper-lower;    /*replace later*/
+    {
+      if (A[i] <= A[j]) {
+        B[k] = A[i]; i++;
+      } else {
+        B[k] = A[j]; j++;
+      }
+      k++;
+    }
+  //@assert i == mid || j == upper;
+  while (i < mid) { B[k] = A[i]; i++; k++; }
+  while (j < upper) { B[k] = A[j]; j++; k++; }
+  for (k = 0; k < upper-lower; k++)
+    A[lower+k] = B[k];
+}
+
+
+
+
+
+
+void sort(int[] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+//@ensures is_sorted(A, lower, upper);
+{
+  if (upper - lower <= 1) return;
+  int mid = lower + (upper-lower)/2;
+  //@assert lower < mid && mid < upper;
+  sort(A, lower, mid);
+  sort(A, mid, upper);
+  merge(A, lower, mid, upper);
+}

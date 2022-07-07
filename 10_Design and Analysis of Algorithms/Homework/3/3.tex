@@ -1,0 +1,127 @@
+\documentclass[a4paper]{article}
+\PassOptionsToPackage{quiet}{xeCJK}
+\usepackage[margin=1in]{geometry}
+\usepackage{ctex}
+\usepackage{xeCJK}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage[noend,ruled,noline]{algorithm2e}
+\title{\heiti\zihao{2} 算法设计与分析}
+\author{\songti CS2008班   U202015533  徐瑞达}
+\date{2022.03.26}
+\begin{document}
+\maketitle
+% \tableofcontents
+% \newpage
+\section{2-4:逆序对}
+\paragraph{a.列出<2,3,8,6,1>的5个逆序对}
+\subparagraph{$(1,5),(2,5),(3,4),(3,5),(4,5)$}
+\paragraph{b.由1-n中的数字构成的什么数组拥有最多的逆序对}
+\subparagraph{数组$<n,n-1,\dots,1>$拥有最多的逆序对，共有$(n-1)+(n-2)+ \dots +1=n(n-1)/2$个逆序对。}
+\paragraph{c.插入排序的运行时间与输入数组中逆序对的数量之间有什么关系，阐述并证明之}
+\subparagraph{插入排序的运行时间与逆序对数量之间为常数级关系。}
+\subparagraph{令$N(i)$表示在某个i下的逆序对个数，则$\sum_{i=1}^nN(i)$表示数组的逆序对个数。}
+\subparagraph{在插入排序算法中的$while$循环中，对于每个下标小于$j$但是值大于$A[j]$的元素，该循环都会执行一次，因此，该循环会执行$N(j)$次。而对于在$for$循环中的每次迭代，我们都会进入一次$while$循环，所以插入排序的常量运行次数为$\sum_{i=1}^nN(i)$，也就是A的逆序对个数。}
+\paragraph{d.在最坏时间复杂度为$\Theta(n \lg n)$的前提下，给出一个确定逆序对数量的算法(修改归并排序)}
+\subparagraph{}
+\begin{algorithm}
+    \setstretch{1.35}
+    \caption{INVERSIONS($A,p,r$)}
+    \If{p<r}{
+        $q=\lfloor (p+r)/2 \rfloor$\\
+        left=INVERSIONS($A,p,q$)\\
+        right=INVERSIONS($A,q+1,r$)\\
+        count=AUXILIARY-FUNCTION($A,p,q,r$)+left+right\\
+        return  count\\
+    }
+\end{algorithm}
+\begin{algorithm}
+    \setstretch{1.35}
+    \caption{AUXILIARY-FUNCTION($A,p,q,r$)}
+    $n_{1}=q-p+1$\\
+    $n_{2}=r-q$\\
+    let $L[1..n_{1}+1]$ and $R[1..n_{2}+1]$ be new arrays\\
+    \For {i=1 to $n_{1}$} {
+    $L[i]=A[p+i-1]$
+    }
+    \For {j=1 to $n_{2}$} {
+    $R[j]=A[q+j]$
+    }
+    $L[n_{1}+1]=\infty$\\
+    $R[n_{2}+1]=\infty$\\
+    $i=1$\\
+    $j=1$\\
+    \For {$k=p\quad to\quad r$} {
+    \If{$L[i] \leq R[j]$}{
+    $A[k]=L[i]$\\
+    $i=i+1$\\
+    }
+    \BlankLine
+    \Else{
+    $count=count+n_{1}-i+1$\\
+    $A[k]=R[j]$\\
+    $j=j+1$\\
+    }
+    }
+    return  count
+\end{algorithm}
+\section{4.1-5:对算法的理解}
+\paragraph{
+    由算法得知:已知$A[1,\dots,j]$的最大子数组时，$A[1,\dots,j+1]$的最大子数组要么与其相同，要么为$A[i,\dots,j+1],1\geq i \geq j+1$。
+    在循环中，$j$由$1$遍历到$n$，每次循环内，更新最大下标为$j$，若当前和大于0，则加上$A[j]$，否则更新最小下标并更新和，将和与最大和比较并更新最大和及上下标，
+    避免了递归过程，并且仅使用了线性时间完成算法。
+    }
+\section{4.1-2:证明递归式$T(n)=T(\lceil n/2 \rceil)+1$的解为$O(\lg n)$}
+\paragraph{假设$T(n)\leq c\lg (n-a)$，}
+\begin{center}
+    $T(n)\leq c\lg (\lceil n/2 \rceil-a)+1$\\
+    $\leq c\lg ((n+1)/2-a)+1$\\
+    $= c\lg ((n+1-2a)/2)+1$\\
+    $= c\lg (n+1-2a)-c\lg 2+1 \quad (c\geq 1)$\\
+    $\leq c\lg (n+1-2a) \quad (a\geq 1)$\\
+    $\leq c\lg (n-a)$\\
+\end{center}
+\paragraph{因此得到递归式$T(n)=T(\lceil n/2 \rceil)+1$的解为$O(\lg n)$}
+\section{4.3-9:求解递归式$T(n)=3T(\sqrt{n})+\log n$}
+\paragraph{首先}
+\begin{center}
+    $T(n)=3T(\sqrt{n})+\log n \quad $令$m=\lg n$\\
+    $T(2^m)=3T(2^{m/2})+m$\\
+    $S(m)=3S(m/2)+m.$\\
+\end{center}
+\paragraph{假设$S(m) \leq cm^{\lg 3}+dm$，则}
+\begin{center}
+    $S(m)\leq 3(c(m/2)^{\lg 3}+d(m/2))+m$\\
+    $\leq cm^{\lg 3}+(\frac{3}{2}d+1)m \quad (d\leq -2)$\\
+    $\leq cm^{\lg 3}+dm$\\
+\end{center}
+\paragraph{假设$S(m) \geq cm^{\lg 3}+dm$，则}
+\begin{center}
+    $S(m)\geq 3(c(m/2)^{\lg 3}+d(m/2))+m$\\
+    $\geq cm^{\lg 3}+(\frac{3}{2}d+1)m \quad (d\geq -2)$\\
+    $\geq cm^{\lg 3}+dm$\\
+\end{center}
+\section{4.4-6:对递归式$T(n)=T(n/3)+T(2n/3)+cn$利用递归树证明其解是$\Omega(n\log n)$，其中$c$是一个常数。}
+\paragraph{根据每个结点的最左孩子可以得出从根到叶子结点的最短简单路径，因此可得:}
+\begin{center}
+    $cn(\log _{3}n+1)\geq cn\log _{3}n=\frac{c}{\log _{3}}n\log n=\Omega(n\log n).$)
+\end{center}
+\section{4.5-1:用主方法给出以下递归式的紧确渐近界:}
+\paragraph{(b)$T(n)=2T(n/4)+n^{1/2}$}
+\subparagraph{$\Theta(n^{\log _{4}2}\lg n)=\Theta(\sqrt{n}\lg n)$}
+\paragraph{(d)$T(n)=2T(n/4)+n^2$}
+\subparagraph{$\Theta(n^2)$}
+\section{4.5-4:主方法能否应用于递归式$T(n)=4T(n/2)+n^2\log n$?为什么?给出其渐近上界。}
+\paragraph{当$a=4,b=2$时，有$f(n)=n^2\lg n \neq O(n^{2-\epsilon}) \neq \Omega(n^{2+\epsilon})$，因此不能使用主方法。}
+\paragraph{
+    假设$T(n)\leq cn^2(\lg n)^2$，将$n$替换为$n/2$得:\\
+    $T(n)=4T(n/2)+n^2\lg n$\\
+    $\leq 4c(n/2)^2(\lg(n/2))^2+n^2\lg n$\\
+    $=cn^2\lg (n/2)\lg n-cn^2\lg (n/2)\lg 2+n^2\lg n$\\
+    $=cn^2(\lg n)^2-cn^2\lg n\lg 2-cn^2\lg (n/2) \lg 2 +n^2 lg n$\\
+    $=cn^2(\lg n)^2+(1-c\lg 2)n^2\lg n-cn^2\lg (n/2)\lg 2\quad(c\geq 1/\lg 2)$\\
+    $\leq cn^2(\lg n)^2-cn^2\lg(n/2)\lg 2$\\
+    $\leq cn^2(\lg n)^2$\\
+    也即渐近上界为$cn^2(\lg n)^2$.
+}
+\end{document}

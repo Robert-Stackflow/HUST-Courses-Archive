@@ -1,0 +1,18 @@
+// Linear congruential pseudorandom number generator
+// According to Wikipedia according to "Numerical Recipes"
+// Not for anything serious, but okay for testing
+
+struct rand {
+  int seed;
+};
+
+rand_t init_rand (int seed) {
+  rand_t gen = alloc(struct rand);
+  gen->seed = seed;
+  return gen;
+}
+
+int rand(rand_t gen) {
+  gen->seed = gen->seed * 1664525 + 1013904223;
+  return gen->seed;
+}

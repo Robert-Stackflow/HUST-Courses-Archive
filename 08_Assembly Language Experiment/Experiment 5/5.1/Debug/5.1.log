@@ -1,0 +1,27 @@
+﻿  Assembling demo.asm...
+demo.asm(1): error A2013: .MODEL must precede this directive
+demo.asm(2): error A2119: language type must be specified
+demo.asm(4): error A2034: must be in segment block
+demo.asm(5): error A2034: must be in segment block
+demo.asm(6): error A2034: must be in segment block
+demo.asm(7): error A2013: .MODEL must precede this directive
+demo.asm(9): error A2034: must be in segment block : start
+demo.asm(10): error A2034: must be in segment block
+demo.asm(11): error A2034: must be in segment block
+demo.asm(12): error A2034: must be in segment block
+demo.asm(13): error A2034: must be in segment block
+demo.asm(14): error A2034: must be in segment block
+demo.asm(15): error A2034: must be in segment block
+demo.asm(16): error A2034: must be in segment block
+demo.asm(18): error A2034: must be in segment block
+demo.asm(19): error A2034: must be in segment block
+demo.asm(20): error A2034: must be in segment block
+demo.asm(21): error A2034: must be in segment block
+demo.asm(22): error A2034: must be in segment block
+demo.asm(23): error A2034: must be in segment block
+demo.asm(24): error A2034: must be in segment block
+demo.asm(26): error A2034: must be in segment block
+demo.asm(27): error A2034: must be in segment block
+demo.asm(28): error A2034: must be in segment block
+demo.asm(29): fatal error A1010: unmatched block nesting : start
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: 命令“ml.exe /c /nologo /Zi /Fo"Debug\demo.obj" /W3 /errorReport:prompt  /Tademo.asm”已退出，返回代码为 1。

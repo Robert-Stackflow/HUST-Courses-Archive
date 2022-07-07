@@ -1,0 +1,11 @@
+int exploop(int b, int e)
+//@requires e >= 0;
+{
+  int result = 1;
+  int i = 0;
+  while (i < e) {
+    result = result * b;
+    i = i+1;
+  }
+  return result;
+}

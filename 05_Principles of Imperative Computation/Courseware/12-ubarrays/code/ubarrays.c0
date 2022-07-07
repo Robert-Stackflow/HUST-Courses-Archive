@@ -1,0 +1,305 @@
+/* Unbounded arrays
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning, Rob Simmons
+ */
+
+#use <util>
+
+typedef string elem;
+
+/* Interface of unbounded arrays */
+
+typedef struct uba_header* uba;
+
+uba uba_new(int initial_limit)
+//@requires initial_limit > 0;
+  ;
+
+int uba_size(uba L)                      /* "Size of used portion of L" */
+//@ensures \result >= 0;
+  ;
+
+elem uba_get(uba L, int index)           /* "L[index]" */
+//@requires 0 <= index && index < uba_size(L);
+  ;
+
+void uba_set(uba L, int index, elem e)   /* "L[index] = e" */
+//@requires 0 <= index && index < uba_size(L);
+  ;
+
+void uba_add(uba L, elem e);             /* add e at the end of L */
+
+elem uba_rem(uba L)                      /* remove last element in L */
+//@requires uba_size(L) > 0;
+  ;
+
+/* Implementation of unbounded arrays */
+
+
+
+
+
+
+
+
+
+struct uba_header {
+  int limit;                    /* 0 < limit */
+  int size;			/* 0 <= size && size <= limit */
+  elem[] A;			/* \length(A) == limit */
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bool is_uba (uba L)
+{
+  if (L == NULL) return false;
+  if (!(0 <= L->size)) return false;
+  if (!(L->size <= L->limit)) return false;
+  if (!(0 < L->limit)) return false;
+  //@assert L->limit == \length(L->A);
+  return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+uba uba_new (int initial_limit)
+//@requires initial_limit > 0;
+//@ensures is_uba(\result);
+{
+  uba L = alloc(struct uba_header);
+  L->limit = initial_limit;
+  L->size = 0;
+  L->A = alloc_array(elem, L->limit);
+  return L;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int uba_size(uba L)
+//@requires is_uba(L);
+{
+  return L->size;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+elem uba_get(uba L, int index)
+//@requires is_uba(L);
+//@requires 0 <= index && index < L->size;
+{
+  return L->A[index];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void uba_set(uba L, int index, elem e)
+//@requires is_uba(L);
+//@requires 0 <= index && index < L->size;
+{
+  L->A[index] = e;
+  return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* uba_resize(L, new_limit) resizes L to new_limit */
+/* copies old values between 0 and L->size to new array */
+void uba_resize(uba L, int new_limit)
+//@requires is_uba(L);
+//@requires L->size < new_limit;
+//@ensures is_uba(L);
+//@ensures L->limit == new_limit && L->size == \old(L->size);
+//@ensures L->size < L->limit;
+{
+  elem[] B = alloc_array(elem, new_limit);
+  for (int i = 0; i < L->size; i++)
+    //@loop_invariant 0 <= i && i <= L->size;
+    {
+      B[i] = L->A[i];
+    }
+  L->limit = new_limit;
+  /* L->size remains unchanged */
+  L->A = B;
+  return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void uba_add(uba L, elem e)
+//@requires is_uba(L);
+//@ensures is_uba(L);
+{
+  if (L->size == L->limit) {
+    /* Check for overflow */
+    assert(L->limit <= int_max()/2);
+    uba_resize(L, 2*L->limit);
+  }
+
+  //@assert L->size < L->limit;
+  L->A[L->size] = e;
+  L->size++;
+  return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+elem uba_rem(uba L)
+//@requires is_uba(L);
+//@requires L->size > 0;
+//@ensures is_uba(L);
+{
+  if (L->size <= L->limit/4 && L->limit >= 2)
+    uba_resize(L, L->limit/2);
+  L->size--;
+  elem e = L->A[L->size];
+  return e;
+}
+
+
+
+

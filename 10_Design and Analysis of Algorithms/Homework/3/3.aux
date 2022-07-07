@@ -1,0 +1,35 @@
+\relax 
+\providecommand \oddpage@label [2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}2-4:逆序对}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{a.列出<2,3,8,6,1>的5个逆序对}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{$(1,5),(2,5),(3,4),(3,5),(4,5)$}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{b.由1-n中的数字构成的什么数组拥有最多的逆序对}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{数组$<n,n-1,\dots  ,1>$拥有最多的逆序对，共有$(n-1)+(n-2)+ \dots  +1=n(n-1)/2$个逆序对。}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{c.插入排序的运行时间与输入数组中逆序对的数量之间有什么关系，阐述并证明之}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{插入排序的运行时间与逆序对数量之间为常数级关系。}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{令$N(i)$表示在某个i下的逆序对个数，则$\sum _{i=1}^nN(i)$表示数组的逆序对个数。}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{在插入排序算法中的$while$循环中，对于每个下标小于$j$但是值大于$A[j]$的元素，该循环都会执行一次，因此，该循环会执行$N(j)$次。而对于在$for$循环中的每次迭代，我们都会进入一次$while$循环，所以插入排序的常量运行次数为$\sum _{i=1}^nN(i)$，也就是A的逆序对个数。}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{d.在最坏时间复杂度为$\Theta (n \lg  n)$的前提下，给出一个确定逆序对数量的算法(修改归并排序)}{1}{}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces INVERSIONS($A,p,r$)}}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{}{1}{}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces AUXILIARY-FUNCTION($A,p,q,r$)}}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}4.1-5:对算法的理解}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{ 由算法得知:已知$A[1,\dots  ,j]$的最大子数组时，$A[1,\dots  ,j+1]$的最大子数组要么与其相同，要么为$A[i,\dots  ,j+1],1\geq i \geq j+1$。 在循环中，$j$由$1$遍历到$n$，每次循环内，更新最大下标为$j$，若当前和大于0，则加上$A[j]$，否则更新最小下标并更新和，将和与最大和比较并更新最大和及上下标， 避免了递归过程，并且仅使用了线性时间完成算法。 }{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}4.1-2:证明递归式$T(n)=T(\lceil n/2 \rceil )+1$的解为$O(\lg  n)$}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{假设$T(n)\leq c\lg  (n-a)$，}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{因此得到递归式$T(n)=T(\lceil n/2 \rceil )+1$的解为$O(\lg  n)$}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}4.3-9:求解递归式$T(n)=3T(\sqrt  {n})+\log  n$}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{首先}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{假设$S(m) \leq cm^{\lg  3}+dm$，则}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{假设$S(m) \geq cm^{\lg  3}+dm$，则}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}4.4-6:对递归式$T(n)=T(n/3)+T(2n/3)+cn$利用递归树证明其解是$\Omega (n\log  n)$，其中$c$是一个常数。}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{根据每个结点的最左孩子可以得出从根到叶子结点的最短简单路径，因此可得:}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}4.5-1:用主方法给出以下递归式的紧确渐近界:}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{(b)$T(n)=2T(n/4)+n^{1/2}$}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{$\Theta (n^{\log  _{4}2}\lg  n)=\Theta (\sqrt  {n}\lg  n)$}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{(d)$T(n)=2T(n/4)+n^2$}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{$\Theta (n^2)$}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}4.5-4:主方法能否应用于递归式$T(n)=4T(n/2)+n^2\log  n$?为什么?给出其渐近上界。}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{当$a=4,b=2$时，有$f(n)=n^2\lg  n \neq  O(n^{2-\epsilon }) \neq  \Omega (n^{2+\epsilon })$，因此不能使用主方法。}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{ 假设$T(n)\leq cn^2(\lg  n)^2$，将$n$替换为$n/2$得:\\ $T(n)=4T(n/2)+n^2\lg  n$\\ $\leq 4c(n/2)^2(\lg  (n/2))^2+n^2\lg  n$\\ $=cn^2\lg  (n/2)\lg  n-cn^2\lg  (n/2)\lg  2+n^2\lg  n$\\ $=cn^2(\lg  n)^2-cn^2\lg  n\lg  2-cn^2\lg  (n/2) \lg  2 +n^2 lg n$\\ $=cn^2(\lg  n)^2+(1-c\lg  2)n^2\lg  n-cn^2\lg  (n/2)\lg  2\hskip 1em\relax (c\geq 1/\lg  2)$\\ $\leq cn^2(\lg  n)^2-cn^2\lg  (n/2)\lg  2$\\ $\leq cn^2(\lg  n)^2$\\ 也即渐近上界为$cn^2(\lg  n)^2$. }{4}{}\protected@file@percent }
+\gdef \@abspage@last{4}

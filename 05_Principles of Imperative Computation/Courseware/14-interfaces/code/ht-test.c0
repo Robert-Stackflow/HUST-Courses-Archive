@@ -1,0 +1,101 @@
+/* Testing hash tables
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning, Rob Simmons
+ */
+
+#use <conio>
+#use <string>
+
+int main () {
+  {
+    println("Testing with Lecture 1's black-box testing code");
+    elem E1 = alloc(struct word_with_color); E1->word = "a";
+    elem E2 = alloc(struct word_with_color); E2->word = "c";
+    elem E3 = alloc(struct word_with_color); E3->word = "a";
+    elem E4 = alloc(struct word_with_color); E4->word = "c";
+    
+    ht H = ht_new(5);
+    assert(H != NULL);
+    assert(ht_lookup(H, "") == NULL);
+    assert(ht_lookup(H, "non-boundary case") == NULL);
+    
+    ht_insert(H, E1);
+    assert(ht_lookup(H, "a") == E1);
+    assert(ht_lookup(H, "b") == NULL);
+    assert(ht_lookup(H, "") == NULL);
+    
+    ht_insert(H, E2);
+    assert(ht_lookup(H, "a") == E1);
+    assert(ht_lookup(H, "c") == E2);
+    assert(ht_lookup(H, "") == NULL);
+    
+    ht_insert(H, E3);
+    assert(ht_lookup(H, "a") == E3);
+    assert(ht_lookup(H, "c") == E2);
+
+    ht_insert(H, E4);
+    assert(ht_lookup(H, "c") == E4);
+    assert(ht_lookup(H, "a") == E3);
+  }
+
+  {
+    println("Testing with Lecture 2's black-box testing code");
+    elem E1 = alloc(struct word_with_color); E1->word = "waffles";
+    elem E2 = alloc(struct word_with_color); E2->word = "waffles";
+    elem E3 = alloc(struct word_with_color); E3->word = "fruit";
+    elem E4 = alloc(struct word_with_color); E4->word = "";
+
+    ht H = ht_new(5);
+    assert(NULL == ht_lookup(H, ""));
+    assert(NULL == ht_lookup(H, "pancakes"));
+    
+    ht_insert(H, E1);
+    assert(ht_lookup(H, "waffles") == E1);
+    assert(ht_lookup(H, "") == NULL);
+    assert(ht_lookup(H, "pancakes") == NULL);
+    assert(ht_lookup(H, "waffles") == E1);
+    
+    ht_insert(H, E2);
+    assert(ht_lookup(H, "waffles") == E2);
+
+    ht_insert(H, E3);
+    assert(ht_lookup(H, "waffles") == E2);
+    assert(ht_lookup(H, "fruit") == E3);
+    assert(ht_lookup(H, "") == NULL);
+    assert(ht_lookup(H, "pancakes") == NULL);
+    
+    ht_insert(H, E4);
+    assert(ht_lookup(H, "") == E4);
+    assert(ht_lookup(H, "waffles") == E2);
+    assert(ht_lookup(H, "fruit") == E3);
+    assert(ht_lookup(H, "pancakes") == NULL);
+  }
+
+  int n = (1<<15)+1;
+  int num_tests = 2;
+  print("Testing array of size "); printint(n/5);
+  print(" with "); printint(n); print(" values, ");
+  printint(num_tests); print(" times\n");
+  for (int j = 0; j < num_tests; j++) {
+    ht H = ht_new(n/5);         /* table will end up with load factor 5 */
+    for (int i = 0; i < n; i++) {
+      elem e = alloc(struct word_with_color);
+      e->word = string_fromint(j*n+i);
+      e->color = string_fromint(j*n+i);
+      ht_insert(H, e);
+    }
+    for (int i = 0; i < n; i++) {
+      /* missing existing element? */
+      assert(string_equal(ht_lookup(H, string_fromint(j*n+i))->color,
+                          string_fromint(j*n+i)));
+    }
+    for (int i = 0; i < n; i++) {
+      /* finding nonexistent element? */
+      assert(ht_lookup(H, string_fromint((j+1)*n+i)) == NULL);
+    }
+    // ht_stats(H);
+  }
+
+  print("All tests passed!\n");
+  return 0;
+}

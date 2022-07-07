@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>hust.cs.javacourse.search.index.impl.Index</OriginalElement>
+  <nodes>
+    <node x="-68.25" y="341.66101694915255">hust.cs.javacourse.search.index.impl.Index</node>
+    <node x="-60.75" y="-58.28813559322033">hust.cs.javacourse.search.index.FileSerializable</node>
+    <node x="-68.25" y="60.18644067796612">hust.cs.javacourse.search.index.AbstractIndex</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="hust.cs.javacourse.search.index.AbstractIndex" target="hust.cs.javacourse.search.index.FileSerializable" relationship="REALIZATION">
+      <point x="0.0" y="-120.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="hust.cs.javacourse.search.index.impl.Index" target="hust.cs.javacourse.search.index.AbstractIndex" relationship="GENERALIZATION">
+      <point x="-0.07203389830505103" y="-145.4152542372882" />
+      <point x="78.67796610169495" y="318.0" />
+      <point x="78.75" y="318.0" />
+      <point x="0.0" y="120.0" />
+    </edge>
+  </edges>
+  <settings layout="分层" zoom="0.9698630136986301" showDependencies="false" x="78.5" y="296.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>字段</Category>
+    <Category>属性</Category>
+    <Category>方法</Category>
+    <Category>构造函数</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

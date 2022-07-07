@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "溢出标志的理解", "溢出标志的理解\溢出标志的理解.vcxproj", "{45AB3C73-2291-4390-9A03-470676F1D53C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "标志位实验", "标志位实验\标志位实验.vcxproj", "{28982706-3DA3-4539-A3FB-670B8A93F3D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45AB3C73-2291-4390-9A03-470676F1D53C}.Debug|x64.ActiveCfg = Debug|x64
+		{45AB3C73-2291-4390-9A03-470676F1D53C}.Debug|x64.Build.0 = Debug|x64
+		{45AB3C73-2291-4390-9A03-470676F1D53C}.Debug|x86.ActiveCfg = Debug|Win32
+		{45AB3C73-2291-4390-9A03-470676F1D53C}.Debug|x86.Build.0 = Debug|Win32
+		{45AB3C73-2291-4390-9A03-470676F1D53C}.Release|x64.ActiveCfg = Release|x64
+		{45AB3C73-2291-4390-9A03-470676F1D53C}.Release|x64.Build.0 = Release|x64
+		{45AB3C73-2291-4390-9A03-470676F1D53C}.Release|x86.ActiveCfg = Release|Win32
+		{45AB3C73-2291-4390-9A03-470676F1D53C}.Release|x86.Build.0 = Release|Win32
+		{28982706-3DA3-4539-A3FB-670B8A93F3D1}.Debug|x64.ActiveCfg = Debug|x64
+		{28982706-3DA3-4539-A3FB-670B8A93F3D1}.Debug|x64.Build.0 = Debug|x64
+		{28982706-3DA3-4539-A3FB-670B8A93F3D1}.Debug|x86.ActiveCfg = Debug|Win32
+		{28982706-3DA3-4539-A3FB-670B8A93F3D1}.Debug|x86.Build.0 = Debug|Win32
+		{28982706-3DA3-4539-A3FB-670B8A93F3D1}.Release|x64.ActiveCfg = Release|x64
+		{28982706-3DA3-4539-A3FB-670B8A93F3D1}.Release|x64.Build.0 = Release|x64
+		{28982706-3DA3-4539-A3FB-670B8A93F3D1}.Release|x86.ActiveCfg = Release|Win32
+		{28982706-3DA3-4539-A3FB-670B8A93F3D1}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D7AB81B-D6C3-4B88-A37A-F981C46A3C40}
+	EndGlobalSection
+EndGlobal

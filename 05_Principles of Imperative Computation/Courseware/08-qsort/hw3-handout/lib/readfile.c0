@@ -1,0 +1,241 @@
+/* Reading files into arrays of words
+ *
+ * 15-122 Principles of Imperative Computation */
+
+#use <string>
+#use <file>
+#use <conio>
+
+/*** Interface ***/
+
+// typedef _______ string_bundle
+typedef struct fat_string_array *string_bundle;
+
+// first call read_words to read in the content of the file:
+string_bundle read_words(string filename);
+
+// to determine the length of the array in the string_bundle, use:
+int string_bundle_length(string_bundle wl);
+
+// access the array inside of the string bundle using:
+string[] string_bundle_array(string_bundle wl)
+/*@ensures \length(\result) == string_bundle_length(wl); @*/ ;
+
+
+/*** Implementation ***/
+/*** file readers -- for reading space-separated words out of a file ***/
+
+// NB: more than just space, actually -- matches any "interword" character
+// KBN 2011-1-28 updated to include more delimiters to match how I was
+// getting a sorted copy of Shakespeare's works
+bool is_space(char c) {
+  return c == ' ' || c == '\t' || c == '\n' || c == '\r'
+    || c == ',' || c == '.' || c == ';' || c == ':' || c == '"'
+    || c == '-' || c == '!' || c == '?' || c == '|' || c == '~'
+    || c == '(' || c == ')' || c == '[' || c == ']' || c == '{' || c == '}'
+    || c == '#' || c == '$' || c == '%' || c == '\'' || c == '*' || c == '+'
+    || c == '/' || c == '<' || c == '=' || c == '>' || c == '@' || c == '\\'
+    || c == '&' || c == '^' || c == '_' || c == '`';
+}
+
+/* returns the word in sentence starting at i, lowercased, and sets *newi
+   to the beginning of the next word, or just past the end of the sentence
+   if there is no next word */
+string word(string sentence, int i, int *newi)
+//@requires 0 <= i && i < string_length(sentence);
+//@requires !is_space(string_charat(sentence, i));
+//@ensures string_length(\result) > 0;
+//@ensures *newi <= string_length(sentence);
+{
+  int j = i+1;
+  int len = string_length(sentence);
+  /* find next space */
+  while (j < len && !is_space(string_charat(sentence, j)))
+    //@loop_invariant 0 <= j && j <= len;
+    {
+      j++;
+    }
+  *newi = j;
+  return string_tolower(string_sub(sentence, i, j));
+}
+
+int skip_space(string sentence, int i)
+//@requires 0 <= i && i <= string_length(sentence);
+/*@ensures \result == string_length(sentence) 
+        || !is_space(string_charat(sentence, \result)); @*/
+{
+  int j = i;
+  int len = string_length(sentence);
+  while (j < string_length(sentence) && is_space(string_charat(sentence, j))) {
+    j++;
+  }
+  return j;
+}
+
+struct reader {
+  file_t file;
+  string current;
+  int current_idx;
+};
+
+typedef struct reader reader_t;
+
+/* a reader is valid if its buffer pointer is either in bounds for its
+   buffer or just past the end of its buffer.
+   TODO: fit this into pre- and post-conditions of functions below... */
+bool reader_valid(reader_t *r) {
+  return r == NULL
+    || (0 <= r->current_idx && r->current_idx <= string_length(r->current));
+}
+
+bool at_space(reader_t *r)
+//@requires r != NULL;
+{
+  return r->current_idx < string_length(r->current)
+    && is_space(string_charat(r->current, r->current_idx));
+}
+
+reader_t *get_reader(string fname)
+//@ensures \result == NULL || !at_space(\result);
+{
+  file_t file = file_read(fname);
+  if (file == NULL) {
+    return NULL;
+  }
+  
+  if (file_eof(file)) {
+    return NULL;    /* special case: null reader is empty */
+  } else {
+    reader_t *r = alloc(reader_t);
+    r->file = file;
+    r->current = file_readline(file);
+    r->current_idx = skip_space(r->current, 0);
+    return r;
+  }
+}
+
+string read_word(reader_t *r)
+//@requires r == NULL || !at_space(r);
+//@ensures r == NULL || !at_space(r);
+{
+  /* no strings available from the empty reader */
+  if (r == NULL) return "";
+  
+  /* if we're at the end of a line, read lines until we get to a new word */
+  while (r->current_idx == string_length(r->current) && !file_eof(r->file))
+    //@loop_invariant !at_space(r);
+    {
+      r->current = file_readline(r->file);
+      r->current_idx = skip_space(r->current, 0);
+    }
+
+  /* two cases: either we're at a word char or we've exhausted the file */
+  /*@assert (r->current_idx < string_length(r->current)
+             && !is_space(string_charat(r->current, r->current_idx)))
+         || (r->current_idx == string_length(r->current)
+             && file_eof(r->file));
+    @*/
+  if (r->current_idx < string_length(r->current)) {
+    // (follows from !at_space(r))
+    //@assert !is_space(string_charat(r->current, r->current_idx));
+    int *newi = alloc(int);
+    string w = word(r->current, r->current_idx, newi);
+    r->current_idx = skip_space(r->current, *newi);
+    return w;
+  } else {
+    //@assert (r->current_idx == string_length(r->current));
+    //@assert file_eof(r->file);
+    // no word, and current string exhausted
+    return "";
+  }
+}
+
+
+/*** linked lists containing strings ***/
+
+struct list_cell {
+  string head;
+  struct list_cell *tail;
+};
+
+typedef struct list_cell *list;
+
+int list_length(list l) {
+  int count = 0;
+  while (l != NULL) {
+    count++;
+    l = l->tail;
+  }
+  return count;
+}
+
+list list_empty() {
+  return NULL;
+}
+
+list list_cons(string s, list l) {
+  list res = alloc(struct list_cell);
+  res->head = s;
+  res->tail = l;
+  return res;
+}
+
+/* convert a string list to an array, reversing the elements */
+string[] rev_list_to_array(list l)
+//@ensures \length(\result) == list_length(l);
+{
+  int len = list_length(l);
+  string[] res = alloc_array(string, len);
+  int i;
+  list ll = l;
+  for (i = len-1; i >= 0; i--) {
+    //@assert ll != NULL;
+    res[i] = ll->head;
+    ll = ll->tail;
+  }
+  return res;
+}
+
+
+/*** read words from a file ***/
+
+struct fat_string_array {
+  string[] array;
+  int length;
+};
+
+string[] string_bundle_array(string_bundle wl) { return wl->array; }
+int string_bundle_length(string_bundle wl) { return wl->length; }
+
+string_bundle read_words(string filename)
+//@ensures \length(\result->array) == \result->length;
+{
+  reader_t *r = get_reader(filename);
+  if (r == NULL) {
+    error(string_join(string_join("Cannot open file '", filename), "'"));
+  }
+  
+  list l = NULL;
+  string w = read_word(r);
+  string_bundle res = alloc(struct fat_string_array);
+  int count = 0;
+  
+  /* accumulate words in reverse order */
+  while (!string_equal(w, "")) {
+    l = list_cons(w, l);
+    w = read_word(r);
+    
+    int MAX_INT = 2147483647;
+    if (count == MAX_INT) {
+      error("Too many words in input file");
+    }
+    
+    count++;
+  }
+  
+  /* reverse accumulated words and convert to array */
+  /* PERF: could pass count into rev_list_to_array to avoid recomputing it */
+  res->array = rev_list_to_array(l);
+  res->length = count;
+  return res;
+}

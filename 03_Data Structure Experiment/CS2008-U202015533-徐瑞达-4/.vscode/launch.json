@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "d:\\资源\\复习\\大一下复习资料\\数据结构\\数据结构实验\\实验4\\CS2008-U202015533-徐瑞达-4",
+      "environment": [],
+      "program": "d:\\资源\\复习\\大一下复习资料\\数据结构\\数据结构实验\\实验4\\CS2008-U202015533-徐瑞达-4\\build\\Debug\\outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
+      "externalConsole": false
+    }
+  ]
+}

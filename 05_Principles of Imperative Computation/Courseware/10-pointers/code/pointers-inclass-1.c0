@@ -1,0 +1,163 @@
+/* 
+ * Pointers
+ * 
+ * 15-122 Principles of Imperative Computation
+ * Fall 2013
+ * Rob Simmons */
+
+#use <util>
+
+typedef int pixel;
+
+struct img_header {
+  int width;
+  int height; 
+  pixel[] pixels;
+};
+
+bool is_img(struct img_header* IMG) {
+  if (IMG == NULL) return false;
+  if (!(IMG->width > 0)) return false;
+  if (!(IMG->height > 0)) return false;
+  if (!(IMG->width <= int_max() / IMG->height)) return false;
+  //@assert \length(IMG->pixels) == IMG->width * IMG->height;
+  return true;
+}
+
+typedef struct list_node list;
+
+struct list_node {
+  int data;
+  list* next;
+};
+
+
+/*** TAKE ONE ***/
+
+// Simple is_segment function
+// Will run forever if there's a cycle
+bool is_segment_or_loops(list* start, list* end) {
+  for (list* p = start; p != NULL; p = p->next) {
+    if (p == end) return true;
+  }
+  return false;
+}
+
+
+/*** TAKE TWO ***/
+
+// Code that we developed in class. See if we can 
+// find "check" within numsteps steps of start
+bool node_is_in(list* start, int numsteps, list* check) 
+{
+  list* p = start;
+  for (int j = 0; j < numsteps; j++)  
+    {
+      if (p == check) return true;
+      if (p == NULL) return false;
+      p = p->next;
+    }
+  return false;
+}
+
+// Use node_is_in to check 
+bool is_segment_checked(list* start, list* end) {
+  int i = 0;
+  for (list* p = start; p != NULL; p = p->next) 
+    {
+      if (p == end) return true;
+      if (node_is_in (start, i, p)) return false; //CYCLE!
+      i++;
+    }
+  return false;
+}
+
+
+/*** TAKE THREE ***/
+
+// Cleaned-up version of the code we developed in class.
+// Checks whether we can get from start to check by following
+// fewer than numsteps next pointers.
+bool is_in_bounded(list* check, list* start, int numsteps) 
+//@requires 0 <= numsteps;
+{
+  int i = 0;
+  for (list* p = start; p != NULL; p = p->next) 
+    //@loop_invariant 0 <= i && i <= numsteps;
+    {
+      if (i == numsteps) {
+        // If the thing we're looking for is in the list,
+        // it is further on.
+        return false; 
+      }
+      
+      if (p == check) {
+        // Oh, here it is!
+        return true;
+      }
+
+      i++;
+    }
+
+  // We reached a NULL, it's not in the bounded list
+  return false;
+}
+
+// Always returns true or false
+bool is_segment(list* start, list* end) {
+  int i = 0;
+  for (list* p = start; p != NULL; p = p->next) 
+    //@loop_invariant 0 <= i;
+    {
+      //@assert(is_in_bounded(p, start, i+1));
+      if (is_in_bounded(p, start, i)) return false; // CYCLE!
+      if (p == end) return true; // DONE!
+      i += 1;
+    }
+
+  // We reached NULL without getting to end first
+  return false;
+}
+
+
+/*** A function that uses is_segment to prove correctness ***/
+
+int sum_seg(list* start, list* end) 
+//@requires is_segment(start, end);
+{
+  int sum = 0;
+  list* l = start;
+  while (l != end) 
+    //@loop_invariant is_segment(l, end);
+    {
+      sum += l->data;
+      l = l->next;
+    }
+  return sum;
+}
+
+
+void test_take_3() {
+  // Check linked lists of size 0 to 12:
+
+  list* end = alloc(list);
+  list* start = end;
+  for(int i = 0; i < 12; i++) {
+    assert(is_segment(start, end));
+
+    list* newstart = alloc(list);
+    newstart->data = i;
+    newstart->next = start;
+    start = newstart;
+    
+    assert(!is_segment(end, start));
+  }
+
+  // Create circularity
+  list* middle = start->next->next->next->next->next->next->next;
+  middle->next = start->next->next;
+
+  assert(is_segment(start, middle)); // Next pointer of middle doesn't matter
+  assert(!is_segment(end, start));
+  assert(!is_segment(start, end));
+}

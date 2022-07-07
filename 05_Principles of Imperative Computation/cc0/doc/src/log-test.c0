@@ -1,0 +1,15 @@
+#use <conio>
+
+int main() {
+  assert(log(1) == 0);
+  assert(log(2) == 1);
+  assert(log(3) == 1);
+  assert(log(4) == 2);
+  for (int k = 1; k < 31; k++) {
+    assert(log(1<<k) == k);
+    assert(log((1<<k)-1) == k-1);
+    assert(log((1<<k)+1) == k);
+  }
+  print("All tests passed!\n");
+  return 0;
+}

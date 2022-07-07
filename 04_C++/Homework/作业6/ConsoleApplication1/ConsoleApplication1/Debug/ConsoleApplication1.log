@@ -1,0 +1,3 @@
+﻿  ConsoleApplication1.cpp
+D:\HUST-Courses\C++\作业\作业6\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(8,17): warning C4326: “main”的返回类型应为“int”而非“void”
+  ConsoleApplication1.vcxproj -> D:\HUST-Courses\C++\作业\作业6\ConsoleApplication1\Debug\ConsoleApplication1.exe

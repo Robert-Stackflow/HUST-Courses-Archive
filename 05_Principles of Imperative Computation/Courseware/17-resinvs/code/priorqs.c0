@@ -1,0 +1,31 @@
+/*
+ * Bounded priority queue interface 
+ * Integers are keys, lower keys are higher-priority 
+ * (int_min() has highest priority)
+ *
+ * 15-122 Principles of Imperative Computation */
+
+/*** Client interface ***/
+
+// typedef ______________ elem;
+
+int elem_priority(elem e);
+
+/*** Library interface ***/
+
+// typedef _______________ pq;
+
+bool pq_empty(pq P);
+bool pq_full(pq P);
+pq pq_new(int capacity)
+/*@requires capacity > 0; @*/ 
+/*@ensures pq_empty(\result); @*/ ;
+
+void pq_insert(pq P, elem e) /* insert e into P */
+/*@requires !pq_full(P); @*/ ;
+
+elem pq_min(pq P) /* return minimum, leave it */
+/*@requires !pq_empty(P); @*/ ;
+
+elem pq_delmin(pq P) /* return minimum, delete minimum */
+/*@requires !pq_empty(P); @*/ ;

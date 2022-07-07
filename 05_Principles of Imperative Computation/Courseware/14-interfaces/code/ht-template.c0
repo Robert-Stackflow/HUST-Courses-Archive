@@ -1,0 +1,141 @@
+/* 
+ * Hash tables (fixed size)
+ * 
+ * 15-122 Principles of Imperative Computation */
+
+#use <conio>
+#use <util>
+
+/******************************/
+/* client-side implementation */
+/******************************/
+
+typedef int pixel;
+typedef struct word_with_color* elem;
+typedef string key;
+
+struct word_with_color {
+  string word;
+  string color;
+};
+
+int hash(key k) { 
+  return hash_string(k);
+}
+
+bool key_equal(key k1, key k2) { 
+  return string_equal(k1, k2); 
+}
+
+key elem_key(elem e) 
+//@requires e != NULL;
+{
+  return e->word;
+}
+
+/*************************/
+/* client-side interface */
+/*************************/
+// typedef ______* elem;
+// typedef ______ key;
+
+int hash(key k);
+
+bool key_equal(key k1, key k2);
+
+key elem_key(elem e)
+//@requires e != NULL;
+  ;
+
+/**************************/
+/* library side interface */
+/**************************/
+// typedef _______ ht;
+
+typedef struct ht_header* ht;
+
+ht ht_new(int capacity)
+//@requires capacity > 0;
+  ;
+elem ht_lookup(ht H, key k);    /* O(1) avg. */
+void ht_insert(ht H, elem e)    /* O(1) avg. */
+//@requires e != NULL;
+  ;
+int ht_size(ht H);              /* O(1) */
+
+/*******************************/
+/* library-side implementation */
+/*******************************/
+
+typedef struct chain_node chain;
+struct chain_node {
+  elem data;     /* data != NULL */
+  chain* next;
+};
+
+struct ht_header {
+  int size;        /* size >= 0 */
+  int capacity;    /* capacity > 0 */
+  chain*[] table;  /* \length(table) == capacity */
+};
+
+bool is_ht(ht H) {
+  if (H == NULL) return false;
+  if (!(H->size >= 0)) return false;
+  if (!(H->capacity > 0)) return false;
+
+  /* Finish me */
+
+  return true;
+}
+
+ht ht_new(int capacity)
+//@requires capacity > 0;
+//@ensures is_ht(\result);
+{
+  ht H = alloc(struct ht_header);
+  H->size = 0;
+  H->capacity = capacity;
+  H->table = alloc_array(chain*, capacity);
+  /* initialized to NULL */
+  return H;
+}
+
+int ht_size(ht H) 
+//@requires is_ht(H);
+{
+  return H->size;
+}
+
+/* ht_lookup(H, k) returns NULL if key k not present in H */
+elem ht_lookup(ht H, key k)
+//@requires is_ht(H);
+{
+  int i = abs(hash(k) % H->capacity);
+  chain* p = H->table[i];
+  while (p != NULL)
+    //@loop_invariant is_chain(p, i, H->capacity);
+    {
+      //@assert p->data != NULL;
+      if (key_equal(elem_key(p->data), k))
+        return p->data;
+      else
+        p = p->next;
+    }
+  /* not in chain */
+  return NULL;
+}
+
+void ht_insert(ht H, elem e)
+//@requires is_ht(H);
+//@requires e != NULL;
+//@ensures is_ht(H);
+//@ensures ht_lookup(H, elem_key(e)) != NULL;
+{
+  key k = elem_key(e);
+  int i = abs(hash(k) % H->capacity);
+  chain* p = H->table[i];
+
+  /* Write me */
+}
+

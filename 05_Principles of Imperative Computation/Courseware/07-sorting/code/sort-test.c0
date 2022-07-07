@@ -1,0 +1,54 @@
+/* Testing sorting implementations
+ * Frank Pfenning, Fall 2010
+ */
+
+#use <conio>
+#use <rand>
+
+void printarray(int[] A, int n)
+//@requires 0 <= n && n <= \length(A);
+{
+  for (int i = 0; i < n; i++)
+    //@loop_invariant 0 <= i && i <= n;
+    { printint(A[i]); print(" ");
+      if (i % 20 == 19) print("\n");
+    }
+  print("\n");
+}
+
+int main () {
+  int seed = 0x8badf00d;
+  rand_t gen = init_rand(seed);
+  int n = (1<<9)-3; // start with 1<<10 for timing; 1<<9 for -d
+  int num_tests = 10; // start with 1000 for timing; 10 for -d
+  int[] A = alloc_array(int, n);
+
+  print("Testing array of size 0\n");
+  int[] Zero = alloc_array(int, 0);
+  sort(Zero, 0, 0);
+  assert(is_sorted(Zero, 0, 0));
+
+  print("Testing array of size 1\n");
+  int[] One = alloc_array(int, 1);
+  One[0] = 89;
+  sort(One, 0, 1);
+  assert(is_sorted(One, 0, 1));
+
+  print("Testing small array with some duplicates\n");
+  int[] S = alloc_array(int, 5);
+  S[0] = 5; S[1] = 3; S[2] = 5; S[3] = 2; S[4] = 2;
+  printarray(S, 5);
+  sort(S, 0, 5);
+  printarray(S, 5);
+
+  print("Testing random array of size "); printint(n);
+  print(", "); printint(num_tests); print(" times\n");
+  for (int j = 0; j < num_tests; j++) {
+    for (int i = 0; i < n; i++)
+      A[i] = rand(gen);
+    sort(A, 0, n);
+    assert(is_sorted(A, 0, n));
+  }
+  print("All tests passed!\n");
+  return 0;
+}

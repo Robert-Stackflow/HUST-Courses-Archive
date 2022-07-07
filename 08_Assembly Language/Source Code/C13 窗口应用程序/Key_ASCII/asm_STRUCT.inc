@@ -1,0 +1,301 @@
+HDC    typedef DWORD
+HWND   typedef DWORD
+
+NULL                                 equ 0
+
+SW_SHOWNORMAL                        equ 1
+SW_SHOWDEFAULT                       equ 10
+
+WS_OVERLAPPED                        equ 0h
+WS_POPUP                             equ 80000000h
+WS_CHILD                             equ 40000000h
+WS_MINIMIZE                          equ 20000000h
+WS_VISIBLE                           equ 10000000h
+WS_DISABLED                          equ 8000000h
+WS_CLIPSIBLINGS                      equ 4000000h
+WS_CLIPCHILDREN                      equ 2000000h
+WS_MAXIMIZE                          equ 1000000h
+WS_CAPTION                           equ 0C00000h
+WS_BORDER                            equ 800000h
+WS_DLGFRAME                          equ 400000h
+WS_VSCROLL                           equ 200000h
+WS_HSCROLL                           equ 100000h
+WS_SYSMENU                           equ 80000h
+WS_THICKFRAME                        equ 40000h
+WS_GROUP                             equ 20000h
+WS_TABSTOP                           equ 10000h
+WS_MINIMIZEBOX                       equ 20000h
+WS_MAXIMIZEBOX                       equ 10000h
+WS_TILED                             equ WS_OVERLAPPED
+WS_ICONIC                            equ WS_MINIMIZE
+WS_SIZEBOX                           equ WS_THICKFRAME
+WS_OVERLAPPEDWINDOW                  equ WS_OVERLAPPED OR WS_CAPTION OR WS_SYSMENU OR WS_THICKFRAME OR WS_MINIMIZEBOX OR WS_MAXIMIZEBOX
+WS_TILEDWINDOW                       equ WS_OVERLAPPEDWINDOW
+WS_POPUPWINDOW                       equ WS_POPUP OR WS_BORDER OR WS_SYSMENU
+WS_CHILDWINDOW                       equ WS_CHILD
+WS_EX_DLGMODALFRAME                  equ 1h
+WS_EX_NOPARENTNOTIFY                 equ 4h
+WS_EX_TOPMOST                        equ 8h
+WS_EX_ACCEPTFILES                    equ 10h
+WS_EX_TRANSPARENT                    equ 20h
+WS_EX_MDICHILD                       equ 00000040h
+WS_EX_TOOLWINDOW                     equ 00000080h
+WS_EX_WINDOWEDGE                     equ 00000100h
+WS_EX_CLIENTEDGE                     equ 00000200h
+WS_EX_CONTEXTHELP                    equ 00000400h
+WS_EX_RIGHT                          equ 00001000h
+WS_EX_LEFT                           equ 00000000h
+WS_EX_RTLREADING                     equ 00002000h
+WS_EX_LTRREADING                     equ 00000000h
+WS_EX_LEFTSCROLLBAR                  equ 00004000h
+WS_EX_RIGHTSCROLLBAR                 equ 00000000h
+WS_EX_CONTROLPARENT                  equ 00010000h
+WS_EX_STATICEDGE                     equ 00020000h
+WS_EX_APPWINDOW                      equ 00040000h
+WS_EX_OVERLAPPEDWINDOW               equ WS_EX_WINDOWEDGE OR WS_EX_CLIENTEDGE
+WS_EX_PALETTEWINDOW                  equ WS_EX_WINDOWEDGE OR WS_EX_TOOLWINDOW OR WS_EX_TOPMOST
+
+IDC_ARROW                            equ 32512
+IDC_IBEAM                            equ 32513
+IDC_WAIT                             equ 32514
+IDC_CROSS                            equ 32515
+IDC_UPARROW                          equ 32516
+IDC_SIZE                             equ 32640
+IDC_ICON                             equ 32641
+IDC_SIZENWSE                         equ 32642
+IDC_SIZENESW                         equ 32643
+IDC_SIZEWE                           equ 32644
+IDC_SIZENS                           equ 32645
+IDC_SIZEALL                          equ 32646
+IDC_NO                               equ 32648
+IDC_HAND            			  equ 32649
+IDC_APPSTARTING                      equ 32650
+IDC_HELP            			  equ 32651
+
+IDI_APPLICATION                      equ 32512
+IDI_HAND                             equ 32513
+IDI_QUESTION                         equ 32514
+IDI_EXCLAMATION                      equ 32515
+IDI_ASTERISK                         equ 32516
+IDI_WINLOGO         			  equ 32517
+IDI_WARNING     				  equ IDI_EXCLAMATION
+IDI_ERROR       				  equ IDI_HAND
+IDI_INFORMATION 				  equ IDI_ASTERISK
+
+CW_USEDEFAULT                        equ 80000000h
+CS_HREDRAW                           equ 2h
+CS_VREDRAW                           equ 1h
+
+COLOR_WINDOW                         equ 5
+
+WM_USER                              equ 400h
+WM_NULL                              equ 0h
+WM_CREATE                            equ 1h
+WM_DESTROY                           equ 2h
+WM_MOVE                              equ 3h
+WM_SIZE                              equ 5h
+WM_ACTIVATE                          equ 6h
+WA_INACTIVE                          equ 0
+WA_ACTIVE                            equ 1
+WA_CLICKACTIVE                       equ 2
+WM_SETFOCUS                          equ 7h
+WM_KILLFOCUS                         equ 08h
+WM_ENABLE                            equ 0Ah
+WM_SETREDRAW                         equ 0Bh
+WM_SETTEXT                           equ 0Ch
+WM_GETTEXT                           equ 0Dh
+WM_GETTEXTLENGTH                     equ 0Eh
+WM_PAINT                             equ 0Fh
+WM_CLOSE                             equ 10h
+WM_QUERYENDSESSION                   equ 11h
+WM_QUIT                              equ 12h
+WM_QUERYOPEN                         equ 13h
+WM_ERASEBKGND                        equ 14h
+WM_SYSCOLORCHANGE                    equ 15h
+WM_ENDSESSION                        equ 16h
+WM_SHOWWINDOW                        equ 18h
+WM_WININICHANGE                      equ 1Ah
+WM_SETTINGCHANGE                	  equ WM_WININICHANGE
+WM_DEVMODECHANGE                     equ 1Bh
+WM_ACTIVATEAPP                       equ 1Ch
+WM_FONTCHANGE                        equ 1Dh
+WM_TIMECHANGE                        equ 1Eh
+WM_CANCELMODE                        equ 1Fh
+WM_SETCURSOR                         equ 20h
+WM_MOUSEACTIVATE                     equ 21h
+WM_CHILDACTIVATE                     equ 22h
+WM_QUEUESYNC                         equ 23h
+WM_GETMINMAXINFO                     equ 24h
+WM_PAINTICON                         equ 26h
+WM_ICONERASEBKGND                    equ 27h
+WM_NEXTDLGCTL                        equ 28h
+WM_SPOOLERSTATUS                     equ 2Ah
+WM_DRAWITEM                          equ 2Bh
+WM_MEASUREITEM                       equ 2Ch
+WM_DELETEITEM                        equ 2Dh
+WM_VKEYTOITEM                        equ 2Eh
+WM_CHARTOITEM                        equ 2Fh
+WM_SETFONT                           equ 30h
+WM_GETFONT                           equ 31h
+WM_SETHOTKEY                         equ 32h
+WM_GETHOTKEY                         equ 33h
+WM_QUERYDRAGICON                     equ 37h
+WM_COMPAREITEM                       equ 39h
+WM_GETOBJECT                    	  equ 3Dh
+WM_COMPACTING                        equ 41h
+WM_OTHERWINDOWCREATED                equ 42h
+WM_OTHERWINDOWDESTROYED              equ 43h
+WM_COMMNOTIFY                        equ 44h
+CN_RECEIVE                           equ 1h
+CN_TRANSMIT                          equ 2h
+CN_EVENT                             equ 4h
+WM_WINDOWPOSCHANGING                 equ 46h
+WM_WINDOWPOSCHANGED                  equ 47h
+WM_POWER                             equ 48h
+PWR_OK                               equ 1
+PWR_FAIL                             equ -1
+PWR_SUSPENDREQUEST                   equ 1
+PWR_SUSPENDRESUME                    equ 2
+PWR_CRITICALRESUME                   equ 3
+WM_COPYDATA                          equ 4Ah
+WM_CANCELJOURNAL                     equ 4Bh
+WM_NOTIFY                            equ 4Eh
+WM_INPUTLANGCHANGEREQUEST            equ 50h
+WM_INPUTLANGCHANGE                   equ 51h
+WM_TCARD                             equ 52h
+WM_HELP                              equ 53h
+WM_USERCHANGED                       equ 54h
+WM_NOTIFYFORMAT                      equ 55h
+WM_CONTEXTMENU                       equ 7Bh
+WM_STYLECHANGING                     equ 7Ch
+WM_STYLECHANGED                      equ 7Dh
+WM_DISPLAYCHANGE                     equ 7Eh
+WM_GETICON                           equ 7Fh
+WM_SETICON                           equ 80h
+WM_NCCREATE                          equ 81h
+WM_NCDESTROY                         equ 82h
+WM_NCCALCSIZE                        equ 83h
+WM_NCHITTEST                         equ 84h
+WM_NCPAINT                           equ 85h
+WM_NCACTIVATE                        equ 86h
+WM_GETDLGCODE                        equ 87h
+WM_SYNCPAINT                    	  equ 88h
+WM_NCMOUSEMOVE                       equ 0A0h
+WM_NCLBUTTONDOWN                     equ 0A1h
+WM_NCLBUTTONUP                       equ 0A2h
+WM_NCLBUTTONDBLCLK                   equ 0A3h
+WM_NCRBUTTONDOWN                     equ 0A4h
+WM_NCRBUTTONUP                       equ 0A5h
+WM_NCRBUTTONDBLCLK                   equ 0A6h
+WM_NCMBUTTONDOWN                     equ 0A7h
+WM_NCMBUTTONUP                       equ 0A8h
+WM_NCMBUTTONDBLCLK                   equ 0A9h
+WM_KEYFIRST                          equ 100h
+WM_KEYDOWN                           equ 100h
+WM_KEYUP                             equ 101h
+WM_CHAR                              equ 102h
+WM_DEADCHAR                          equ 103h
+WM_SYSKEYDOWN                        equ 104h
+WM_SYSKEYUP                          equ 105h
+WM_SYSCHAR                           equ 106h
+WM_SYSDEADCHAR                       equ 107h
+WM_KEYLAST                           equ 108h
+WM_INITDIALOG                        equ 110h
+WM_COMMAND                           equ 111h
+WM_SYSCOMMAND                        equ 112h
+WM_TIMER                             equ 113h
+WM_HSCROLL                           equ 114h
+WM_VSCROLL                           equ 115h
+WM_INITMENU                          equ 116h
+WM_INITMENUPOPUP                     equ 117h
+WM_MENUSELECT                        equ 11Fh
+WM_MENUCHAR                          equ 120h
+WM_ENTERIDLE                         equ 121h
+WM_CTLCOLORMSGBOX                    equ 132h
+WM_CTLCOLOREDIT                      equ 133h
+WM_CTLCOLORLISTBOX                   equ 134h
+WM_CTLCOLORBTN                       equ 135h
+WM_CTLCOLORDLG                       equ 136h
+WM_CTLCOLORSCROLLBAR                 equ 137h
+WM_CTLCOLORSTATIC                    equ 138h
+WM_MOUSEFIRST                        equ 200h
+WM_MOUSEMOVE                         equ 200h
+WM_LBUTTONDOWN                       equ 201h
+WM_LBUTTONUP                         equ 202h
+WM_LBUTTONDBLCLK                     equ 203h
+WM_RBUTTONDOWN                       equ 204h
+WM_RBUTTONUP                         equ 205h
+WM_RBUTTONDBLCLK                     equ 206h
+WM_MBUTTONDOWN                       equ 207h
+WM_MBUTTONUP                         equ 208h
+WM_MBUTTONDBLCLK                     equ 209h
+WM_MOUSELAST                         equ 209h
+WM_PARENTNOTIFY                      equ 210h
+WM_ENTERMENULOOP                     equ 211h
+WM_EXITMENULOOP                      equ 212h
+WM_MDICREATE                         equ 220h
+WM_MDIDESTROY                        equ 221h
+WM_MDIACTIVATE                       equ 222h
+WM_MDIRESTORE                        equ 223h
+WM_MDINEXT                           equ 224h
+WM_MDIMAXIMIZE                       equ 225h
+WM_MDITILE                           equ 226h
+WM_MDICASCADE                        equ 227h
+WM_MDIICONARRANGE                    equ 228h
+WM_MDIGETACTIVE                      equ 229h
+WM_MDISETMENU                        equ 230h
+WM_DROPFILES                         equ 233h
+WM_MDIREFRESHMENU                    equ 234h
+WM_CUT                               equ 300h
+WM_COPY                              equ 301h
+WM_PASTE                             equ 302h
+WM_CLEAR                             equ 303h
+WM_UNDO                              equ 304h
+WM_RENDERFORMAT                      equ 305h
+WM_RENDERALLFORMATS                  equ 306h
+WM_DESTROYCLIPBOARD                  equ 307h
+WM_DRAWCLIPBOARD                     equ 308h
+WM_PAINTCLIPBOARD                    equ 309h
+WM_VSCROLLCLIPBOARD                  equ 30Ah
+WM_SIZECLIPBOARD                     equ 30Bh
+WM_ASKCBFORMATNAME                   equ 30Ch
+WM_CHANGECBCHAIN                     equ 30Dh
+WM_HSCROLLCLIPBOARD                  equ 30Eh
+WM_QUERYNEWPALETTE                   equ 30Fh
+WM_PALETTEISCHANGING                 equ 310h
+WM_PALETTECHANGED                    equ 311h
+WM_HOTKEY                            equ 312h
+WM_PRINT                        	  equ 317h
+WM_PRINTCLIENT                       equ 318h
+WM_PENWINFIRST                       equ 380h
+WM_PENWINLAST                        equ 38Fh
+
+
+WNDCLASSEX STRUCT
+  cbSize            DWORD      ?
+  style             DWORD      ?
+  lpfnWndProc       DWORD      ?
+  cbClsExtra        DWORD      ?
+  cbWndExtra        DWORD      ?
+  hInstance         DWORD      ?
+  hIcon             DWORD      ?
+  hCursor           DWORD      ?
+  hbrBackground     DWORD      ?
+  lpszMenuName      DWORD      ?
+  lpszClassName     DWORD      ?
+  hIconSm           DWORD      ?
+WNDCLASSEX ENDS
+
+POINT STRUCT
+  x  DWORD ?
+  y  DWORD ?
+POINT ENDS
+
+MSG STRUCT
+  hwnd      DWORD      ?
+  message   DWORD      ?
+  wParam    DWORD      ?
+  lParam    DWORD      ?
+  time      DWORD      ?
+  pt        POINT      <>
+MSG ENDS

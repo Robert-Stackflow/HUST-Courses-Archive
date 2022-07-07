@@ -1,0 +1,39 @@
+for(int i=1;i<=d;i++)
+    {
+        if(flag&&line[i]) continue;
+        flag=0;
+        max=max>line[i]?max:line[i];
+    }
+    printf("max:%d\n",max);
+    for(int i=max;ans>=k;i--)
+    {
+        for(int j=1;j<d;j++)
+        {
+            if(line[j]==i) {checkl[j]=1;ans++;}
+        }
+    }
+    max=0;
+    ans=0;
+    for(int i=1;i<=d;i++)
+    {
+        if(flag&&row[i]) continue;
+        flag=0;
+        max=max>row[i]?max:row[i];
+    }
+    printf("max:%d\n",max);
+    for(int i=max;ans>=l;i--)
+    {
+        for(int j=1;j<d;j++)
+        {
+            if(row[j]==i) {checkr[j]=1;ans++;}
+        }
+    }
+    for(int i=0;i<1001;i++)
+    {
+        if(checkl[i]) printf("%d ",i);
+    }
+    printf("\n");
+    for(int i=0;i<1001;i++)
+    {
+        if(checkr[i]) printf("%d ",i);
+    }

@@ -1,0 +1,19 @@
+/* pow2.c0 */
+
+/* 1  */ int pow_iter(int x, int y) 
+/* 2  */ //@requires y >= 0;
+/* 3  */ //@ensures \result == POW(x,y);
+/* 4  */ {
+/* 5  */   int accum = 1;
+/* 6  */   int b = x;    
+/* 7  */   int e = y;    
+/* 8  */   while (e > 0)                 
+/* 9  */     //@loop_invariant e >= 0; 
+/* 10 */     //@loop_invariant accum * POW(b,e) == POW(x,y);
+/* 11 */     {
+/* 12 */       accum = accum * b;
+/* 13 */       e = e - 1;
+/* 14 */     }
+/* 15 */   //@assert e == 0;
+/* 16 */   return accum;
+/* 17 */ }

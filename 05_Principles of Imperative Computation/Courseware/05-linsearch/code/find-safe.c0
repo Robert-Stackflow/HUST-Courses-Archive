@@ -1,0 +1,22 @@
+int search(int x, int[] A, int n)
+//@requires 0 <= n && n <= \length(A);
+//@requires is_sorted(A, 0, n);                  // safe by (2) 
+/*@ensures (-1 == \result && !is_in(x, A, 0, n)) // safe by (2)
+        || ((0 <= \result && \result < n) 
+            && A[\result] == x);                 // safe by (5) (2)  
+  @*/
+{
+  for (int i = 0; i < n; i++)
+    //@loop_invariant 0 <= i && i <= n;
+    //@loop_invariant i == 0 || x > A[i-1];      /* safe by (11) (10) [not 9!] (2) */
+    {
+      if (A[i] == x) return i;                   /* safe by (10) (9) (2) */
+      else if (x < A[i]) return -1;              /* safe by (10) (9) (2) */
+      //@assert A[i] < x;                        /* safe by (10) (9) (2) */
+    }
+  //@assert n == 0 || x > A[n-1];                /* safe by (17) (2) */
+  return -1;
+}
+
+// Note that in Aquamacs you can turn on line numbers via Options->View->Line numbers
+// In regular Emacs the line number is displayed in the status bar

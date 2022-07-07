@@ -1,0 +1,30 @@
+/* Simple test of queues
+ * The challenge is to print queues 
+ *
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning
+ */
+
+#use <conio>
+#use <string>
+
+/* This uses the starter code queues_string.c0 from
+ * the programming assignment 3, which has an additional
+ * function in the interface, queue_copy_read_only.
+ */
+
+int main() {
+  queue Q = queue_new();
+  enq(Q, "a");
+  enq(Q, "b");
+  enq(Q, "c");
+  enq(Q, "d");
+  assert(string_equal(deq(Q), "a"));
+  assert(string_equal(deq(Q), "b"));
+  assert(string_equal(deq(Q), "c"));
+  assert(string_equal(deq(Q), "d"));
+  assert(queue_empty(Q));
+  print("All tests passed!\n");
+
+  return 0;
+}

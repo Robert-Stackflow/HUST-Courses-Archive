@@ -1,0 +1,4 @@
+﻿  Assembling Menu_Dialog.asm...
+Menu_Dialog.asm(109): warning A6004: procedure argument or local not referenced : x
+Menu_Dialog.asm(133): warning A6004: procedure argument or local not referenced : lParam
+  Menu_Dialog.vcxproj -> C:\新书示例\C13_窗口应用程序\Debug\Menu_Dialog.exe

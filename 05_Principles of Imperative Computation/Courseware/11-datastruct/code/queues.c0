@@ -1,0 +1,176 @@
+/*
+ * Queues
+ *
+ * 15-122 Principles of Imperative Computation */
+
+/*** Interface ***/
+
+// typedef _______ queue;
+typedef struct queue_header* queue;
+
+bool queue_empty(queue Q);      /* O(1) */
+queue queue_new();              /* O(1) */
+void enq(queue Q, elem e);      /* O(1) */
+elem deq(queue Q)               /* O(1) */
+/*@requires !queue_empty(Q); @*/ ;
+
+
+
+
+
+
+
+
+
+
+
+
+/*** Implementation ***/
+
+struct queue_header {
+  list* front;
+  list* back;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bool is_queue(queue Q) {
+  if (Q == NULL) return false;
+  if (Q->front == NULL || Q->back == NULL) return false;
+  return is_segment(Q->front, Q->back);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bool queue_empty(queue Q)
+//@requires is_queue(Q);
+{
+  return Q->front == Q->back;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+queue queue_new()
+//@ensures is_queue(\result);
+//@ensures queue_empty(\result);
+{
+  queue Q = alloc(struct queue_header);
+  list* l = alloc(struct list_node);
+  Q->front = l;
+  Q->back = l;
+  return Q;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void enq(queue Q, elem s)
+//@requires is_queue(Q);
+//@ensures is_queue(Q);
+{
+  list* l = alloc(struct list_node);
+  Q->back->data = s;
+  Q->back->next = l;
+  Q->back = l;
+  return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+elem deq(queue Q)
+//@requires is_queue(Q);
+//@requires !queue_empty(Q);
+//@ensures is_queue(Q);
+{
+  elem s = Q->front->data;
+  Q->front = Q->front->next;
+  return s;
+}
+

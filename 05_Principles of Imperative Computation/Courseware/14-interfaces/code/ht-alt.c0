@@ -1,0 +1,221 @@
+/* 
+ * Hash tables (fixed size)
+ * 15-122 Principles of Imperative Computation
+ * Frank Pfenning
+ *
+ * Alternative version where some list op's are factored out
+ */
+
+#use <conio>
+#use <util>
+
+/******************************/
+/* client-side implementation */
+/******************************/
+
+typedef int pixel;
+typedef struct word_with_color* elem;
+typedef string key;
+
+struct word_with_color {
+  string word;
+  pixel color;
+};
+
+int hash(key k, int m) { 
+  return abs(hash_string(k) % m));
+}
+
+bool key_equal(key k1, key k2) { 
+  return string_equal(k1, k2); 
+}
+
+key elem_key(elem e) 
+//@requires e != NULL;
+{
+  return e->word;
+}
+
+/*************************/
+/* client-side interface */
+/*************************/
+// typedef ______* elem;
+// typedef ______ key;
+
+int hash(key k, int m)
+//@requires m > 0;
+//@ensures 0 <= \result && \result < m;
+  ;
+
+bool key_equal(key k1, key k2);
+
+key elem_key(elem e)
+//@requires e != NULL;
+  ;
+
+/**************************/
+/* library side interface */
+/**************************/
+struct ht_header;
+typedef struct ht_header* ht;
+
+ht ht_new(int capacity)
+//@requires capacity > 0;
+  ;
+elem ht_lookup(ht H, key k);	/* O(1) avg. */
+void ht_insert(ht H, elem e)	/* O(1) avg. */
+//@requires e != NULL;
+  ;
+int ht_size(ht H);              /* O(1) */
+void ht_stats(ht H);            /* Print debugging info about the table */  
+
+/*******************************/
+/* library-side implementation */
+/*******************************/
+struct chain_node {
+  elem data;			/* data != NULL */
+  struct chain_node* next;
+};
+typedef struct chain_node chain;
+
+bool is_chain(chain* p) {
+  while (p != NULL) {
+    if (p->data == NULL) return false;
+    p = p->next;
+  }
+  return true;
+}
+
+int chain_length(chain* p)
+//@requires is_chain(p);
+{
+  int i = 0;
+  while (p != NULL) {
+    i++;
+    p = p->next;
+  }
+  return i;
+}
+
+chain* chain_new(elem e, chain* tail) 
+//@requires is_chain(tail);
+//@requires e != NULL;
+//@ensures is_chain(\result);
+{
+  chain* lnew = alloc(struct chain_node);
+  lnew->data = e;
+  lnew->next = tail;
+  return lnew;
+}
+
+chain* chain_lookup(chain* p, key k)
+//@requires is_chain(p);
+//@ensures \result == NULL || key_equal(elem_key(\result->data), k);
+{
+  while (p != NULL)
+    /* to be filled in */
+    // loop invariant: p points to a chain, to imply assert below
+    {
+      //@assert p->data != NULL;
+      if (key_equal(elem_key(p->data), k))
+	return p;
+      p = p->next;
+    }
+  return NULL;
+}
+
+struct ht_header {
+  int size;			/* size >= 0 */
+  int capacity;			/* capacity > 0 */
+  chain*[] table;		/* \length(table) == capacity */
+};
+
+bool is_ht(ht H) {
+  if (H == NULL) return false;
+  if (!(H->size >= 0)) return false;
+  if (!(H->capacity > 0)) return false;
+  //@assert \length(H->table) == H->capacity;
+
+  int size = 0;
+  for (int i = 0; i < H->capacity; i++) 
+    //@loop_invariant 0 <= i;
+    {
+      chain* p = H->table[i];
+      if (!(is_chain(p))) return false;
+      size += chain_length(p);
+    }
+  
+  if (!(H->size == size)) return false;
+  return true;
+}
+
+ht ht_new(int capacity)
+//@requires capacity > 0;
+//@ensures is_ht(\result);
+{
+  ht H = alloc(struct ht_header);
+  H->size = 0;
+  H->capacity = capacity;
+  H->table = alloc_array(chain*, capacity);
+  /* initialized to NULL */
+  return H;
+}
+
+int ht_size(ht H) 
+//@requires is_ht(H);
+{
+  return H->size;
+}
+
+/* ht_lookup(H, k) returns NULL if key k not present in H */
+elem ht_lookup(ht H, key k)
+//@requires is_ht(H);
+{
+  int h = hash(k, H->capacity);
+  chain* p = chain_lookup(H->table[h], k);
+  if (p != NULL)
+    return p->data;
+  else
+    return NULL;
+}
+
+void ht_insert(ht H, elem e)
+//@requires is_ht(H);
+//@requires e != NULL;
+//@ensures is_ht(H);
+//@ensures ht_lookup(H, elem_key(e)) != NULL;
+{
+  key k = elem_key(e);
+  int h = hash(k, H->capacity);
+
+  chain* p = chain_lookup(H->table[h], k);
+  if (p != NULL) {
+    /* overwrite existing element */
+    p->data = e;
+  } else {
+    /* prepend new element to chain */
+    H->table[h] = chain_new(e, H->table[h]);
+    (H->size)++;
+  }
+  return;
+}
+
+void ht_stats(ht H) 
+//@requires is_ht(H);
+{
+  int max = 0;
+  int[] A = alloc_array(int, 11);
+  for(int i = 0; i < H->capacity; i++) {
+    int j = chain_length(H->table[i]);
+    if (j > 9) A[10]++;
+    else A[j]++;
+    if (j > max) max = j;
+  }
+  
+  println("Hash table distribution: how many chains have size... ");
+  for(int i = 0; i < 10; i++) {
+    print("..."); printint(i); print(":   "); printint(A[i]); print("\n");
+  }
+  print("...10+: "); printint(A[10]); print("\n");
+  print("Longest chain: "); printint(max); print("\n");
+}

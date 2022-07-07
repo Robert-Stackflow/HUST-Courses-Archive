@@ -1,0 +1,49 @@
+bool is_in(int x, int[] A, int lower, int upper) 
+/*@requires 0 <= lower 
+         && lower <= upper 
+         && upper <= \length(A); @*/
+{
+  for (int i = lower; i < upper; i++) 
+    //@loop_invariant lower <= i && i <= upper;
+    {
+      //@assert 0 <= i && i < \length(A);
+      if (x == A[i]) return true;
+    }
+
+  return false;
+}
+
+bool is_sorted(int[] A, 
+               int lower, 
+               int upper)
+/*@requires 0 <= lower 
+         && lower <= upper 
+         && upper <= \length(A); @*/
+{
+  for(int i = lower+1; i < upper; i++)
+    //@loop_invariant lower < i;
+    {
+      if(!(A[i-1] <= A[i])) return false;
+    }
+  return true;
+}
+
+int search(int x, int[] A, int n)
+//@requires 0 <= n && n <= \length(A);
+//@requires is_sorted(A, 0, n);
+/*@ensures (\result == -1 && !is_in(x, A, 0, n))
+        || (0 <= \result 
+            && \result < n
+            && A[\result] == x); @*/
+{
+  for (int j = 0; j < n; j++)
+    //@loop_invariant 0 <= j && j <= n;
+    //@loop_invariant !is_in(x, A, 0, j);
+    {
+      if(A[j] == x) return j;
+      if(A[j] > x) return -1;
+      //@assert A[j] < x;
+    }
+  return -1;
+}
+

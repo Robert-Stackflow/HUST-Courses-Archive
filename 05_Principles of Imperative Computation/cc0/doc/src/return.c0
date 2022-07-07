@@ -1,0 +1,11 @@
+void print_array(int[] A, int n, string array_name)
+//@requires 0 <= n && n <= \length(A);
+{
+  for (int i = 0; i < n; i++) {
+    print(array_name);
+    print("["); printint(i); print("] = ");
+    printint(A[i]);
+    print("\n");
+  }
+  return;
+}

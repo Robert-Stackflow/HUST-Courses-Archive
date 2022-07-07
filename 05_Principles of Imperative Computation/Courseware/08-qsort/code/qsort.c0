@@ -1,0 +1,62 @@
+#use <rand>
+#use "sortutil.c0"
+#use "util.c0"
+
+int partition(int[] A, int lower, int pivot_index, int upper)
+//@requires 0 <= lower && lower <= pivot_index;
+//@requires pivot_index < upper && upper <= \length(A);
+//@ensures lower <= \result && \result < upper;
+//@ensures ge_seg(A[\result], A, lower, \result);
+//@ensures le_seg(A[\result], A, \result+1, upper);
+{
+  int pivot = A[pivot_index];
+  swap(A, pivot_index, upper-1);
+
+  int left = lower;
+  int right = upper-2;
+  while (left <= right)
+    //@loop_invariant lower <= left && left <= right+1 && right+1 < upper;
+    //@loop_invariant ge_seg(pivot, A, lower, left);
+    //@loop_invariant le_seg(pivot, A, right+1, upper-1);																																						
+    {
+      if (A[left] <= pivot) {
+        left++;
+      } else { //@assert A[left] > pivot;
+        swap(A, left, right);
+        right--;
+      }
+    }
+  //@assert left == right+1;
+  //@assert A[upper-1] == pivot;
+
+ swap(A, left, upper-1);
+ return left;
+}
+
+void qsort(int[] A, int lower, int upper, rand_t gen)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+//@ensures is_sorted(A, lower, upper);
+{
+  if (upper-lower <= 1) return;
+
+  int pivot_index = lower + abs(rand(gen) % (upper-lower));
+  /* pivot_index = upper-1 or pivot_index = 0 gives O(n^2) for sorted array */
+  /* pivot_index = lower+(upper-lower)/2 efficiency depends on input distribution */
+  /* better yet would be: median of 3 random elements */
+
+  int mid = partition(A, lower, pivot_index, upper);
+  qsort(A, lower, mid, gen);
+  qsort(A, mid+1, upper, gen);
+  return;
+}
+
+void sort(int[] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+//@ensures is_sorted(A, lower, upper);
+{
+  int seed = 0xc0c0ffee;
+  rand_t gen = init_rand(seed);
+
+  qsort(A, lower, upper, gen);
+  return;
+}

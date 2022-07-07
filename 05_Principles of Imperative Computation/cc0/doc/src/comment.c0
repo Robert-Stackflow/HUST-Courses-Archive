@@ -1,0 +1,13 @@
+/* file comment.c0 */
+// this is a single line of comments
+/* this is a comment
+ * stretching over multiple lines
+ */
+
+/* the rest of this file is a single comment */
+/*
+// this is a single line of comments
+/* this is a comment
+ * stretching over multiple lines
+ */
+*/ 

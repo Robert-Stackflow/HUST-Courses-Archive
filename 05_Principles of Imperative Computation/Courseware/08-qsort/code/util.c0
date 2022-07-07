@@ -1,0 +1,59 @@
+/* Some C0 Utilities
+ *
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning
+ */
+
+#use <string>
+
+/* Some limits, which are fixed in the language definition */
+int int_size() { return 4; }	/* size of ints, in bytes */
+int int_max() { return 0x7FFFFFFF; } /* maximal integer */
+int int_min() { return 0x80000000; } /* minimal integer */
+
+/* Absolute value */
+int abs(int x)
+//@requires x > int_min();
+//@ensures \result >= 0;
+{
+  return x < 0 ? -x : x;
+}
+
+/* Converting an integer to a hex digit */
+char hexdig2char(int d)
+//@requires 0 <= d && d < 16;
+{
+  if (0 <= d && d < 10)
+    return char_chr(char_ord('0') + d);
+  else if (10 <= d && d < 16)
+    return char_chr(char_ord('A') + (d-10));
+  else /* this case should be impossible */
+    return '?';
+}
+
+/* Converting an integers to a string of hex digits */
+string int2hex(int x)
+//@ensures string_length(\result) == 2*int_size();
+{
+  int digits = 2*int_size();
+  char[] s = alloc_array(char, digits+1);
+  s[digits] = '\0';		/* required string terminator */
+  for (int i = 0; i < digits; i++)
+    //@loop_invariant 0 <= i && i <= digits;
+    {
+      s[digits-i-1] = hexdig2char(x & 0xF);
+      x = x >> 4;		/* 4 = bits in a hex digit */
+    }
+  return string_from_chararray(s);
+}
+
+/* some small tests */
+/*
+int main () {
+  assert(string_equal(int2hex(0), "00000000"));
+  assert(string_equal(int2hex(int_min()), "80000000"));
+  assert(string_equal(int2hex(int_max()), "7FFFFFFF"));
+  assert(string_equal(int2hex(0x0ABCDEF3), "0ABCDEF3"));
+  return 0;
+}
+*/

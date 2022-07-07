@@ -1,0 +1,92 @@
+/* Unbounded arrays
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Rob Simmons
+ */
+
+#use <conio>
+#use <string>
+#use "ubarrays.c0"
+
+int main() {
+  uba A = uba_new(1);
+  uba B = uba_new(3);
+
+  // Blackbox
+  assert(A != NULL);
+  assert(uba_size(A) == 0);
+  assert(B != NULL);
+  assert(uba_size(B) == 0);
+
+  // Whitebox
+  assert(A->limit == 1);
+  assert(B->limit == 3);
+
+  // Blackbox
+  uba_add(A, "A_0");
+  uba_add(B, "B_0");
+  assert(uba_size(A) == 1);
+  assert(uba_size(B) == 1);
+  assert(string_equal(uba_get(A, 0), "A_0"));  
+  assert(string_equal(uba_get(B, 0), "B_0"));
+
+  uba_set(A, 0, "A_First");
+  uba_set(B, 0, "B_First");
+  assert(uba_size(A) == 1);
+  assert(uba_size(B) == 1);
+  assert(string_equal(uba_get(A, 0), "A_First"));  
+  assert(string_equal(uba_get(B, 0), "B_First"));
+
+  uba_add(A, "A_1");
+  uba_add(B, "B_1");
+  assert(uba_size(A) == 2);
+  assert(uba_size(B) == 2);
+  assert(string_equal(uba_get(A, 0), "A_First"));  
+  assert(string_equal(uba_get(A, 1), "A_1"));  
+  assert(string_equal(uba_get(B, 0), "B_First"));
+  assert(string_equal(uba_get(B, 1), "B_1"));
+
+  // Whitebox
+  assert(A->limit == 2);
+  assert(B->limit == 3);
+
+  // Blackbox
+  uba_add(A, "A_2"); uba_add(A, "A_3"); uba_add(A, "A_4"); uba_add(A, "A_5");
+  uba_add(B, "B_2"); uba_add(B, "B_3"); uba_add(B, "B_4");
+  uba_add(B, "B_5"); uba_add(B, "B_6"); uba_add(B, "B_7");
+  assert(uba_size(A) == 6);
+  assert(uba_size(B) == 8);
+  assert(string_equal(uba_get(A, 0), "A_First"));  
+  assert(string_equal(uba_get(A, 1), "A_1"));  
+  assert(string_equal(uba_get(A, 4), "A_4"));  
+  assert(string_equal(uba_get(A, 5), "A_5"));  
+  assert(string_equal(uba_get(B, 0), "B_First"));
+  assert(string_equal(uba_get(B, 1), "B_1"));
+  assert(string_equal(uba_get(B, 6), "B_6"));  
+  assert(string_equal(uba_get(B, 7), "B_7"));  
+  
+  // Whitebox
+  assert(A->limit == 8);
+  assert(B->limit == 12);
+
+  // Blackbox
+  uba_set(A, 1, "A_Second");
+  uba_set(A, 4, "A_Next_To_Last");
+  uba_set(A, 5, "A_Last");
+  uba_set(B, 1, "B_Second");
+  uba_set(B, 6, "B_Next_To_Last");
+  uba_set(B, 7, "B_Last");
+
+  assert(string_equal(uba_get(A, 0), "A_First"));  
+  assert(string_equal(uba_get(A, 1), "A_Second"));  
+  assert(string_equal(uba_get(A, 2), "A_2"));  
+  assert(string_equal(uba_get(A, 3), "A_3"));  
+  assert(string_equal(uba_get(A, 4), "A_Next_To_Last"));  
+  assert(string_equal(uba_get(A, 5), "A_Last"));  
+  assert(string_equal(uba_get(B, 0), "B_First"));
+  assert(string_equal(uba_get(B, 1), "B_Second"));
+  assert(string_equal(uba_get(B, 6), "B_Next_To_Last"));  
+  assert(string_equal(uba_get(B, 7), "B_Last"));  
+  
+  println("All tests passed!");
+  return 0;
+}

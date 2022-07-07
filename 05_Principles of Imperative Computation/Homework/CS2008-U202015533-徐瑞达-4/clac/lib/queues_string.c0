@@ -1,0 +1,87 @@
+/* 
+ * Queues of string
+ *
+ * 15-122 Principles of Imperative Computation */
+
+/*** Interface ***/
+
+// typedef _______ queue;
+typedef struct queue_header* queue;
+
+bool queue_empty(queue Q);      /* O(1) */
+queue queue_new();              /* O(1) */
+void enq(queue Q, string e);    /* O(1) */
+string deq(queue Q)             /* O(1) */
+/*@requires !queue_empty(Q); @*/ ;
+
+
+/*** Implementation ***/
+
+/* Aux structure of linked lists */
+struct slist_node {
+  string data;
+  struct slist_node* next;
+};
+typedef struct slist_node slist;
+
+/* is_segment(start, end) will diverge if list is circular! */
+bool is_segment_string(slist* start, slist* end) {
+  slist* p = start;
+  while (p != NULL) {
+    if (p == end) return true;
+    p = p->next;
+  }
+  return false;
+}
+
+/* Queues */
+
+struct queue_header {
+  slist* front;
+  slist* back;
+};
+
+bool is_queue(queue Q) {
+  if (Q == NULL) return false;
+  if (Q->front == NULL || Q->back == NULL) return false;
+  return is_segment_string(Q->front, Q->back);
+}
+
+bool queue_empty(queue Q)
+//@requires is_queue(Q);
+{
+  return Q->front == Q->back;
+}
+
+queue queue_new()
+//@ensures is_queue(\result);
+//@ensures queue_empty(\result);
+{
+  queue Q = alloc(struct queue_header);
+  slist* l = alloc(struct slist_node);
+  Q->front = l;
+  Q->back = l;
+  return Q;
+}
+
+void enq(queue Q, string s)
+//@requires is_queue(Q);
+//@ensures is_queue(Q);
+{
+  slist* l = alloc(struct slist_node);
+  Q->back->data = s;
+  Q->back->next = l;
+  Q->back = l;
+  return;
+}
+
+string deq(queue Q)
+//@requires is_queue(Q);
+//@requires !queue_empty(Q);
+//@ensures is_queue(Q);
+{
+  string s = Q->front->data;
+  Q->front = Q->front->next;
+  return s;
+}
+

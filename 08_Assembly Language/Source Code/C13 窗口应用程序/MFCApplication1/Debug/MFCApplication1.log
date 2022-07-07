@@ -1,0 +1,12 @@
+﻿  pch.cpp
+  ClassView.cpp
+  FileView.cpp
+  MainFrm.cpp
+  MFCApplication1.cpp
+  MFCApplication1Doc.cpp
+  MFCApplication1View.cpp
+  OutputWnd.cpp
+  PropertiesWnd.cpp
+  ViewTree.cpp
+  正在生成代码...
+  MFCApplication1.vcxproj -> C:\新书示例\C13_窗口应用程序\Debug\MFCApplication1.exe

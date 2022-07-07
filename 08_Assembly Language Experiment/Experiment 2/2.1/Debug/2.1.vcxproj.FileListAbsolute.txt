@@ -1,0 +1,4 @@
+D:\HUST-Courses\12_汇编语言实验\Experiment\Experiment 2\2.1\Debug\2.1.exe
+D:\HUST-Courses\8_汇编语言实验\Experiment\Experiment 2\2.1\Debug\2.1.exe
+D:\HUST-Courses\8_汇编语言实验\Experiment 2\2.1\Debug\2.1.exe
+D:\HUST-Courses\08_Assembly Language Experiment\Experiment 2\2.1\Debug\2.1.exe

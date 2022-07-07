@@ -1,0 +1,5 @@
+﻿  stdafx.cpp
+  test5.cpp
+C:\新书示例\C12 中断和异常\test5\test5.cpp(11,9): warning C4477:  “printf”: 格式字符串“%x”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“PVOID”
+C:\新书示例\C12 中断和异常\test5\test5.cpp(34,8): warning C4101:  “p”: 未引用的局部变量
+  test5.vcxproj -> C:\新书示例\C12 中断和异常\Debug\test5.exe

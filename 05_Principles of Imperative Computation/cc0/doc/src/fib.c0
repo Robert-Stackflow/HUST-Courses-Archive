@@ -1,0 +1,24 @@
+#use <conio>
+
+int[] fib(int n)
+//@requires n >= 0;
+//@ensures \length(\result) == n;
+{
+  int[] F = alloc_array(int, n);
+  if (n > 0) F[0] = 0;
+  if (n > 1) F[1] = 1;
+  for (int i = 2; i < n; i++)
+    //@loop_invariant 2 <= i;
+    F[i] = F[i-1] + F[i-2];
+  return F;
+}
+
+void print_fib(int[] F, int n)
+//@requires 0 <= n && n <= \length(F);
+{
+  for (int i = 0; i < n; i++) {
+    print("F["); printint(i); print("] = "); 
+    printint(F[i]); print(";\n");
+  }
+  return;
+}

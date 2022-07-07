@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<malloc.h>
+#include<stdlib.h>
+int main(int n,char *a[])
+{
+	int *number,i,j,t,k;
+    k=atoi(a[1]);
+	number=(int *)malloc(k*sizeof(int));
+	for(i=0;i<k;i++)
+		scanf("%d",(number+i));
+    if(n>2)
+    {
+        if(*a[2]='-')
+            {
+                for(i=0;i<k;i++)
+                {
+                    for(j=0;j<k-i-1;j++)
+                    {
+                        if(*(number+j)<*(number+j+1))
+                        {
+                            t=*(number+j);
+                            *(number+j)=*(number+j+1);
+                            *(number+j+1)=t;
+                        }
+                    }
+                }
+            }
+    }
+	else
+	{
+		for(i=0;i<k;i++)
+        {
+            for(j=0;j<k-i-1;j++)
+			{
+				if(*(number+j)>*(number+j+1))
+				{
+					t=*(number+j);
+					*(number+j)=*(number+j+1);
+					*(number+j+1)=t;
+				}
+			} 
+        }
+	}
+	for(i=0;i<k;i++)
+		printf("%d ",*(number+i));
+	return 0;
+}

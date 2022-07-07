@@ -1,0 +1,13 @@
+/*
+ * Client implementation for priority queues
+ * Elements are ints
+ *
+ * 15-122 Principles of Imperative Computation */
+
+#use <string>
+
+typedef int elem;
+
+int elem_priority(elem x) {
+  return x;
+}

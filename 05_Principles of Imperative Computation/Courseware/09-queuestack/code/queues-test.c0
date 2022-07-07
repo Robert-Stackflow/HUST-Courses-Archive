@@ -1,0 +1,50 @@
+/* Simple test of queues
+ * The challenge is to print queues 
+ *
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning
+ */
+
+#use <conio>
+#use <string>
+
+/* This uses the starter code queues_string.c0 from
+ * the programming assignment 3, which has an additional
+ * function in the interface, queue_copy_read_only.
+ */
+
+/* printqueue(Q, k) prints the first k elements
+ * in the queue, and '...' if there are more.
+ * Leftmost element is the front of the queue.
+ */
+void printqueue (queue Q, int k)
+//@requires k >= 0;
+{
+  queue T = queue_copy_read_only(Q);
+  while (!queue_empty(T) && k > 0)
+    //@loop_invariant k >= 0;
+    {
+      print(deq(T)); print(" ");
+      k--;
+    }
+  if (!queue_empty(T)) print("...");
+  /* at this point T's header struct will become unreachable */
+  return;
+}
+
+int main() {
+  queue Q = queue_new();
+  enq(Q, "a");
+  enq(Q, "b");
+  enq(Q, "c");
+  enq(Q, "d");
+  printqueue(Q, 3); print("\n");
+  assert(string_equal(deq(Q), "a"));
+  assert(string_equal(deq(Q), "b"));
+  assert(string_equal(deq(Q), "c"));
+  assert(string_equal(deq(Q), "d"));
+  assert(queue_empty(Q));
+  print("All tests passed!\n");
+
+  return 0;
+}

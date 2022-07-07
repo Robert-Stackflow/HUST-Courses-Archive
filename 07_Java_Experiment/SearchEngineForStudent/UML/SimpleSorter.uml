@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>hust.cs.javacourse.search.query.impl.SimpleSorter</OriginalElement>
+  <nodes>
+    <node x="-108.0" y="76.0">hust.cs.javacourse.search.query.impl.SimpleSorter</node>
+    <node x="-108.0" y="-51.0">hust.cs.javacourse.search.query.Sort</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="hust.cs.javacourse.search.query.impl.SimpleSorter" target="hust.cs.javacourse.search.query.Sort" relationship="REALIZATION">
+      <point x="0.0" y="-50.5" />
+      <point x="0.0" y="38.5" />
+    </edge>
+  </edges>
+  <settings layout="分层" zoom="1.0" showDependencies="false" x="142.0" y="63.0" />
+  <SelectedNodes>
+    <node>hust.cs.javacourse.search.query.impl.SimpleSorter</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>字段</Category>
+    <Category>属性</Category>
+    <Category>方法</Category>
+    <Category>构造函数</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,6 @@
+string[] sortcopy(string[] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+//@ensures is_sorted(\result, 0, \length(\result));
+{
+  return alloc_array(string, upper-lower);
+}

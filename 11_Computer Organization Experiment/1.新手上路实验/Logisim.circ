@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Pin">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Probe">
+      <a name="facing" val="west"/>
+      <a name="radix" val="10signed"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="width" val="32"/>
+    </tool>
+    <tool name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Clock">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Constant">
+      <a name="value" val="0x0"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="LED计数测试"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="LED计数电路">
+    <a name="circuit" val="LED计数电路"/>
+    <a name="clabel" val="LED计数"/>
+    <a name="clabelup" val="north"/>
+    <a name="clabelfont" val="SansSerif bold 14"/>
+  </circuit>
+  <circuit name="LED计数测试">
+    <a name="circuit" val="LED计数测试"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <path d="M61,51 Q65,61 69,51" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="30" stroke="#000000" stroke-width="2" width="30" x="50" y="50"/>
+      <circ-anchor facing="east" height="6" width="6" x="67" y="67"/>
+    </appear>
+  </circuit>
+  <circuit name="5输入编码器">
+    <a name="circuit" val="5输入编码器"/>
+    <a name="clabel" val="编码器"/>
+    <a name="clabelup" val="north"/>
+    <a name="clabelfont" val="SansSerif bold 14"/>
+  </circuit>
+  <circuit name="数码管驱动">
+    <a name="circuit" val="数码管驱动"/>
+    <a name="clabel" val="数码管驱动"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="#ffeab8" height="81" stroke="#000000" stroke-width="4" width="80" x="50" y="50"/>
+      <circ-port height="8" pin="40,30" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="40,80" width="8" x="46" y="66"/>
+      <circ-port height="10" pin="340,100" width="10" x="125" y="55"/>
+      <circ-port height="8" pin="40,130" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="40,190" width="8" x="46" y="86"/>
+      <circ-port height="10" pin="340,320" width="10" x="125" y="65"/>
+      <circ-port height="10" pin="340,610" width="10" x="125" y="75"/>
+      <circ-port height="10" pin="340,960" width="10" x="125" y="85"/>
+      <circ-port height="10" pin="340,1210" width="10" x="125" y="95"/>
+      <circ-port height="10" pin="340,1490" width="10" x="125" y="105"/>
+      <circ-port height="10" pin="340,1780" width="10" x="125" y="115"/>
+      <circ-anchor facing="east" height="6" width="6" x="127" y="87"/>
+    </appear>
+    <wire from="(310,320)" to="(340,320)"/>
+    <wire from="(310,100)" to="(340,100)"/>
+    <wire from="(310,1210)" to="(340,1210)"/>
+    <wire from="(310,960)" to="(340,960)"/>
+    <wire from="(310,1490)" to="(340,1490)"/>
+    <wire from="(310,1780)" to="(340,1780)"/>
+    <wire from="(320,610)" to="(340,610)"/>
+    <comp lib="0" loc="(340,1490)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Seg_6"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(340,1210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Seg_5"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(340,100)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Seg_1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(340,320)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Seg_2"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(40,80)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="X2"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(40,130)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="X1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(40,30)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="X3"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(340,1780)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Seg_7"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(340,610)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Seg_3"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(40,190)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="X0"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(340,960)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Seg_4"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+  </circuit>
+  <circuit name="数码管驱动测试">
+    <a name="circuit" val="数码管驱动测试"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(280,140)" to="(340,140)"/>
+    <wire from="(350,210)" to="(410,210)"/>
+    <wire from="(430,110)" to="(430,120)"/>
+    <wire from="(280,80)" to="(400,80)"/>
+    <wire from="(420,100)" to="(420,120)"/>
+    <wire from="(400,180)" to="(400,200)"/>
+    <wire from="(110,140)" to="(110,160)"/>
+    <wire from="(340,140)" to="(340,220)"/>
+    <wire from="(360,120)" to="(360,200)"/>
+    <wire from="(350,130)" to="(350,210)"/>
+    <wire from="(410,180)" to="(410,210)"/>
+    <wire from="(410,90)" to="(410,120)"/>
+    <wire from="(130,120)" to="(170,120)"/>
+    <wire from="(360,200)" to="(400,200)"/>
+    <wire from="(420,180)" to="(420,220)"/>
+    <wire from="(280,110)" to="(430,110)"/>
+    <wire from="(400,80)" to="(400,120)"/>
+    <wire from="(280,100)" to="(420,100)"/>
+    <wire from="(280,120)" to="(360,120)"/>
+    <wire from="(190,90)" to="(200,90)"/>
+    <wire from="(190,100)" to="(200,100)"/>
+    <wire from="(190,110)" to="(200,110)"/>
+    <wire from="(190,80)" to="(200,80)"/>
+    <wire from="(340,220)" to="(420,220)"/>
+    <wire from="(280,90)" to="(410,90)"/>
+    <wire from="(280,130)" to="(350,130)"/>
+    <comp lib="0" loc="(110,160)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="6" loc="(248,250)" name="Text">
+      <a name="text" val="Ctrl+T驱动时钟单步运行测试"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp loc="(280,110)" name="数码管驱动"/>
+    <comp lib="5" loc="(400,120)" name="7-Segment Display"/>
+    <comp lib="4" loc="(130,120)" name="Counter">
+      <a name="width" val="4"/>
+      <a name="max" val="0xf"/>
+    </comp>
+    <comp lib="0" loc="(170,120)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="bit0" val="3"/>
+      <a name="bit1" val="2"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="0"/>
+    </comp>
+  </circuit>
+  <circuit name="2路选择器（1位）">
+    <a name="circuit" val="2路选择器（1位）"/>
+    <a name="clabel" val="MUX"/>
+    <a name="clabelup" val="north"/>
+    <a name="clabelfont" val="Dialog bold 10"/>
+    <appear>
+      <polygon fill="#caffcd" points="30,20 60,30 60,50 30,60" stroke="#000000" stroke-width="2"/>
+      <text font-family="SansSerif" font-size="8" text-anchor="middle" x="37" y="32">0</text>
+      <circ-port height="8" pin="80,40" width="8" x="26" y="26"/>
+      <circ-port height="8" pin="80,80" width="8" x="26" y="46"/>
+      <circ-port height="8" pin="270,60" width="8" x="46" y="46"/>
+      <circ-port height="10" pin="560,60" width="10" x="55" y="35"/>
+      <circ-anchor facing="east" height="6" width="6" x="57" y="37"/>
+    </appear>
+    <wire from="(430,10)" to="(430,110)"/>
+    <wire from="(20,10)" to="(20,110)"/>
+    <wire from="(20,10)" to="(430,10)"/>
+    <wire from="(20,110)" to="(430,110)"/>
+    <wire from="(430,110)" to="(640,110)"/>
+    <wire from="(430,10)" to="(640,10)"/>
+    <wire from="(510,60)" to="(560,60)"/>
+    <wire from="(80,80)" to="(180,80)"/>
+    <wire from="(80,40)" to="(180,40)"/>
+    <wire from="(640,10)" to="(640,110)"/>
+    <wire from="(270,60)" to="(340,60)"/>
+    <comp lib="0" loc="(180,40)" name="Tunnel">
+      <a name="label" val="X0"/>
+    </comp>
+    <comp lib="6" loc="(389,30)" name="Text">
+      <a name="text" val="输入引脚区"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(560,60)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(80,80)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="X1"/>
+    </comp>
+    <comp lib="0" loc="(80,40)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="X0"/>
+    </comp>
+    <comp lib="6" loc="(330,99)" name="Text">
+      <a name="text" val="电路功能：Out=(Sel==0)?X0:X1;"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(180,80)" name="Tunnel">
+      <a name="label" val="X1"/>
+    </comp>
+    <comp lib="0" loc="(270,60)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Sel"/>
+    </comp>
+    <comp lib="0" loc="(510,60)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Out"/>
+    </comp>
+    <comp lib="6" loc="(325,128)" name="Text">
+      <a name="text" val="请勿增删改引脚，请在下方利用上方输入输出引脚的隧道标签信号构建电路，ctrl+d复制选择组件"/>
+    </comp>
+    <comp lib="6" loc="(596,30)" name="Text">
+      <a name="text" val="输出引脚区"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(340,60)" name="Tunnel">
+      <a name="label" val="Sel"/>
+    </comp>
+  </circuit>
+  <circuit name="2路选择器（16位）">
+    <a name="circuit" val="2路选择器（16位）"/>
+    <a name="clabel" val="MUX"/>
+    <a name="clabelup" val="north"/>
+    <a name="clabelfont" val="Rockwell bold 12"/>
+    <appear>
+      <polygon fill="#64ffb2" points="60,170 90,130 150,130 180,170" stroke="#000000" stroke-width="3"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="91" y="165">0</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="148" y="165">1</text>
+      <circ-port height="8" pin="120,40" width="8" x="86" y="166"/>
+      <circ-port height="8" pin="290,70" width="8" x="76" y="136"/>
+      <circ-port height="8" pin="120,100" width="8" x="146" y="166"/>
+      <circ-port height="10" pin="550,70" width="10" x="115" y="125"/>
+      <circ-anchor facing="east" height="6" width="6" x="117" y="147"/>
+    </appear>
+    <wire from="(10,10)" to="(10,140)"/>
+    <wire from="(430,10)" to="(430,140)"/>
+    <wire from="(490,70)" to="(520,70)"/>
+    <wire from="(520,70)" to="(550,70)"/>
+    <wire from="(160,40)" to="(160,50)"/>
+    <wire from="(160,100)" to="(160,110)"/>
+    <wire from="(660,10)" to="(660,140)"/>
+    <wire from="(60,550)" to="(110,550)"/>
+    <wire from="(60,440)" to="(110,440)"/>
+    <wire from="(60,280)" to="(110,280)"/>
+    <wire from="(520,70)" to="(520,90)"/>
+    <wire from="(540,690)" to="(540,720)"/>
+    <wire from="(120,100)" to="(160,100)"/>
+    <wire from="(120,40)" to="(160,40)"/>
+    <wire from="(160,100)" to="(200,100)"/>
+    <wire from="(160,40)" to="(200,40)"/>
+    <wire from="(10,140)" to="(430,140)"/>
+    <wire from="(430,10)" to="(660,10)"/>
+    <wire from="(430,140)" to="(660,140)"/>
+    <wire from="(10,10)" to="(430,10)"/>
+    <wire from="(290,70)" to="(360,70)"/>
+    <comp lib="6" loc="(324,158)" name="Text">
+      <a name="text" val="请勿增删改引脚，请在下方利用上方输入输出引脚的隧道标签信号构建电路，ctrl+d复制选择组件"/>
+    </comp>
+    <comp lib="0" loc="(360,70)" name="Tunnel">
+      <a name="label" val="Sel"/>
+    </comp>
+    <comp lib="0" loc="(290,70)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Sel"/>
+    </comp>
+    <comp lib="0" loc="(60,550)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Sel"/>
+    </comp>
+    <comp lib="0" loc="(540,720)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="16"/>
+      <a name="label" val="Out"/>
+    </comp>
+    <comp lib="0" loc="(160,110)" name="Probe">
+      <a name="facing" val="north"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(120,100)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Y"/>
+    </comp>
+    <comp lib="0" loc="(60,280)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="X"/>
+    </comp>
+    <comp lib="0" loc="(550,70)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="Out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(331,130)" name="Text">
+      <a name="text" val="电路功能：Out=(Sel==0)?X:Y;"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(200,40)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="X"/>
+    </comp>
+    <comp lib="0" loc="(60,440)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="Y"/>
+    </comp>
+    <comp lib="0" loc="(160,50)" name="Probe">
+      <a name="facing" val="north"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(490,70)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="Out"/>
+    </comp>
+    <comp lib="0" loc="(120,40)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="X"/>
+    </comp>
+    <comp lib="0" loc="(520,90)" name="Probe">
+      <a name="facing" val="north"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="6" loc="(387,28)" name="Text">
+      <a name="text" val="输入引脚区"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="6" loc="(617,28)" name="Text">
+      <a name="text" val="输出引脚区"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>  
+  </circuit>
+</project>

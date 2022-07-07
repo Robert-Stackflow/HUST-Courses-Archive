@@ -1,0 +1,16 @@
+/* Library parse */
+/* Functions for parsing basic data values from strings */
+
+/* Attempt to parse "true" or "false from s and return
+ * a pointer to the result or NULL if not of that form
+ */
+bool* parse_bool(string s);
+
+/* Attempt to parse an integer from the given string.
+ * For base > 10, the letters A-Z (case insignificant) are used as digits.
+ * Return NULL if s cannot be completely parsed to an int in the given
+ * base.
+ */
+int* parse_int(string s, int base)
+  //@requires 2 <= base && base <= 36;
+  ;

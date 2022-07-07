@@ -1,0 +1,10 @@
+// Pseudorandom number generators
+
+// provides:
+// typedef _ rand_t;
+// rand_t init_rand(int seed);
+// int rand(rand_t gen);
+
+typedef struct rand* rand_t;
+rand_t init_rand (int seed);
+int rand(rand_t gen);

@@ -1,0 +1,73 @@
+/* Stacks implemented as (bounded) arrays.
+ *
+ * 15-122 Principles of Imperative Computation, Spring 2013
+ */
+
+typedef string elem;
+
+/* Interface to stacks of elems */
+
+typedef struct stack_header* stack;
+
+bool stack_empty(stack S);      /* O(1) */
+stack stack_new();              /* O(1) */
+void push(stack S, elem e);     /* O(1) */
+elem pop(stack S)               /* O(1) */
+//@requires !stack_empty(S);
+  ;
+
+/* Implementation of stacks */
+
+struct stack_header {
+  elem[] data;
+  int top;
+  int bottom;
+  int capacity;
+};
+
+bool is_stack(stack S)
+{
+  if (S == NULL) return false;
+  if (!(S->bottom == 0)) return false;
+  if (!(S->bottom <= S->top)) return false;
+  if (!(S->top < S->capacity)) return false;
+  //@assert \length(S->data) == S->capacity;
+  return true;
+}
+
+bool stack_empty(stack S)
+//@requires is_stack(S);
+{
+  return S->top == S->bottom;
+}
+
+stack stack_new()
+//@ensures is_stack(\result);
+//@ensures stack_empty(\result);
+{
+  stack S = alloc(struct stack_header);
+  S->bottom = 0;
+  S->top = 0;
+  S->capacity = 100;
+  S->data = alloc_array(elem, S->capacity);
+  return S;
+}
+
+void push(stack S, elem e)
+//@requires is_stack(S);
+//@ensures is_stack(S);
+{
+  if (S->top+1 >= S->capacity) error("stack overflow");
+  S->top++;
+  S->data[S->top] = e;
+}
+
+elem pop(stack S)
+//@requires !stack_empty(S);
+//@requires is_stack(S);
+//@ensures is_stack(S);
+{
+  elem r = S->data[S->top];
+  S->top--;
+  return r;
+}

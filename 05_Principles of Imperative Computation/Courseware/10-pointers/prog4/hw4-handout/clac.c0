@@ -1,0 +1,39 @@
+/*
+ * Clac, stack-based calculator language
+ *
+ * 15-122 Principles of Imperative Computation
+ */
+
+#use <string>
+#use <parse>
+#use <conio>
+#use <args>
+#use <util>
+
+/* Return true: clac top-level interpreter will expect more input */
+/* Return false: clac top-level interpreter will exit */
+bool eval(queue Q, stack S)
+//@ensures \result == false || queue_empty(Q);
+{
+  while (!queue_empty(Q)) {
+    string tok = deq(Q); /* is this dequeue safe? */
+    // print("Read: "); print(tok); print("\n");
+    if (string_equal(tok, "print")) {
+
+      /* next line is unsafe and should be fixed */
+      int x = pop(S);
+      printint(x); print("\n");
+    } else if (string_equal(tok, "quit")) {
+      return false;             /* do not continue */
+    } else {
+      /* not defined as an operation name, should be an int */
+      int* p = parse_int(tok, 10);
+      if (p == NULL) { /* not an int */
+        /* call error(msg) which prints msg and aborts */
+        error(string_join("undefined token ", tok));
+      }
+      push(S, *p);
+    }
+  }
+  return true;                  /* continue */
+}

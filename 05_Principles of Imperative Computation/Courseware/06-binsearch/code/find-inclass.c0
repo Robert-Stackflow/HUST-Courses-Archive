@@ -1,0 +1,72 @@
+/* Linear and binary search
+ * 15-122 Principles of Imperative Computation
+ * Frank Pfenning
+ */
+
+int search(int x, int[] A, int n)
+//@requires 0 <= n && n <= \length(A);
+//@requires is_sorted(A, 0, n);
+/*@ensures (\result == -1 && !is_in(x, A, 0, n))
+        || (0 <= \result 
+            && \result < n
+            && A[\result] == x); @*/
+{
+  int low = 0;
+  int up = n;
+  while (low < up)
+    //@loop_invariant 0 <= low && low <= up && up <= n;
+    //@loop_invariant low == 0 || A[low-1] < x;
+    //@loop_invariant up == n || x < A[up];
+    {
+      int mid = low + (up-low) / 2;
+    //@assert low <= mid && mid < up;
+    if (x == A[mid]) return mid;
+    else if (A[mid] < x) low = mid + 1;
+    else {
+      //@assert A[mid] > x;
+      up = mid;
+    }
+  }
+  //@assert low == up;
+  return -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int linsearch(int x, int[] A, int n)
+//@requires 0 <= n && n <= \length(A);
+//@requires is_sorted(A, 0, n);
+/*@ensures (\result == -1 && !is_in(x, A, 0, n))
+        || (0 <= \result 
+            && \result < n
+            && A[\result] == x); @*/
+{
+  for (int j = 0; j < n; j++)
+    //@loop_invariant 0 <= j && j <= n;
+    //@loop_invariant !is_in(x, A, 0, j);
+    {
+      if(A[j] == x) return j;
+      if(A[j] > x) return -1;
+      //@assert A[j] < x;
+    }
+  return -1;
+}
+

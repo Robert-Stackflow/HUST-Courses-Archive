@@ -1,0 +1,20 @@
+/* file sieve2-test.c0 */
+#use <conio>
+#use "sieve2-inv.c0"
+
+int main () {
+  print("Testing isPrime for correctness...\n");
+  assert(isPrime(10) == false);
+  assert(isPrime(17) == true);
+  assert(isPrime(-1) == false);
+  print("Passed!\n");
+
+  print("Testing piUsingSieve for correctness...\n");
+  assert(piUsingSieve(10) == 4);
+  assert(piUsingSieve(100) == 25);
+  assert(piUsingSieve(1000) == 168);
+  print("Passed!\n");
+
+  return 0;
+}
+

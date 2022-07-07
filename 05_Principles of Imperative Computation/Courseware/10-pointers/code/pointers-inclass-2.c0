@@ -1,0 +1,21 @@
+/* 
+ * Pointers
+ * 
+ * 15-122 Principles of Imperative Computation
+ * Fall 2013
+ * Tom Cortina */
+
+#use <util>
+
+typedef int pixel;
+
+struct point_header {
+  int x;
+  int y;
+};
+
+struct img_header {
+  int width;
+  int height; 
+  pixel[] pixels;
+};

@@ -1,0 +1,4 @@
+﻿  Assembling asm_64_example.asm...
+asm_64_example.asm(23): error A2008: syntax error : start
+asm_64_example.asm(23): error A2088: END directive required at end of file
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\BuildCustomizations\masm.targets(70,5): error MSB3721: 命令“ml64.exe /c /nologo /Zi /Fo"x64\Debug\asm_64_example.obj" /W3 /errorReport:prompt  /Taasm_64_example.asm”已退出，返回代码为 1。

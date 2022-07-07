@@ -1,0 +1,3 @@
+﻿  ConsoleApplication1.cpp
+D:\HUST-Courses\C++\作业\作业4\T6\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(8,16): error C2533: “A”: 构造函数不能有返回类型
+D:\HUST-Courses\C++\作业\作业4\T6\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(8,16): error C2256: 在“A::A”上非法使用友元说明符

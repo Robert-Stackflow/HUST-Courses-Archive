@@ -1,0 +1,47 @@
+/*
+ * Binary search tree without balancing: outline
+ *
+ * 15-122 Principles of Imperative Computation, Spring 2011
+ * Frank Pfenning
+ */
+
+/* Outline (only) showing structure of interface */
+
+/******************************/
+/* Client-side implementation */
+/******************************/
+
+/* invisible to library */
+
+/*************************/
+/* Client-side interface */
+/*************************/
+
+typedef struct wcount* elem;              // same as for hash tables
+typedef string key;                       // same as for hash tables
+
+key elem_key(elem e)                      // same as for hash tables
+//@requires e != NULL;
+  ;
+
+int key_compare(key k1, key k2)         // instead of key_equal
+//@ensures -1 <= \result && \result <= 1;
+  ;
+
+/*********************/
+/* Library interface */
+/*********************/
+
+typedef struct bst_header* bst;
+
+bst bst_new();                          // no initial_capacity argument
+void bst_insert(bst B, elem e)  /* replace if elem with same key as x in B */
+//@requires e != NULL;
+  ;
+elem bst_lookup(bst B, key k);  /* return NULL if not in tree */
+
+/**************************/
+/* Library implementation */
+/**************************/
+
+/* invisible to client */

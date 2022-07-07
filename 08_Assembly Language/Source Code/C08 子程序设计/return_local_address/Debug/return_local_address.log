@@ -1,0 +1,3 @@
+﻿  return_local_address.c
+C:\新书示例\C08 子程序设计\return_local_address\return_local_address.c(6): warning C4172: 返回局部变量或临时变量的地址: t
+  return_local_address.vcxproj -> C:\新书示例\C08 子程序设计\Debug\return_local_address.exe

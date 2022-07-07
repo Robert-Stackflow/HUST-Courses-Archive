@@ -1,0 +1,28 @@
+/* Simple array illustration
+ *
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning
+ */
+
+/* Identity array of length n (A[i] = i for 0 <= i < n) */
+int[] id_array(int n)
+//@requires n >= 0;
+{
+  int[] A = alloc_array(int, n);
+
+  for (int i = 0; i < n; i++) /* i++ abbrev for (i = i+1) */
+    //@loop_invariant 0 <= i && i <= n;
+    A[i] = i;
+
+  /* more verbose alternative using while loops */
+  /*
+  int i = 0;
+  while (i < n)
+    //@loop_invariant 0 <= i && i <= n;
+    {
+      A[i] = i;
+      i = i+1;
+    }
+  */
+  return A;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>hust.cs.javacourse.search.index.impl.TermTuple</OriginalElement>
+  <nodes>
+    <node x="-97.0" y="-176.0">hust.cs.javacourse.search.index.AbstractTermTuple</node>
+    <node x="-97.0" y="-25.0">hust.cs.javacourse.search.index.impl.TermTuple</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="hust.cs.javacourse.search.index.impl.TermTuple" target="hust.cs.javacourse.search.index.AbstractTermTuple" relationship="GENERALIZATION">
+      <point x="0.0" y="-62.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+  </edges>
+  <settings layout="分层" zoom="1.0" showDependencies="false" x="119.0" y="23.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>字段</Category>
+    <Category>方法</Category>
+    <Category>构造函数</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

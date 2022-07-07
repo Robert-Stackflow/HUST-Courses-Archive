@@ -1,0 +1,11 @@
+/* 
+ * Images
+ * 
+ * 15-122 Principles of Imperative Computation 
+ * Tom Cortina */
+
+struct img_header {
+  int width;
+  int height; 
+  pixel[] pixels;
+};

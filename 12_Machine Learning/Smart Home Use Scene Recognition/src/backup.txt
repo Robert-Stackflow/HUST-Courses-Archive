@@ -1,0 +1,127 @@
+    # # 对form列进行哑编码
+    # form_columns = ['form_backnet', 'form_datasync', 'form_delfail', 'form_normal', 'form_oauth2',
+    #                 'form_offxiaoda', 'form_scene', 'form_sceneref', 'form_sceneswitch', 'form_subgroup', 'form_timing',
+    #                 'form_webdevice', ]
+    # train_control_onehot = pd.get_dummies(train_control, columns=['form'], prefix='form', drop_first=False)[
+    #     form_columns]
+    # train_control_onehot.to_csv('a.csv')
+    # train_control = pd.concat([train_control, train_control_onehot], axis=1)
+    # # pd.concat([train_control, train_control_onehot])
+    # train_control.to_csv('b.csv')
+    # train_control_feat = train_control.groupby('uid').agg({
+    #     'did': 'nunique',
+    #     'data': 'nunique',
+    #     'form': ['nunique', 'count'],
+    #     'form_backnet': 'count',
+    #     'form_datasync': 'count',
+    #     'form_delfail': 'count',
+    #     'form_normal': 'count',
+    #     'form_oauth2': 'count',
+    #     'form_offxiaoda': 'count',
+    #     'form_scene': 'count',
+    #     'form_sceneref': 'count',
+    #     'form_sceneswitch': 'count',
+    #     'form_subgroup': 'count',
+    #     'form_timing': 'count',
+    #     'form_webdevice': 'count',
+    # })
+    # train_control_feat.reset_index(inplace=True)
+    # train_control_feat.columns = [x[0] + '_' + x[1] for x in train_control_feat.columns]
+    # new_columns = []
+    # for col in train_control_feat.columns:
+    #     if col == 'uid_':
+    #         new_columns.append('uid')
+    #     else:
+    #         new_columns.append(col)
+    # train_control_feat.columns = new_columns
+    #
+    # test_control_onehot = pd.get_dummies(test_control, columns=['form'], prefix='form', drop_first=False)
+    # test_control_onehot['form_webdevice'] = 0
+    # test_control_onehot = test_control_onehot[form_columns]
+    # test_control = pd.concat([test_control, test_control_onehot])
+    # test_control_feat = test_control.groupby('uid').agg({
+    #     'did': 'nunique',
+    #     'data': 'nunique',
+    #     'form': ['nunique', 'count'],
+    #     'form_backnet': 'count',
+    #     'form_datasync': 'count',
+    #     'form_delfail': 'count',
+    #     'form_normal': 'count',
+    #     'form_oauth2': 'count',
+    #     'form_offxiaoda': 'count',
+    #     'form_scene': 'count',
+    #     'form_sceneref': 'count',
+    #     'form_sceneswitch': 'count',
+    #     'form_subgroup': 'count',
+    #     'form_timing': 'count',
+    #     'form_webdevice': 'count',
+    # })
+    # test_control_feat.reset_index(inplace=True)
+    # test_control_feat.columns = [x[0] + '_' + x[1] for x in test_control_feat.columns]
+    # new_columns = []
+    # for col in test_control_feat.columns:
+    #     if col == 'uid_':
+    #         new_columns.append('uid')
+    #     else:
+    #         new_columns.append(col)
+    # test_control_feat.columns = new_columns
+
+
+    # # 绘制出不同模型准确率对比曲线
+    # from sklearn.model_selection import cross_val_score
+    # lr_l = []
+    # dtc_l = []
+    # rfc_l = []
+    # gbm_l = []
+    # for i in range(10):
+    #     # 逻辑回归模型
+    #     lr = LogisticRegression(max_iter=10000)
+    #     lr_s = cross_val_score(lr, X, y, cv=10).mean()
+    #     lr_l.append(lr_s)
+    #     # 决策树模型
+    #     dtc = DecisionTreeClassifier()
+    #     dtc_s = cross_val_score(dtc, X, y, cv=10).mean()
+    #     dtc_l.append(dtc_s)
+    #     # 随机森林模型
+    #     rfc = RandomForestClassifier(n_estimators=20)
+    #     rfc_s = cross_val_score(rfc, X, y, cv=10).mean()
+    #     rfc_l.append(rfc_s)
+    #     # LightGBM模型
+    #     gbm = LGBMClassifier(num_leaves=31, learning_rate=0.05)
+    #     gbm_s = cross_val_score(gbm, X, y, cv=10).mean()
+    #     gbm_l.append(gbm_s)
+    # plt.plot(range(1, 11), lr_l, label="Logistic Regression")
+    # plt.plot(range(1, 11), dtc_l, label="Decision Tree")
+    # plt.plot(range(1, 11), rfc_l, label="Random Forest")
+    # plt.plot(range(1, 11), gbm_l, label="LightGBM")
+    # plt.legend()
+    # plt.show()
+
+    # 打印不同模型的准确率
+    print(">>>The Accuracy of Different Models:")
+    print(f"Logistic Regression:{score['Logistic Regression']}")
+    print(f"Decision Tree:{score['Decision Tree']}")
+    print(f"Random Forest:{score['Random Forest']}")
+    print(f"LightGBM:{score['LightGBM']}")
+    print(f"XGBoost:{score['XGBoost']}\n")
+
+    #lightGBM调参
+        best_params = {}
+    learning_rate = [0.01, 0.1, 0.3, 0.6]
+    feature_fraction = [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+    num_leaves = range(5, 10, 1)
+    max_depth = range(3, 8, 1)
+    parameters = {'learning_rate': learning_rate,
+                  'feature_fraction': feature_fraction,
+                  'num_leaves': num_leaves,
+                  'max_depth': max_depth}
+    model = LGBMClassifier(n_estimators=50)
+
+    # 进行网格搜索
+    clf = GridSearchCV(model, parameters, cv=3, scoring='accuracy', verbose=3, n_jobs=-1)
+    clf = clf.fit(X_train, y_train)
+    print(clf.best_params_)
+    best_params = clf.best_params_
+
+        # # 特征工程
+    # train, test = gen_target_encoding_feats(train, test, TARGET_ENCODING_FETAS, target_col='loan_default',n_fold=10)

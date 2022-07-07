@@ -1,0 +1,14 @@
+﻿生成启动时间为 2019/08/07 17:04:06。
+     1>项目“G:\汇编语言新书实例\中断和异常\test1\test1.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>_MASM:
+         Assembling test1.asm...
+         cmd.exe /C "C:\Users\Administrator\AppData\Local\Temp\tmp39a34cf6b01c4abaac844c4d282c85a0.cmd"
+         ml.exe /c /nologo /Zi /Fo"Debug\test1.obj" /W3 /errorReport:prompt  /Tatest1.asm
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\汇编语言新书实例\中断和异常\Debug\test1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\汇编语言新书实例\中断和异常\Debug\test1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\汇编语言新书实例\中断和异常\Debug\test1.lib" /MACHINE:X86 Debug\test1.obj
+         test1.vcxproj -> G:\汇编语言新书实例\中断和异常\Debug\test1.exe
+     1>已完成生成项目“G:\汇编语言新书实例\中断和异常\test1\test1.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.18

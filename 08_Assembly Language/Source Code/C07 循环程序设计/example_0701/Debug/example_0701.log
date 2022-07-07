@@ -1,0 +1,3 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(example_0701.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  Assembling example_0707.asm...
+  example_0701.vcxproj -> C:\新书示例\C07 循环程序设计\Debug\example_0707.exe

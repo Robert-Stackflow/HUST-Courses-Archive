@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>hust.cs.javacourse.search.index.impl.Document</OriginalElement>
+  <nodes>
+    <node x="-193.0" y="-143.0">hust.cs.javacourse.search.index.AbstractDocument</node>
+    <node x="-168.0" y="193.0">hust.cs.javacourse.search.index.impl.Document</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="hust.cs.javacourse.search.index.impl.Document" target="hust.cs.javacourse.search.index.AbstractDocument" relationship="GENERALIZATION">
+      <point x="0.0" y="-143.0" />
+      <point x="0.0" y="143.0" />
+    </edge>
+  </edges>
+  <settings layout="分层" zoom="1.0" showDependencies="false" x="0.0" y="168.0" />
+  <SelectedNodes>
+    <node>hust.cs.javacourse.search.index.impl.Document</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>字段</Category>
+    <Category>属性</Category>
+    <Category>方法</Category>
+    <Category>构造函数</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

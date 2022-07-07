@@ -1,0 +1,18 @@
+#use <conio>
+#use <string>
+
+void print_substrings(string s){
+    int len = string_length(s);
+    for(int i = 0; i < len; i++){
+        printint(len - i);
+        print(". ");
+        string sub = string_sub(s, i, len);
+        println(sub);
+    }
+}
+
+int main(){
+    string myname = "Nivedita"; //Feel free to replace this with yours!
+    print_substrings(myname);
+    return 0;
+}

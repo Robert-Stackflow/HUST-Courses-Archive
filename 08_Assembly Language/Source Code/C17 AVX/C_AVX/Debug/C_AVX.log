@@ -1,0 +1,4 @@
+﻿  C_AVX.c
+C:\新书示例\C16_AVX\C_AVX\C_AVX.c(5,10): warning C4305: “=”: 从“double”到“float”截断
+C:\新书示例\C16_AVX\C_AVX\C_AVX.c(6,11): warning C4305: “=”: 从“double”到“float”截断
+  C_AVX.vcxproj -> C:\新书示例\C16_AVX\Debug\C_AVX.exe

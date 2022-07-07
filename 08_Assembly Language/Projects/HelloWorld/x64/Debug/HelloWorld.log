@@ -1,0 +1,7 @@
+﻿  Assembling main.asm...
+main.asm(1): error A2008: syntax error : .
+main.asm(2): error A2008: syntax error : .
+main.asm(10): error A2008: syntax error : .
+main.asm(22): error A2008: syntax error : printf
+main.asm(23): error A2008: syntax error : invoke
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: 命令“ml64.exe /c /nologo /Zi /Fo"x64\Debug\main.obj" /W3 /errorReport:prompt  /Tamain.asm”已退出，返回代码为 1。

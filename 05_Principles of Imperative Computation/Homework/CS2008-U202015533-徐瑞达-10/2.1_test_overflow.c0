@@ -1,0 +1,10 @@
+#use <conio>
+
+int f(int x, int y);
+
+int main()
+{
+    assert(f(2,32) == 32);
+    assert(f(-2,32) == 32);
+    return 0;
+}

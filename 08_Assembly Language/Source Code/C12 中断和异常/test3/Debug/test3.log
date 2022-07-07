@@ -1,0 +1,5 @@
+﻿  stdafx.cpp
+  test3.cpp
+C:\新书示例\C12 中断和异常\test3\stdafx.cpp(5,10): error C1083:  无法打开预编译头文件: “Debug\test3.pch”: No such file or directory
+  正在生成代码...
+C:\新书示例\C12 中断和异常\test3\test3.cpp(4,10): error C1083:  无法打开预编译头文件: “Debug\test3.pch”: No such file or directory

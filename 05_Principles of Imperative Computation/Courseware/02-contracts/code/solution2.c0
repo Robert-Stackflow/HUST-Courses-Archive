@@ -1,0 +1,125 @@
+/* Recursive definition of pow, runs out of stack space */
+
+
+int POW(int base, int exp)
+
+//@requires base==0&&exp>0 || base!=0&&exp >= 0;
+{
+  int r;
+  int b = base;
+  int s;
+  int sum;
+
+
+  if (exp == 0) {
+
+    return 1;
+
+  } else {
+    r = POW(base, exp - 1);
+    if (b < 0)
+      {
+        s = -1;
+        b = -b;
+      }
+    else
+      s = 1;
+    for (int i=0,sum=0; i<b; i++)
+      //@loop_invariant i>=0 && i<=b;
+      {
+        sum += r;
+        if (r >= 0)
+          {
+            if (sum < r)
+              error("Overflow");
+          }
+        else
+          {
+            if (sum > r)
+              error("Overflow");
+          }
+      }
+
+    return sum * s;
+
+  }
+
+}
+
+
+int POW(int base, int exp)
+//@requires base==0&&exp>0 || base!=0&&exp >= 0;
+{
+  int r;
+  int b = base;
+  int s;
+//  int sum;
+  if (exp == 0) {
+    return 1;
+  } else {
+    r = POW(base, exp - 1);
+    if (b < 0)
+      {
+        s = -1;
+        b = -b;
+      }
+    else
+      s = 1;
+    if (~(1<<31)/r < b)
+      error("Overflower!");
+    return sum * s;
+  }
+}
+
+/* POW(19, 1000000) will almost certainly run out of stack space if it
+   is compiled with cc0.
+
+   If we look at POW in the debugger, we can see that it tries to
+   compute POW(19, 3), then POW(19, 2), then POW(19, 1), and then
+   finally POW(19, 0). Can we mimic this iteratively?
+*/
+
+int pow_iter(int x, int y)
+//@requires y >= 0;
+//@ensures \result == POW(x, y);
+{
+  int b = x; /* we don't *really* need to redeclare base right now */
+  int e = y;
+  int accum = 1;
+  while (e > 0)
+    //@loop_invariant e >= 0;
+    //@loop_invariant POW(x, y) == accum * POW(b, e);
+    {
+      accum = accum * b;
+      e = e - 1;
+    }
+
+  //@assert e == 0;
+  return accum;
+}
+
+int pow_fast(int x, int y)
+//@requires y >= 0;
+//@ensures \result == POW(x, y);
+{
+  int b = x;
+  int e = y;
+  int accum = 1;
+  while (e > 0)
+    //@loop_invariant e >= 0;
+    //@loop_invariant POW(x, y) == accum * POW(b, e);
+    {
+      if (e % 2 == 1) {
+        accum = b * accum;
+      }
+      b = b * b;
+      e = e / 2;
+    }
+
+  //@assert e == 0;
+  return accum;
+}
+
+int main () {
+  return pow_fast(4, 10);
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>hust.cs.javacourse.search.query.impl.IndexSearcher</OriginalElement>
+  <nodes>
+    <node x="-249.0" y="-85.0">hust.cs.javacourse.search.query.AbstractIndexSearcher</node>
+    <node x="-249.0" y="89.0">hust.cs.javacourse.search.query.impl.IndexSearcher</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="hust.cs.javacourse.search.query.impl.IndexSearcher" target="hust.cs.javacourse.search.query.AbstractIndexSearcher" relationship="GENERALIZATION">
+      <point x="0.0" y="-85.0" />
+      <point x="0.0" y="62.0" />
+    </edge>
+  </edges>
+  <settings layout="分层" zoom="0.8491295938104448" showDependencies="false" x="-0.5" y="87.0" />
+  <SelectedNodes>
+    <node>hust.cs.javacourse.search.query.impl.IndexSearcher</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>字段</Category>
+    <Category>属性</Category>
+    <Category>方法</Category>
+    <Category>构造函数</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

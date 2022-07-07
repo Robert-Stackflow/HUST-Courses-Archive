@@ -1,0 +1,40 @@
+/* 
+ * Hash function on strings
+ *
+ * 15-122 Principles of Imperative Computation
+ * Frank Pfenning, Rob Simmons
+ */
+
+#use <string>
+
+// This version doesn't take a limit; it's up to the caller to 
+// restrict the result to the desired range.
+
+int hash_string(string s) {
+  // These numbers are the linear congruential generator constants
+  // from Numerical Recipies
+  // http://en.wikipedia.org/wiki/Linear_congruential_generator
+  int a = 1664525; 
+  int c = 1013904223; 
+
+  // These numbers are representative of how Java string hashing is
+  // defined (less random, more predictable)
+  // int a = 31;
+  // int c = 0;
+
+  int len = string_length(s);
+  int h = 0;                                   /* empty string maps to 0 */
+  for (int i = 0; i < len; i++)
+  //@loop_invariant 0 <= i;
+  {
+    /* The value of the char in the i^th position in the string: */
+    int cv = char_ord(string_charat(s, i));
+    /* Step forward in the LCG's series to turn the combined value into
+     * something unpredictable. */
+    h = h*a + c; 
+    /* Combine the hash value and the value of the char (other
+     * operations, including xor, can also work) */
+    h = h + cv; 
+  }
+  return h;
+}

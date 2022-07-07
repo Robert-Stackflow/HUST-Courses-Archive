@@ -1,0 +1,23 @@
+/*
+ * Collider hash function on strings.
+ * String collider causes too many collisions.
+ *
+ * 15-122 Principles of Imperative Computation
+ * Frank Pfenning
+ */
+
+#use <rand>
+#use <string>
+
+int hash_string(string s)
+{
+  int len = string_length(s);
+  int h = 0;                                   /* empty string maps to 0 */
+  for (int i = 0; i < len; i++)
+    //@loop_invariant 0 <= i;
+    {
+      h = h + char_ord(string_charat(s, i)); 
+    }
+
+  return h;
+}

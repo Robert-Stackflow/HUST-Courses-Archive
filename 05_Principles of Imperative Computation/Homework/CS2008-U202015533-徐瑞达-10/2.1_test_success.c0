@@ -1,0 +1,12 @@
+#use <conio>
+
+int f(int x, int y);
+
+int main()
+{
+    assert(f(2,5) == 32);
+    assert(f(-2,5) == -32);
+    assert(f(2,0) == 1);
+    print("All tests for FUNTION f passed!\n");
+    return 0;
+}

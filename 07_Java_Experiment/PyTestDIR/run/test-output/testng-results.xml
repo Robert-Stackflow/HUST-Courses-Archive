@@ -1,0 +1,2232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="106" passed="106" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-31T06:55:25Z" name="All Test Suite" finished-at="2022-05-31T06:55:26Z" duration-ms="1144">
+    <groups>
+    </groups>
+    <test started-at="2022-05-31T06:55:25Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/TermTest.java" finished-at="2022-05-31T06:55:25Z" duration-ms="24">
+      <class name="hust.cs.javacourse.search.index.TermTest">
+        <test-method signature="testTestToString(hust.cs.javacourse.search.index.AbstractTerm, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.TermTest@612fc6eb]" started-at="2022-05-31T06:55:25Z" name="testTestToString" data-provider="testTerm" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[We have a dream.]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[We have a dream.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestToString -->
+        <test-method signature="testCompareTo([Lhust.cs.javacourse.search.index.AbstractTerm;, int)[pri:0, instance:hust.cs.javacourse.search.index.TermTest@612fc6eb]" started-at="2022-05-31T06:55:25Z" name="testCompareTo" data-provider="testTerm" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractTerm;@1460a8c0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCompareTo -->
+        <test-method signature="testWriteObject(hust.cs.javacourse.search.index.AbstractTerm, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.TermTest@612fc6eb]" started-at="2022-05-31T06:55:25Z" name="testWriteObject" data-provider="testTerm" finished-at="2022-05-31T06:55:25Z" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[search engine]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//ser/Term.dat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWriteObject -->
+        <test-method signature="testSetContent(hust.cs.javacourse.search.index.AbstractTerm, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.TermTest@612fc6eb]" started-at="2022-05-31T06:55:25Z" name="testSetContent" data-provider="testTerm" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[We have no dream.]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[We have no dream.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetContent -->
+        <test-method signature="testCompareTo([Lhust.cs.javacourse.search.index.AbstractTerm;, int)[pri:0, instance:hust.cs.javacourse.search.index.TermTest@612fc6eb]" started-at="2022-05-31T06:55:25Z" name="testCompareTo" data-provider="testTerm" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractTerm;@79ca92b9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCompareTo -->
+        <test-method signature="testTestEquals([Lhust.cs.javacourse.search.index.AbstractTerm;, boolean)[pri:0, instance:hust.cs.javacourse.search.index.TermTest@612fc6eb]" started-at="2022-05-31T06:55:25Z" name="testTestEquals" data-provider="testTerm" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractTerm;@4387b79e]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestEquals -->
+        <test-method signature="testTestEquals([Lhust.cs.javacourse.search.index.AbstractTerm;, boolean)[pri:0, instance:hust.cs.javacourse.search.index.TermTest@612fc6eb]" started-at="2022-05-31T06:55:25Z" name="testTestEquals" data-provider="testTerm" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractTerm;@4f638935]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestEquals -->
+        <test-method signature="testGetContent(hust.cs.javacourse.search.index.AbstractTerm, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.TermTest@612fc6eb]" started-at="2022-05-31T06:55:25Z" name="testGetContent" data-provider="testTerm" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[We have a dream.]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[We have a dream.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetContent -->
+        <test-method signature="testReadObject(hust.cs.javacourse.search.index.AbstractTerm, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.TermTest@612fc6eb]" started-at="2022-05-31T06:55:25Z" name="testReadObject" data-provider="testTerm" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[search engine]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//ser/Term.dat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReadObject -->
+      </class> <!-- hust.cs.javacourse.search.index.TermTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/TermTest.java -->
+    <test started-at="2022-05-31T06:55:25Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/TermTupleTest.java" finished-at="2022-05-31T06:55:25Z" duration-ms="16">
+      <class name="hust.cs.javacourse.search.index.TermTupleTest">
+        <test-method signature="testTestEquals([Lhust.cs.javacourse.search.index.AbstractTermTuple;, boolean)[pri:0, instance:hust.cs.javacourse.search.index.TermTupleTest@3891771e]" started-at="2022-05-31T06:55:25Z" name="testTestEquals" data-provider="testTermTuple" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractTermTuple;@2f177a4b]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestEquals -->
+        <test-method signature="testTestEquals([Lhust.cs.javacourse.search.index.AbstractTermTuple;, boolean)[pri:0, instance:hust.cs.javacourse.search.index.TermTupleTest@3891771e]" started-at="2022-05-31T06:55:25Z" name="testTestEquals" data-provider="testTermTuple" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractTermTuple;@147ed70f]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestEquals -->
+        <test-method signature="testTestEquals([Lhust.cs.javacourse.search.index.AbstractTermTuple;, boolean)[pri:0, instance:hust.cs.javacourse.search.index.TermTupleTest@3891771e]" started-at="2022-05-31T06:55:25Z" name="testTestEquals" data-provider="testTermTuple" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractTermTuple;@4278a03f]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestEquals -->
+        <test-method signature="testTestToString(hust.cs.javacourse.search.index.AbstractTermTuple, [Ljava.lang.String;)[pri:0, instance:hust.cs.javacourse.search.index.TermTupleTest@3891771e]" started-at="2022-05-31T06:55:25Z" name="testTestToString" data-provider="testTermTuple" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TermTuple{term=Search, freq=1, curPos=100}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.String;@61dd025]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestToString -->
+      </class> <!-- hust.cs.javacourse.search.index.TermTupleTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/TermTupleTest.java -->
+    <test started-at="2022-05-31T06:55:25Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/PostingTest.java" finished-at="2022-05-31T06:55:25Z" duration-ms="20">
+      <class name="hust.cs.javacourse.search.index.PostingTest">
+        <test-method signature="testTestEquals([Lhust.cs.javacourse.search.index.AbstractPosting;, boolean)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testTestEquals" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@1f0f1111]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestEquals -->
+        <test-method signature="testTestToString(hust.cs.javacourse.search.index.AbstractPosting, [Ljava.lang.String;)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testTestToString" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[10, 100, 320, 400]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.String;@49c386c8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestToString -->
+        <test-method signature="testTestEquals([Lhust.cs.javacourse.search.index.AbstractPosting;, boolean)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testTestEquals" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@2b6faea6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestEquals -->
+        <test-method signature="testTestEquals([Lhust.cs.javacourse.search.index.AbstractPosting;, boolean)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testTestEquals" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@778d1062]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestEquals -->
+        <test-method signature="testTestEquals([Lhust.cs.javacourse.search.index.AbstractPosting;, boolean)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testTestEquals" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@1e802ef9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestEquals -->
+        <test-method signature="testTestEquals([Lhust.cs.javacourse.search.index.AbstractPosting;, boolean)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testTestEquals" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@670002]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestEquals -->
+        <test-method signature="testSetFreq(hust.cs.javacourse.search.index.AbstractPosting, int)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testSetFreq" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":0,"freq":8,"positions":[]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetFreq -->
+        <test-method signature="testSetDocId(hust.cs.javacourse.search.index.AbstractPosting, int)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testSetDocId" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":20,"freq":0,"positions":[]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetDocId -->
+        <test-method signature="testSetPositions(hust.cs.javacourse.search.index.AbstractPosting, java.util.List)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testSetPositions" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":0,"freq":0,"positions":[100, 320, 400]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[100, 320, 400]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetPositions -->
+        <test-method signature="testGetFreq(hust.cs.javacourse.search.index.AbstractPosting, int)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testGetFreq" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[10, 100, 320, 400]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetFreq -->
+        <test-method signature="testGetDocId(hust.cs.javacourse.search.index.AbstractPosting, int)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testGetDocId" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[10, 100, 320, 400]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDocId -->
+        <test-method signature="testGetPositions(hust.cs.javacourse.search.index.AbstractPosting, java.util.List)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testGetPositions" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[10, 100, 320, 400]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[10, 100, 320, 400]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPositions -->
+        <test-method signature="testSort(hust.cs.javacourse.search.index.AbstractPosting, java.util.List)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testSort" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[10, 100, 320, 400]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[10, 100, 320, 400]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSort -->
+        <test-method signature="testWriteObject(hust.cs.javacourse.search.index.AbstractPosting, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testWriteObject" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[10, 100, 320, 400]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//ser/Posting.dat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWriteObject -->
+        <test-method signature="testCompareTo([Lhust.cs.javacourse.search.index.AbstractPosting;, int)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testCompareTo" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@7f010382]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCompareTo -->
+        <test-method signature="testReadObject(hust.cs.javacourse.search.index.AbstractPosting, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.PostingTest@2e3fc542]" started-at="2022-05-31T06:55:25Z" name="testReadObject" data-provider="testPosting" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[10, 100, 320, 400]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//ser/Posting.dat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReadObject -->
+      </class> <!-- hust.cs.javacourse.search.index.PostingTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/PostingTest.java -->
+    <test started-at="2022-05-31T06:55:25Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/PostingListTest.java" finished-at="2022-05-31T06:55:25Z" duration-ms="16">
+      <class name="hust.cs.javacourse.search.index.PostingListTest">
+        <test-method signature="testIndexOf(hust.cs.javacourse.search.index.AbstractPostingList, [Lhust.cs.javacourse.search.index.AbstractPosting;)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testIndexOf" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[1, 2, 3, 4]}->{"docId":2,"freq":2,"positions":[5, 6]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@78b66d36]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIndexOf -->
+        <test-method signature="testGet(hust.cs.javacourse.search.index.AbstractPostingList, [Lhust.cs.javacourse.search.index.AbstractPosting;)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testGet" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[1, 2, 3, 4]}->{"docId":2,"freq":2,"positions":[5, 6]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@7ce3cb8e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGet -->
+        <test-method signature="testTestAdd(hust.cs.javacourse.search.index.AbstractPostingList, java.util.List)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testTestAdd" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[1, 2, 3, 4]}->{"docId":2,"freq":2,"positions":[5, 6]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[{"docId":1,"freq":4,"positions":[1, 2, 3, 4]}, {"docId":1,"freq":4,"positions":[1, 2, 3, 4]}, {"docId":2,"freq":2,"positions":[5, 6]}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestAdd -->
+        <test-method signature="testTestIndexOf(hust.cs.javacourse.search.index.AbstractPostingList, [Lhust.cs.javacourse.search.index.AbstractPosting;)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testTestIndexOf" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[1, 2, 3, 4]}->{"docId":2,"freq":2,"positions":[5, 6]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@69b2283a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestIndexOf -->
+        <test-method signature="testTestToString(hust.cs.javacourse.search.index.AbstractPostingList, [Ljava.lang.String;)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testTestToString" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[1, 2, 3, 4]}->{"docId":2,"freq":2,"positions":[5, 6]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.String;@6fe7aac8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestToString -->
+        <test-method signature="testAdd(hust.cs.javacourse.search.index.AbstractPostingList, [Lhust.cs.javacourse.search.index.AbstractPosting;)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testAdd" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[1, 2, 3, 4]}->{"docId":2,"freq":2,"positions":[5, 6]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@6ef888f6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdd -->
+        <test-method signature="testContains(hust.cs.javacourse.search.index.AbstractPostingList, [Lhust.cs.javacourse.search.index.AbstractPosting;)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testContains" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[1, 2, 3, 4]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@10e92f8f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContains -->
+        <test-method signature="testTestRemove(hust.cs.javacourse.search.index.AbstractPostingList, [Lhust.cs.javacourse.search.index.AbstractPosting;)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testTestRemove" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@22a637e7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestRemove -->
+        <test-method signature="testClear(hust.cs.javacourse.search.index.AbstractPostingList, java.lang.Object)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testClear" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClear -->
+        <test-method signature="testSize(hust.cs.javacourse.search.index.AbstractPostingList, int)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testSize" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[1, 2, 3, 4]}->{"docId":2,"freq":2,"positions":[5, 6]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSize -->
+        <test-method signature="testIsEmpty(hust.cs.javacourse.search.index.AbstractPostingList, boolean)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testIsEmpty" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[1, 2, 3, 4]}->{"docId":2,"freq":2,"positions":[5, 6]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsEmpty -->
+        <test-method signature="testSize(hust.cs.javacourse.search.index.AbstractPostingList, int)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testSize" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSize -->
+        <test-method signature="testIsEmpty(hust.cs.javacourse.search.index.AbstractPostingList, boolean)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testIsEmpty" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsEmpty -->
+        <test-method signature="testRemove(hust.cs.javacourse.search.index.AbstractPostingList, [Lhust.cs.javacourse.search.index.AbstractPosting;)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testRemove" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractPosting;@5223e5ee]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemove -->
+        <test-method signature="testSort(hust.cs.javacourse.search.index.AbstractPostingList, [Ljava.lang.Integer;)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testSort" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":2,"freq":4,"positions":[5, 7, 8, 9]}->{"docId":3,"freq":2,"positions":[10, 11]}->{"docId":4,"freq":4,"positions":[1, 2, 3, 4]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.Integer;@bef2d72]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSort -->
+        <test-method signature="testWriteObject(hust.cs.javacourse.search.index.AbstractPostingList, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testWriteObject" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[1, 2, 3, 4]}->{"docId":2,"freq":2,"positions":[5, 6]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//ser/PostingList.dat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWriteObject -->
+        <test-method signature="testReadObject(hust.cs.javacourse.search.index.AbstractPostingList, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="testReadObject" data-provider="testPostingList" finished-at="2022-05-31T06:55:25Z" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{"docId":1,"freq":4,"positions":[1, 2, 3, 4]}->{"docId":2,"freq":2,"positions":[5, 6]}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//ser/PostingList.dat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReadObject -->
+      </class> <!-- hust.cs.javacourse.search.index.PostingListTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/PostingListTest.java -->
+    <test started-at="2022-05-31T06:55:25Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/DocumentTest.java" finished-at="2022-05-31T06:55:25Z" duration-ms="0">
+      <class name="hust.cs.javacourse.search.index.DocumentTest">
+        <test-method signature="testGetDocId(hust.cs.javacourse.search.index.AbstractDocument, int)[pri:0, instance:hust.cs.javacourse.search.index.DocumentTest@2f0a87b3]" started-at="2022-05-31T06:55:25Z" name="testGetDocId" data-provider="testDocument" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  1, docPath  C:/1.txt
+Tuples 
+TermTuple{term=aaa, freq=1, curPos=17}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDocId -->
+        <test-method signature="testSetDocId(hust.cs.javacourse.search.index.AbstractDocument, int)[pri:0, instance:hust.cs.javacourse.search.index.DocumentTest@2f0a87b3]" started-at="2022-05-31T06:55:25Z" name="testSetDocId" data-provider="testDocument" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  2, docPath  null
+Tuples 
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetDocId -->
+        <test-method signature="testContains(hust.cs.javacourse.search.index.AbstractDocument, hust.cs.javacourse.search.index.AbstractTermTuple)[pri:0, instance:hust.cs.javacourse.search.index.DocumentTest@2f0a87b3]" started-at="2022-05-31T06:55:25Z" name="testContains" data-provider="testDocument" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  1, docPath  C:/1.txt
+Tuples 
+TermTuple{term=aaa, freq=1, curPos=17}TermTuple{term=bbb, freq=1, curPos=30}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[TermTuple{term=aaa, freq=1, curPos=17}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContains -->
+        <test-method signature="testGetTupleSize(hust.cs.javacourse.search.index.AbstractDocument, int)[pri:0, instance:hust.cs.javacourse.search.index.DocumentTest@2f0a87b3]" started-at="2022-05-31T06:55:25Z" name="testGetTupleSize" data-provider="testDocument" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  1, docPath  C:/1.txt
+Tuples 
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTupleSize -->
+        <test-method signature="testGetTuples(hust.cs.javacourse.search.index.AbstractDocument, java.util.List)[pri:0, instance:hust.cs.javacourse.search.index.DocumentTest@2f0a87b3]" started-at="2022-05-31T06:55:25Z" name="testGetTuples" data-provider="testDocument" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  1, docPath  C:/1.txt
+Tuples 
+TermTuple{term=aaa, freq=1, curPos=17}TermTuple{term=bbb, freq=1, curPos=30}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=aaa, freq=1, curPos=17}, TermTuple{term=bbb, freq=1, curPos=30}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTuples -->
+        <test-method signature="testGetDocPath(hust.cs.javacourse.search.index.AbstractDocument, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.DocumentTest@2f0a87b3]" started-at="2022-05-31T06:55:25Z" name="testGetDocPath" data-provider="testDocument" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  1, docPath  C:/1.txt
+Tuples 
+TermTuple{term=aaa, freq=1, curPos=17}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:/1.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDocPath -->
+        <test-method signature="testGetTupleSize(hust.cs.javacourse.search.index.AbstractDocument, int)[pri:0, instance:hust.cs.javacourse.search.index.DocumentTest@2f0a87b3]" started-at="2022-05-31T06:55:25Z" name="testGetTupleSize" data-provider="testDocument" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  1, docPath  C:/1.txt
+Tuples 
+TermTuple{term=aaa, freq=1, curPos=17}TermTuple{term=bbb, freq=1, curPos=30}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTupleSize -->
+        <test-method signature="testTestToString(hust.cs.javacourse.search.index.AbstractDocument, [Ljava.lang.String;)[pri:0, instance:hust.cs.javacourse.search.index.DocumentTest@2f0a87b3]" started-at="2022-05-31T06:55:25Z" name="testTestToString" data-provider="testDocument" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  1, docPath  C:/1.txt
+Tuples 
+TermTuple{term=aaa, freq=1, curPos=17}TermTuple{term=bbb, freq=1, curPos=30}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.String;@3d680b5a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestToString -->
+        <test-method signature="testAddTuple(hust.cs.javacourse.search.index.AbstractDocument, hust.cs.javacourse.search.index.AbstractTermTuple)[pri:0, instance:hust.cs.javacourse.search.index.DocumentTest@2f0a87b3]" started-at="2022-05-31T06:55:25Z" name="testAddTuple" data-provider="testDocument" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  1, docPath  C:/1.txt
+Tuples 
+TermTuple{term=aaa, freq=1, curPos=17}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[TermTuple{term=aaa, freq=1, curPos=17}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddTuple -->
+        <test-method signature="testSetDocPath(hust.cs.javacourse.search.index.AbstractDocument, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.DocumentTest@2f0a87b3]" started-at="2022-05-31T06:55:25Z" name="testSetDocPath" data-provider="testDocument" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  0, docPath  C:/2.txt
+Tuples 
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:/2.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetDocPath -->
+        <test-method signature="testContains(hust.cs.javacourse.search.index.AbstractDocument, hust.cs.javacourse.search.index.AbstractTermTuple)[pri:0, instance:hust.cs.javacourse.search.index.DocumentTest@2f0a87b3]" started-at="2022-05-31T06:55:25Z" name="testContains" data-provider="testDocument" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  1, docPath  C:/1.txt
+Tuples 
+TermTuple{term=aaa, freq=1, curPos=17}TermTuple{term=bbb, freq=1, curPos=30}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[TermTuple{term=bbb, freq=1, curPos=30}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContains -->
+        <test-method signature="testGetTuple(hust.cs.javacourse.search.index.AbstractDocument, java.util.List)[pri:0, instance:hust.cs.javacourse.search.index.DocumentTest@2f0a87b3]" started-at="2022-05-31T06:55:25Z" name="testGetTuple" data-provider="testDocument" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  1, docPath  C:/1.txt
+Tuples 
+TermTuple{term=aaa, freq=1, curPos=17}TermTuple{term=bbb, freq=1, curPos=30}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=aaa, freq=1, curPos=17}, TermTuple{term=bbb, freq=1, curPos=30}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTuple -->
+      </class> <!-- hust.cs.javacourse.search.index.DocumentTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/DocumentTest.java -->
+    <test started-at="2022-05-31T06:55:25Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/parse/TermTupleScannerTest.java" finished-at="2022-05-31T06:55:25Z" duration-ms="28">
+      <class name="hust.cs.javacourse.search.parse.TermTupleScannerTest">
+        <test-method signature="testNext(hust.cs.javacourse.search.parse.AbstractTermTupleStream, java.util.List)[pri:0, instance:hust.cs.javacourse.search.parse.TermTupleScannerTest@2fd66ad3]" started-at="2022-05-31T06:55:25Z" name="testNext" data-provider="testTermTupleScanner" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hust.cs.javacourse.search.parse.impl.TermTupleScanner@1622f1b]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=activity, freq=1, curPos=0}, TermTuple{term=destination, freq=1, curPos=1}, TermTuple{term=emergency, freq=1, curPos=2}, TermTuple{term=26%, freq=1, curPos=3}, TermTuple{term=u571, freq=1, curPos=4}, TermTuple{term=because, freq=1, curPos=5}, TermTuple{term=hence, freq=1, curPos=6}, TermTuple{term=capital, freq=1, curPos=7}, TermTuple{term=i, freq=1, curPos=8}, TermTuple{term=frozen, freq=1, curPos=9}, TermTuple{term=benefits, freq=1, curPos=10}, TermTuple{term=google, freq=1, curPos=11}, TermTuple{term=hahahahahahahahahahahahah, freq=1, curPos=12}, TermTuple{term=ha, freq=1, curPos=13}, TermTuple{term=frozen, freq=1, curPos=14}, TermTuple{term=google, freq=1, curPos=15}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNext -->
+        <test-method signature="testNext(hust.cs.javacourse.search.parse.AbstractTermTupleStream, java.util.List)[pri:0, instance:hust.cs.javacourse.search.parse.TermTupleScannerTest@2fd66ad3]" started-at="2022-05-31T06:55:25Z" name="testNext" data-provider="testTermTupleScanner" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hust.cs.javacourse.search.parse.impl.TermTupleScanner@3e92efc3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=aaa, freq=1, curPos=0}, TermTuple{term=bbb, freq=1, curPos=1}, TermTuple{term=ccc, freq=1, curPos=2}, TermTuple{term=ddd, freq=1, curPos=3}, TermTuple{term=is, freq=1, curPos=4}, TermTuple{term=f17, freq=1, curPos=5}, TermTuple{term=2020, freq=1, curPos=6}, TermTuple{term=ab, freq=1, curPos=7}, TermTuple{term=ababababababababababab, freq=1, curPos=8}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNext -->
+      </class> <!-- hust.cs.javacourse.search.parse.TermTupleScannerTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/parse/TermTupleScannerTest.java -->
+    <test started-at="2022-05-31T06:55:25Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/parse/StopWordTermTupleFilterTest.java" finished-at="2022-05-31T06:55:25Z" duration-ms="15">
+      <class name="hust.cs.javacourse.search.parse.StopWordTermTupleFilterTest">
+        <test-method signature="testNext(hust.cs.javacourse.search.parse.AbstractTermTupleStream, java.util.List)[pri:0, instance:hust.cs.javacourse.search.parse.StopWordTermTupleFilterTest@6fb0d3ed]" started-at="2022-05-31T06:55:25Z" name="testNext" data-provider="testStopWordTermTupleFilter" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hust.cs.javacourse.search.parse.impl.StopWordTermTupleFilter@10e41621]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=activity, freq=1, curPos=0}, TermTuple{term=destination, freq=1, curPos=1}, TermTuple{term=emergency, freq=1, curPos=2}, TermTuple{term=26%, freq=1, curPos=3}, TermTuple{term=u571, freq=1, curPos=4}, TermTuple{term=capital, freq=1, curPos=7}, TermTuple{term=frozen, freq=1, curPos=9}, TermTuple{term=benefits, freq=1, curPos=10}, TermTuple{term=google, freq=1, curPos=11}, TermTuple{term=hahahahahahahahahahahahah, freq=1, curPos=12}, TermTuple{term=ha, freq=1, curPos=13}, TermTuple{term=frozen, freq=1, curPos=14}, TermTuple{term=google, freq=1, curPos=15}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNext -->
+        <test-method signature="testNext(hust.cs.javacourse.search.parse.AbstractTermTupleStream, java.util.List)[pri:0, instance:hust.cs.javacourse.search.parse.StopWordTermTupleFilterTest@6fb0d3ed]" started-at="2022-05-31T06:55:25Z" name="testNext" data-provider="testStopWordTermTupleFilter" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hust.cs.javacourse.search.parse.impl.StopWordTermTupleFilter@19bb07ed]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=aaa, freq=1, curPos=0}, TermTuple{term=bbb, freq=1, curPos=1}, TermTuple{term=ccc, freq=1, curPos=3}, TermTuple{term=ddd, freq=1, curPos=4}, TermTuple{term=f17, freq=1, curPos=6}, TermTuple{term=2020, freq=1, curPos=7}, TermTuple{term=ab, freq=1, curPos=8}, TermTuple{term=ababababababababababab, freq=1, curPos=10}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNext -->
+        <test-method signature="testNext(hust.cs.javacourse.search.parse.AbstractTermTupleStream, java.util.List)[pri:0, instance:hust.cs.javacourse.search.parse.StopWordTermTupleFilterTest@6fb0d3ed]" started-at="2022-05-31T06:55:25Z" name="testNext" data-provider="testStopWordTermTupleFilter" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hust.cs.javacourse.search.parse.impl.StopWordTermTupleFilter@4b0b0854]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=aaa, freq=1, curPos=0}, TermTuple{term=bbb, freq=1, curPos=1}, TermTuple{term=ccc, freq=1, curPos=2}, TermTuple{term=ddd, freq=1, curPos=3}, TermTuple{term=f17, freq=1, curPos=4}, TermTuple{term=2020, freq=1, curPos=5}, TermTuple{term=ab, freq=1, curPos=6}, TermTuple{term=ababababababababababab, freq=1, curPos=7}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNext -->
+      </class> <!-- hust.cs.javacourse.search.parse.StopWordTermTupleFilterTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/parse/StopWordTermTupleFilterTest.java -->
+    <test started-at="2022-05-31T06:55:25Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/parse/PatternTermTupleFilterTest.java" finished-at="2022-05-31T06:55:25Z" duration-ms="0">
+      <class name="hust.cs.javacourse.search.parse.PatternTermTupleFilterTest">
+        <test-method signature="testNext(hust.cs.javacourse.search.parse.AbstractTermTupleStream, java.util.List)[pri:0, instance:hust.cs.javacourse.search.parse.PatternTermTupleFilterTest@35a50a4c]" started-at="2022-05-31T06:55:25Z" name="testNext" data-provider="testPatternTermTupleFilter" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hust.cs.javacourse.search.parse.impl.PatternTermTupleFilter@13e39c73]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=aaa, freq=1, curPos=0}, TermTuple{term=bbb, freq=1, curPos=2}, TermTuple{term=ab, freq=1, curPos=3}, TermTuple{term=ccc, freq=1, curPos=4}, TermTuple{term=ddd, freq=1, curPos=5}, TermTuple{term=ababababababababababab, freq=1, curPos=7}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNext -->
+        <test-method signature="testNext(hust.cs.javacourse.search.parse.AbstractTermTupleStream, java.util.List)[pri:0, instance:hust.cs.javacourse.search.parse.PatternTermTupleFilterTest@35a50a4c]" started-at="2022-05-31T06:55:25Z" name="testNext" data-provider="testPatternTermTupleFilter" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hust.cs.javacourse.search.parse.impl.PatternTermTupleFilter@64cd705f]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=activity, freq=1, curPos=0}, TermTuple{term=destination, freq=1, curPos=1}, TermTuple{term=emergency, freq=1, curPos=2}, TermTuple{term=because, freq=1, curPos=5}, TermTuple{term=hence, freq=1, curPos=6}, TermTuple{term=capital, freq=1, curPos=7}, TermTuple{term=i, freq=1, curPos=8}, TermTuple{term=frozen, freq=1, curPos=9}, TermTuple{term=benefits, freq=1, curPos=10}, TermTuple{term=google, freq=1, curPos=11}, TermTuple{term=hahahahahahahahahahahahah, freq=1, curPos=12}, TermTuple{term=ha, freq=1, curPos=13}, TermTuple{term=frozen, freq=1, curPos=14}, TermTuple{term=google, freq=1, curPos=15}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNext -->
+      </class> <!-- hust.cs.javacourse.search.parse.PatternTermTupleFilterTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/parse/PatternTermTupleFilterTest.java -->
+    <test started-at="2022-05-31T06:55:25Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/parse/LengthTermTupleFilterTest.java" finished-at="2022-05-31T06:55:25Z" duration-ms="2">
+      <class name="hust.cs.javacourse.search.parse.LengthTermTupleFilterTest">
+        <test-method signature="testNext(hust.cs.javacourse.search.parse.AbstractTermTupleStream, java.util.List)[pri:0, instance:hust.cs.javacourse.search.parse.LengthTermTupleFilterTest@1da51a35]" started-at="2022-05-31T06:55:25Z" name="testNext" data-provider="testLengthTermTupleFilter" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hust.cs.javacourse.search.parse.impl.LengthTermTupleFilter@9353778]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=activity, freq=1, curPos=0}, TermTuple{term=destination, freq=1, curPos=1}, TermTuple{term=emergency, freq=1, curPos=2}, TermTuple{term=26%, freq=1, curPos=3}, TermTuple{term=u571, freq=1, curPos=4}, TermTuple{term=because, freq=1, curPos=5}, TermTuple{term=hence, freq=1, curPos=6}, TermTuple{term=capital, freq=1, curPos=7}, TermTuple{term=frozen, freq=1, curPos=9}, TermTuple{term=benefits, freq=1, curPos=10}, TermTuple{term=google, freq=1, curPos=11}, TermTuple{term=frozen, freq=1, curPos=14}, TermTuple{term=google, freq=1, curPos=15}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNext -->
+        <test-method signature="testNext(hust.cs.javacourse.search.parse.AbstractTermTupleStream, java.util.List)[pri:0, instance:hust.cs.javacourse.search.parse.LengthTermTupleFilterTest@1da51a35]" started-at="2022-05-31T06:55:25Z" name="testNext" data-provider="testLengthTermTupleFilter" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hust.cs.javacourse.search.parse.impl.LengthTermTupleFilter@63355449]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=aaa, freq=1, curPos=0}, TermTuple{term=bbb, freq=1, curPos=1}, TermTuple{term=ccc, freq=1, curPos=3}, TermTuple{term=ddd, freq=1, curPos=4}, TermTuple{term=f17, freq=1, curPos=5}, TermTuple{term=2020, freq=1, curPos=6}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNext -->
+      </class> <!-- hust.cs.javacourse.search.parse.LengthTermTupleFilterTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/parse/LengthTermTupleFilterTest.java -->
+    <test started-at="2022-05-31T06:55:25Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/parse/ScannerFilterAllInOneTest.java" finished-at="2022-05-31T06:55:25Z" duration-ms="1">
+      <class name="hust.cs.javacourse.search.parse.ScannerFilterAllInOneTest">
+        <test-method signature="testNext(hust.cs.javacourse.search.parse.AbstractTermTupleStream, java.util.List)[pri:0, instance:hust.cs.javacourse.search.parse.ScannerFilterAllInOneTest@61ca2dfa]" started-at="2022-05-31T06:55:25Z" name="testNext" data-provider="testScannerFilterAllInOne" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hust.cs.javacourse.search.parse.impl.PatternTermTupleFilter@31d7b7bf]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=activity, freq=1, curPos=0}, TermTuple{term=destination, freq=1, curPos=1}, TermTuple{term=emergency, freq=1, curPos=2}, TermTuple{term=capital, freq=1, curPos=7}, TermTuple{term=frozen, freq=1, curPos=9}, TermTuple{term=benefits, freq=1, curPos=10}, TermTuple{term=google, freq=1, curPos=11}, TermTuple{term=frozen, freq=1, curPos=14}, TermTuple{term=google, freq=1, curPos=15}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNext -->
+        <test-method signature="testNext(hust.cs.javacourse.search.parse.AbstractTermTupleStream, java.util.List)[pri:0, instance:hust.cs.javacourse.search.parse.ScannerFilterAllInOneTest@61ca2dfa]" started-at="2022-05-31T06:55:25Z" name="testNext" data-provider="testScannerFilterAllInOne" finished-at="2022-05-31T06:55:25Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hust.cs.javacourse.search.parse.impl.PatternTermTupleFilter@30ee2816]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TermTuple{term=aaa, freq=1, curPos=1}, TermTuple{term=bbb, freq=1, curPos=2}, TermTuple{term=ccc, freq=1, curPos=4}, TermTuple{term=ddd, freq=1, curPos=6}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNext -->
+      </class> <!-- hust.cs.javacourse.search.parse.ScannerFilterAllInOneTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/parse/ScannerFilterAllInOneTest.java -->
+    <test started-at="2022-05-31T06:55:25Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/DocumentBuilderTest.java" finished-at="2022-05-31T06:55:26Z" duration-ms="402">
+      <class name="hust.cs.javacourse.search.index.DocumentBuilderTest">
+        <test-method signature="testBuild(hust.cs.javacourse.search.index.AbstractDocument, hust.cs.javacourse.search.index.AbstractDocument)[pri:0, instance:hust.cs.javacourse.search.index.DocumentBuilderTest@8b87145]" started-at="2022-05-31T06:55:26Z" name="testBuild" data-provider="testDocumentBuilder" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  0, docPath  D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=because, freq=1, curPos=5}TermTuple{term=hence, freq=1, curPos=6}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=i, freq=1, curPos=8}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=hahahahahahahahahahahahah, freq=1, curPos=12}TermTuple{term=ha, freq=1, curPos=13}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[docId  0, docPath  D:\IdeaWorkspace\SeachEngine/text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=because, freq=1, curPos=5}TermTuple{term=hence, freq=1, curPos=6}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=i, freq=1, curPos=8}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=hahahahahahahahahahahahah, freq=1, curPos=12}TermTuple{term=ha, freq=1, curPos=13}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuild -->
+        <test-method signature="testBuild(hust.cs.javacourse.search.index.AbstractDocument, hust.cs.javacourse.search.index.AbstractDocument)[pri:0, instance:hust.cs.javacourse.search.index.DocumentBuilderTest@8b87145]" started-at="2022-05-31T06:55:26Z" name="testBuild" data-provider="testDocumentBuilder" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  0, docPath  D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=26%, freq=1, curPos=3}TermTuple{term=u571, freq=1, curPos=4}TermTuple{term=because, freq=1, curPos=5}TermTuple{term=hence, freq=1, curPos=6}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=i, freq=1, curPos=8}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=hahahahahahahahahahahahah, freq=1, curPos=12}TermTuple{term=ha, freq=1, curPos=13}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[docId  0, docPath  D:\IdeaWorkspace\SeachEngine/text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=26%, freq=1, curPos=3}TermTuple{term=u571, freq=1, curPos=4}TermTuple{term=because, freq=1, curPos=5}TermTuple{term=hence, freq=1, curPos=6}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=i, freq=1, curPos=8}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=hahahahahahahahahahahahah, freq=1, curPos=12}TermTuple{term=ha, freq=1, curPos=13}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuild -->
+        <test-method signature="testBuild(hust.cs.javacourse.search.index.AbstractDocument, hust.cs.javacourse.search.index.AbstractDocument)[pri:0, instance:hust.cs.javacourse.search.index.DocumentBuilderTest@8b87145]" started-at="2022-05-31T06:55:26Z" name="testBuild" data-provider="testDocumentBuilder" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  0, docPath  D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=26%, freq=1, curPos=3}TermTuple{term=u571, freq=1, curPos=4}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=hahahahahahahahahahahahah, freq=1, curPos=12}TermTuple{term=ha, freq=1, curPos=13}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[docId  0, docPath  D:\IdeaWorkspace\SeachEngine/text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=26%, freq=1, curPos=3}TermTuple{term=u571, freq=1, curPos=4}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=hahahahahahahahahahahahah, freq=1, curPos=12}TermTuple{term=ha, freq=1, curPos=13}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuild -->
+        <test-method signature="testBuild(hust.cs.javacourse.search.index.AbstractDocument, hust.cs.javacourse.search.index.AbstractDocument)[pri:0, instance:hust.cs.javacourse.search.index.DocumentBuilderTest@8b87145]" started-at="2022-05-31T06:55:26Z" name="testBuild" data-provider="testDocumentBuilder" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  0, docPath  D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[docId  0, docPath  D:\IdeaWorkspace\SeachEngine/text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuild -->
+        <test-method signature="testBuild(hust.cs.javacourse.search.index.AbstractDocument, hust.cs.javacourse.search.index.AbstractDocument)[pri:0, instance:hust.cs.javacourse.search.index.DocumentBuilderTest@8b87145]" started-at="2022-05-31T06:55:26Z" name="testBuild" data-provider="testDocumentBuilder" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  0, docPath  D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=26%, freq=1, curPos=3}TermTuple{term=u571, freq=1, curPos=4}TermTuple{term=because, freq=1, curPos=5}TermTuple{term=hence, freq=1, curPos=6}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[docId  0, docPath  D:\IdeaWorkspace\SeachEngine/text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=26%, freq=1, curPos=3}TermTuple{term=u571, freq=1, curPos=4}TermTuple{term=because, freq=1, curPos=5}TermTuple{term=hence, freq=1, curPos=6}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuild -->
+        <test-method signature="testTestBuild(hust.cs.javacourse.search.index.AbstractDocument, hust.cs.javacourse.search.index.AbstractDocument)[pri:0, instance:hust.cs.javacourse.search.index.DocumentBuilderTest@8b87145]" started-at="2022-05-31T06:55:26Z" name="testTestBuild" data-provider="testDocumentBuilder" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  0, docPath  D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[docId  0, docPath  D:\IdeaWorkspace\SeachEngine/text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestBuild -->
+        <test-method signature="testTestBuild(hust.cs.javacourse.search.index.AbstractDocument, hust.cs.javacourse.search.index.AbstractDocument)[pri:0, instance:hust.cs.javacourse.search.index.DocumentBuilderTest@8b87145]" started-at="2022-05-31T06:55:26Z" name="testTestBuild" data-provider="testDocumentBuilder" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[docId  0, docPath  D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[docId  0, docPath  D:\IdeaWorkspace\SeachEngine/text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestBuild -->
+      </class> <!-- hust.cs.javacourse.search.index.DocumentBuilderTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/DocumentBuilderTest.java -->
+    <test started-at="2022-05-31T06:55:26Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/IndexTest.java" finished-at="2022-05-31T06:55:26Z" duration-ms="272">
+      <class name="hust.cs.javacourse.search.index.IndexTest">
+        <test-method signature="testTestToString(hust.cs.javacourse.search.index.AbstractIndex, [Ljava.lang.String;)[pri:0, instance:hust.cs.javacourse.search.index.IndexTest@5f71c76a]" started-at="2022-05-31T06:55:26Z" name="testTestToString" data-provider="testIndex" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dictionary:[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]
+docId-----docPath mapping:
+0   ---->   D:\IdeaWorkspace\SeachEngine\text\1.txt
+1   ---->   D:\IdeaWorkspace\SeachEngine\text\2.txt
+2   ---->   D:\IdeaWorkspace\SeachEngine\text\3.txt
+term-----postingList mapping:
+activity   ---->   {"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}
+benefits   ---->   {"docId":0,"freq":2,"positions":[2, 7]}->{"docId":1,"freq":1,"positions":[10]}
+capital   ---->   {"docId":0,"freq":2,"positions":[3, 8]}->{"docId":1,"freq":1,"positions":[7]}
+destination   ---->   {"docId":0,"freq":2,"positions":[4, 9]}->{"docId":1,"freq":1,"positions":[1]}
+emergency   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[2]}
+fizzy   ---->   {"docId":0,"freq":1,"positions":[5]}
+frozen   ---->   {"docId":1,"freq":2,"positions":[9, 14]}
+google   ---->   {"docId":1,"freq":2,"positions":[11, 15]}
+marketplace   ---->   {"docId":2,"freq":1,"positions":[0]}
+medical   ---->   {"docId":2,"freq":1,"positions":[1]}
+notification   ---->   {"docId":2,"freq":1,"positions":[3]}
+peninsula   ---->   {"docId":2,"freq":1,"positions":[5]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[7]}
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.String;@1199fe66]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestToString -->
+        <test-method signature="testAddDocument([Lhust.cs.javacourse.search.index.AbstractIndex;, hust.cs.javacourse.search.index.AbstractDocument)[pri:0, instance:hust.cs.javacourse.search.index.IndexTest@5f71c76a]" started-at="2022-05-31T06:55:26Z" name="testAddDocument" data-provider="testIndex" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.index.AbstractIndex;@37c7595]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[docId  1, docPath  D:\IdeaWorkspace\SeachEngine/text/2.txt
+Tuples 
+TermTuple{term=activity, freq=1, curPos=0}TermTuple{term=destination, freq=1, curPos=1}TermTuple{term=emergency, freq=1, curPos=2}TermTuple{term=capital, freq=1, curPos=7}TermTuple{term=frozen, freq=1, curPos=9}TermTuple{term=benefits, freq=1, curPos=10}TermTuple{term=google, freq=1, curPos=11}TermTuple{term=frozen, freq=1, curPos=14}TermTuple{term=google, freq=1, curPos=15}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddDocument -->
+        <test-method signature="testLoad(hust.cs.javacourse.search.index.AbstractIndex, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.IndexTest@5f71c76a]" started-at="2022-05-31T06:55:26Z" name="testLoad" data-provider="testIndex" finished-at="2022-05-31T06:55:26Z" duration-ms="22" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dictionary:[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]
+docId-----docPath mapping:
+0   ---->   D:\IdeaWorkspace\SeachEngine\text\1.txt
+1   ---->   D:\IdeaWorkspace\SeachEngine\text\2.txt
+2   ---->   D:\IdeaWorkspace\SeachEngine\text\3.txt
+term-----postingList mapping:
+activity   ---->   {"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}
+benefits   ---->   {"docId":0,"freq":2,"positions":[2, 7]}->{"docId":1,"freq":1,"positions":[10]}
+capital   ---->   {"docId":0,"freq":2,"positions":[3, 8]}->{"docId":1,"freq":1,"positions":[7]}
+destination   ---->   {"docId":0,"freq":2,"positions":[4, 9]}->{"docId":1,"freq":1,"positions":[1]}
+emergency   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[2]}
+fizzy   ---->   {"docId":0,"freq":1,"positions":[5]}
+frozen   ---->   {"docId":1,"freq":2,"positions":[9, 14]}
+google   ---->   {"docId":1,"freq":2,"positions":[11, 15]}
+marketplace   ---->   {"docId":2,"freq":1,"positions":[0]}
+medical   ---->   {"docId":2,"freq":1,"positions":[1]}
+notification   ---->   {"docId":2,"freq":1,"positions":[3]}
+peninsula   ---->   {"docId":2,"freq":1,"positions":[5]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[7]}
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//index/index_1_2_3_txt.dat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoad -->
+        <test-method signature="testSave(hust.cs.javacourse.search.index.AbstractIndex, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.IndexTest@5f71c76a]" started-at="2022-05-31T06:55:26Z" name="testSave" data-provider="testIndex" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dictionary:[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]
+docId-----docPath mapping:
+0   ---->   D:\IdeaWorkspace\SeachEngine\text\1.txt
+1   ---->   D:\IdeaWorkspace\SeachEngine\text\2.txt
+2   ---->   D:\IdeaWorkspace\SeachEngine\text\3.txt
+term-----postingList mapping:
+activity   ---->   {"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}
+benefits   ---->   {"docId":0,"freq":2,"positions":[2, 7]}->{"docId":1,"freq":1,"positions":[10]}
+capital   ---->   {"docId":0,"freq":2,"positions":[3, 8]}->{"docId":1,"freq":1,"positions":[7]}
+destination   ---->   {"docId":0,"freq":2,"positions":[4, 9]}->{"docId":1,"freq":1,"positions":[1]}
+emergency   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[2]}
+fizzy   ---->   {"docId":0,"freq":1,"positions":[5]}
+frozen   ---->   {"docId":1,"freq":2,"positions":[9, 14]}
+google   ---->   {"docId":1,"freq":2,"positions":[11, 15]}
+marketplace   ---->   {"docId":2,"freq":1,"positions":[0]}
+medical   ---->   {"docId":2,"freq":1,"positions":[1]}
+notification   ---->   {"docId":2,"freq":1,"positions":[3]}
+peninsula   ---->   {"docId":2,"freq":1,"positions":[5]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[7]}
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//index/index_1_2_3_txt.dat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSave -->
+        <test-method signature="testSearch(hust.cs.javacourse.search.index.AbstractIndex, hust.cs.javacourse.search.index.AbstractPostingList)[pri:0, instance:hust.cs.javacourse.search.index.IndexTest@5f71c76a]" started-at="2022-05-31T06:55:26Z" name="testSearch" data-provider="testIndex" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dictionary:[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]
+docId-----docPath mapping:
+0   ---->   D:\IdeaWorkspace\SeachEngine\text\1.txt
+1   ---->   D:\IdeaWorkspace\SeachEngine\text\2.txt
+2   ---->   D:\IdeaWorkspace\SeachEngine\text\3.txt
+term-----postingList mapping:
+activity   ---->   {"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}
+benefits   ---->   {"docId":0,"freq":2,"positions":[2, 7]}->{"docId":1,"freq":1,"positions":[10]}
+capital   ---->   {"docId":0,"freq":2,"positions":[3, 8]}->{"docId":1,"freq":1,"positions":[7]}
+destination   ---->   {"docId":0,"freq":2,"positions":[4, 9]}->{"docId":1,"freq":1,"positions":[1]}
+emergency   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[2]}
+fizzy   ---->   {"docId":0,"freq":1,"positions":[5]}
+frozen   ---->   {"docId":1,"freq":2,"positions":[9, 14]}
+google   ---->   {"docId":1,"freq":2,"positions":[11, 15]}
+marketplace   ---->   {"docId":2,"freq":1,"positions":[0]}
+medical   ---->   {"docId":2,"freq":1,"positions":[1]}
+notification   ---->   {"docId":2,"freq":1,"positions":[3]}
+peninsula   ---->   {"docId":2,"freq":1,"positions":[5]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[7]}
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearch -->
+        <test-method signature="testGetDictionary(hust.cs.javacourse.search.index.AbstractIndex, java.util.Set)[pri:0, instance:hust.cs.javacourse.search.index.IndexTest@5f71c76a]" started-at="2022-05-31T06:55:26Z" name="testGetDictionary" data-provider="testIndex" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dictionary:[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]
+docId-----docPath mapping:
+0   ---->   D:\IdeaWorkspace\SeachEngine\text\1.txt
+1   ---->   D:\IdeaWorkspace\SeachEngine\text\2.txt
+2   ---->   D:\IdeaWorkspace\SeachEngine\text\3.txt
+term-----postingList mapping:
+activity   ---->   {"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}
+benefits   ---->   {"docId":0,"freq":2,"positions":[2, 7]}->{"docId":1,"freq":1,"positions":[10]}
+capital   ---->   {"docId":0,"freq":2,"positions":[3, 8]}->{"docId":1,"freq":1,"positions":[7]}
+destination   ---->   {"docId":0,"freq":2,"positions":[4, 9]}->{"docId":1,"freq":1,"positions":[1]}
+emergency   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[2]}
+fizzy   ---->   {"docId":0,"freq":1,"positions":[5]}
+frozen   ---->   {"docId":1,"freq":2,"positions":[9, 14]}
+google   ---->   {"docId":1,"freq":2,"positions":[11, 15]}
+marketplace   ---->   {"docId":2,"freq":1,"positions":[0]}
+medical   ---->   {"docId":2,"freq":1,"positions":[1]}
+notification   ---->   {"docId":2,"freq":1,"positions":[3]}
+peninsula   ---->   {"docId":2,"freq":1,"positions":[5]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[7]}
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDictionary -->
+        <test-method signature="testWriteObject(hust.cs.javacourse.search.index.AbstractIndex, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.IndexTest@5f71c76a]" started-at="2022-05-31T06:55:26Z" name="testWriteObject" data-provider="testIndex" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dictionary:[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]
+docId-----docPath mapping:
+0   ---->   D:\IdeaWorkspace\SeachEngine\text\1.txt
+1   ---->   D:\IdeaWorkspace\SeachEngine\text\2.txt
+2   ---->   D:\IdeaWorkspace\SeachEngine\text\3.txt
+term-----postingList mapping:
+activity   ---->   {"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}
+benefits   ---->   {"docId":0,"freq":2,"positions":[2, 7]}->{"docId":1,"freq":1,"positions":[10]}
+capital   ---->   {"docId":0,"freq":2,"positions":[3, 8]}->{"docId":1,"freq":1,"positions":[7]}
+destination   ---->   {"docId":0,"freq":2,"positions":[4, 9]}->{"docId":1,"freq":1,"positions":[1]}
+emergency   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[2]}
+fizzy   ---->   {"docId":0,"freq":1,"positions":[5]}
+frozen   ---->   {"docId":1,"freq":2,"positions":[9, 14]}
+google   ---->   {"docId":1,"freq":2,"positions":[11, 15]}
+marketplace   ---->   {"docId":2,"freq":1,"positions":[0]}
+medical   ---->   {"docId":2,"freq":1,"positions":[1]}
+notification   ---->   {"docId":2,"freq":1,"positions":[3]}
+peninsula   ---->   {"docId":2,"freq":1,"positions":[5]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[7]}
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//index/index_1_2_3_txt.dat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWriteObject -->
+        <test-method signature="testReadObject(hust.cs.javacourse.search.index.AbstractIndex, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.index.IndexTest@5f71c76a]" started-at="2022-05-31T06:55:26Z" name="testReadObject" data-provider="testIndex" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dictionary:[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]
+docId-----docPath mapping:
+0   ---->   D:\IdeaWorkspace\SeachEngine\text\1.txt
+1   ---->   D:\IdeaWorkspace\SeachEngine\text\2.txt
+2   ---->   D:\IdeaWorkspace\SeachEngine\text\3.txt
+term-----postingList mapping:
+activity   ---->   {"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}
+benefits   ---->   {"docId":0,"freq":2,"positions":[2, 7]}->{"docId":1,"freq":1,"positions":[10]}
+capital   ---->   {"docId":0,"freq":2,"positions":[3, 8]}->{"docId":1,"freq":1,"positions":[7]}
+destination   ---->   {"docId":0,"freq":2,"positions":[4, 9]}->{"docId":1,"freq":1,"positions":[1]}
+emergency   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[2]}
+fizzy   ---->   {"docId":0,"freq":1,"positions":[5]}
+frozen   ---->   {"docId":1,"freq":2,"positions":[9, 14]}
+google   ---->   {"docId":1,"freq":2,"positions":[11, 15]}
+marketplace   ---->   {"docId":2,"freq":1,"positions":[0]}
+medical   ---->   {"docId":2,"freq":1,"positions":[1]}
+notification   ---->   {"docId":2,"freq":1,"positions":[3]}
+peninsula   ---->   {"docId":2,"freq":1,"positions":[5]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[7]}
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:/HUST-Courses/07_Java_Experiment/PyTestDIR/run/test/config/..//index/index_1_2_3_txt.dat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReadObject -->
+        <test-method signature="testOptimize(hust.cs.javacourse.search.index.AbstractIndex, hust.cs.javacourse.search.index.AbstractIndex)[pri:0, instance:hust.cs.javacourse.search.index.IndexTest@5f71c76a]" started-at="2022-05-31T06:55:26Z" name="testOptimize" data-provider="testIndex" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dictionary:[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]
+docId-----docPath mapping:
+0   ---->   D:\IdeaWorkspace\SeachEngine\text\1.txt
+1   ---->   D:\IdeaWorkspace\SeachEngine\text\2.txt
+2   ---->   D:\IdeaWorkspace\SeachEngine\text\3.txt
+term-----postingList mapping:
+activity   ---->   {"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}
+benefits   ---->   {"docId":0,"freq":2,"positions":[2, 7]}->{"docId":1,"freq":1,"positions":[10]}
+capital   ---->   {"docId":0,"freq":2,"positions":[3, 8]}->{"docId":1,"freq":1,"positions":[7]}
+destination   ---->   {"docId":0,"freq":2,"positions":[4, 9]}->{"docId":1,"freq":1,"positions":[1]}
+emergency   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[2]}
+fizzy   ---->   {"docId":0,"freq":1,"positions":[5]}
+frozen   ---->   {"docId":1,"freq":2,"positions":[9, 14]}
+google   ---->   {"docId":1,"freq":2,"positions":[11, 15]}
+marketplace   ---->   {"docId":2,"freq":1,"positions":[0]}
+medical   ---->   {"docId":2,"freq":1,"positions":[1]}
+notification   ---->   {"docId":2,"freq":1,"positions":[3]}
+peninsula   ---->   {"docId":2,"freq":1,"positions":[5]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[7]}
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dictionary:[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]
+docId-----docPath mapping:
+0   ---->   D:\IdeaWorkspace\SeachEngine\text\1.txt
+1   ---->   D:\IdeaWorkspace\SeachEngine\text\2.txt
+2   ---->   D:\IdeaWorkspace\SeachEngine\text\3.txt
+term-----postingList mapping:
+activity   ---->   {"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}
+benefits   ---->   {"docId":0,"freq":2,"positions":[2, 7]}->{"docId":1,"freq":1,"positions":[10]}
+capital   ---->   {"docId":0,"freq":2,"positions":[3, 8]}->{"docId":1,"freq":1,"positions":[7]}
+destination   ---->   {"docId":0,"freq":2,"positions":[4, 9]}->{"docId":1,"freq":1,"positions":[1]}
+emergency   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[2]}
+fizzy   ---->   {"docId":0,"freq":1,"positions":[5]}
+frozen   ---->   {"docId":1,"freq":2,"positions":[9, 14]}
+google   ---->   {"docId":1,"freq":2,"positions":[11, 15]}
+marketplace   ---->   {"docId":2,"freq":1,"positions":[0]}
+medical   ---->   {"docId":2,"freq":1,"positions":[1]}
+notification   ---->   {"docId":2,"freq":1,"positions":[3]}
+peninsula   ---->   {"docId":2,"freq":1,"positions":[5]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[7]}
+]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOptimize -->
+        <test-method signature="testGetDocName(hust.cs.javacourse.search.index.AbstractIndex, [Ljava.lang.String;)[pri:0, instance:hust.cs.javacourse.search.index.IndexTest@5f71c76a]" started-at="2022-05-31T06:55:26Z" name="testGetDocName" data-provider="testIndex" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dictionary:[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]
+docId-----docPath mapping:
+0   ---->   D:\IdeaWorkspace\SeachEngine\text\1.txt
+1   ---->   D:\IdeaWorkspace\SeachEngine\text\2.txt
+2   ---->   D:\IdeaWorkspace\SeachEngine\text\3.txt
+term-----postingList mapping:
+activity   ---->   {"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}
+benefits   ---->   {"docId":0,"freq":2,"positions":[2, 7]}->{"docId":1,"freq":1,"positions":[10]}
+capital   ---->   {"docId":0,"freq":2,"positions":[3, 8]}->{"docId":1,"freq":1,"positions":[7]}
+destination   ---->   {"docId":0,"freq":2,"positions":[4, 9]}->{"docId":1,"freq":1,"positions":[1]}
+emergency   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[2]}
+fizzy   ---->   {"docId":0,"freq":1,"positions":[5]}
+frozen   ---->   {"docId":1,"freq":2,"positions":[9, 14]}
+google   ---->   {"docId":1,"freq":2,"positions":[11, 15]}
+marketplace   ---->   {"docId":2,"freq":1,"positions":[0]}
+medical   ---->   {"docId":2,"freq":1,"positions":[1]}
+notification   ---->   {"docId":2,"freq":1,"positions":[3]}
+peninsula   ---->   {"docId":2,"freq":1,"positions":[5]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[7]}
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.String;@3ed242a4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDocName -->
+      </class> <!-- hust.cs.javacourse.search.index.IndexTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/IndexTest.java -->
+    <test started-at="2022-05-31T06:55:26Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/IndexBuilderTest.java" finished-at="2022-05-31T06:55:26Z" duration-ms="31">
+      <class name="hust.cs.javacourse.search.index.IndexBuilderTest">
+        <test-method signature="testBuildIndex(hust.cs.javacourse.search.index.AbstractIndex, hust.cs.javacourse.search.index.AbstractIndex)[pri:0, instance:hust.cs.javacourse.search.index.IndexBuilderTest@1ad282e0]" started-at="2022-05-31T06:55:26Z" name="testBuildIndex" data-provider="testIndexBuilder" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dictionary:[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]
+docId-----docPath mapping:
+0   ---->   D:\HUST-Courses\07_Java_Experiment\PyTestDIR\run\test\text\1.txt
+1   ---->   D:\HUST-Courses\07_Java_Experiment\PyTestDIR\run\test\text\2.txt
+2   ---->   D:\HUST-Courses\07_Java_Experiment\PyTestDIR\run\test\text\3.txt
+term-----postingList mapping:
+activity   ---->   {"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}
+benefits   ---->   {"docId":0,"freq":2,"positions":[2, 7]}->{"docId":1,"freq":1,"positions":[10]}
+capital   ---->   {"docId":0,"freq":2,"positions":[3, 8]}->{"docId":1,"freq":1,"positions":[7]}
+destination   ---->   {"docId":0,"freq":2,"positions":[4, 9]}->{"docId":1,"freq":1,"positions":[1]}
+emergency   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[2]}
+fizzy   ---->   {"docId":0,"freq":1,"positions":[5]}
+frozen   ---->   {"docId":1,"freq":2,"positions":[9, 14]}
+google   ---->   {"docId":1,"freq":2,"positions":[11, 15]}
+marketplace   ---->   {"docId":2,"freq":1,"positions":[0]}
+medical   ---->   {"docId":2,"freq":1,"positions":[1]}
+notification   ---->   {"docId":2,"freq":1,"positions":[3]}
+peninsula   ---->   {"docId":2,"freq":1,"positions":[5]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[7]}
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dictionary:[activity, benefits, capital, destination, emergency, fizzy, frozen, google, marketplace, medical, notification, peninsula, pollution]
+docId-----docPath mapping:
+0   ---->   D:\IdeaWorkspace\SeachEngine\text\1.txt
+1   ---->   D:\IdeaWorkspace\SeachEngine\text\2.txt
+2   ---->   D:\IdeaWorkspace\SeachEngine\text\3.txt
+term-----postingList mapping:
+activity   ---->   {"docId":0,"freq":3,"positions":[0, 1, 6]}->{"docId":1,"freq":1,"positions":[0]}
+benefits   ---->   {"docId":0,"freq":2,"positions":[2, 7]}->{"docId":1,"freq":1,"positions":[10]}
+capital   ---->   {"docId":0,"freq":2,"positions":[3, 8]}->{"docId":1,"freq":1,"positions":[7]}
+destination   ---->   {"docId":0,"freq":2,"positions":[4, 9]}->{"docId":1,"freq":1,"positions":[1]}
+emergency   ---->   {"docId":0,"freq":1,"positions":[10]}->{"docId":1,"freq":1,"positions":[2]}
+fizzy   ---->   {"docId":0,"freq":1,"positions":[5]}
+frozen   ---->   {"docId":1,"freq":2,"positions":[9, 14]}
+google   ---->   {"docId":1,"freq":2,"positions":[11, 15]}
+marketplace   ---->   {"docId":2,"freq":1,"positions":[0]}
+medical   ---->   {"docId":2,"freq":1,"positions":[1]}
+notification   ---->   {"docId":2,"freq":1,"positions":[3]}
+peninsula   ---->   {"docId":2,"freq":1,"positions":[5]}
+pollution   ---->   {"docId":2,"freq":1,"positions":[7]}
+]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBuildIndex -->
+      </class> <!-- hust.cs.javacourse.search.index.IndexBuilderTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/index/IndexBuilderTest.java -->
+    <test started-at="2022-05-31T06:55:26Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/query/HitTest.java" finished-at="2022-05-31T06:55:26Z" duration-ms="63">
+      <class name="hust.cs.javacourse.search.query.HitTest">
+        <test-method signature="testGetDocId(hust.cs.javacourse.search.query.AbstractHit, int)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testGetDocId" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:0
+score:-3.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\1.txt
+termPostingMapping:
+{activity={"docId":0,"freq":3,"positions":[0, 1, 6]}}
+content:
+activity activity benefits capital  destination
+
+
+fizzy activity benefits capital destination emergency
+
+2005 12-31 F16 the from  Pseudopseudohypoparathyroidism
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDocId -->
+        <test-method signature="testGetDocPath(hust.cs.javacourse.search.query.AbstractHit, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testGetDocPath" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:0
+score:-3.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\1.txt
+termPostingMapping:
+{activity={"docId":0,"freq":3,"positions":[0, 1, 6]}}
+content:
+activity activity benefits capital  destination
+
+
+fizzy activity benefits capital destination emergency
+
+2005 12-31 F16 the from  Pseudopseudohypoparathyroidism
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:\IdeaWorkspace\SeachEngine\text\1.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDocPath -->
+        <test-method signature="testGetDocId(hust.cs.javacourse.search.query.AbstractHit, int)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testGetDocId" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:1
+score:-1.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\2.txt
+termPostingMapping:
+{activity={"docId":1,"freq":1,"positions":[0]}}
+content:
+activity   destination emergency
+26%  U571 because hence capital i 
+
+frozen benefits google hahahahahahahahahahahahah ha frozen google
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDocId -->
+        <test-method signature="testGetDocPath(hust.cs.javacourse.search.query.AbstractHit, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testGetDocPath" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:1
+score:-1.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\2.txt
+termPostingMapping:
+{activity={"docId":1,"freq":1,"positions":[0]}}
+content:
+activity   destination emergency
+26%  U571 because hence capital i 
+
+frozen benefits google hahahahahahahahahahahahah ha frozen google
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[D:\IdeaWorkspace\SeachEngine\text\2.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDocPath -->
+        <test-method signature="testGetScore(hust.cs.javacourse.search.query.AbstractHit, double)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testGetScore" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:1
+score:-1.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\2.txt
+termPostingMapping:
+{activity={"docId":1,"freq":1,"positions":[0]}}
+content:
+activity   destination emergency
+26%  U571 because hence capital i 
+
+frozen benefits google hahahahahahahahahahahahah ha frozen google
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[-1.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetScore -->
+        <test-method signature="testSetScore(hust.cs.javacourse.search.query.AbstractHit, double)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testSetScore" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:1
+score:1.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\2.txt
+termPostingMapping:
+{activity={"docId":1,"freq":1,"positions":[0]}}
+content:
+activity   destination emergency
+26%  U571 because hence capital i 
+
+frozen benefits google hahahahahahahahahahahahah ha frozen google
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetScore -->
+        <test-method signature="testSetContent(hust.cs.javacourse.search.query.AbstractHit, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testSetContent" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:0
+score:-3.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\1.txt
+termPostingMapping:
+{activity={"docId":0,"freq":3,"positions":[0, 1, 6]}}
+content:
+new content1
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[new content1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetContent -->
+        <test-method signature="testGetContent(hust.cs.javacourse.search.query.AbstractHit, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testGetContent" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:0
+score:-3.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\1.txt
+termPostingMapping:
+{activity={"docId":0,"freq":3,"positions":[0, 1, 6]}}
+content:
+activity activity benefits capital  destination
+
+
+fizzy activity benefits capital destination emergency
+
+2005 12-31 F16 the from  Pseudopseudohypoparathyroidism
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[activity activity benefits capital  destination
+
+
+fizzy activity benefits capital destination emergency
+
+2005 12-31 F16 the from  Pseudopseudohypoparathyroidism]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetContent -->
+        <test-method signature="testGetContent(hust.cs.javacourse.search.query.AbstractHit, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testGetContent" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:1
+score:-1.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\2.txt
+termPostingMapping:
+{activity={"docId":1,"freq":1,"positions":[0]}}
+content:
+activity   destination emergency
+26%  U571 because hence capital i 
+
+frozen benefits google hahahahahahahahahahahahah ha frozen google
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[activity   destination emergency
+26%  U571 because hence capital i 
+
+frozen benefits google hahahahahahahahahahahahah ha frozen google]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetContent -->
+        <test-method signature="testSetScore(hust.cs.javacourse.search.query.AbstractHit, double)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testSetScore" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:0
+score:3.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\1.txt
+termPostingMapping:
+{activity={"docId":0,"freq":3,"positions":[0, 1, 6]}}
+content:
+activity activity benefits capital  destination
+
+
+fizzy activity benefits capital destination emergency
+
+2005 12-31 F16 the from  Pseudopseudohypoparathyroidism
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetScore -->
+        <test-method signature="testSetContent(hust.cs.javacourse.search.query.AbstractHit, java.lang.String)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testSetContent" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:1
+score:-1.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\2.txt
+termPostingMapping:
+{activity={"docId":1,"freq":1,"positions":[0]}}
+content:
+new content2
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[new content2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetContent -->
+        <test-method signature="testGetScore(hust.cs.javacourse.search.query.AbstractHit, double)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testGetScore" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:0
+score:-3.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\1.txt
+termPostingMapping:
+{activity={"docId":0,"freq":3,"positions":[0, 1, 6]}}
+content:
+activity activity benefits capital  destination
+
+
+fizzy activity benefits capital destination emergency
+
+2005 12-31 F16 the from  Pseudopseudohypoparathyroidism
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[-3.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetScore -->
+        <test-method signature="testTestToString(hust.cs.javacourse.search.query.AbstractHit, [Ljava.lang.String;)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testTestToString" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:0
+score:-3.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\1.txt
+termPostingMapping:
+{activity={"docId":0,"freq":3,"positions":[0, 1, 6]}}
+content:
+activity activity benefits capital  destination
+
+
+fizzy activity benefits capital destination emergency
+
+2005 12-31 F16 the from  Pseudopseudohypoparathyroidism
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.String;@24d09c1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestToString -->
+        <test-method signature="testGetTermPostingMapping(hust.cs.javacourse.search.query.AbstractHit, int)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testGetTermPostingMapping" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:1
+score:-1.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\2.txt
+termPostingMapping:
+{activity={"docId":1,"freq":1,"positions":[0]}}
+content:
+activity   destination emergency
+26%  U571 because hence capital i 
+
+frozen benefits google hahahahahahahahahahahahah ha frozen google
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTermPostingMapping -->
+        <test-method signature="testGetTermPostingMapping(hust.cs.javacourse.search.query.AbstractHit, int)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testGetTermPostingMapping" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[----------------------------------------------
+docId:0
+score:-3.0
+docPath:D:\IdeaWorkspace\SeachEngine\text\1.txt
+termPostingMapping:
+{activity={"docId":0,"freq":3,"positions":[0, 1, 6]}}
+content:
+activity activity benefits capital  destination
+
+
+fizzy activity benefits capital destination emergency
+
+2005 12-31 F16 the from  Pseudopseudohypoparathyroidism
+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTermPostingMapping -->
+        <test-method signature="testCompareTo([Lhust.cs.javacourse.search.query.AbstractHit;, int)[pri:0, instance:hust.cs.javacourse.search.query.HitTest@de3a06f]" started-at="2022-05-31T06:55:26Z" name="testCompareTo" data-provider="testHit" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.query.AbstractHit;@1d470d0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[-2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCompareTo -->
+      </class> <!-- hust.cs.javacourse.search.query.HitTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/query/HitTest.java -->
+    <test started-at="2022-05-31T06:55:26Z" name="D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/query/IndexSearcherTest.java" finished-at="2022-05-31T06:55:26Z" duration-ms="84">
+      <class name="hust.cs.javacourse.search.index.PostingListTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:hust.cs.javacourse.search.index.PostingListTest@646007f4]" started-at="2022-05-31T06:55:25Z" name="beforeSuite" finished-at="2022-05-31T06:55:25Z" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+      </class> <!-- hust.cs.javacourse.search.index.PostingListTest -->
+      <class name="hust.cs.javacourse.search.query.IndexSearcherTest">
+        <test-method signature="testSearch([Lhust.cs.javacourse.search.query.AbstractHit;, [Lhust.cs.javacourse.search.query.AbstractHit;)[pri:0, instance:hust.cs.javacourse.search.query.IndexSearcherTest@58a90037]" started-at="2022-05-31T06:55:26Z" name="testSearch" data-provider="testIndexSearcher" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.query.AbstractHit;@75f65e45]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.query.AbstractHit;@6eeade6c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearch -->
+        <test-method signature="testSearch([Lhust.cs.javacourse.search.query.AbstractHit;, [Lhust.cs.javacourse.search.query.AbstractHit;)[pri:0, instance:hust.cs.javacourse.search.query.IndexSearcherTest@58a90037]" started-at="2022-05-31T06:55:26Z" name="testSearch" data-provider="testIndexSearcher" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.query.AbstractHit;@3382f8ae]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.query.AbstractHit;@60641ec8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearch -->
+        <test-method signature="testTestSearch([Lhust.cs.javacourse.search.query.AbstractHit;, [Lhust.cs.javacourse.search.query.AbstractHit;)[pri:0, instance:hust.cs.javacourse.search.query.IndexSearcherTest@58a90037]" started-at="2022-05-31T06:55:26Z" name="testTestSearch" data-provider="testIndexSearcher" finished-at="2022-05-31T06:55:26Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.query.AbstractHit;@4a891c97]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Lhust.cs.javacourse.search.query.AbstractHit;@a5bd950]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTestSearch -->
+      </class> <!-- hust.cs.javacourse.search.query.IndexSearcherTest -->
+    </test> <!-- D:/IdeaWorkspace/SeachEngine/test/hust/cs/javacourse/search/query/IndexSearcherTest.java -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

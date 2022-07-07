@@ -1,0 +1,4 @@
+﻿  c_struct.c
+C:\新书示例\C10 结构体\c_struct\c_struct.c(40,8): warning C4013: “strcpy”未定义；假设外部返回 int
+C:\新书示例\C10 结构体\c_struct\c_struct.c(34,8): warning C4101: “T”: 未引用的局部变量
+  c_struct.vcxproj -> C:\新书示例\C10 结构体\Debug\c_struct.exe

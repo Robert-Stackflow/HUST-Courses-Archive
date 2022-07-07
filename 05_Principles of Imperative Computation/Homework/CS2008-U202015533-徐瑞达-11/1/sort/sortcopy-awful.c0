@@ -1,0 +1,20 @@
+#use <string>
+#use "arrayutil.c0"
+bool is_in_every(string[] A, int lower1, int upper1, 
+             string[] B, int lower2, int upper2)
+//@requires 0 <= lower1 && lower1 <= upper1 && upper1 <= \length(A);
+//@requires 0 <= lower2 && lower2 <= upper2 && upper2 <= \length(B);
+{
+  for (int i = lower1; i < upper1; i++)
+    //@loop_invariant 0 <= lower1 && lower1 <= upper1;
+      if (is_in(A[i],B,lower2,upper2)==false) 
+        return false;
+  return true;
+}
+string[] sortcopy(string[] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+//@ensures is_sorted(\result, 0, \length(\result));
+//@ensures is_in_every(A,lower,upper,\result,lower,upper)==true;
+{
+    return alloc_array(string, upper-lower);
+}

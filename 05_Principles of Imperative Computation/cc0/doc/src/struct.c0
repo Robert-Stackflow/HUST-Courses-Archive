@@ -1,0 +1,14 @@
+struct person {
+  int id;
+  string name;
+  int age;
+};
+typedef struct person* person;
+
+bool is_person(person p) {
+  if (p == NULL) return false;
+  if (!(p->id > 0)) return false;
+  if (!(0 <= p->age && p->age < 200)) return false;
+  return true;
+}
+

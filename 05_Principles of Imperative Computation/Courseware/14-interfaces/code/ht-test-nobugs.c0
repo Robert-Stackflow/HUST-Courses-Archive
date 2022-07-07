@@ -1,0 +1,28 @@
+/**
+ * Test.
+ */
+
+int main() {
+  ht H = ht_new(5);
+  elem e = alloc(struct word_with_color);
+
+  e->word = "banana";
+  e->color = "yellow";
+
+  assert(ht_lookup(H, "vorpalsword") == NULL);
+  
+  ht_insert(H, e);
+  assert(ht_lookup(H, "banana") == e);
+  assert(ht_lookup(H, "vorpalsword") == NULL);
+
+  e = alloc(struct word_with_color);
+  e->word = "grapes";
+  e->color = "green";
+
+  ht_insert(H, e);
+  assert(ht_lookup(H, "grapes") != NULL);
+  assert(ht_lookup(H, "vorpalsword") == NULL);
+  assert(ht_lookup(H, "banana") != NULL);
+
+  return 0;
+}

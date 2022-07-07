@@ -1,0 +1,84 @@
+/* Interface to queues of strings */
+
+typedef struct queue_header* queue;
+
+bool queue_empty(queue Q);      /* O(1) */
+queue queue_new();              /* O(1) */
+void enq(queue Q, string s);    /* O(1) */
+string deq(queue Q)             /* O(1) */
+//@requires !queue_empty(Q);
+  ;
+
+/* Implementation of queues */
+
+struct queue_header {
+  string[] data;
+  int front;
+  int back;
+  int capacity;
+};
+
+bool is_queue(queue Q)
+{
+  if (Q == NULL) return false;
+  if (Q->capacity < 2) return false;
+  if (Q->front < 0 || Q->front >= Q->capacity) return false;
+  if (Q->back < 0 || Q->back >= Q->capacity) return false;
+  //@assert \length(Q->data) == Q->capacity;
+  return true;
+}
+
+bool queue_empty(queue Q)
+//@requires is_queue(Q);
+{
+  return Q->front == Q->back;
+}
+
+queue queue_new()
+//@ensures is_queue(\result);
+//@ensures queue_empty(\result);
+{
+  queue Q = alloc(struct queue_header);
+  Q->front = 0;
+  Q->back = 0;
+  Q->capacity = 10;
+  Q->data = alloc_array(string, Q->capacity);
+  return Q;
+}
+
+void enq(queue Q, string e)
+//@requires is_queue(Q);
+//@ensures is_queue(Q);
+//@ensures !queue_empty(Q);
+{
+  if (Q->back+1 >= Q->capacity) error("queue overflow");
+  Q->data[Q->back] = e;
+  Q->back++;
+}
+
+string deq(queue Q)
+//@requires is_queue(Q);
+//@requires !queue_empty(Q);
+//@ensures is_queue(Q);
+{
+  string e = Q->data[Q->front];
+  Q->front++;                 // this leaves wasted space in array
+  return e;
+}
+           
+         
+queue queue_copy_read_only(queue Q) {
+  queue T = queue_new();
+  while (!queue_empty(Q)) {
+    enq(T, deq(Q));
+  }
+  //@assert queue_empty(Q);
+  queue C = queue_new();
+  while (!queue_empty(T)) {
+    string s = deq(T);
+    enq(Q, s);
+    enq(C, s);
+  }
+  //@assert queue_empty(T);
+  return C;
+}

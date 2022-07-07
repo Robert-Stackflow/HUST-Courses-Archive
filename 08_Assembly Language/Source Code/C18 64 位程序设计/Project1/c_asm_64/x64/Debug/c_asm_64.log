@@ -1,0 +1,3 @@
+﻿  c_asm_64.cpp
+c_asm_64.obj : error LNK2019: 无法解析的外部符号 mainp，该符号在函数 main 中被引用
+C:\新书示例\64 位实验\Project1\x64\Debug\c_asm_64.exe : fatal error LNK1120: 1 个无法解析的外部命令

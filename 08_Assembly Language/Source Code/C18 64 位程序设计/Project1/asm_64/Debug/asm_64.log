@@ -1,0 +1,33 @@
+﻿生成启动时间为 2019/08/01 16:12:33。
+     1>项目“H:\64 位实验\Project1\asm_64\asm_64.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>_MASM:
+         Assembling asm_64.asm...
+         cmd.exe /C "C:\Users\Administrator\AppData\Local\Temp\tmp70a5719f2edc43689cd71f07437c51f8.cmd"
+         ml.exe /c /nologo /Zi /Fo"Debug\asm_64.obj" /W3 /errorReport:prompt  /Taasm_64.asm
+     1>asm_64.asm(7): error A2013: .MODEL must precede this directive
+     1>asm_64.asm(8): error A2034: must be in segment block
+     1>asm_64.asm(9): error A2013: .MODEL must precede this directive
+     1>asm_64.asm(10): error A2013: .MODEL must precede this directive
+     1>asm_64.asm(11): error A2034: must be in segment block
+     1>asm_64.asm(12): error A2034: must be in segment block
+     1>asm_64.asm(13): error A2034: must be in segment block
+     1>asm_64.asm(15): error A2034: must be in segment block
+     1>asm_64.asm(16): error A2034: must be in segment block
+     1>asm_64.asm(17): error A2034: must be in segment block
+     1>asm_64.asm(18): error A2034: must be in segment block
+     1>asm_64.asm(19): error A2034: must be in segment block
+     1>asm_64.asm(20): error A2034: must be in segment block
+     1>asm_64.asm(21): error A2034: must be in segment block
+     1>asm_64.asm(22): error A2034: must be in segment block
+     1>asm_64.asm(23): error A2034: must be in segment block
+     1>asm_64.asm(23): error A2006: undefined symbol : lpFmt
+     1>asm_64.asm(23): error A2114: INVOKE argument type mismatch : argument : 0
+     1>asm_64.asm(24): error A2034: must be in segment block
+     1>asm_64.asm(25): error A2006: undefined symbol : START
+     1>asm_64.asm(25): error A2148: invalid symbol type in expression : START
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\masm.targets(50,5): error MSB3721: 命令“ml.exe /c /nologo /Zi /Fo"Debug\asm_64.obj" /W3 /errorReport:prompt  /Taasm_64.asm”已退出，返回代码为 1。
+     1>已完成生成项目“H:\64 位实验\Project1\asm_64\asm_64.vcxproj”(Rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.00

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>hust.cs.javacourse.search.parse.impl.TermTupleScanner</OriginalElement>
+  <nodes>
+    <node x="-131.5" y="251.0">hust.cs.javacourse.search.parse.impl.TermTupleScanner</node>
+    <node x="-116.5" y="-51.0">hust.cs.javacourse.search.parse.AbstractTermTupleStream</node>
+    <node x="-156.0" y="100.0">hust.cs.javacourse.search.parse.AbstractTermTupleScanner</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="hust.cs.javacourse.search.parse.AbstractTermTupleScanner" target="hust.cs.javacourse.search.parse.AbstractTermTupleStream" relationship="GENERALIZATION">
+      <point x="0.0" y="-50.5" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="hust.cs.javacourse.search.parse.impl.TermTupleScanner" target="hust.cs.javacourse.search.parse.AbstractTermTupleScanner" relationship="GENERALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+  </edges>
+  <settings layout="分层" zoom="1.0" showDependencies="false" x="0.0" y="139.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>字段</Category>
+    <Category>属性</Category>
+    <Category>方法</Category>
+    <Category>构造函数</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

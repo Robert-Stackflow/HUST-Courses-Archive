@@ -1,0 +1,13 @@
+﻿生成启动时间为 2019/08/12 17:54:12。
+     1>项目“G:\汇编语言新书实例\中断和异常\asm_no_api\asm_no_api.vcxproj”在节点 5 上(Rebuild 个目标)。
+     1>_MASM:
+         Assembling asm_no_api.asm...
+         cmd.exe /C "C:\Users\Administrator\AppData\Local\Temp\tmp035dfeba085d40e8a7eb7c2efcbc2d4e.cmd"
+         ml.exe /c /nologo /Zi /Fo"Debug\asm_no_api.obj" /W3 /errorReport:prompt  /Taasm_no_api.asm
+     1>asm_no_api.asm(1): error A2088: END directive required at end of file
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\masm.targets(50,5): error MSB3721: 命令“ml.exe /c /nologo /Zi /Fo"Debug\asm_no_api.obj" /W3 /errorReport:prompt  /Taasm_no_api.asm”已退出，返回代码为 1。
+     1>已完成生成项目“G:\汇编语言新书实例\中断和异常\asm_no_api\asm_no_api.vcxproj”(Rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.21

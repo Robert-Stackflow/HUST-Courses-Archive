@@ -1,0 +1,12 @@
+﻿  Assembling asm_function.asm...
+asm_function.asm(1): error A2008: syntax error : .
+asm_function.asm(2): error A2008: syntax error : .
+asm_function.asm(13): error A2045: missing angle bracket or brace in literal
+asm_function.asm(15): error A2008: syntax error : .
+asm_function.asm(21): error A2045: missing angle bracket or brace in literal
+asm_function.asm(25): error A2045: missing angle bracket or brace in literal
+asm_function.asm(26): error A2008: syntax error : IF
+asm_function.asm(28): error A2008: syntax error : .
+asm_function.asm(30): error A2008: syntax error : .
+asm_function.asm(33): error A2008: syntax error : .
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\BuildCustomizations\masm.targets(70,5): error MSB3721: 命令“ml64.exe /c /nologo /Zi /Fo"x64\Debug\asm_function.obj" /W3 /errorReport:prompt  /Taasm_function.asm”已退出，返回代码为 1。

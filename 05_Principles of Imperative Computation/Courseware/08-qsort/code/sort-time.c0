@@ -1,0 +1,76 @@
+/* Timing sorting implementations
+ * Frank Pfenning, Fall 2010
+ */
+
+#use <conio>
+#use <rand>
+#use <args>
+
+int sort_time(int n, int num_tests) 
+//@requires 0 <= n && 0 <= num_tests;
+{
+  int seed = 0xc0c0ffee;
+  rand_t gen = init_rand(seed);
+
+  int[] A = alloc_array(int, n);
+
+  print("Timing array of size "); printint(n);
+  print(", "); printint(num_tests); print(" times\n");
+  for (int j = 0; j < num_tests; j++) {
+    for (int i = 0; i < n; i++)
+      A[i] = rand(gen);
+    sort(A, 0, n);
+    /* assert(is_sorted(A, 0, n)); */
+  }
+  /* print("Timing complete!\n"); */
+  return 0;
+}
+
+int sort_time_exp(int exp, int num_tests) {
+  int seed = 0xc0c0ffee;
+  rand_t gen = init_rand(seed);
+  int n = 1 << exp;
+
+  int[] A = alloc_array(int, n);
+
+  print("Timing array of size 2^"); printint(exp);
+  print(", "); printint(num_tests); print(" times\n");
+  for (int j = 0; j < num_tests; j++) 
+    //@loop_invariant 0 <= j;
+    {
+      for (int i = 0; i < n; i++) 
+        //@loop_invariant 0 <= i;
+        {
+          A[i] = rand(gen);
+        }
+      sort(A, 0, n);
+      //@assert is_sorted(A, 0, n);
+    }
+  /* print("Timing complete!\n"); */
+  return 0;
+}
+
+
+int main() {
+  int* exp_ptr = alloc(int);
+  *exp_ptr = 0;
+  args_int("-exp", exp_ptr);
+
+  int* n_ptr = alloc(int);
+  *n_ptr = 0;
+  args_int("-n", n_ptr);
+
+  int* r_ptr = alloc(int);
+  *r_ptr = 100;
+  args_int("-r", r_ptr);
+
+  args_parse();
+  if(*n_ptr < 0) error("Size of array (-n <elems>) may not be negative");
+  if (!(0 <= *exp_ptr && *exp_ptr < 31)) error("-exp out of range");
+  if (!(0 <= *r_ptr)) error("-r out of range");
+
+  if (*n_ptr == 0 && *exp_ptr == 0) *exp_ptr = 10;
+  if (*n_ptr != 0) sort_time(*n_ptr, *r_ptr);
+  if (*exp_ptr != 0) sort_time_exp(*exp_ptr, *r_ptr);
+  return 0;
+}

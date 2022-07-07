@@ -1,0 +1,174 @@
+Microsoft (R) Macro Assembler (x64) Version 14.22.27905.0   12/09/19 10:17:46
+asm_64.asm						     Page 1 - 1
+
+
+
+				;.model flat, stdcall    ; X64 不能使用 model 
+				 ;ExitProcess PROTO STDCALL :DWORD    ; X32 的使用方式，不再用堆栈传递参数
+				 ;ExitProcess PROTO STDCALL
+				 extern ExitProcess:proc
+				 
+				; includelib  kernel32.lib  ; ExitProcess 在 kernel32.lib中实现
+				 printf          PROTO C :VARARG
+				  ;printf          PROTO C    
+				; extern printf:near
+				   includelib  libcmt.lib
+				;  includelib libvcruntime.lib
+				;  includelib libucrt.lib
+				;  includelib     legacy_stdio_definitions.lib
+
+				; includelib      msvcrt.lib  ; printf 在 msvcrt.lib中实现
+ 00000000			.DATA
+ 00000000 25 64 0A 0D 00	 lpFmt	db	"%d",0ah, 0dh, 0
+ 00000005 FF FF			 X      DB  0FFH,0FFH
+ 00000007			 dv    real8 3.4
+	   400B333333333333
+ 00000000			.CODE
+ 00000000			 main PROC
+ 00000000  41/ 81 C2		add r10d,11223344h
+	   11223344
+ 00000007  48/ 81 C2		 add  rdx,11223344h
+	   11223344
+ 0000000E  81 C2 11223344	 add  edx,11223344h
+ 00000014  81 02 11223344	 add dword ptr [rdx],11223344h
+
+ 0000001A  67& 03 03		 add  eax,[ebx]
+ 0000001D  03 03		 add  eax,[rbx]
+ 0000001F  66| 03 03		 add  ax,[rbx]
+ 00000022  67& 66| 03 03	 add  ax,[ebx]
+ 00000026  02 03		 add  al,[rbx]
+ 00000028  48/ 03 03		 add  rax,[rbx]
+ 0000002B  67& 48/ 03 03	 add  rax,[ebx]
+
+ 0000002F  67& 41/ 03 01	 add  eax,[r9d]
+ 00000033  41/ 03 01		 add  eax,[r9]
+ 00000036  49/ 03 C6		 add  rax,r14
+ 00000039  4C/ 03 F0		 add  r14, rax
+ 0000003C  49/ B9		mov  r9,1122334455667788h 
+	   1122334455667788
+ 00000046  48/ 81 C2		add  rdx,11223344h
+	   11223344
+ 0000004D  48/ 81 02		add  qword ptr [rdx],11223344h
+	   11223344
+ 00000054  81 02 11223344	add  dword ptr [rdx],11223344h
+
+ 0000005A  49/ 81 C2		add  r10,11223344h
+	   11223344
+ 00000061  41/ 81 02		add  dword ptr [r10],11223344h
+	   11223344
+ 00000068  41/ 81 C0		add  r8d, 11223344h
+	   11223344
+ 0000006F  66| 41/ 81 C0	add  r8w, 1122h
+	   1122
+ 00000075  41/ 80 C0 11		add  r8b, 11h
+ 00000079  50			push rax
+ 0000007A  52			push rdx
+ 0000007B  E8 000000BB		call  func1
+				 
+				 
+ 00000080  48/ 0F B6 05		 movzx rax,x
+	   00000005 R
+ 00000088  48/ 0F BE 05		 movsx rax,x+1
+	   00000006 R
+ 00000090  48/ 89 05		 mov  mmword ptr x,rax
+	   00000005 R
+ 00000097  48/ 89 15		 mov  mmword ptr x+8,rdx
+	   0000000D R
+				; cmpxchg16b x
+ 0000009E  48/ B9		 mov rcx,100000001h
+	   0000000100000001
+
+ 000000A8  50			 push rax
+ 000000A9  48/ C1 E0 04		 shl rax,4
+ 000000AD  B0 07		 mov  al,7
+ 000000AF  80 C4 13		 add  ah,13h
+ 000000B2  66| C1 E0 02		 shl  ax, 2
+ 000000B6  66| BB 0002		 mov  bx,2
+ 000000BA  F6 E3		 mul  bl
+ 000000BC  66| 6B DB 02		 imul  bx,2
+ 000000C0  93			 xchg  eax,ebx
+
+ 000000C1			l1:
+ 000000C1  48/ B8		 mov  rax,0F0000000H
+	   00000000F0000000
+ 000000CB  48/ 05		 add  rax,90000000H
+	   90000000
+ 000000D1  8A 05 00000005 R	 mov  Al,X
+ 000000D7  8A 1D 00000006 R	 mov  BL,X[1]
+ 000000DD  48/ B8		 MOV  RAX,1234567887654321H
+	   1234567887654321
+ 000000E7  8D 05 00000005 R	 LEA  EAX,X
+ 000000ED  67& 8A 08		 MOV  CL,[EAX]
+
+ 000000F0  48/ 8D 05		 LEA  RAX,X
+	   00000005 R
+ 000000F7  40/ 8A 30		 MOV  SIL, [RAX]
+
+				 ; MOV  Cl,X[RAX]
+				; MOV  DL,X[RAX+RBX*4]
+				; MOV  CL,[RAX+1234567801H]
+ 000000FA  48/ 8D 05		   LEA  RAX, X
+	   00000005 R
+ 00000101  8A 08		   MOV  CL,[RAX]
+
+
+				              ; eax=0; for (ebx=1;ebx<=100;ebx++) eax=eax+ebx;
+ 00000103  48/ C7 C2		   mov  rdx, 0
+	   00000000
+ 0000010A  48/ C7 C3		   mov  rbx, 1
+	   00000001
+ 00000111  48/ 83 FB 64		lp: cmp  rbx, 100
+ 00000115  7F 09		   jg   exit
+ 00000117  48/ 03 D3		   add  rdx, rbx
+ 0000011A  48/ 83 C3 01		   add  rbx, 1
+ 0000011E  EB F1		   jmp  lp
+ 00000120			exit:
+ 00000120  48/ B9		   mov   rcx, offset lpFmt
+	   0000000000000000 R
+
+ 0000012A  E8 00000000 E	   call printf
+				;   invoke printf,offset lpFmt,eax
+ 0000012F  48/ C7 C2		  mov rdx, 0
+	   00000000
+ 00000136  E8 00000000 E	  call ExitProcess
+				  ; invoke ExitProcess, 0
+ 0000013B			main endp
+
+ 0000013B			func1 proc
+ 0000013B  48/ 8B 5C 24		   mov  rbx,[rsp+8]
+	   08
+ 00000140  48/ 8B 4C 24		   mov  rcx,[rsp+16]
+	   10
+ 00000145  48/ 03 D9		   add  rbx, rcx
+ 00000148  C3			   ret
+ 00000149			func1 endp
+				end
+Microsoft (R) Macro Assembler (x64) Version 14.22.27905.0   12/09/19 10:17:46
+asm_64.asm						     Symbols 2 - 1
+
+
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+func1  . . . . . . . . . . . . .	P 	 0000013B _TEXT	Length= 0000000E Public
+main . . . . . . . . . . . . . .	P 	 00000000 _TEXT	Length= 0000013B Public
+  l1 . . . . . . . . . . . . . .	L 	 000000C1 _TEXT	
+  lp . . . . . . . . . . . . . .	L 	 00000111 _TEXT	
+  exit . . . . . . . . . . . . .	L 	 00000120 _TEXT	
+printf . . . . . . . . . . . . .	P 	 00000000 Length= 00000000 External
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	L 	 00000000 External
+X  . . . . . . . . . . . . . . .	Byte	 00000005 _DATA	
+dv . . . . . . . . . . . . . . .	QWord	 00000007 _DATA	
+lpFmt  . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+
+	   0 Warnings
+	   0 Errors

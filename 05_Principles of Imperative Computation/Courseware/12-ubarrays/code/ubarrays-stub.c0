@@ -1,0 +1,94 @@
+/* Unbounded arrays
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning, Rob Simmons
+ */
+
+typedef string elem;
+
+/* Interface of unbounded arrays */
+
+typedef struct uba_header* uba;
+
+uba uba_new(int initial_limit) 
+//@requires initial_limit > 0;
+  ;
+ 
+int uba_size(uba L)                      /* "\length(L)" */
+//@ensures \result >= 0;
+  ;
+
+elem uba_get(uba L, int index)           /* "L[index]" */
+//@requires 0 <= index && index < uba_size(L);
+  ;
+
+void uba_set(uba L, int index, elem e)   /* "L[index] = e" */
+//@requires 0 <= index && index < uba_size(L);
+  ;
+
+void uba_add(uba L, elem e);
+
+void uba_rem(uba L)
+//@requires uba_size(L) > 0;
+  ;
+
+/* Implementation of unbounded arrays */
+
+struct uba_header {
+  int limit;                    /* 0 < limit */
+  int size;			/* 0 <= size && size <= limit */
+  elem[] A;			/* \length(A) == limit */
+};
+
+bool is_uba (uba L)
+{
+  if (L == NULL) return false;
+  if (!(0 <= L->size)) return false;
+  if (!(L->size <= L->limit)) return false;
+  if (!(0 < L->limit)) return false;
+  //@assert L->limit == \length(L->A);
+  return true;
+}
+
+uba uba_new(int initial_limit) 
+//@requires initial_limit > 0;
+//@ensures is_uba(\result);
+{
+
+}
+
+int uba_size(uba L)
+//@requires is_uba(L);
+{
+
+}
+
+elem uba_get(uba L, int index)
+//@requires is_uba(L);
+//@requires 0 <= index && index < L->size;
+{
+
+}
+
+void uba_set(uba L, int index, elem e)
+//@requires is_uba(L);
+//@requires 0 <= index && index < L->size;
+{
+
+}
+
+void uba_add(uba L, elem e)
+//@requires is_uba(L);
+//@ensures is_uba(L);
+{
+  
+
+}
+
+void uba_rem(uba L)
+//@requires is_uba(L);
+//@requires L->size > 0;
+//@ensures is_uba(L);
+{
+
+
+}

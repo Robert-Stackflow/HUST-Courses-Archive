@@ -1,0 +1,13 @@
+/* file sieve2-test.c0 */
+#use <conio>
+
+int main () {
+  print("Testing isPrime for correctness...\n");
+  assert(isPrime(10) == false);
+  assert(isPrime(17) == true);
+  assert(isPrime(-1) == true);
+  print("Passed!\n");
+
+  return 0;
+}
+

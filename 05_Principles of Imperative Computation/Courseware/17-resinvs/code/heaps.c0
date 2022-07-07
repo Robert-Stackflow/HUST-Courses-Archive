@@ -1,0 +1,208 @@
+/* 
+ * Bounded priority queues
+ * Library implementation as heaps
+ *
+ * 15-122 Principles of Imperative Computation */
+
+/*** Client interface ***/
+
+// typedef ______________ elem;
+
+int elem_priority(elem e);
+
+
+/*** Library interface ***/
+
+// typedef _______________ pq;
+typedef struct heap_header* pq;
+
+bool pq_empty(pq P);
+bool pq_full(pq P);
+pq pq_new(int capacity)
+/*@requires capacity > 0; @*/
+/*@ensures pq_empty(\result); @*/ ;
+
+void pq_insert(pq P, elem e) /* insert e into P */
+/*@requires !pq_full(P); @*/ ;
+
+elem pq_min(pq P) /* return minimum, leave it */
+/*@requires !pq_empty(P); @*/ ;
+
+elem pq_delmin(pq P) /* return minimum, delete minimum */
+/*@requires !pq_empty(P); @*/ ;
+
+
+/*** Library implementation ***/
+
+struct heap_header {
+  int limit;      /* limit = capacity+1 */
+  int next;       /* 1 <= next && next <= limit */
+  elem[] data;    /* \length(data) == limit */
+};
+typedef struct heap_header* heap;
+
+/* Just checks the basic invariants described above, none
+ * of the ordering invariants. */
+bool is_safe_heap(struct heap_header* H) {
+  if (!(H != NULL)) return false;
+  if (!(1 <= H->next && H->next <= H->limit)) return false;
+  //@assert \length(H->data) == H->limit;
+  return true;
+}
+
+/* priority(H, i) returns priority of element i in H
+ * it should not assume H is a heap */
+int priority(struct heap_header* H, int i)
+//@requires is_safe_heap(H);
+{
+  return elem_priority(H->data[i]);
+}
+
+bool is_heap(struct heap_header* H) {
+  if (!is_safe_heap(H)) return false;
+  for (int i = 2; i < H->next; i++)
+    //@loop_invariant 2 <= i;
+    if (!(priority(H, i/2) <= priority(H, i))) return false;
+  return true;
+}
+
+/* H is a valid heap except possibly at n,
+ * looking up in the tree */
+/* is_heap_except_up(H, 1) == is_heap(H) */
+bool is_heap_except_up(heap H, int n) {
+  if (!is_safe_heap(H)) return false;
+  /* check parent <= node for all nodes except root (i = 1) and n */
+  for (int i = 2; i < H->next; i++)
+    //@loop_invariant 2 <= i;
+    {
+      if (i != n && !(priority(H, i/2) <= priority(H, i)))
+        return false;
+      /* for children of node n, check grandparent  */
+      if (i/2 == n && (i/2)/2 >= 1 && !(priority(H, (i/2)/2) <= priority(H,i)))
+        return false;
+    }
+  return true;
+}
+
+/* H is a valid heap, except possibly at n,
+ * looking down in the tree */
+/* If 2*n >= H->next then is_heap_except_down(H, n) == is_heap(H) */
+bool is_heap_except_down(heap H, int n) {
+  if (!is_safe_heap(H)) return false;
+  /* check parent <= node for all nodes except root (i = 1) */
+  /* and children of n (i/2 = n) */
+  for (int i = 2; i < H->next; i++)
+    //@loop_invariant 2 <= i;
+    {
+      if (i/2 != n && !(priority(H, i/2) <= priority(H, i)))
+        return false;
+      /* for children of node n, check grandparent  */
+      if (i/2 == n && (i/2)/2 >= 1 && !(priority(H, (i/2)/2) <= priority(H,i)))
+        return false;
+    }
+  return true;
+}
+
+bool pq_empty(heap H) 
+//@requires is_heap(H);
+{
+  return H->next == 1;
+}
+
+bool pq_full(heap H)
+//@requires is_heap(H);
+{
+  return H->next == H->limit;
+}
+
+heap pq_new(int capacity)
+//@requires capacity > 0;
+//@ensures is_heap(\result) && pq_empty(\result);
+{
+  heap H = alloc(struct heap_header);
+  H->limit = capacity+1;
+  H->next = 1;
+  H->data = alloc_array(elem, capacity+1);
+  return H;
+}
+
+void swap(elem[] A, int i, int j)
+//@requires 0 <= i && i < \length(A);
+//@requires 0 <= j && j < \length(A);
+{
+  elem tmp = A[i];
+  A[i] = A[j];
+  A[j] = tmp;
+}
+
+void pq_insert(heap H, elem e)
+//@requires is_heap(H) && !pq_full(H);
+//@ensures is_heap(H);
+{ 
+  H->data[H->next] = e;
+  (H->next)++;
+  /* H is no longer a heap! */
+  int i = H->next - 1;
+  while (i > 1 && priority(H,i) < priority(H,i/2))
+    //@loop_invariant 1 <= i && i < H->next;
+    //@loop_invariant is_heap_except_up(H, i);
+    {
+      swap(H->data, i, i/2);
+      i = i/2;
+    }
+  //@assert is_heap(H);
+  return;
+}
+
+void sift_down(heap H, int i)
+//@requires 1 <= i && i < H->next;
+//@requires is_heap_except_down(H, i);
+//@ensures is_heap(H);
+{ int n = H->next;
+  int left = 2*i;
+  int right = left+1;
+  while (left < n)
+    //@loop_invariant 1 <= i && i < n;
+    //@loop_invariant left == 2*i && right == 2*i+1;
+    //@loop_invariant is_heap_except_down(H, i);
+    {
+      if (priority(H,i) <= priority(H,left)
+          && (right >= n || priority(H,i) <= priority(H,right)))
+        return;
+      if (right >= n || priority(H,left) < priority(H,right)) {
+        swap(H->data, i, left);
+        i = left;
+      } else {
+        //@assert right < n && priority(H, right) <= priority(H,left);
+        swap(H->data, i, right);
+        i = right;
+      }
+      left = 2*i;
+      right = left+1;
+    }
+  //@assert i < n && 2*i >= n;
+  //@assert is_heap_except_down(H, i);
+  return;
+}
+
+elem pq_delmin(heap H)
+//@requires is_heap(H) && !pq_empty(H);
+//@ensures is_heap(H);
+{ 
+  int n = H->next;
+  elem min = H->data[1];
+  H->data[1] = H->data[n-1];
+  H->next = n-1;
+  if (H->next > 1) {
+    /* H is no longer a heap! */
+    sift_down(H, 1);
+  }
+  return min;
+}
+
+elem pq_min(heap H)
+//@requires is_heap(H) && !pq_empty(H);
+//@ensures is_heap(H);
+{
+  return H->data[1];
+}

@@ -1,0 +1,27 @@
+/* 
+ * Pointers
+ * 
+ * 15-122 Principles of Imperative Computation */
+
+struct point_header {
+  int x;
+  int y;
+};
+
+typedef struct point_header point;
+
+struct img_header {
+  int width;
+  int height; 
+  pixel[] pixels;
+};
+
+typedef struct img_header img;
+
+struct list_node {
+  int data;
+  struct list_node* next;
+}
+
+typedef struct list_node list;
+

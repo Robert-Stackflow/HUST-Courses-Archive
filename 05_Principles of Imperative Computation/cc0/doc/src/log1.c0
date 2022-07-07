@@ -1,0 +1,10 @@
+int log(int x)
+//@requires x >= 1;
+//@ensures \result >= 0;
+{ int r = 0;
+  while (x > 1) {
+    x = x / 2;
+    r = r + 1;
+  }
+  return r;
+}

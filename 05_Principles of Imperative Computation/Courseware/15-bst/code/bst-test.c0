@@ -1,0 +1,105 @@
+/* Testing binary search trees
+ * 15-122 Principles of Imperative Computation, Fall 2010
+ * Frank Pfenning
+ */
+
+#use <string>
+#use <conio>
+#use <rand>
+
+elem elem_fromint(int k) {
+  string s = string_fromint(k);
+  struct wcount * wc = alloc(struct wcount);
+  wc->word = s;
+  wc->count = k;
+  return wc;
+}
+
+int main() {
+  {
+    println("Testing with Lecture 1's black-box testing code");
+    elem E1 = alloc(struct wcount); E1->word = "a";
+    elem E2 = alloc(struct wcount); E2->word = "c";
+    elem E3 = alloc(struct wcount); E3->word = "a";
+    elem E4 = alloc(struct wcount); E4->word = "c";
+    
+    bst B = bst_new();
+    assert(B != NULL);
+    assert(bst_lookup(B, "") == NULL);
+    assert(bst_lookup(B, "non-boundary case") == NULL);
+    
+    bst_insert(B, E1);
+    assert(bst_lookup(B, "a") == E1);
+    assert(bst_lookup(B, "b") == NULL);
+    assert(bst_lookup(B, "") == NULL);
+    
+    bst_insert(B, E2);
+    assert(bst_lookup(B, "a") == E1);
+    assert(bst_lookup(B, "c") == E2);
+    assert(bst_lookup(B, "") == NULL);
+    
+    bst_insert(B, E3);
+    assert(bst_lookup(B, "a") == E3);
+    assert(bst_lookup(B, "c") == E2);
+
+    bst_insert(B, E4);
+    assert(bst_lookup(B, "c") == E4);
+    assert(bst_lookup(B, "a") == E3);
+  }
+
+  {
+    println("Testing with Lecture 2's black-box testing code");
+    elem E1 = alloc(struct wcount); E1->word = "waffles";
+    elem E2 = alloc(struct wcount); E2->word = "waffles";
+    elem E3 = alloc(struct wcount); E3->word = "fruit";
+    elem E4 = alloc(struct wcount); E4->word = "";
+
+    bst B = bst_new();
+    assert(NULL == bst_lookup(B, ""));
+    assert(NULL == bst_lookup(B, "pancakes"));
+    
+    bst_insert(B, E1);
+    assert(bst_lookup(B, "waffles") == E1);
+    assert(bst_lookup(B, "") == NULL);
+    assert(bst_lookup(B, "pancakes") == NULL);
+    assert(bst_lookup(B, "waffles") == E1);
+    
+    bst_insert(B, E2);
+    assert(bst_lookup(B, "waffles") == E2);
+
+    bst_insert(B, E3);
+    assert(bst_lookup(B, "waffles") == E2);
+    assert(bst_lookup(B, "fruit") == E3);
+    assert(bst_lookup(B, "") == NULL);
+    assert(bst_lookup(B, "pancakes") == NULL);
+    
+    bst_insert(B, E4);
+    assert(bst_lookup(B, "") == E4);
+    assert(bst_lookup(B, "waffles") == E2);
+    assert(bst_lookup(B, "fruit") == E3);
+    assert(bst_lookup(B, "pancakes") == NULL);
+  }
+
+  int n = (1<<9)-1;             // 1<<9 for -d; 1<<13 for timing
+  int num_tests = 10;           // 10 for -d;  100 for timing
+  int seed = 0xc0c0ffee;
+  rand_t gen = init_rand(seed);
+  elem[] A = alloc_array(elem, n);
+  for (int i = 0; i < n; i++)
+    A[i] = elem_fromint(rand(gen));
+  
+  assert(n+num_tests > 0);
+  print("Testing bst of size "); printint(n);
+  print(" "); printint(num_tests); print(" times\n");
+  for (int j = 0; j < num_tests; j++) {
+    bst B = bst_new();
+    for (int i = 0; i < n; i++) {
+      elem e = A[(j+i) % n];
+      bst_insert(B, e);
+      assert(bst_lookup(B, elem_key(e)) == e); /* insert ok? */
+    }
+    /* next line violates interface... */
+    assert(is_bst(B)); /* repeated insert failed to preserve order */
+  }
+  return 0;
+}

@@ -1,0 +1,84 @@
+/*
+ * Timing linear and binary search
+ *
+ * Note: you need to run this without the search (-r 0) to understand
+ * the behavior of setting up the test as compared to performing it
+ *
+ * 15-122 Principle of Imperative Computation
+ * Frank Pfenning
+ */
+
+#use <conio>
+#use <rand>
+#use <util>
+#use <args>
+
+/* Positive random number */
+int randpos(rand_t gen) 
+//@requires gen != NULL;
+//@ensures \result > 0;
+{
+  int x = rand(gen);
+  if (x == int_min()) return randpos(gen);
+  return abs(x);
+}
+
+/*
+ *
+ */
+
+void find_time(int exp, int num_tests) 
+//@requires 0 <= exp && exp < 31 && 0 <= num_tests;
+{
+  int n = 1 << exp;
+  rand_t gen = init_rand(0xdeadbeef);
+
+  print("Timing "); printint(num_tests);
+  print(" times with 2^"); printint(exp);
+  print(" elements\n");
+  
+  /* generated sorted array */
+  int[] A = alloc_array(int, n);
+  A[0] = 0;
+  for (int i = 0; i < n-1; i++)
+    //@loop_invariant 0 <= i && i <= n-1;
+    {
+      int dx = abs(rand(gen) % (int_max()/n));
+      A[i+1] = A[i]+dx;
+    }
+
+  /* first, elements in the array */
+  for (int i = 0; i < num_tests; i++) {
+    int j = randpos(gen) % n;
+    search(A[j], A, n);
+  }
+
+  /* timing search, expect O(num_tests * log n) = O(num_tests * exp) time */
+  /* first, elements in the array */
+  for (int i = 0; i < num_tests; i++) {
+    int j = randpos(gen) % n;
+    search(A[j], A, n);
+  }
+
+  /* then random elements */
+  for (int i = 0; i < num_tests; i++) {
+    search(randpos(gen), A, n);
+  }
+}
+
+Int main () {
+  int* exp_ptr = alloc(int);
+  *exp_ptr = 18;
+  args_int("-exp", exp_ptr);
+
+  int* r_ptr = alloc(int);
+  *r_ptr = 1000;
+  args_int("-r", r_ptr);
+
+  args_parse();
+  if (!(0 <= *exp_ptr && *exp_ptr < 31)) error("-exp out of range");
+  if (!(0 <= *r_ptr)) error("-r out of range");
+
+  find_time(*exp_ptr, *r_ptr);
+  return 0;
+}

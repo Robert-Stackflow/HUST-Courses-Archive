@@ -1,0 +1,20 @@
+#use "readfile.c0"
+#use "ht.c0"
+
+int main() {
+  string_bundle B = read_words("news_vocab_sorted.txt");
+  int limit = string_bundle_length(B);
+  string[] A = string_bundle_array(B);
+  ht H = ht_new(limit/2);
+  
+  for(int i = 0; i < limit; i++) 
+    //@loop_invariant 0 <= i;
+    {
+      elem w = alloc(struct word_with_color);
+      w->word = A[i];
+      ht_insert(H, w);
+    }
+
+  ht_stats(H);
+  return 0;
+}

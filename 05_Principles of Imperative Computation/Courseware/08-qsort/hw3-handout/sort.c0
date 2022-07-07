@@ -1,0 +1,53 @@
+/* Selection Sort
+ *
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning - ported by Ryan Sit to strings, Spring 2013 */
+
+#use <string>
+
+int min_index(string[] A, int lower, int upper)
+//@requires 0 <= lower && lower < upper && upper <= \length(A);
+//@ensures lower <= \result && \result < upper;
+//@ensures le_seg(A[\result], A, lower, upper);
+{
+  int m = lower;
+  string min = A[lower];
+  for (int i = lower+1; i < upper; i++) {
+    if (string_compare(A[i], min) < 0) {
+      m = i;
+      min = A[i];
+    }
+  }
+  return m;
+}
+
+void sort(string[] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+//@ensures is_sorted(A, lower, upper);
+{
+  for (int i = lower; i < upper; i++)
+    //@loop_invariant lower <= i && i <= upper;
+    //@loop_invariant is_sorted(A, lower, i);
+    {
+      int m = min_index(A, i, upper);
+      //@assert le_seg(A[m], A, i, upper);
+      swap(A, i, m);
+    }
+  return;
+}
+
+string[] sortcopy(string[] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+//@ensures \length(\result) == upper - lower;
+//@ensures is_sorted(\result, 0, upper - lower);
+{
+  int resultsize = upper - lower;
+  string[] B = alloc_array(string, resultsize);
+  for (int i = 0 ; i < resultsize; i++)
+    //@loop_invariant 0 <= i && i <= resultsize;
+    {
+      B[i] = A[lower + i];
+    }
+  sort(B, 0, resultsize);
+  return B;
+}

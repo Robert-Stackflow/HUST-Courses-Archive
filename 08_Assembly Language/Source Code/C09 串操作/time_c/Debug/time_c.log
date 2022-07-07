@@ -1,0 +1,3 @@
+﻿  time_c.c
+C:\新书示例\C09 串操作\time_c\time_c.c(49,16): warning C4013: “strcmp”未定义；假设外部返回 int
+  time_c.vcxproj -> C:\新书示例\C09 串操作\Debug\time_c.exe

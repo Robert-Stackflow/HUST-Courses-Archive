@@ -1,0 +1,48 @@
+/* Timing unbounded arrays
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning, Rob Simmons
+ */
+
+#use <args>
+#use <conio>
+#use <rand>
+#use "ubarrays.c0"
+
+void uba_time (int initial_limit, int adds, int rems, int num_tests) 
+//@requires adds >= rems;
+{
+
+  print("Timing "); printint(adds); print(" inserts");
+  print(", "); printint(rems); print(" deletes");
+  print(", "); printint(num_tests); print(" times\n");
+
+
+  for(int i = 0; i < num_tests; i++) {
+    uba A = uba_new(initial_limit);
+
+    for(int j = 0; j < adds; j++) {
+      uba_add(A, "a");
+    }
+
+    for(int j = 0; j < rems; j++) {
+      uba_rem(A);
+    }
+  }
+}
+
+int main () {
+  /* parse -n <reps> -s <size> */
+
+  int* n_ptr = alloc(int);      /* -n <reps> */
+  *n_ptr = 1000;                /* default value */
+  args_int("-n", n_ptr);
+
+  int* s_ptr = alloc(int);      /* -s <size> */
+  *s_ptr = 10000;               /* default */
+  args_int("-s", s_ptr);
+
+  args_parse();
+
+  uba_time(1, *s_ptr, *s_ptr, *n_ptr);
+  return 0;
+}

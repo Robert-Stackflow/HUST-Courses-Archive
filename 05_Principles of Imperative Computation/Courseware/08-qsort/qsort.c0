@@ -1,0 +1,39 @@
+int partition(int[ ] A, int lower, int pivot_index, int upper)
+//@requires 0 <= lower && lower <= pivot_index;
+//@requires pivot_index < upper && upper <= \length(A);
+//@ensures lower <= \result && \result < upper;
+//@ensures ge_seg(A[\result], A, lower, \result);
+//@ensures le_seg(A[\result], A, \result+1, upper);
+{
+  int pivot = A[pivot_index];
+  swap(A, lower, pivot_index);
+  int left = lower + 1;
+  int right = upper;
+  while (left < right)
+    //@loop_invariant lower+1<=left && left<=right && right<=upper;
+    //@loop_invariant ge_seg(pivot, A, lower+1, left);
+    //@loop_invariant le_seg(pivot, A, right, upper);
+    {
+      if (A[left] <= pivot)
+        left++;
+      else {
+        right--;
+        swap(A, left, right);
+      }
+    }
+  swap(A, lower, left-1);
+  return left-1;
+}
+
+
+
+void sort(int[ ] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+//@ensures is_sorted(A, lower, upper);
+{
+  if (upper-lower <= 1) return;
+  int index = lower + (upper - lower) / 2;
+  int mid = partition(A, lower, index, upper);
+  sort(A, lower, mid);
+  sort(A, mid+1, upper);
+}

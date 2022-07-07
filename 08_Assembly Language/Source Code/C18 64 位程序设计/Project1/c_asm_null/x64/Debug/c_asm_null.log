@@ -1,0 +1,5 @@
+﻿  Assembling asm_sub.asm...
+asm_sub.asm(1): error A2008: syntax error : C
+asm_sub.asm(12): error A2006: undefined symbol : printf
+asm_sub.asm(16): error A2006: undefined symbol : printf
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\BuildCustomizations\masm.targets(70,5): error MSB3721: 命令“ml64.exe /c /nologo /Zi /Fo"x64\Debug\asm_sub.obj" /W3 /errorReport:prompt  /Taasm_sub.asm”已退出，返回代码为 1。

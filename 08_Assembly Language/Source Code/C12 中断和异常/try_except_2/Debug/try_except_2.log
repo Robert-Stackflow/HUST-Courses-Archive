@@ -1,0 +1,4 @@
+﻿  try_except_2.c
+C:\新书示例\C12 中断和异常\try_except_2\try_except_2.c(7,9): warning C4477:  “printf”: 格式字符串“%x”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“PVOID”
+C:\新书示例\C12 中断和异常\try_except_2\try_except_2.c(30,7): warning C4101:  “p”: 未引用的局部变量
+  try_except_2.vcxproj -> C:\新书示例\C12 中断和异常\Debug\try_except_2.exe

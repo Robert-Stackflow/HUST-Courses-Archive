@@ -1,0 +1,44 @@
+#use "sortutil.c0"
+
+int partition(int[] A, int lower, int upper)
+//@requires 0 <= lower && lower < upper && upper <= \length(A);
+//@ensures lower <= \result && \result < upper;
+//@ensures gt_seg(A[\result], A, lower, \result);
+//@ensures le_seg(A[\result], A, \result, upper);
+{
+  int pivot_index = upper-1;
+  int pivot = A[pivot_index];
+
+  int left = lower;
+  int right = lower;
+  while (right < upper-1)
+    //@loop_invariant lower <= left && left <= right && right < upper;
+    //@loop_invariant gt_seg(pivot, A, lower, left);
+    //@loop_invariant le_seg(pivot, A, left, right);
+    {
+      if (pivot <= A[right]) {
+	right++;
+      } else {
+	swap(A, left, right);
+	left++;
+	right++;
+      }
+    }
+  //@assert right == upper-1;
+  //@assert A[upper-1] == pivot;
+
+  swap(A, left, upper-1);
+  return left;
+}
+
+void sort(int[] A, int lower, int upper) 
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+//@ensures is_sorted(A, lower, upper);
+{
+  if (upper-lower <= 1) return;
+  
+  int mid = partition(A, lower, upper);
+  sort(A, lower, mid);
+  sort(A, mid+1, upper);
+  return;
+}

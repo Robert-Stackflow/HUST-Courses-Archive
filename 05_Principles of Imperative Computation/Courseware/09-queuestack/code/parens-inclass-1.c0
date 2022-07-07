@@ -1,0 +1,62 @@
+#use <string>
+
+bool open(string s) {
+  if (string_equal(s, "(")) return true;
+  if (string_equal(s, "{")) return true;
+  if (string_equal(s, "[")) return true;
+  return false;
+}
+
+bool close(string s) {
+  if (string_equal(s, ")")) return true;
+  if (string_equal(s, "}")) return true;
+  if (string_equal(s, "]")) return true;
+  return false;
+}
+
+bool matches(string l, string r)
+//@requires open(l) && close(r);
+{
+  if (string_equal(l, "(") && string_equal(r, ")")) 
+    return true;
+  if (string_equal(l, "{") && string_equal(r, "}")) 
+    return true;
+  if (string_equal(l, "[") && string_equal(r, "]")) 
+    return true;
+  return false;
+}
+
+bool matching_parens(string str)
+{
+  queue Q = queue_new();
+  
+  for (int i = 0; i < string_length(str); i++) 
+    //@loop_invariant 0 <= i;
+    {
+      string br = string_sub(str, i, i+1);
+      if (open(br) || close(br)) enq(Q, br);
+    }
+
+  stack S = stack_new();
+
+  while (!queue_empty(Q)) 
+    // Informal loop invariants: everything in queue is 
+    // either an open brace or a closed brace.
+    // Everything on the stack is an open brace
+    {
+      string s = deq(Q);
+      if (open(s)) {
+        push(S, s);
+      } else {
+        //@assert close(s);
+        if (stack_empty(S)) {
+          return false; // Example: "())"
+        }
+        if (!matches(pop(S), s)) {
+          return false; // Example: "(]"
+        }
+      }
+    }
+
+  return stack_empty(S); // False if, for example: "("
+}

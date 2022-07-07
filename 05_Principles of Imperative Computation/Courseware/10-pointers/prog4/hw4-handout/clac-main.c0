@@ -1,0 +1,58 @@
+/*
+ * Clac, interface to a stack-based calculator language
+ *
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning
+ */
+
+#use <string>
+#use <parse>
+#use <conio>
+#use <args>
+
+void top_level(queue Q) {
+  /* Q is input queue */
+  stack S = stack_new(); /* operand stack */
+  print("Clac top level\n");
+  bool cont = true;
+  while (cont) {
+    // If there is nothing to be done on the queue and more input, get input
+    if (queue_empty(Q)) 
+      if (!eof()) {
+        print("clac>> ");
+        flush();
+        input_line(Q);
+      }
+    else return;
+
+    cont = eval(Q, S);
+    //@assert !cont || queue_empty(Q);
+    if (!stack_empty(S)) {
+      int x = pop(S);
+      printint(x); print("\n");
+      push(S, x);
+    } else {
+      print("(stack empty)\n");
+    }
+  }
+  print("Bye!\n");
+  return;
+}
+
+int main() {
+  /* pass file names on command line, no flags */
+  /* these will be processed in order */
+  args_t args = args_parse();
+  int argc = args->argc;
+
+  queue Q = queue_new();
+  for (int i = 0; i < argc; i++)
+    //@loop_invariant 0 <= i;
+    {
+      string filename = args->argv[i];
+      print("Loading file "); print(filename); print("\n");
+      input_file(args->argv[i], Q);
+    }
+  top_level(Q);
+  return 0;
+}

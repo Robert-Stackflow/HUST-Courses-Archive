@@ -1,0 +1,50 @@
+/* curses functions c_*, my functions cc_* -- for details, "man ncurses" */
+
+struct _win_st;
+typedef struct _win_st WINDOW;
+
+WINDOW *c_initscr();
+void c_cbreak();
+void c_noecho();
+void c_keypad(WINDOW *w, bool b);
+int c_getch();
+void c_addch(int c);
+void c_waddch(WINDOW *w, int c);
+void c_waddstr(WINDOW *w, string s);
+void c_wstandout(WINDOW *w);
+void c_wstandend(WINDOW *w);
+void c_delch();
+void c_erase();
+void c_werase(WINDOW *w);
+void c_wclear(WINDOW *w);
+void c_move(int y, int x);
+void c_wmove(WINDOW *w, int y, int x);
+void c_refresh();
+void c_wrefresh(WINDOW *w);
+int c_endwin();
+int c_curs_set(int visibility);
+WINDOW *c_subwin(WINDOW *orig, int nlines, int ncols, int begin_y, int begin_x);
+
+void cc_wboldon(WINDOW *w);
+void cc_wboldoff(WINDOW *w);
+void cc_wdimon(WINDOW *w);
+void cc_wdimoff(WINDOW *w);
+void cc_wreverseon(WINDOW *w);
+void cc_wreverseoff(WINDOW *w);
+void cc_wunderon (WINDOW *w);
+void cc_wunderoff(WINDOW *w);
+
+int cc_highlight(int c);
+int cc_getx(WINDOW *w);
+int cc_gety(WINDOW *w);
+int cc_getmaxx(WINDOW *w);
+int cc_getmaxy(WINDOW *w);
+int cc_getbegx(WINDOW *w);
+int cc_getbegy(WINDOW *w);
+
+bool cc_key_is_enter(int key);
+bool cc_key_is_backspace(int key);
+bool cc_key_is_left(int key);
+bool cc_key_is_right(int key);
+bool cc_key_is_up(int key);
+bool cc_key_is_down(int key);

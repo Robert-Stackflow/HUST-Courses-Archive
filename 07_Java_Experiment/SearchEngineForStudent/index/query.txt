@@ -1,0 +1,222 @@
+********************************************************************************************************
+[2022-05-31 02:45:15]  Search "coronavirus"
+----------------------------------------------
+docId:0
+score:2.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\1.txt
+termPostingMapping:
+{coronavirus={"docId":0,"freq":2,"positions":[2, 71]}}
+content:
+The novel coronavirus death toll has reached 21 as of Saturday in Britain as the number of confirmed cases totalled 1,140, according to the latest figures released by the British Department of Health and Social Care.
+
+The new figures showed an increase of 342 confirmed COVID-19 cases in Britain, the largest rise on a single day since the start of the outbreak in the country. Ten more patients who contracted coronavirus died, bringing the death toll in Britain to 21.
+
+All the 10 patients who died were aged over 60 and had underlying health conditions, said Chris Whitty, chief medical officer for England.
+
+According to health authorities, most of the cases are in England. There have been 121 confirmed cases in Scotland, 60 in Wales and 34 in Northern Ireland.
+
+The British government said on Friday that it estimated the true number of infected cases in Britain to be around 5,000 to 10,000. People who are self-isolating with mild symptoms are no longer being tested for the virus.
+----------------------------------------------
+docId:6
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\15.txt
+termPostingMapping:
+{coronavirus={"docId":6,"freq":1,"positions":[16]}}
+content:
+The release of the new James Bond film has been put back by seven months as coronavirus continues to spread.
+The producers said they had moved the release of No Time To Die from April to November after "careful consideration and thorough evaluation of the global theatrical marketplace".
+The announcement comes days after the founders of two 007 fan sites called on the film studios to delay its release.
+
+********************************************************************************************************
+[2022-05-31 02:45:21]  Search "wales"
+----------------------------------------------
+docId:0
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\1.txt
+termPostingMapping:
+{wales={"docId":0,"freq":1,"positions":[125]}}
+content:
+The novel coronavirus death toll has reached 21 as of Saturday in Britain as the number of confirmed cases totalled 1,140, according to the latest figures released by the British Department of Health and Social Care.
+
+The new figures showed an increase of 342 confirmed COVID-19 cases in Britain, the largest rise on a single day since the start of the outbreak in the country. Ten more patients who contracted coronavirus died, bringing the death toll in Britain to 21.
+
+All the 10 patients who died were aged over 60 and had underlying health conditions, said Chris Whitty, chief medical officer for England.
+
+According to health authorities, most of the cases are in England. There have been 121 confirmed cases in Scotland, 60 in Wales and 34 in Northern Ireland.
+
+The British government said on Friday that it estimated the true number of infected cases in Britain to be around 5,000 to 10,000. People who are self-isolating with mild symptoms are no longer being tested for the virus.
+----------------------------------------------
+docId:1
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\10.txt
+termPostingMapping:
+{wales={"docId":1,"freq":1,"positions":[33]}}
+content:
+The ongoing bushfires that have devastated Australia closed in on the country's capital, Canberra, last Friday as it declared its first state of emergency since 2003.
+The Rural Fire Service of New South Wales, the state surrounding the capital, warned of severe fire danger for the Australian Capital Territory, with flames and embers projected to spread well inside the region on Saturday. The territory is home to more than 400,000 residents, and nearly half of it is at risk of "ember attack" and flames.
+
+********************************************************************************************************
+[2022-05-31 02:45:38]  Search two words with AND: "wales" AND "coronavirus"
+----------------------------------------------
+docId:0
+score:3.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\1.txt
+termPostingMapping:
+{coronavirus={"docId":0,"freq":2,"positions":[2, 71]}, wales={"docId":0,"freq":1,"positions":[125]}}
+content:
+The novel coronavirus death toll has reached 21 as of Saturday in Britain as the number of confirmed cases totalled 1,140, according to the latest figures released by the British Department of Health and Social Care.
+
+The new figures showed an increase of 342 confirmed COVID-19 cases in Britain, the largest rise on a single day since the start of the outbreak in the country. Ten more patients who contracted coronavirus died, bringing the death toll in Britain to 21.
+
+All the 10 patients who died were aged over 60 and had underlying health conditions, said Chris Whitty, chief medical officer for England.
+
+According to health authorities, most of the cases are in England. There have been 121 confirmed cases in Scotland, 60 in Wales and 34 in Northern Ireland.
+
+The British government said on Friday that it estimated the true number of infected cases in Britain to be around 5,000 to 10,000. People who are self-isolating with mild symptoms are no longer being tested for the virus.
+
+********************************************************************************************************
+[2022-05-31 02:46:15]  Search two words with OR: "wales" OR "coronavirus"
+----------------------------------------------
+docId:0
+score:3.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\1.txt
+termPostingMapping:
+{coronavirus={"docId":0,"freq":2,"positions":[2, 71]}, wales={"docId":0,"freq":1,"positions":[125]}}
+content:
+The novel coronavirus death toll has reached 21 as of Saturday in Britain as the number of confirmed cases totalled 1,140, according to the latest figures released by the British Department of Health and Social Care.
+
+The new figures showed an increase of 342 confirmed COVID-19 cases in Britain, the largest rise on a single day since the start of the outbreak in the country. Ten more patients who contracted coronavirus died, bringing the death toll in Britain to 21.
+
+All the 10 patients who died were aged over 60 and had underlying health conditions, said Chris Whitty, chief medical officer for England.
+
+According to health authorities, most of the cases are in England. There have been 121 confirmed cases in Scotland, 60 in Wales and 34 in Northern Ireland.
+
+The British government said on Friday that it estimated the true number of infected cases in Britain to be around 5,000 to 10,000. People who are self-isolating with mild symptoms are no longer being tested for the virus.
+----------------------------------------------
+docId:1
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\10.txt
+termPostingMapping:
+{wales={"docId":1,"freq":1,"positions":[33]}}
+content:
+The ongoing bushfires that have devastated Australia closed in on the country's capital, Canberra, last Friday as it declared its first state of emergency since 2003.
+The Rural Fire Service of New South Wales, the state surrounding the capital, warned of severe fire danger for the Australian Capital Territory, with flames and embers projected to spread well inside the region on Saturday. The territory is home to more than 400,000 residents, and nearly half of it is at risk of "ember attack" and flames.
+----------------------------------------------
+docId:6
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\15.txt
+termPostingMapping:
+{coronavirus={"docId":6,"freq":1,"positions":[16]}}
+content:
+The release of the new James Bond film has been put back by seven months as coronavirus continues to spread.
+The producers said they had moved the release of No Time To Die from April to November after "careful consideration and thorough evaluation of the global theatrical marketplace".
+The announcement comes days after the founders of two 007 fan sites called on the film studios to delay its release.
+
+********************************************************************************************************
+[2022-05-31 02:46:38]  Search two words with NEIGHBOR: "government" NEIGHBOR "google"
+Not Found!
+********************************************************************************************************
+[2022-05-31 02:46:58]  Search two words with NEIGHBOR: "pleasant" NEIGHBOR "considered"
+----------------------------------------------
+docId:12
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\7.txt
+termPostingMapping:
+{pleasant considered={"docId":12,"freq":1,"positions":[76]}}
+content:
+Climate experts stationed at an Argentine research base in a northern part of Antarctica have just logged the highest temperature on record for the typically frozen continent.
+According to preliminary data from the U.N.'s World Meteorological Organization, temperatures on the Antarctic Peninsula just hit 64.9 degrees Fahrenheit, or 18.3 degrees Celsius. That figure tops the previous record of 17.5 degrees Celsius set in March 2015.
+
+While such temperatures might be considered pleasant under different circumstances say on a picnic or hiking trip this is Antarctica we're talking about, home to the most inhospitable environments on the planet.
+
+********************************************************************************************************
+[2022-05-31 02:47:15]  Search "luxembourg"
+----------------------------------------------
+docId:11
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\6.txt
+termPostingMapping:
+{luxembourg={"docId":11,"freq":1,"positions":[6]}}
+content:
+With a population of 602,000, Luxembourg is one of Europe's smallest countries -- yet it suffers from major traffic jams.
+
+But that could be about to change. As of March 1, 2020 all public transport -- trains, trams and buses -- in the country is now free.
+
+The government hopes the move will alleviate heavy congestion and bring environmental benefits, according to Dany Frank, a spokesperson for the Ministry of Mobility and Public Works.
+
+********************************************************************************************************
+[2022-05-31 02:47:23]  Search "recognition"
+----------------------------------------------
+docId:5
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\14.txt
+termPostingMapping:
+{recognition={"docId":5,"freq":1,"positions":[13]}}
+content:
+A Chinese wildlife park has sparked outcry after making visitors submit to facial recognition scanning, with one law professor taking it to court.
+Professor Guo Bing is taking action against Hangzhou safari park, after it replaced its existing fingerprinting system with the new technology.
+I filed this case because I feel that not only my privacy rights are being infringed upon but those of many others, Guo, from Zhejiang University of Sci-Tech, said according to an audio recording of an interview posted by state-run Beijing News.
+----------------------------------------------
+docId:10
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\5.txt
+termPostingMapping:
+{recognition={"docId":10,"freq":1,"positions":[6]}}
+content:
+Google has announced that its image recognition AI will no longer identify people in images as a man or a woman. The change was revealed in an email to developers who use the company's Cloud Vision API that makes it easy for apps and services to identify objects in images.
+
+In the email, Google said it wasn't possible to detect a person's true gender based simply on the clothes they were wearing. But Google also said that they were dropping gender labels for another reason: they could create or reinforce biases.
+
+********************************************************************************************************
+[2022-05-31 02:47:29]  Search "kobe"
+----------------------------------------------
+docId:14
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\9.txt
+termPostingMapping:
+{kobe={"docId":14,"freq":1,"positions":[14]}}
+content:
+Perhaps no one in recent history cared more about winning the All-Star Game than Kobe Bryant.
+
+The format changes and his memory combined to create a game Sunday night at the United Center that would've made Bryant proud.
+Technically, the winners were Team LeBron over Team Giannis 157-155 and local charities, as $500,000 was donated.
+The last hero was Chicago native Anthony Davis, who made the winning free throw. But the real victor was the competitive spirit Bryant embodied.
+
+********************************************************************************************************
+[2022-05-31 02:47:36]  Search two words with AND: "recognition" AND "luxembourg"
+Not Found!
+********************************************************************************************************
+[2022-05-31 02:47:44]  Search two words with OR: "recognition" OR "luxembourg"
+----------------------------------------------
+docId:5
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\14.txt
+termPostingMapping:
+{recognition={"docId":5,"freq":1,"positions":[13]}}
+content:
+A Chinese wildlife park has sparked outcry after making visitors submit to facial recognition scanning, with one law professor taking it to court.
+Professor Guo Bing is taking action against Hangzhou safari park, after it replaced its existing fingerprinting system with the new technology.
+I filed this case because I feel that not only my privacy rights are being infringed upon but those of many others, Guo, from Zhejiang University of Sci-Tech, said according to an audio recording of an interview posted by state-run Beijing News.
+----------------------------------------------
+docId:10
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\5.txt
+termPostingMapping:
+{recognition={"docId":10,"freq":1,"positions":[6]}}
+content:
+Google has announced that its image recognition AI will no longer identify people in images as a man or a woman. The change was revealed in an email to developers who use the company's Cloud Vision API that makes it easy for apps and services to identify objects in images.
+
+In the email, Google said it wasn't possible to detect a person's true gender based simply on the clothes they were wearing. But Google also said that they were dropping gender labels for another reason: they could create or reinforce biases.
+----------------------------------------------
+docId:11
+score:1.0
+docPath:D:\HUST-Courses\07_Java_Experiment\SearchEngineForStudent\text\6.txt
+termPostingMapping:
+{luxembourg={"docId":11,"freq":1,"positions":[6]}}
+content:
+With a population of 602,000, Luxembourg is one of Europe's smallest countries -- yet it suffers from major traffic jams.
+
+But that could be about to change. As of March 1, 2020 all public transport -- trains, trams and buses -- in the country is now free.
+
+The government hopes the move will alleviate heavy congestion and bring environmental benefits, according to Dany Frank, a spokesperson for the Ministry of Mobility and Public Works.
+

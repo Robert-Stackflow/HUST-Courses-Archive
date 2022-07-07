@@ -1,0 +1,97 @@
+/* Sorting utilities
+ *
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning
+ */
+
+bool is_sorted(int[] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+{
+  for (int i = lower; i < upper-1; i++)
+    //@loop_invariant 0 <= i;
+    if (!(A[i] <= A[i+1])) return false;
+  return true;
+}
+
+/* ge_seg(x, A, lower, upper)
+ * iff x >= A[lower..upper)
+ * iff x >= A[i] for all lower <= i < upper
+ */
+bool ge_seg(int x, int[] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+{
+  for (int i = lower; i < upper; i++)
+    //@loop_invariant lower <= i && i <= upper;
+    if (!(x >= A[i])) return false;
+  return true;
+}
+
+/* gt_seg(x, A, lower, upper)
+ * iff x > A[lower..upper)
+ * iff x > A[i] for all lower <= i < upper
+ */
+bool gt_seg(int x, int[] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+{
+  for (int i = lower; i < upper; i++)
+    //@loop_invariant lower <= i && i <= upper;
+    if (!(x > A[i])) return false;
+  return true;
+}
+
+/* le_seg(x, A, lower, upper)
+ * iff x <= A[lower..upper)
+ * iff x <= A[i] for all lower <= i < upper
+ */
+bool le_seg(int x, int[] A, int lower, int upper)
+//@requires 0 <= lower && lower <= upper && upper <= \length(A);
+{
+  for (int i = lower; i < upper; i++)
+    //@loop_invariant lower <= i && i <= upper;
+    if (!(x <= A[i])) return false;
+  return true;
+}
+
+/* le_segs(A, lower1, upper1, lower2, upper2)
+ * iff A[lower1..upper1) <= A[lower2..upper2)
+ * iff A[i] <= A[j] for all lower1 <= i < upper1, lower2 <= j < upper2
+ */
+bool le_segs(int[] A, int lower1, int upper1, int lower2, int upper2)
+//@requires 0 <= lower1 && lower1 <= upper1 && upper1 <= \length(A);
+//@requires 0 <= lower2 && lower2 <= upper2 && upper2 <= \length(A);
+{
+  for (int i = lower1; i < upper1; i++)
+    //@loop_invariant 0 <= lower1 && lower1 <= upper1;
+    for (int j = lower2; j < upper2; j++)
+      //@loop_invariant 0 <= lower2 && lower2 <= upper2;
+      if (!(A[i] <= A[j])) return false;
+  return true;
+}
+
+/* lt_segs(A, lower1, upper1, lower2, upper2)
+ * iff A[lower1..upper1) < A[lower2..upper2)
+ * iff A[i] < A[j] for all lower1 <= i < upper1, lower2 <= j < upper2
+ */
+bool lt_segs(int[] A, int lower1, int upper1, int lower2, int upper2)
+//@requires 0 <= lower1 && lower1 <= upper1 && upper1 <= \length(A);
+//@requires 0 <= lower2 && lower2 <= upper2 && upper2 <= \length(A);
+{
+  for (int i = lower1; i < upper1; i++)
+    //@loop_invariant 0 <= lower1 && lower1 <= upper1;
+    for (int j = lower2; j < upper2; j++)
+      //@loop_invariant 0 <= lower2 && lower2 <= upper2;
+      if (!(A[i] < A[j])) return false;
+  return true;
+}
+
+void swap(int[] A, int i, int j)
+//@requires 0 <= i && i < \length(A);
+//@requires 0 <= j && j < \length(A);
+{
+  int tmp = A[i];
+  A[i] = A[j];
+  A[j] = tmp;
+  return;
+}
+
+

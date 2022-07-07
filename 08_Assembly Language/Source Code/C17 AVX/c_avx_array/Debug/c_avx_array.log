@@ -1,0 +1,4 @@
+﻿  c_avx_array.c
+C:\新书示例\C16_AVX\c_avx_array\c_avx_array.c(26,18): warning C4244: “函数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+C:\新书示例\C16_AVX\c_avx_array\c_avx_array.c(23,10): warning C4101: “t”: 未引用的局部变量
+  c_avx_array.vcxproj -> C:\新书示例\C16_AVX\Debug\c_avx_array.exe

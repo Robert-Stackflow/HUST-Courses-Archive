@@ -1,0 +1,81 @@
+﻿生成启动时间为 2019/07/23 19:31:57。
+     1>项目“G:\汇编语言新书实例\C12_窗口应用程序\c_windows\c_windows.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt c_windows.cpp
+         c_windows.cpp
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(11): error C2146: 语法错误: 缺少“;”(在标识符“hInst”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(11): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(12): error C2146: 语法错误: 缺少“;”(在标识符“bg”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(12): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(13): error C2146: 语法错误: 缺少“;”(在标识符“hdc”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(13): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(14): error C2146: 语法错误: 缺少“;”(在标识符“hWnd”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(14): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(15): error C2146: 语法错误: 缺少“;”(在标识符“tPre”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(15): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(20): error C2146: 语法错误: 缺少“;”(在标识符“MyRegisterClass”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(20): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(20): error C2146: 语法错误: 缺少“)”(在标识符“hInstance”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(20): error C2059: 语法错误:“)”
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(21): error C2146: 语法错误: 缺少“;”(在标识符“InitInstance”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(21): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(21): error C2062: 意外的类型“int”
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(22): error C2146: 语法错误: 缺少“;”(在标识符“CALLBACK”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(22): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(22): error C2146: 语法错误: 缺少“;”(在标识符“WndProc”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(22): error C2065: “UINT”: 未声明的标识符
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(22): error C2065: “WPARAM”: 未声明的标识符
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(22): error C2065: “LPARAM”: 未声明的标识符
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(22): error C2078: 初始值设定项太多
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(23): error C2146: 语法错误: 缺少“)”(在标识符“hdc”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(23): error C2182: “MyPaint”: 非法使用“void”类型
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(23): error C2059: 语法错误:“)”
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(26): error C2146: 语法错误: 缺少“;”(在标识符“WinMain”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(26): error C2146: 语法错误: 缺少“)”(在标识符“hInstance”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(26): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(29): error C2059: 语法错误:“)”
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(30): error C2143: 语法错误 : 缺少“;”(在“{”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(30): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(56): error C2146: 语法错误: 缺少“;”(在标识符“MyRegisterClass”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(56): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(56): error C2086: “int ATOM”: 重定义
+                 g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(20) : 参见“ATOM”的声明
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(56): error C2146: 语法错误: 缺少“)”(在标识符“hInstance”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(56): error C2374: “MyRegisterClass”: 重定义；多次初始化
+                 g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(20) : 参见“MyRegisterClass”的声明
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(56): error C2059: 语法错误:“)”
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(57): error C2143: 语法错误 : 缺少“;”(在“{”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(57): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(76): error C2146: 语法错误: 缺少“;”(在标识符“InitInstance”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(76): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(76): error C2086: “int BOOL”: 重定义
+                 g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(21) : 参见“BOOL”的声明
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(76): error C2146: 语法错误: 缺少“)”(在标识符“hInstance”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(76): error C2059: 语法错误:“)”
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(77): error C2143: 语法错误 : 缺少“;”(在“{”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(77): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(132): error C2146: 语法错误: 缺少“)”(在标识符“hdc”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(132): error C2182: “MyPaint”: 非法使用“void”类型
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(132): error C2374: “MyPaint”: 重定义；多次初始化
+                 g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(23) : 参见“MyPaint”的声明
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(132): error C2059: 语法错误:“)”
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(133): error C2143: 语法错误 : 缺少“;”(在“{”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(133): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(198): error C2146: 语法错误: 缺少“;”(在标识符“CALLBACK”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(198): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(198): error C2086: “int LRESULT”: 重定义
+                 g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(22) : 参见“LRESULT”的声明
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(198): error C2146: 语法错误: 缺少“;”(在标识符“WndProc”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(198): error C2086: “int CALLBACK”: 重定义
+                 g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(22) : 参见“CALLBACK”的声明
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(198): error C2146: 语法错误: 缺少“)”(在标识符“hWnd”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(198): error C2374: “WndProc”: 重定义；多次初始化
+                 g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(22) : 参见“WndProc”的声明
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(198): error C2059: 语法错误:“)”
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(199): error C2143: 语法错误 : 缺少“;”(在“{”的前面)
+     1>g:\汇编语言新书实例\c12_窗口应用程序\c_windows\c_windows.cpp(199): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+     1>已完成生成项目“G:\汇编语言新书实例\C12_窗口应用程序\c_windows\c_windows.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:02.04

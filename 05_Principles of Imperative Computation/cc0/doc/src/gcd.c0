@@ -1,0 +1,15 @@
+/*
+gcd(a,0) = a
+gcd(a,b) = gcd(b,a mod b).
+*/
+
+int gcd(int x, int y)
+//@requires x > 0 && y > 0;
+{
+  while (y != 0) {
+    int r = x % y;
+    x = y;
+    y = r;
+  }
+  return x;
+}

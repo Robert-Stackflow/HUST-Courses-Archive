@@ -1,0 +1,45 @@
+#use <conio>
+#use <parse>
+#use <string>
+int binsearch(int x, int[] A, int n);
+
+int main()
+{	
+	int i=0;
+	bool flag=true;
+	while(flag)
+	{
+	println("Key false to exit or true to continue");
+	flag = *(parse_bool(readline()));
+	if(flag)
+	{
+		println("Input the number you want to search");
+		int x = *(parse_int(readline(), 10));
+		println("Input the count of numbers in the array");
+		int count = *(parse_int(readline(), 10));
+		int[]A=alloc_array(int,count);
+		println("Input the numbers in the array by lines");
+		for(i=0;i<count;i++)
+		{
+			int temp = *(parse_int(readline(), 10));
+			A[i]=temp;
+		}
+		int ans=binsearch(x,A,count);
+		if(ans==-1)
+		{
+		println("The num isn't in the array");
+		}
+		else
+		{
+			print("The order of the num is ");
+			print(string_fromint(ans+1));
+			println(" (The order starts from 1) ");
+		}
+    }
+    else
+    {
+    	println("Test is finished");
+    }
+	}
+    return 0;
+}

@@ -1,0 +1,25 @@
+# C0 syntax highlighting
+
+syntax "c" "\.c0$" "\.h0$"
+
+# types
+color green "\<(string|bool|char|int|void|struct|typedef)\>"
+
+# control constructs
+color brightyellow "\<(for|if|while|else)\>"
+
+color magenta "\<(continue|break|return|alloc|alloc_array)\>"
+color brightmagenta "\<(alloc|alloc_array)\>"
+
+color brightcyan "^[[:space:]]*#[[:space:]]*use"
+
+## String highlighting.  You will in general want your comments and
+## strings to come last, because syntax highlighting rules will be
+## applied in the order they are read in.
+color red "<[^= ]*>" ""(\\.|[^"])*""
+
+## Comment highlighting
+color brightblue "//.*"
+color brightblue start="/\*" end="\*/"
+color white,blue "//@\<(ensures|requires|loop_invariant|assert)\> .*"
+color white,blue start="/\*@\<(ensures|requires|loop_invariant|assert)\>" end="\*/"

@@ -1,0 +1,23 @@
+/* Some C0 Utilities
+ *
+ * 15-122 Principles of Imperative Computation, Fall 2012
+ * Frank Pfenning
+ */
+
+int int_size()
+//@ensures \result == 4;
+  ;
+int int_max()
+//@ensures \result == 2147483647;
+  ;
+int int_min()
+//@ensures \result == -2147483648;
+  ;
+
+int abs(int x)
+//@requires x > int_min();
+//@ensures \result >= 0;
+//@ensures \result == (x < 0 ? -x : x);
+  ;
+
+string int2hex(int x);

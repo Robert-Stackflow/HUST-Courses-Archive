@@ -1,0 +1,85 @@
+/* Linear and binary search for strings
+ *
+ * 15-122 Principles of Imperative Computation */
+
+#use <string>
+#use "arrayutil.c0" 
+// The above line lets us use functions from arrayutil.c0 even if we
+// don't include arrayutil.c0 on the command line. It can sometimes
+// cause problems with the autograder if you do this in your code, but
+// it can also be a useful way of splitting your code into multiple
+// files.
+
+/*** Interface ***/
+
+int linsearch(string x, string[] A, int n)
+//@requires 0 <= n && n <= \length(A);
+//@requires is_sorted(A, 0, n);
+/*@ensures (-1 == \result && !is_in(x, A, 0, n)) 
+        || ((0 <= \result && \result < n)
+            && string_equal(A[\result], x)); @*/ ;
+
+int binsearch(string x, string[] A, int n)
+//@requires 0 <= n && n <= \length(A);
+//@requires is_sorted(A, 0, n);
+/*@ensures (-1 == \result && !is_in(x, A, 0, n)) 
+        || ((0 <= \result && \result < n)
+            && string_equal(A[\result], x)); @*/ ;
+
+
+/*** Implementation ***/
+
+// a linear search
+int linsearch(string x, string[] A, int n)
+//@requires 0 <= n && n <= \length(A);
+//@requires is_sorted(A, 0, n);
+/*@ensures (-1 == \result && !is_in(x, A, 0, n)) 
+        || ((0 <= \result && \result < n)
+            && string_equal(A[\result], x)); @*/
+{ 
+  for (int i = 0; i < n; i++)
+    //@loop_invariant 0 <= i && i <= n;
+    //@loop_invariant gt_seg(x, A, 0, i);
+    {
+      int cmp = string_compare(A[i], x);
+      if (cmp == 0) {
+        return i;
+      } else if (cmp > 0) {
+        //@assert string_compare(A[i], x) > 0;
+        return -1;
+      }
+      //@assert string_compare(A[i], x) < 0;
+    }
+  return -1;
+}
+
+// a binary search
+int binsearch(string x, string[] A, int n)
+//@requires 0 <= n && n <= \length(A);
+//@requires is_sorted(A, 0, n);
+/*@ensures (-1 == \result && !is_in(x, A, 0, n)) 
+        || ((0 <= \result && \result < n)
+            && string_equal(A[\result], x)); @*/
+{
+  int lower = 0;
+  int upper = n;
+  while (lower < upper)
+    //@loop_invariant 0 <= lower && lower <= upper && upper <= n;
+    //@loop_invariant gt_seg(x, A, 0, lower);
+    //@loop_invariant lt_seg(x, A, upper, n);
+    { 
+      int mid = lower + (upper-lower)/2; // (lower + upper)/2 could overflow
+      int cmp = string_compare(A[mid], x);
+      if (cmp == 0) {
+        //@assert string_equal(A[mid], x);
+        return mid;
+      } else if (cmp > 0) { 
+        //@assert string_compare(A[mid], x) > 0;
+        upper = mid;
+      } else {
+        //@assert string_compare(A[mid], x) < 0; 
+        lower = mid+1;
+      }
+    }
+  return -1;
+}

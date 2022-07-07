@@ -1,0 +1,28 @@
+#use <string>
+#use <file>
+#use <parse>
+#use <conio>
+int count_distinct(string[] A, int n);
+string[] remove_duplicates(string[] A, int n);
+int main()
+{
+	println("Input the path of the test file");
+	file_t fp=file_read(readline());
+	int n=*(parse_int(file_readline(fp),10));
+//	println(string_fromint(n));
+	string[] A = alloc_array(string, n);
+	int i=0;
+	while(!file_eof(fp))
+	{
+		A[i]=file_readline(fp);
+		i=i+1;
+	}
+	assert(i==n);
+//	for(i=0;i<n;i++)
+//		println(A[i]);
+	int nofb=count_distinct(A,n);
+	string[] B=remove_duplicates(A,n);
+	for(i=0;i<nofb;i++)
+		println(B[i]);
+	return 0;
+}

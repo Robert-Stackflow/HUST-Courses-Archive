@@ -1,0 +1,5 @@
+﻿  sse_normal_mul.cpp
+C:\新书示例\MMX指令\ipp_normal_add\sse_normal_mul.cpp(32,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+C:\新书示例\MMX指令\ipp_normal_add\sse_normal_mul.cpp(37,26): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\新书示例\MMX指令\ipp_normal_add\sse_normal_mul.cpp(39,23): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\新书示例\MMX指令\ipp_normal_add\sse_normal_mul.cpp(44,3): error C3861: “sse_mul”: 找不到标识符
