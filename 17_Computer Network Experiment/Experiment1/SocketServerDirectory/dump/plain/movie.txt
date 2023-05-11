@@ -1,0 +1,39 @@
+create table movie(
+	movie_ID int PRIMARY KEY,
+	title varchar(30) not null,
+	type varchar(10) not null,
+	runtime int not null,
+	release_date date,
+	director varchar(10) not null,
+	starring varchar(10)
+);
+create table customer(
+	c_ID int PRIMARY KEY,
+	name varchar(10) not null,
+	phone varchar(11) not null
+);
+create table hall(
+	hall_ID int primary key,
+	mode varchar(10) not null,
+	capacity int not null,
+	location varchar(30) not null
+);
+create table `schedule`(
+	schedule_ID int primary key,
+	`date` date not null,
+	`time` time not null,
+	price int not null,
+	number int not null,
+	s_movie_ID int not null,
+	s_hall_ID int not null,
+	constraint FK_movie_ID foreign key(s_movie_ID) references movie(movie_ID),
+	constraint FK_hall_ID foreign key(s_hall_ID) references hall(hall_ID)
+);
+create table ticket(
+	ticket_ID int primary key,
+	seat_num int not null,
+	t_c_ID int not null,
+	t_schedule_ID int not null,
+	constraint FK_c_ID foreign key(t_c_ID) references customer(c_ID),
+	constraint FK_schedule_ID foreign key(t_schedule_ID) references `schedule`(schedule_ID)
+);

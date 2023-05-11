@@ -1,0 +1,38 @@
+main(){
+	semphore Sempty=1,Sfull=0,Tempty=1,Tfull=0,Mutex=1;
+	cobegin
+		p1(),p2(),p3(),p4();
+	coend
+}
+
+P1/2(){
+	while(票未卖完){
+		P(Mutex);
+		number++;
+		if(number%2==1){
+			V(Mutex);
+			P(Sempty);
+			放入S;
+			V(Sfull);
+		}else{
+			V(Mutex);
+			P(Tempty);
+			放入T;
+			V(Tfull);
+		}
+	}
+}
+P3(){
+	while(票未打印完){
+		P(Sfull);
+		打印票;
+		V(Sempty);
+	}
+}
+P4(){
+	while(票未打印完){
+		P(Tfull);
+		打印票;
+		V(Tempty);
+	}
+}

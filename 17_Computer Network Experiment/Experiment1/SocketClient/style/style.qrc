@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/custom">
+        <file>icons/right.png</file>
+        <file>icons/wrong.png</file>
+        <file>icons/close.png</file>
+        <file>icons/minimize.png</file>
+        <file>icons/maximize.png</file>
+        <file>icons/about.png</file>
+        <file>icons/edit.png</file>
+        <file>icons/critical.png</file>
+        <file>icons/info.png</file>
+        <file>icons/question.png</file>
+        <file>icons/warning.png</file>
+        <file>icons/fail.png</file>
+        <file>icons/success.png</file>
+        <file>fonts/fa-brands-400.ttf</file>
+        <file>fonts/fa-regular-400.ttf</file>
+        <file>fonts/fa-solid-900.ttf</file>
+        <file>fonts/fa-v4compatibility.ttf</file>
+        <file>fonts/fontawesome-webfont.ttf</file>
+        <file>fonts/Font Awesome 5 Brands-Regular-400.otf</file>
+        <file>fonts/Font Awesome 5 Free-Regular-400.otf</file>
+        <file>fonts/Font Awesome 5 Free-Solid-900.otf</file>
+        <file>fonts/fa-regular.ttf</file>
+        <file>icons/restore.png</file>
+        <file>custom.qss</file>
+        <file>icons/help.png</file>
+        <file>icons/see.png</file>
+        <file>icons/unsee.png</file>
+        <file>icons/help_white.png</file>
+        <file>icons/see2.png</file>
+        <file>icons/unsee2.png</file>
+        <file>icons/network.png</file>
+        <file>icons/settings.png</file>
+        <file>icons/client.png</file>
+        <file>icons/server.png</file>
+        <file>icons/openfile.png</file>
+    </qresource>
+    <qresource prefix="/qss"/>
+</RCC>

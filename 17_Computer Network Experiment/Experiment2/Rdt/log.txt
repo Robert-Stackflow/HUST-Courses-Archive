@@ -1,0 +1,1515 @@
+[2022-12-11 22:07:44:549] [INFO]  运行TCP协议
+[2022-12-11 22:07:44:559] [INFO]  [发送方] 发送方发送报文:seqnum = 1,acknum = -1,checknum = 29555,payload = AAAAAAAAAAAAAAAAAAAA
+[2022-12-11 22:07:44:560] [INFO]  [接收方] 接收方正确收到报文seqnum = 1,acknum = -1,checknum = 29555,payload = AAAAAAAAAAAAAAAAAAAA
+[2022-12-11 22:07:44:569] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 2,checknum = 12849,payload = ....................
+[2022-12-11 22:07:44:575] [INFO]  [发送方] 已接收到的ACK数目:0,新接收到的ACK序号:2,此时的窗口内第一个分组的序号:1
+[2022-12-11 22:07:44:582] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 2,checknum = 12849,payload = ....................
+[2022-12-11 22:07:44:590] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	1	-	-	-	-	-	-	-	
+[2022-12-11 22:07:44:597] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:44:602] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:44:610] [INFO]  [发送方] 发送方发送报文:seqnum = 2,acknum = -1,checknum = 26984,payload = BBBBBBBBBBBBBBBBBBBB
+[2022-12-11 22:07:44:617] [INFO]  [发送方] 发送方发送报文:seqnum = 3,acknum = -1,checknum = 24413,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:44:622] [INFO]  [发送方] 发送方发送报文:seqnum = 4,acknum = -1,checknum = 21842,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:44:629] [INFO]  [发送方] 发送方发送报文:seqnum = 5,acknum = -1,checknum = 19271,payload = EEEEEEEEEEEEEEEEEEEE
+[2022-12-11 22:07:44:634] [INFO]  [发送方] 发送方发送报文:seqnum = 6,acknum = -1,checknum = 16700,payload = FFFFFFFFFFFFFFFFFFFF
+[2022-12-11 22:07:44:638] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 2,acknum = -1,checknum = 26984,payload = CBBBBBBBBBBBBBBBBBBB
+[2022-12-11 22:07:44:643] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 2,checknum = 12849,payload = ....................
+[2022-12-11 22:07:44:649] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:2,此时的窗口内第一个分组的序号:2
+[2022-12-11 22:07:44:653] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 3,acknum = -1,checknum = 24413,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:44:657] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 2,checknum = 12849,payload = ....................
+[2022-12-11 22:07:44:664] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 4,acknum = -1,checknum = 21842,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:44:669] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 2,checknum = 12849,payload = ....................
+[2022-12-11 22:07:44:673] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 5,acknum = -1,checknum = 19271,payload = EEEEEEEEEEEEEEEEEEEE
+[2022-12-11 22:07:44:680] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 2,checknum = 12849,payload = ....................
+[2022-12-11 22:07:44:684] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:2,此时的窗口内第一个分组的序号:2
+[2022-12-11 22:07:44:690] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 6,acknum = -1,checknum = 16700,payload = GFFFFFFFFFFFFFFFFFFF
+[2022-12-11 22:07:44:696] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 2,checknum = 12849,payload = ....................
+[2022-12-11 22:07:44:701] [INFO]  [发送方] 已接收到的ACK数目:3,新接收到的ACK序号:2,此时的窗口内第一个分组的序号:2
+[2022-12-11 22:07:44:705] [INFO]  [发送方] 冗余ACK大于3,快速重传当前窗口第一个报文:seqnum = 2,acknum = -1,checknum = 26984,payload = BBBBBBBBBBBBBBBBBBBB
+[2022-12-11 22:07:44:713] [INFO]  [发送方] 当前窗口为:
+order		0	1	2	3	4	5	6	7	
+seqnum	2	3	4	5	6	-	-	-	
+[2022-12-11 22:07:44:717] [INFO]  [发送方] 已接收到的ACK数目:0,新接收到的ACK序号:2,此时的窗口内第一个分组的序号:2
+[2022-12-11 22:07:44:721] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 2,checknum = 12849,payload = ....................
+[2022-12-11 22:07:44:728] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	2	3	4	5	6	-	-	-	
+[2022-12-11 22:07:44:735] [INFO]  [发送方] 向右滑动窗口长度:0
+[2022-12-11 22:07:44:740] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	2	3	4	5	6	-	-	-	
+[2022-12-11 22:07:44:747] [INFO]  [接收方] 接收方正确收到报文seqnum = 2,acknum = -1,checknum = 26984,payload = BBBBBBBBBBBBBBBBBBBB
+[2022-12-11 22:07:44:753] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 3,checknum = 12848,payload = ....................
+[2022-12-11 22:07:44:755] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:2,此时的窗口内第一个分组的序号:2
+[2022-12-11 22:07:44:762] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:3,此时的窗口内第一个分组的序号:2
+[2022-12-11 22:07:44:766] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 3,checknum = 12848,payload = ....................
+[2022-12-11 22:07:44:770] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	2	3	4	5	6	-	-	-	
+[2022-12-11 22:07:44:775] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:44:780] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	3	4	5	6	-	-	-	-	
+[2022-12-11 22:07:44:784] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 3,acknum = -1,checknum = 24413,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:44:789] [INFO]  [接收方] 接收方正确收到报文seqnum = 3,acknum = -1,checknum = 24413,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:44:797] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 4,checknum = 12847,payload = ....................
+[2022-12-11 22:07:44:802] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:4,此时的窗口内第一个分组的序号:3
+[2022-12-11 22:07:44:807] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 3,acknum = -1,checknum = 24413,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:44:813] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 3,acknum = -1,checknum = 24413,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:44:817] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 4,checknum = 12847,payload = ....................
+[2022-12-11 22:07:44:823] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:4,此时的窗口内第一个分组的序号:3
+[2022-12-11 22:07:44:830] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 4,checknum = 12847,payload = ....................
+[2022-12-11 22:07:44:835] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	3	4	5	6	-	-	-	-	
+[2022-12-11 22:07:44:840] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:44:848] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	4	5	6	-	-	-	-	-	
+[2022-12-11 22:07:44:856] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 4,acknum = -1,checknum = 21842,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:44:862] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 4,acknum = -1,checknum = 21842,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:44:867] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 4,acknum = -1,checknum = 21842,payload = EDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:44:873] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 4,checknum = 12847,payload = ....................
+[2022-12-11 22:07:44:878] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:4,此时的窗口内第一个分组的序号:4
+[2022-12-11 22:07:44:885] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 4,acknum = -1,checknum = 21842,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:44:889] [INFO]  [接收方] 接收方正确收到报文seqnum = 4,acknum = -1,checknum = 21842,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:44:897] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 5,checknum = 12846,payload = ....................
+[2022-12-11 22:07:44:902] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:5,此时的窗口内第一个分组的序号:4
+[2022-12-11 22:07:44:906] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 5,checknum = 12846,payload = ....................
+[2022-12-11 22:07:44:913] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	4	5	6	-	-	-	-	-	
+[2022-12-11 22:07:44:919] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:44:923] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	5	6	-	-	-	-	-	-	
+[2022-12-11 22:07:44:930] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 5,acknum = -1,checknum = 19271,payload = EEEEEEEEEEEEEEEEEEEE
+[2022-12-11 22:07:44:934] [INFO]  [接收方] 接收方正确收到报文seqnum = 5,acknum = -1,checknum = 19271,payload = EEEEEEEEEEEEEEEEEEEE
+[2022-12-11 22:07:44:939] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 6,checknum = 12845,payload = ....................
+[2022-12-11 22:07:44:947] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:6,此时的窗口内第一个分组的序号:5
+[2022-12-11 22:07:44:953] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 6,checknum = 12845,payload = ....................
+[2022-12-11 22:07:44:957] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	5	6	-	-	-	-	-	-	
+[2022-12-11 22:07:44:964] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:44:968] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	6	-	-	-	-	-	-	-	
+[2022-12-11 22:07:44:973] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 6,acknum = -1,checknum = 16700,payload = FFFFFFFFFFFFFFFFFFFF
+[2022-12-11 22:07:44:978] [INFO]  [接收方] 接收方正确收到报文seqnum = 6,acknum = -1,checknum = 16700,payload = FFFFFFFFFFFFFFFFFFFF
+[2022-12-11 22:07:44:983] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 7,checknum = 12844,payload = ....................
+[2022-12-11 22:07:44:986] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:7,此时的窗口内第一个分组的序号:6
+[2022-12-11 22:07:44:994] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 7,checknum = 12844,payload = ....................
+[2022-12-11 22:07:44:999] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	6	-	-	-	-	-	-	-	
+[2022-12-11 22:07:45:003] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:45:009] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:45:016] [INFO]  [发送方] 发送方发送报文:seqnum = 7,acknum = -1,checknum = 14129,payload = GGGGGGGGGGGGGGGGGGGG
+[2022-12-11 22:07:45:022] [INFO]  [发送方] 发送方发送报文:seqnum = 8,acknum = -1,checknum = 11558,payload = HHHHHHHHHHHHHHHHHHHH
+[2022-12-11 22:07:45:029] [INFO]  [发送方] 发送方发送报文:seqnum = 9,acknum = -1,checknum = 8987,payload = IIIIIIIIIIIIIIIIIIII
+[2022-12-11 22:07:45:034] [INFO]  [发送方] 发送方发送报文:seqnum = 10,acknum = -1,checknum = 6416,payload = JJJJJJJJJJJJJJJJJJJJ
+[2022-12-11 22:07:45:039] [INFO]  [发送方] 发送方发送报文:seqnum = 11,acknum = -1,checknum = 3845,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:45:047] [INFO]  [接收方] 接收方正确收到报文seqnum = 7,acknum = -1,checknum = 14129,payload = GGGGGGGGGGGGGGGGGGGG
+[2022-12-11 22:07:45:054] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 8,checknum = 12843,payload = ....................
+[2022-12-11 22:07:45:057] [INFO]  [接收方] 接收方正确收到报文seqnum = 8,acknum = -1,checknum = 11558,payload = HHHHHHHHHHHHHHHHHHHH
+[2022-12-11 22:07:45:065] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 9,checknum = 12842,payload = ....................
+[2022-12-11 22:07:45:070] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:8,此时的窗口内第一个分组的序号:7
+[2022-12-11 22:07:45:077] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 8,checknum = 12843,payload = ....................
+[2022-12-11 22:07:45:084] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	7	8	9	10	11	-	-	-	
+[2022-12-11 22:07:45:089] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:45:097] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	8	9	10	11	-	-	-	-	
+[2022-12-11 22:07:45:104] [INFO]  [接收方] 接收方正确收到报文seqnum = 9,acknum = -1,checknum = 8987,payload = IIIIIIIIIIIIIIIIIIII
+[2022-12-11 22:07:45:110] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 10,checknum = 12841,payload = ....................
+[2022-12-11 22:07:45:116] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:9,此时的窗口内第一个分组的序号:8
+[2022-12-11 22:07:45:124] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 9,checknum = 12842,payload = ....................
+[2022-12-11 22:07:45:133] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	8	9	10	11	-	-	-	-	
+[2022-12-11 22:07:45:137] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:45:150] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	9	10	11	-	-	-	-	-	
+[2022-12-11 22:07:45:162] [INFO]  [接收方] 接收方正确收到报文seqnum = 10,acknum = -1,checknum = 6416,payload = JJJJJJJJJJJJJJJJJJJJ
+[2022-12-11 22:07:45:171] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 11,checknum = 12840,payload = ....................
+[2022-12-11 22:07:45:179] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:10,此时的窗口内第一个分组的序号:9
+[2022-12-11 22:07:45:186] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:11,此时的窗口内第一个分组的序号:9
+[2022-12-11 22:07:45:191] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = -999999,acknum = -1,checknum = 3845,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:45:200] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 11,checknum = 12840,payload = ....................
+[2022-12-11 22:07:45:205] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 9,acknum = -1,checknum = 8987,payload = IIIIIIIIIIIIIIIIIIII
+[2022-12-11 22:07:45:214] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 9,acknum = -1,checknum = 8987,payload = IIIIIIIIIIIIIIIIIIII
+[2022-12-11 22:07:45:221] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 11,checknum = 12840,payload = ....................
+[2022-12-11 22:07:45:230] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:11,此时的窗口内第一个分组的序号:9
+[2022-12-11 22:07:45:235] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 11,checknum = 12840,payload = ....................
+[2022-12-11 22:07:45:243] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	9	10	11	-	-	-	-	-	
+[2022-12-11 22:07:45:252] [INFO]  [发送方] 向右滑动窗口长度:2
+[2022-12-11 22:07:45:261] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	11	-	-	-	-	-	-	-	
+[2022-12-11 22:07:45:266] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 11,acknum = -1,checknum = 3845,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:45:272] [INFO]  [接收方] 接收方正确收到报文seqnum = 11,acknum = -1,checknum = 3845,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:45:282] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 12,checknum = 12839,payload = ....................
+[2022-12-11 22:07:45:287] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:12,此时的窗口内第一个分组的序号:11
+[2022-12-11 22:07:45:292] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 12,checknum = 12839,payload = ....................
+[2022-12-11 22:07:45:298] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	11	-	-	-	-	-	-	-	
+[2022-12-11 22:07:45:305] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:45:312] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:45:317] [INFO]  [发送方] 发送方发送报文:seqnum = 12,acknum = -1,checknum = 1274,payload = LLLLLLLLLLLLLLLLLLLL
+[2022-12-11 22:07:45:328] [INFO]  [发送方] 发送方发送报文:seqnum = 13,acknum = -1,checknum = 64238,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:45:335] [INFO]  [发送方] 发送方发送报文:seqnum = 14,acknum = -1,checknum = 61667,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:45:346] [INFO]  [发送方] 发送方发送报文:seqnum = 15,acknum = -1,checknum = 59096,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:45:353] [INFO]  [发送方] 发送方发送报文:seqnum = 16,acknum = -1,checknum = 56525,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:45:360] [INFO]  [接收方] 接收方正确收到报文seqnum = 12,acknum = -1,checknum = 1274,payload = LLLLLLLLLLLLLLLLLLLL
+[2022-12-11 22:07:45:368] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 13,checknum = 12838,payload = ....................
+[2022-12-11 22:07:45:372] [INFO]  [接收方] 接收方正确收到报文seqnum = 13,acknum = -1,checknum = 64238,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:45:382] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 14,checknum = 12837,payload = ....................
+[2022-12-11 22:07:45:387] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:13,此时的窗口内第一个分组的序号:12
+[2022-12-11 22:07:45:397] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 13,checknum = 12838,payload = ....................
+[2022-12-11 22:07:45:403] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	12	13	14	15	16	-	-	-	
+[2022-12-11 22:07:45:410] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:45:417] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	13	14	15	16	-	-	-	-	
+[2022-12-11 22:07:45:423] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 15,acknum = -1,checknum = 59096,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:45:433] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 14,checknum = 12837,payload = ....................
+[2022-12-11 22:07:45:437] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 16,acknum = -1,checknum = 56525,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:45:447] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 14,checknum = 12837,payload = ....................
+[2022-12-11 22:07:45:453] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:14,此时的窗口内第一个分组的序号:13
+[2022-12-11 22:07:45:462] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 14,checknum = 12837,payload = ....................
+[2022-12-11 22:07:45:470] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	13	14	15	16	-	-	-	-	
+[2022-12-11 22:07:45:478] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:45:485] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	14	15	16	-	-	-	-	-	
+[2022-12-11 22:07:45:491] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:14,此时的窗口内第一个分组的序号:14
+[2022-12-11 22:07:45:501] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:14,此时的窗口内第一个分组的序号:14
+[2022-12-11 22:07:45:510] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 14,acknum = -1,checknum = 61667,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:45:520] [INFO]  [接收方] 接收方正确收到报文seqnum = 14,acknum = -1,checknum = 61667,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:45:530] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 15,checknum = 12836,payload = ....................
+[2022-12-11 22:07:45:534] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:15,此时的窗口内第一个分组的序号:14
+[2022-12-11 22:07:45:541] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 15,checknum = 12836,payload = ....................
+[2022-12-11 22:07:45:551] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	14	15	16	-	-	-	-	-	
+[2022-12-11 22:07:45:557] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:45:565] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	15	16	-	-	-	-	-	-	
+[2022-12-11 22:07:45:573] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 15,acknum = -1,checknum = 59096,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:45:579] [INFO]  [接收方] 接收方正确收到报文seqnum = 15,acknum = -1,checknum = 59096,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:45:587] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 16,checknum = 12835,payload = ....................
+[2022-12-11 22:07:45:596] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:-999999,此时的窗口内第一个分组的序号:15
+[2022-12-11 22:07:45:602] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 15,acknum = -1,checknum = 59096,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:45:609] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 15,acknum = -1,checknum = 59096,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:45:617] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 16,checknum = 12835,payload = ....................
+[2022-12-11 22:07:45:624] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:16,此时的窗口内第一个分组的序号:15
+[2022-12-11 22:07:45:634] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 16,checknum = 12835,payload = ....................
+[2022-12-11 22:07:45:638] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	15	16	-	-	-	-	-	-	
+[2022-12-11 22:07:45:645] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:45:651] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	16	-	-	-	-	-	-	-	
+[2022-12-11 22:07:45:656] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 16,acknum = -1,checknum = 56525,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:45:665] [INFO]  [接收方] 接收方正确收到报文seqnum = 16,acknum = -1,checknum = 56525,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:45:670] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 17,checknum = 12834,payload = ....................
+[2022-12-11 22:07:45:673] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:17,此时的窗口内第一个分组的序号:16
+[2022-12-11 22:07:45:682] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 17,checknum = 12834,payload = ....................
+[2022-12-11 22:07:45:687] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	16	-	-	-	-	-	-	-	
+[2022-12-11 22:07:45:692] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:45:700] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:45:704] [INFO]  [发送方] 发送方发送报文:seqnum = 17,acknum = -1,checknum = 53954,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:45:712] [INFO]  [发送方] 发送方发送报文:seqnum = 18,acknum = -1,checknum = 51383,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:45:717] [INFO]  [发送方] 发送方发送报文:seqnum = 19,acknum = -1,checknum = 48812,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:45:721] [INFO]  [发送方] 发送方发送报文:seqnum = 20,acknum = -1,checknum = 46241,payload = TTTTTTTTTTTTTTTTTTTT
+[2022-12-11 22:07:45:729] [INFO]  [发送方] 发送方发送报文:seqnum = 21,acknum = -1,checknum = 43670,payload = UUUUUUUUUUUUUUUUUUUU
+[2022-12-11 22:07:45:738] [INFO]  [接收方] 接收方正确收到报文seqnum = 17,acknum = -1,checknum = 53954,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:45:748] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 18,checknum = 12833,payload = ....................
+[2022-12-11 22:07:45:751] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:18,此时的窗口内第一个分组的序号:17
+[2022-12-11 22:07:45:756] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 18,checknum = 12833,payload = ....................
+[2022-12-11 22:07:45:763] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	17	18	19	20	21	-	-	-	
+[2022-12-11 22:07:45:768] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:45:775] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	18	19	20	21	-	-	-	-	
+[2022-12-11 22:07:45:785] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 18,acknum = -1,checknum = 51383,payload = SRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:45:790] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 18,checknum = 12833,payload = ....................
+[2022-12-11 22:07:45:798] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:18,此时的窗口内第一个分组的序号:18
+[2022-12-11 22:07:45:808] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 19,acknum = -1,checknum = 48812,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:45:817] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 18,checknum = 12833,payload = ....................
+[2022-12-11 22:07:45:822] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 20,acknum = -1,checknum = 46241,payload = TTTTTTTTTTTTTTTTTTTT
+[2022-12-11 22:07:45:828] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 18,checknum = 12833,payload = ....................
+[2022-12-11 22:07:45:837] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:18,此时的窗口内第一个分组的序号:18
+[2022-12-11 22:07:45:842] [INFO]  [发送方] 已接收到的ACK数目:3,新接收到的ACK序号:18,此时的窗口内第一个分组的序号:18
+[2022-12-11 22:07:45:853] [INFO]  [发送方] 冗余ACK大于3,快速重传当前窗口第一个报文:seqnum = 18,acknum = -1,checknum = 51383,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:45:857] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	18	19	20	21	-	-	-	-	
+[2022-12-11 22:07:45:864] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 21,acknum = -1,checknum = 43670,payload = UUUUUUUUUUUUUUUUUUUU
+[2022-12-11 22:07:45:868] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 18,checknum = 12833,payload = ....................
+[2022-12-11 22:07:45:873] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = -999999,acknum = -1,checknum = 51383,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:45:880] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 18,checknum = 12833,payload = ....................
+[2022-12-11 22:07:45:885] [INFO]  [发送方] 已接收到的ACK数目:0,新接收到的ACK序号:18,此时的窗口内第一个分组的序号:18
+[2022-12-11 22:07:45:890] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 18,checknum = 12833,payload = ....................
+[2022-12-11 22:07:45:897] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	18	19	20	21	-	-	-	-	
+[2022-12-11 22:07:45:907] [INFO]  [发送方] 向右滑动窗口长度:0
+[2022-12-11 22:07:45:920] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	18	19	20	21	-	-	-	-	
+[2022-12-11 22:07:45:926] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:18,此时的窗口内第一个分组的序号:18
+[2022-12-11 22:07:45:933] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 18,acknum = -1,checknum = 51383,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:45:937] [INFO]  [接收方] 接收方正确收到报文seqnum = 18,acknum = -1,checknum = 51383,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:45:948] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 19,checknum = 12832,payload = ....................
+[2022-12-11 22:07:45:955] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 18,acknum = -1,checknum = 51383,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:45:966] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 18,acknum = -1,checknum = 51383,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:45:971] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 19,checknum = 12832,payload = ....................
+[2022-12-11 22:07:45:981] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:19,此时的窗口内第一个分组的序号:18
+[2022-12-11 22:07:45:986] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 19,checknum = 12832,payload = ....................
+[2022-12-11 22:07:45:995] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	18	19	20	21	-	-	-	-	
+[2022-12-11 22:07:46:000] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:005] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	19	20	21	-	-	-	-	-	
+[2022-12-11 22:07:46:014] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 19,acknum = -1,checknum = 48812,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:46:021] [INFO]  [接收方] 接收方正确收到报文seqnum = 19,acknum = -1,checknum = 48812,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:46:031] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 20,checknum = 12831,payload = ....................
+[2022-12-11 22:07:46:035] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:20,此时的窗口内第一个分组的序号:19
+[2022-12-11 22:07:46:043] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 20,checknum = 12831,payload = ....................
+[2022-12-11 22:07:46:052] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	19	20	21	-	-	-	-	-	
+[2022-12-11 22:07:46:057] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:063] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	20	21	-	-	-	-	-	-	
+[2022-12-11 22:07:46:070] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 20,acknum = -1,checknum = 46241,payload = TTTTTTTTTTTTTTTTTTTT
+[2022-12-11 22:07:46:082] [INFO]  [接收方] 接收方正确收到报文seqnum = 20,acknum = -1,checknum = 46241,payload = TTTTTTTTTTTTTTTTTTTT
+[2022-12-11 22:07:46:092] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 21,checknum = 12830,payload = ....................
+[2022-12-11 22:07:46:099] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:21,此时的窗口内第一个分组的序号:20
+[2022-12-11 22:07:46:104] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 21,checknum = 12830,payload = ....................
+[2022-12-11 22:07:46:109] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	20	21	-	-	-	-	-	-	
+[2022-12-11 22:07:46:121] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:131] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	21	-	-	-	-	-	-	-	
+[2022-12-11 22:07:46:136] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 21,acknum = -1,checknum = 43670,payload = UUUUUUUUUUUUUUUUUUUU
+[2022-12-11 22:07:46:141] [INFO]  [接收方] 接收方正确收到报文seqnum = 21,acknum = -1,checknum = 43670,payload = UUUUUUUUUUUUUUUUUUUU
+[2022-12-11 22:07:46:150] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 22,checknum = 12829,payload = ....................
+[2022-12-11 22:07:46:153] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:22,此时的窗口内第一个分组的序号:21
+[2022-12-11 22:07:46:160] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 22,checknum = 12829,payload = ....................
+[2022-12-11 22:07:46:170] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	21	-	-	-	-	-	-	-	
+[2022-12-11 22:07:46:179] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:183] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:46:187] [INFO]  [发送方] 发送方发送报文:seqnum = 22,acknum = -1,checknum = 41099,payload = VVVVVVVVVVVVVVVVVVVV
+[2022-12-11 22:07:46:194] [INFO]  [发送方] 发送方发送报文:seqnum = 23,acknum = -1,checknum = 38528,payload = WWWWWWWWWWWWWWWWWWWW
+[2022-12-11 22:07:46:203] [INFO]  [发送方] 发送方发送报文:seqnum = 24,acknum = -1,checknum = 35957,payload = XXXXXXXXXXXXXXXXXXXX
+[2022-12-11 22:07:46:209] [INFO]  [发送方] 发送方发送报文:seqnum = 25,acknum = -1,checknum = 33386,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:46:216] [INFO]  [发送方] 发送方发送报文:seqnum = 26,acknum = -1,checknum = 30815,payload = ZZZZZZZZZZZZZZZZZZZZ
+[2022-12-11 22:07:46:221] [INFO]  [接收方] 接收方正确收到报文seqnum = 22,acknum = -1,checknum = 41099,payload = VVVVVVVVVVVVVVVVVVVV
+[2022-12-11 22:07:46:234] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 23,checknum = 12828,payload = ....................
+[2022-12-11 22:07:46:241] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:23,此时的窗口内第一个分组的序号:22
+[2022-12-11 22:07:46:252] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 23,checknum = 12828,payload = ....................
+[2022-12-11 22:07:46:257] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	22	23	24	25	26	-	-	-	
+[2022-12-11 22:07:46:266] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:274] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	23	24	25	26	-	-	-	-	
+[2022-12-11 22:07:46:283] [INFO]  [接收方] 接收方正确收到报文seqnum = 23,acknum = -1,checknum = 38528,payload = WWWWWWWWWWWWWWWWWWWW
+[2022-12-11 22:07:46:292] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 24,checknum = 12827,payload = ....................
+[2022-12-11 22:07:46:300] [INFO]  [接收方] 接收方正确收到报文seqnum = 24,acknum = -1,checknum = 35957,payload = XXXXXXXXXXXXXXXXXXXX
+[2022-12-11 22:07:46:306] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 25,checknum = 12826,payload = ....................
+[2022-12-11 22:07:46:312] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:24,此时的窗口内第一个分组的序号:23
+[2022-12-11 22:07:46:317] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 24,checknum = 12827,payload = ....................
+[2022-12-11 22:07:46:322] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	23	24	25	26	-	-	-	-	
+[2022-12-11 22:07:46:328] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:334] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	24	25	26	-	-	-	-	-	
+[2022-12-11 22:07:46:339] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:25,此时的窗口内第一个分组的序号:24
+[2022-12-11 22:07:46:344] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 25,checknum = 12826,payload = ....................
+[2022-12-11 22:07:46:353] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	24	25	26	-	-	-	-	-	
+[2022-12-11 22:07:46:357] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:365] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	25	26	-	-	-	-	-	-	
+[2022-12-11 22:07:46:369] [INFO]  [接收方] 接收方正确收到报文seqnum = 25,acknum = -1,checknum = 33386,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:46:374] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 26,checknum = 12825,payload = ....................
+[2022-12-11 22:07:46:381] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:26,此时的窗口内第一个分组的序号:25
+[2022-12-11 22:07:46:388] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 26,checknum = 12825,payload = ....................
+[2022-12-11 22:07:46:394] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	25	26	-	-	-	-	-	-	
+[2022-12-11 22:07:46:401] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:405] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	26	-	-	-	-	-	-	-	
+[2022-12-11 22:07:46:413] [INFO]  [接收方] 接收方正确收到报文seqnum = 26,acknum = -1,checknum = 30815,payload = ZZZZZZZZZZZZZZZZZZZZ
+[2022-12-11 22:07:46:419] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 27,checknum = 12824,payload = ....................
+[2022-12-11 22:07:46:423] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:27,此时的窗口内第一个分组的序号:26
+[2022-12-11 22:07:46:433] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 27,checknum = 12824,payload = ....................
+[2022-12-11 22:07:46:439] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	26	-	-	-	-	-	-	-	
+[2022-12-11 22:07:46:446] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:450] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:46:454] [INFO]  [发送方] 发送方发送报文:seqnum = 27,acknum = -1,checknum = 29529,payload = AAAAAAAAAAAAAAAAAAAA
+[2022-12-11 22:07:46:462] [INFO]  [发送方] 发送方发送报文:seqnum = 28,acknum = -1,checknum = 26958,payload = BBBBBBBBBBBBBBBBBBBB
+[2022-12-11 22:07:46:470] [INFO]  [发送方] 发送方发送报文:seqnum = 29,acknum = -1,checknum = 24387,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:46:478] [INFO]  [发送方] 发送方发送报文:seqnum = 30,acknum = -1,checknum = 21816,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:46:483] [INFO]  [发送方] 发送方发送报文:seqnum = 31,acknum = -1,checknum = 19245,payload = EEEEEEEEEEEEEEEEEEEE
+[2022-12-11 22:07:46:489] [INFO]  [接收方] 接收方正确收到报文seqnum = 27,acknum = -1,checknum = 29529,payload = AAAAAAAAAAAAAAAAAAAA
+[2022-12-11 22:07:46:499] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 28,checknum = 12823,payload = ....................
+[2022-12-11 22:07:46:503] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:28,此时的窗口内第一个分组的序号:27
+[2022-12-11 22:07:46:512] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 28,checknum = 12823,payload = ....................
+[2022-12-11 22:07:46:516] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	27	28	29	30	31	-	-	-	
+[2022-12-11 22:07:46:522] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:528] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	28	29	30	31	-	-	-	-	
+[2022-12-11 22:07:46:532] [INFO]  [接收方] 接收方正确收到报文seqnum = 28,acknum = -1,checknum = 26958,payload = BBBBBBBBBBBBBBBBBBBB
+[2022-12-11 22:07:46:539] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 29,checknum = 12822,payload = ....................
+[2022-12-11 22:07:46:546] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:29,此时的窗口内第一个分组的序号:28
+[2022-12-11 22:07:46:550] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 29,checknum = 12822,payload = ....................
+[2022-12-11 22:07:46:555] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	28	29	30	31	-	-	-	-	
+[2022-12-11 22:07:46:560] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:565] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	29	30	31	-	-	-	-	-	
+[2022-12-11 22:07:46:570] [INFO]  [接收方] 接收方正确收到报文seqnum = 29,acknum = -1,checknum = 24387,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:46:575] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 30,checknum = 12821,payload = ....................
+[2022-12-11 22:07:46:582] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:30,此时的窗口内第一个分组的序号:29
+[2022-12-11 22:07:46:586] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 30,checknum = 12821,payload = ....................
+[2022-12-11 22:07:46:591] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	29	30	31	-	-	-	-	-	
+[2022-12-11 22:07:46:599] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:610] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	30	31	-	-	-	-	-	-	
+[2022-12-11 22:07:46:617] [INFO]  [接收方] 接收方正确收到报文seqnum = 30,acknum = -1,checknum = 21816,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:46:622] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 31,checknum = 12820,payload = ....................
+[2022-12-11 22:07:46:628] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:31,此时的窗口内第一个分组的序号:30
+[2022-12-11 22:07:46:635] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 31,checknum = 12820,payload = ....................
+[2022-12-11 22:07:46:639] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	30	31	-	-	-	-	-	-	
+[2022-12-11 22:07:46:649] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:654] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	31	-	-	-	-	-	-	-	
+[2022-12-11 22:07:46:662] [INFO]  [接收方] 接收方正确收到报文seqnum = 31,acknum = -1,checknum = 19245,payload = EEEEEEEEEEEEEEEEEEEE
+[2022-12-11 22:07:46:670] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 32,checknum = 12819,payload = ....................
+[2022-12-11 22:07:46:674] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:32,此时的窗口内第一个分组的序号:31
+[2022-12-11 22:07:46:682] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 32,checknum = 12819,payload = ....................
+[2022-12-11 22:07:46:688] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	31	-	-	-	-	-	-	-	
+[2022-12-11 22:07:46:697] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:704] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:46:713] [INFO]  [发送方] 发送方发送报文:seqnum = 32,acknum = -1,checknum = 16674,payload = FFFFFFFFFFFFFFFFFFFF
+[2022-12-11 22:07:46:718] [INFO]  [发送方] 发送方发送报文:seqnum = 33,acknum = -1,checknum = 14103,payload = GGGGGGGGGGGGGGGGGGGG
+[2022-12-11 22:07:46:724] [INFO]  [发送方] 发送方发送报文:seqnum = 34,acknum = -1,checknum = 11532,payload = HHHHHHHHHHHHHHHHHHHH
+[2022-12-11 22:07:46:732] [INFO]  [发送方] 发送方发送报文:seqnum = 35,acknum = -1,checknum = 8961,payload = IIIIIIIIIIIIIIIIIIII
+[2022-12-11 22:07:46:739] [INFO]  [发送方] 发送方发送报文:seqnum = 36,acknum = -1,checknum = 6390,payload = JJJJJJJJJJJJJJJJJJJJ
+[2022-12-11 22:07:46:747] [INFO]  [接收方] 接收方正确收到报文seqnum = 32,acknum = -1,checknum = 16674,payload = FFFFFFFFFFFFFFFFFFFF
+[2022-12-11 22:07:46:752] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 33,checknum = 12818,payload = ....................
+[2022-12-11 22:07:46:757] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:33,此时的窗口内第一个分组的序号:32
+[2022-12-11 22:07:46:765] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 33,checknum = 12818,payload = ....................
+[2022-12-11 22:07:46:770] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	32	33	34	35	36	-	-	-	
+[2022-12-11 22:07:46:776] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:785] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	33	34	35	36	-	-	-	-	
+[2022-12-11 22:07:46:794] [INFO]  [接收方] 接收方正确收到报文seqnum = 33,acknum = -1,checknum = 14103,payload = GGGGGGGGGGGGGGGGGGGG
+[2022-12-11 22:07:46:801] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 34,checknum = 12817,payload = ....................
+[2022-12-11 22:07:46:809] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:34,此时的窗口内第一个分组的序号:33
+[2022-12-11 22:07:46:818] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 34,checknum = 12817,payload = ....................
+[2022-12-11 22:07:46:826] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	33	34	35	36	-	-	-	-	
+[2022-12-11 22:07:46:833] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:842] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	34	35	36	-	-	-	-	-	
+[2022-12-11 22:07:46:851] [INFO]  [接收方] 接收方正确收到报文seqnum = 34,acknum = -1,checknum = 11532,payload = HHHHHHHHHHHHHHHHHHHH
+[2022-12-11 22:07:46:858] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 35,checknum = 12816,payload = ....................
+[2022-12-11 22:07:46:864] [INFO]  [接收方] 接收方正确收到报文seqnum = 35,acknum = -1,checknum = 8961,payload = IIIIIIIIIIIIIIIIIIII
+[2022-12-11 22:07:46:872] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 36,checknum = 12815,payload = ....................
+[2022-12-11 22:07:46:877] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:35,此时的窗口内第一个分组的序号:34
+[2022-12-11 22:07:46:887] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 35,checknum = 12816,payload = ....................
+[2022-12-11 22:07:46:892] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	34	35	36	-	-	-	-	-	
+[2022-12-11 22:07:46:901] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:912] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	35	36	-	-	-	-	-	-	
+[2022-12-11 22:07:46:919] [INFO]  [接收方] 接收方正确收到报文seqnum = 36,acknum = -1,checknum = 6390,payload = JJJJJJJJJJJJJJJJJJJJ
+[2022-12-11 22:07:46:924] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 37,checknum = 12814,payload = ....................
+[2022-12-11 22:07:46:931] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:36,此时的窗口内第一个分组的序号:35
+[2022-12-11 22:07:46:938] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 36,checknum = 12815,payload = ....................
+[2022-12-11 22:07:46:944] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	35	36	-	-	-	-	-	-	
+[2022-12-11 22:07:46:954] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:46:961] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	36	-	-	-	-	-	-	-	
+[2022-12-11 22:07:46:966] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:37,此时的窗口内第一个分组的序号:36
+[2022-12-11 22:07:46:974] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 37,checknum = 12814,payload = ....................
+[2022-12-11 22:07:46:983] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	36	-	-	-	-	-	-	-	
+[2022-12-11 22:07:46:991] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:002] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:47:009] [INFO]  [发送方] 发送方发送报文:seqnum = 37,acknum = -1,checknum = 3819,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:47:017] [INFO]  [发送方] 发送方发送报文:seqnum = 38,acknum = -1,checknum = 1248,payload = LLLLLLLLLLLLLLLLLLLL
+[2022-12-11 22:07:47:027] [INFO]  [发送方] 发送方发送报文:seqnum = 39,acknum = -1,checknum = 64212,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:47:032] [INFO]  [发送方] 发送方发送报文:seqnum = 40,acknum = -1,checknum = 61641,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:47:038] [INFO]  [发送方] 发送方发送报文:seqnum = 41,acknum = -1,checknum = 59070,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:47:046] [INFO]  [接收方] 接收方正确收到报文seqnum = 37,acknum = -1,checknum = 3819,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:47:059] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 38,checknum = 12813,payload = ....................
+[2022-12-11 22:07:47:068] [INFO]  [接收方] 接收方正确收到报文seqnum = 38,acknum = -1,checknum = 1248,payload = LLLLLLLLLLLLLLLLLLLL
+[2022-12-11 22:07:47:075] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 39,checknum = 12812,payload = ....................
+[2022-12-11 22:07:47:084] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:38,此时的窗口内第一个分组的序号:37
+[2022-12-11 22:07:47:094] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 38,checknum = 12813,payload = ....................
+[2022-12-11 22:07:47:103] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	37	38	39	40	41	-	-	-	
+[2022-12-11 22:07:47:111] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:120] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	38	39	40	41	-	-	-	-	
+[2022-12-11 22:07:47:128] [INFO]  [接收方] 接收方正确收到报文seqnum = 39,acknum = -1,checknum = 64212,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:47:143] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 40,checknum = 12811,payload = ....................
+[2022-12-11 22:07:47:155] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:39,此时的窗口内第一个分组的序号:38
+[2022-12-11 22:07:47:165] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 39,checknum = 12812,payload = ....................
+[2022-12-11 22:07:47:169] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	38	39	40	41	-	-	-	-	
+[2022-12-11 22:07:47:174] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:182] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	39	40	41	-	-	-	-	-	
+[2022-12-11 22:07:47:188] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:40,此时的窗口内第一个分组的序号:39
+[2022-12-11 22:07:47:198] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 40,checknum = 12811,payload = ....................
+[2022-12-11 22:07:47:207] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	39	40	41	-	-	-	-	-	
+[2022-12-11 22:07:47:216] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:221] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	40	41	-	-	-	-	-	-	
+[2022-12-11 22:07:47:231] [INFO]  [接收方] 接收方正确收到报文seqnum = 40,acknum = -1,checknum = 61641,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:47:236] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 41,checknum = 12810,payload = ....................
+[2022-12-11 22:07:47:244] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:41,此时的窗口内第一个分组的序号:40
+[2022-12-11 22:07:47:253] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 41,checknum = 12810,payload = ....................
+[2022-12-11 22:07:47:259] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	40	41	-	-	-	-	-	-	
+[2022-12-11 22:07:47:264] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:272] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	41	-	-	-	-	-	-	-	
+[2022-12-11 22:07:47:280] [INFO]  [接收方] 接收方正确收到报文seqnum = 41,acknum = -1,checknum = 59070,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:47:288] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 42,checknum = 12809,payload = ....................
+[2022-12-11 22:07:47:292] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:42,此时的窗口内第一个分组的序号:41
+[2022-12-11 22:07:47:300] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 42,checknum = 12809,payload = ....................
+[2022-12-11 22:07:47:310] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	41	-	-	-	-	-	-	-	
+[2022-12-11 22:07:47:318] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:322] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:47:328] [INFO]  [发送方] 发送方发送报文:seqnum = 42,acknum = -1,checknum = 56499,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:47:333] [INFO]  [发送方] 发送方发送报文:seqnum = 43,acknum = -1,checknum = 53928,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:47:338] [INFO]  [发送方] 发送方发送报文:seqnum = 44,acknum = -1,checknum = 51357,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:47:348] [INFO]  [发送方] 发送方发送报文:seqnum = 45,acknum = -1,checknum = 48786,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:47:356] [INFO]  [发送方] 发送方发送报文:seqnum = 46,acknum = -1,checknum = 46215,payload = TTTTTTTTTTTTTTTTTTTT
+[2022-12-11 22:07:47:365] [INFO]  [接收方] 接收方正确收到报文seqnum = 42,acknum = -1,checknum = 56499,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:47:372] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 43,checknum = 12808,payload = ....................
+[2022-12-11 22:07:47:378] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:43,此时的窗口内第一个分组的序号:42
+[2022-12-11 22:07:47:384] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 43,checknum = 12808,payload = ....................
+[2022-12-11 22:07:47:389] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	42	43	44	45	46	-	-	-	
+[2022-12-11 22:07:47:398] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:403] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	43	44	45	46	-	-	-	-	
+[2022-12-11 22:07:47:409] [INFO]  [接收方] 接收方正确收到报文seqnum = 43,acknum = -1,checknum = 53928,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:47:418] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 44,checknum = 12807,payload = ....................
+[2022-12-11 22:07:47:421] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:44,此时的窗口内第一个分组的序号:43
+[2022-12-11 22:07:47:428] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 44,checknum = 12807,payload = ....................
+[2022-12-11 22:07:47:437] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	43	44	45	46	-	-	-	-	
+[2022-12-11 22:07:47:446] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:450] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	44	45	46	-	-	-	-	-	
+[2022-12-11 22:07:47:459] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 45,acknum = -1,checknum = 48786,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:47:468] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 44,checknum = 12807,payload = ....................
+[2022-12-11 22:07:47:477] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 44,acknum = -1,checknum = 51357,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:47:485] [INFO]  [接收方] 接收方正确收到报文seqnum = 44,acknum = -1,checknum = 51357,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:47:494] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 45,checknum = 12806,payload = ....................
+[2022-12-11 22:07:47:501] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:45,此时的窗口内第一个分组的序号:44
+[2022-12-11 22:07:47:506] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 45,checknum = 12806,payload = ....................
+[2022-12-11 22:07:47:513] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	44	45	46	-	-	-	-	-	
+[2022-12-11 22:07:47:517] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:524] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	45	46	-	-	-	-	-	-	
+[2022-12-11 22:07:47:535] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 45,acknum = -1,checknum = 48786,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:47:539] [INFO]  [接收方] 接收方正确收到报文seqnum = 45,acknum = -1,checknum = 48786,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:47:550] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 46,checknum = 12805,payload = ....................
+[2022-12-11 22:07:47:553] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:46,此时的窗口内第一个分组的序号:45
+[2022-12-11 22:07:47:558] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 46,checknum = 12805,payload = ....................
+[2022-12-11 22:07:47:566] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	45	46	-	-	-	-	-	-	
+[2022-12-11 22:07:47:571] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:577] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	46	-	-	-	-	-	-	-	
+[2022-12-11 22:07:47:584] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 46,acknum = -1,checknum = 46215,payload = TTTTTTTTTTTTTTTTTTTT
+[2022-12-11 22:07:47:590] [INFO]  [接收方] 接收方正确收到报文seqnum = 46,acknum = -1,checknum = 46215,payload = TTTTTTTTTTTTTTTTTTTT
+[2022-12-11 22:07:47:599] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 47,checknum = 12804,payload = ....................
+[2022-12-11 22:07:47:602] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:47,此时的窗口内第一个分组的序号:46
+[2022-12-11 22:07:47:614] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 47,checknum = 12804,payload = ....................
+[2022-12-11 22:07:47:619] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	46	-	-	-	-	-	-	-	
+[2022-12-11 22:07:47:624] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:633] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:47:637] [INFO]  [发送方] 发送方发送报文:seqnum = 47,acknum = -1,checknum = 43644,payload = UUUUUUUUUUUUUUUUUUUU
+[2022-12-11 22:07:47:649] [INFO]  [发送方] 发送方发送报文:seqnum = 48,acknum = -1,checknum = 41073,payload = VVVVVVVVVVVVVVVVVVVV
+[2022-12-11 22:07:47:656] [INFO]  [发送方] 发送方发送报文:seqnum = 49,acknum = -1,checknum = 38502,payload = WWWWWWWWWWWWWWWWWWWW
+[2022-12-11 22:07:47:664] [INFO]  [发送方] 发送方发送报文:seqnum = 50,acknum = -1,checknum = 35931,payload = XXXXXXXXXXXXXXXXXXXX
+[2022-12-11 22:07:47:668] [INFO]  [发送方] 发送方发送报文:seqnum = 51,acknum = -1,checknum = 33360,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:47:678] [INFO]  [接收方] 接收方正确收到报文seqnum = 47,acknum = -1,checknum = 43644,payload = UUUUUUUUUUUUUUUUUUUU
+[2022-12-11 22:07:47:689] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 48,checknum = 12803,payload = ....................
+[2022-12-11 22:07:47:697] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:48,此时的窗口内第一个分组的序号:47
+[2022-12-11 22:07:47:704] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 48,checknum = 12803,payload = ....................
+[2022-12-11 22:07:47:712] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	47	48	49	50	51	-	-	-	
+[2022-12-11 22:07:47:717] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:722] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	48	49	50	51	-	-	-	-	
+[2022-12-11 22:07:47:729] [INFO]  [接收方] 接收方正确收到报文seqnum = 48,acknum = -1,checknum = 41073,payload = VVVVVVVVVVVVVVVVVVVV
+[2022-12-11 22:07:47:738] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 49,checknum = 12802,payload = ....................
+[2022-12-11 22:07:47:742] [INFO]  [接收方] 接收方正确收到报文seqnum = 49,acknum = -1,checknum = 38502,payload = WWWWWWWWWWWWWWWWWWWW
+[2022-12-11 22:07:47:750] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 50,checknum = 12801,payload = ....................
+[2022-12-11 22:07:47:757] [INFO]  [接收方] 接收方正确收到报文seqnum = 50,acknum = -1,checknum = 35931,payload = XXXXXXXXXXXXXXXXXXXX
+[2022-12-11 22:07:47:768] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 51,checknum = 12800,payload = ....................
+[2022-12-11 22:07:47:773] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:50,此时的窗口内第一个分组的序号:48
+[2022-12-11 22:07:47:780] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 50,checknum = 12801,payload = ....................
+[2022-12-11 22:07:47:787] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	48	49	50	51	-	-	-	-	
+[2022-12-11 22:07:47:793] [INFO]  [发送方] 向右滑动窗口长度:2
+[2022-12-11 22:07:47:801] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	50	51	-	-	-	-	-	-	
+[2022-12-11 22:07:47:809] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:51,此时的窗口内第一个分组的序号:50
+[2022-12-11 22:07:47:817] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 51,checknum = 12800,payload = ....................
+[2022-12-11 22:07:47:822] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	50	51	-	-	-	-	-	-	
+[2022-12-11 22:07:47:830] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:834] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	51	-	-	-	-	-	-	-	
+[2022-12-11 22:07:47:839] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 51,acknum = -1,checknum = 33360,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:47:849] [INFO]  [接收方] 接收方正确收到报文seqnum = 51,acknum = -1,checknum = 33360,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:47:859] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 52,checknum = 12799,payload = ....................
+[2022-12-11 22:07:47:866] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:52,此时的窗口内第一个分组的序号:51
+[2022-12-11 22:07:47:873] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 52,checknum = 12799,payload = ....................
+[2022-12-11 22:07:47:883] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	51	-	-	-	-	-	-	-	
+[2022-12-11 22:07:47:889] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:899] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:47:904] [INFO]  [发送方] 发送方发送报文:seqnum = 52,acknum = -1,checknum = 30789,payload = ZZZZZZZZZZZZZZZZZZZZ
+[2022-12-11 22:07:47:913] [INFO]  [发送方] 发送方发送报文:seqnum = 53,acknum = -1,checknum = 29503,payload = AAAAAAAAAAAAAAAAAAAA
+[2022-12-11 22:07:47:920] [INFO]  [发送方] 发送方发送报文:seqnum = 54,acknum = -1,checknum = 26932,payload = BBBBBBBBBBBBBBBBBBBB
+[2022-12-11 22:07:47:929] [INFO]  [发送方] 发送方发送报文:seqnum = 55,acknum = -1,checknum = 24361,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:47:933] [INFO]  [发送方] 发送方发送报文:seqnum = 56,acknum = -1,checknum = 21790,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:47:942] [INFO]  [接收方] 接收方正确收到报文seqnum = 52,acknum = -1,checknum = 30789,payload = ZZZZZZZZZZZZZZZZZZZZ
+[2022-12-11 22:07:47:953] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 53,checknum = 12798,payload = ....................
+[2022-12-11 22:07:47:960] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:53,此时的窗口内第一个分组的序号:52
+[2022-12-11 22:07:47:968] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 53,checknum = 12798,payload = ....................
+[2022-12-11 22:07:47:973] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	52	53	54	55	56	-	-	-	
+[2022-12-11 22:07:47:981] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:47:989] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	53	54	55	56	-	-	-	-	
+[2022-12-11 22:07:47:996] [INFO]  [接收方] 接收方正确收到报文seqnum = 53,acknum = -1,checknum = 29503,payload = AAAAAAAAAAAAAAAAAAAA
+[2022-12-11 22:07:48:005] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 54,checknum = 12797,payload = ....................
+[2022-12-11 22:07:48:011] [INFO]  [接收方] 接收方正确收到报文seqnum = 54,acknum = -1,checknum = 26932,payload = BBBBBBBBBBBBBBBBBBBB
+[2022-12-11 22:07:48:020] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 55,checknum = 12796,payload = ....................
+[2022-12-11 22:07:48:023] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:54,此时的窗口内第一个分组的序号:53
+[2022-12-11 22:07:48:032] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 54,checknum = 12797,payload = ....................
+[2022-12-11 22:07:48:036] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	53	54	55	56	-	-	-	-	
+[2022-12-11 22:07:48:046] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:48:052] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	54	55	56	-	-	-	-	-	
+[2022-12-11 22:07:48:057] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:55,此时的窗口内第一个分组的序号:54
+[2022-12-11 22:07:48:069] [INFO]  [接收方] 接收方正确收到报文seqnum = 55,acknum = -1,checknum = 24361,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:48:082] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 56,checknum = 12795,payload = ....................
+[2022-12-11 22:07:48:089] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = -999999,acknum = -1,checknum = 21790,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:48:099] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 56,checknum = 12795,payload = ....................
+[2022-12-11 22:07:48:103] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:56,此时的窗口内第一个分组的序号:54
+[2022-12-11 22:07:48:112] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 56,checknum = 12795,payload = ....................
+[2022-12-11 22:07:48:120] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	54	55	56	-	-	-	-	-	
+[2022-12-11 22:07:48:129] [INFO]  [发送方] 向右滑动窗口长度:2
+[2022-12-11 22:07:48:137] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	56	-	-	-	-	-	-	-	
+[2022-12-11 22:07:48:146] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:56,此时的窗口内第一个分组的序号:56
+[2022-12-11 22:07:48:150] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 56,acknum = -1,checknum = 21790,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:48:155] [INFO]  [接收方] 接收方正确收到报文seqnum = 56,acknum = -1,checknum = 21790,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:48:162] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 57,checknum = 12794,payload = ....................
+[2022-12-11 22:07:48:170] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:57,此时的窗口内第一个分组的序号:56
+[2022-12-11 22:07:48:175] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 57,checknum = 12794,payload = ....................
+[2022-12-11 22:07:48:182] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	56	-	-	-	-	-	-	-	
+[2022-12-11 22:07:48:189] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:48:199] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:48:208] [INFO]  [发送方] 发送方发送报文:seqnum = 57,acknum = -1,checknum = 19219,payload = EEEEEEEEEEEEEEEEEEEE
+[2022-12-11 22:07:48:215] [INFO]  [发送方] 发送方发送报文:seqnum = 58,acknum = -1,checknum = 16648,payload = FFFFFFFFFFFFFFFFFFFF
+[2022-12-11 22:07:48:223] [INFO]  [发送方] 发送方发送报文:seqnum = 59,acknum = -1,checknum = 14077,payload = GGGGGGGGGGGGGGGGGGGG
+[2022-12-11 22:07:48:231] [INFO]  [发送方] 发送方发送报文:seqnum = 60,acknum = -1,checknum = 11506,payload = HHHHHHHHHHHHHHHHHHHH
+[2022-12-11 22:07:48:236] [INFO]  [发送方] 发送方发送报文:seqnum = 61,acknum = -1,checknum = 8935,payload = IIIIIIIIIIIIIIIIIIII
+[2022-12-11 22:07:48:245] [INFO]  [接收方] 接收方正确收到报文seqnum = 57,acknum = -1,checknum = 19219,payload = EEEEEEEEEEEEEEEEEEEE
+[2022-12-11 22:07:48:252] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 58,checknum = 12793,payload = ....................
+[2022-12-11 22:07:48:254] [INFO]  [接收方] 接收方正确收到报文seqnum = 58,acknum = -1,checknum = 16648,payload = FFFFFFFFFFFFFFFFFFFF
+[2022-12-11 22:07:48:261] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 59,checknum = 12792,payload = ....................
+[2022-12-11 22:07:48:269] [INFO]  [接收方] 接收方正确收到报文seqnum = 59,acknum = -1,checknum = 14077,payload = GGGGGGGGGGGGGGGGGGGG
+[2022-12-11 22:07:48:275] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 60,checknum = 12791,payload = ....................
+[2022-12-11 22:07:48:281] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:59,此时的窗口内第一个分组的序号:57
+[2022-12-11 22:07:48:286] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 59,checknum = 12792,payload = ....................
+[2022-12-11 22:07:48:290] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	57	58	59	60	61	-	-	-	
+[2022-12-11 22:07:48:298] [INFO]  [发送方] 向右滑动窗口长度:2
+[2022-12-11 22:07:48:307] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	59	60	61	-	-	-	-	-	
+[2022-12-11 22:07:48:318] [INFO]  [接收方] 接收方正确收到报文seqnum = 60,acknum = -1,checknum = 11506,payload = HHHHHHHHHHHHHHHHHHHH
+[2022-12-11 22:07:48:324] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 61,checknum = 12790,payload = ....................
+[2022-12-11 22:07:48:331] [INFO]  [接收方] 接收方正确收到报文seqnum = 61,acknum = -1,checknum = 8935,payload = IIIIIIIIIIIIIIIIIIII
+[2022-12-11 22:07:48:339] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 62,checknum = 12789,payload = ....................
+[2022-12-11 22:07:48:346] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:60,此时的窗口内第一个分组的序号:59
+[2022-12-11 22:07:48:358] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 60,checknum = 12791,payload = ....................
+[2022-12-11 22:07:48:365] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	59	60	61	-	-	-	-	-	
+[2022-12-11 22:07:48:369] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:48:376] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	60	61	-	-	-	-	-	-	
+[2022-12-11 22:07:48:384] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:61,此时的窗口内第一个分组的序号:60
+[2022-12-11 22:07:48:391] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 61,checknum = 12790,payload = ....................
+[2022-12-11 22:07:48:399] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	60	61	-	-	-	-	-	-	
+[2022-12-11 22:07:48:406] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:48:414] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	61	-	-	-	-	-	-	-	
+[2022-12-11 22:07:48:420] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:62,此时的窗口内第一个分组的序号:61
+[2022-12-11 22:07:48:425] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 62,checknum = 12789,payload = ....................
+[2022-12-11 22:07:48:434] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	61	-	-	-	-	-	-	-	
+[2022-12-11 22:07:48:443] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:48:452] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:48:456] [INFO]  [发送方] 发送方发送报文:seqnum = 62,acknum = -1,checknum = 6364,payload = JJJJJJJJJJJJJJJJJJJJ
+[2022-12-11 22:07:48:464] [INFO]  [发送方] 发送方发送报文:seqnum = 63,acknum = -1,checknum = 3793,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:48:471] [INFO]  [发送方] 发送方发送报文:seqnum = 64,acknum = -1,checknum = 1222,payload = LLLLLLLLLLLLLLLLLLLL
+[2022-12-11 22:07:48:478] [INFO]  [接收方] 接收方正确收到报文seqnum = 62,acknum = -1,checknum = 6364,payload = JJJJJJJJJJJJJJJJJJJJ
+[2022-12-11 22:07:48:486] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 63,checknum = 12788,payload = ....................
+[2022-12-11 22:07:48:490] [INFO]  [发送方] 发送方发送报文:seqnum = 65,acknum = -1,checknum = 64186,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:48:499] [INFO]  [发送方] 发送方发送报文:seqnum = 66,acknum = -1,checknum = 61615,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:48:504] [INFO]  [接收方] 接收方正确收到报文seqnum = 63,acknum = -1,checknum = 3793,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:48:509] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 64,checknum = 12787,payload = ....................
+[2022-12-11 22:07:48:518] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:63,此时的窗口内第一个分组的序号:62
+[2022-12-11 22:07:48:522] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:64,此时的窗口内第一个分组的序号:62
+[2022-12-11 22:07:48:531] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 64,checknum = 12787,payload = ....................
+[2022-12-11 22:07:48:535] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	62	63	64	65	66	-	-	-	
+[2022-12-11 22:07:48:539] [INFO]  [发送方] 向右滑动窗口长度:2
+[2022-12-11 22:07:48:550] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	64	65	66	-	-	-	-	-	
+[2022-12-11 22:07:48:558] [INFO]  [接收方] 接收方正确收到报文seqnum = 64,acknum = -1,checknum = 1222,payload = LLLLLLLLLLLLLLLLLLLL
+[2022-12-11 22:07:48:569] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 65,checknum = 12786,payload = ....................
+[2022-12-11 22:07:48:575] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:65,此时的窗口内第一个分组的序号:64
+[2022-12-11 22:07:48:583] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 65,checknum = 12786,payload = ....................
+[2022-12-11 22:07:48:589] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	64	65	66	-	-	-	-	-	
+[2022-12-11 22:07:48:598] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:48:604] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	65	66	-	-	-	-	-	-	
+[2022-12-11 22:07:48:615] [INFO]  [接收方] 接收方正确收到报文seqnum = 65,acknum = -1,checknum = 64186,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:48:627] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 66,checknum = 12785,payload = ....................
+[2022-12-11 22:07:48:632] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:66,此时的窗口内第一个分组的序号:65
+[2022-12-11 22:07:48:638] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 65,acknum = -1,checknum = 64186,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:48:647] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 65,acknum = -1,checknum = 64186,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:48:652] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 66,checknum = 12785,payload = ....................
+[2022-12-11 22:07:48:657] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:66,此时的窗口内第一个分组的序号:65
+[2022-12-11 22:07:48:663] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 66,checknum = 12785,payload = ....................
+[2022-12-11 22:07:48:670] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	65	66	-	-	-	-	-	-	
+[2022-12-11 22:07:48:674] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:48:681] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	66	-	-	-	-	-	-	-	
+[2022-12-11 22:07:48:688] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 66,acknum = -1,checknum = 61615,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:48:695] [INFO]  [接收方] 接收方正确收到报文seqnum = 66,acknum = -1,checknum = 61615,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:48:702] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 67,checknum = 12784,payload = ....................
+[2022-12-11 22:07:48:711] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:67,此时的窗口内第一个分组的序号:66
+[2022-12-11 22:07:48:719] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 67,checknum = 12784,payload = ....................
+[2022-12-11 22:07:48:724] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	66	-	-	-	-	-	-	-	
+[2022-12-11 22:07:48:734] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:48:738] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:48:745] [INFO]  [发送方] 发送方发送报文:seqnum = 67,acknum = -1,checknum = 59044,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:48:755] [INFO]  [发送方] 发送方发送报文:seqnum = 68,acknum = -1,checknum = 56473,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:48:763] [INFO]  [发送方] 发送方发送报文:seqnum = 69,acknum = -1,checknum = 53902,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:48:769] [INFO]  [发送方] 发送方发送报文:seqnum = 70,acknum = -1,checknum = 51331,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:48:779] [INFO]  [发送方] 发送方发送报文:seqnum = 71,acknum = -1,checknum = 48760,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:48:784] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 68,acknum = -1,checknum = 56473,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:48:788] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 67,checknum = 12784,payload = ....................
+[2022-12-11 22:07:48:795] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:67,此时的窗口内第一个分组的序号:67
+[2022-12-11 22:07:48:799] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 69,acknum = -1,checknum = 53902,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:48:804] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 67,checknum = 12784,payload = ....................
+[2022-12-11 22:07:48:808] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:67,此时的窗口内第一个分组的序号:67
+[2022-12-11 22:07:48:818] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 70,acknum = -1,checknum = 51331,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:48:823] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 67,checknum = 12784,payload = ....................
+[2022-12-11 22:07:48:833] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = -999999,acknum = -1,checknum = 48760,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:48:838] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 67,checknum = 12784,payload = ....................
+[2022-12-11 22:07:48:848] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 67,acknum = -1,checknum = 59044,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:48:852] [INFO]  [接收方] 接收方正确收到报文seqnum = 67,acknum = -1,checknum = 59044,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:48:862] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 68,checknum = 12783,payload = ....................
+[2022-12-11 22:07:48:867] [INFO]  [发送方] 已接收到的ACK数目:3,新接收到的ACK序号:68,此时的窗口内第一个分组的序号:67
+[2022-12-11 22:07:48:874] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 68,checknum = 12783,payload = ....................
+[2022-12-11 22:07:48:883] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	67	68	69	70	71	-	-	-	
+[2022-12-11 22:07:48:891] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:48:901] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	68	69	70	71	-	-	-	-	
+[2022-12-11 22:07:48:912] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 68,acknum = -1,checknum = 56473,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:48:921] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 68,acknum = -1,checknum = 56473,payload = QPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:48:930] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 68,checknum = 12783,payload = ....................
+[2022-12-11 22:07:48:938] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:68,此时的窗口内第一个分组的序号:68
+[2022-12-11 22:07:48:946] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 68,acknum = -1,checknum = 56473,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:48:956] [INFO]  [接收方] 接收方正确收到报文seqnum = 68,acknum = -1,checknum = 56473,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:48:965] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 69,checknum = 12782,payload = ....................
+[2022-12-11 22:07:48:968] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 68,acknum = -1,checknum = 56473,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:48:977] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 68,acknum = -1,checknum = 56473,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:48:987] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 69,checknum = 12782,payload = ....................
+[2022-12-11 22:07:48:997] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:69,此时的窗口内第一个分组的序号:68
+[2022-12-11 22:07:49:001] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 69,checknum = 12782,payload = ....................
+[2022-12-11 22:07:49:005] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	68	69	70	71	-	-	-	-	
+[2022-12-11 22:07:49:014] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:49:018] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	69	70	71	-	-	-	-	-	
+[2022-12-11 22:07:49:022] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 69,acknum = -1,checknum = 53902,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:49:031] [INFO]  [接收方] 接收方正确收到报文seqnum = 69,acknum = -1,checknum = 53902,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:49:036] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 70,checknum = 12781,payload = ....................
+[2022-12-11 22:07:49:045] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 69,acknum = -1,checknum = 53902,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:49:054] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 69,acknum = -1,checknum = 53902,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:49:063] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 70,checknum = 12781,payload = ....................
+[2022-12-11 22:07:49:067] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:70,此时的窗口内第一个分组的序号:69
+[2022-12-11 22:07:49:071] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 70,checknum = 12781,payload = ....................
+[2022-12-11 22:07:49:080] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	69	70	71	-	-	-	-	-	
+[2022-12-11 22:07:49:084] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:49:090] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	70	71	-	-	-	-	-	-	
+[2022-12-11 22:07:49:099] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 70,acknum = -1,checknum = 51331,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:49:103] [INFO]  [接收方] 接收方正确收到报文seqnum = 70,acknum = -1,checknum = 51331,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:49:116] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 71,checknum = 12780,payload = ....................
+[2022-12-11 22:07:49:125] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:71,此时的窗口内第一个分组的序号:70
+[2022-12-11 22:07:49:138] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 71,checknum = 12780,payload = ....................
+[2022-12-11 22:07:49:145] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	70	71	-	-	-	-	-	-	
+[2022-12-11 22:07:49:154] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:49:164] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	71	-	-	-	-	-	-	-	
+[2022-12-11 22:07:49:173] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 71,acknum = -1,checknum = 48760,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:49:181] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 71,acknum = -1,checknum = 48760,payload = TSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:49:190] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 71,checknum = 12780,payload = ....................
+[2022-12-11 22:07:49:198] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:71,此时的窗口内第一个分组的序号:71
+[2022-12-11 22:07:49:206] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 71,acknum = -1,checknum = 48760,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:49:215] [INFO]  [接收方] 接收方正确收到报文seqnum = 71,acknum = -1,checknum = 48760,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:49:220] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 72,checknum = 12779,payload = ....................
+[2022-12-11 22:07:49:223] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:72,此时的窗口内第一个分组的序号:71
+[2022-12-11 22:07:49:233] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 72,checknum = 12779,payload = ....................
+[2022-12-11 22:07:49:237] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	71	-	-	-	-	-	-	-	
+[2022-12-11 22:07:49:244] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:49:252] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:49:257] [INFO]  [发送方] 发送方发送报文:seqnum = 72,acknum = -1,checknum = 46189,payload = TTTTTTTTTTTTTTTTTTTT
+[2022-12-11 22:07:49:268] [INFO]  [发送方] 发送方发送报文:seqnum = 73,acknum = -1,checknum = 43618,payload = UUUUUUUUUUUUUUUUUUUU
+[2022-12-11 22:07:49:276] [INFO]  [发送方] 发送方发送报文:seqnum = 74,acknum = -1,checknum = 41047,payload = VVVVVVVVVVVVVVVVVVVV
+[2022-12-11 22:07:49:283] [INFO]  [发送方] 发送方发送报文:seqnum = 75,acknum = -1,checknum = 38476,payload = WWWWWWWWWWWWWWWWWWWW
+[2022-12-11 22:07:49:288] [INFO]  [发送方] 发送方发送报文:seqnum = 76,acknum = -1,checknum = 35905,payload = XXXXXXXXXXXXXXXXXXXX
+[2022-12-11 22:07:49:296] [INFO]  [接收方] 接收方正确收到报文seqnum = 72,acknum = -1,checknum = 46189,payload = TTTTTTTTTTTTTTTTTTTT
+[2022-12-11 22:07:49:301] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 73,checknum = 12778,payload = ....................
+[2022-12-11 22:07:49:305] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:73,此时的窗口内第一个分组的序号:72
+[2022-12-11 22:07:49:312] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 73,checknum = 12778,payload = ....................
+[2022-12-11 22:07:49:320] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	72	73	74	75	76	-	-	-	
+[2022-12-11 22:07:49:328] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:49:335] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	73	74	75	76	-	-	-	-	
+[2022-12-11 22:07:49:340] [INFO]  [接收方] 接收方正确收到报文seqnum = 73,acknum = -1,checknum = 43618,payload = UUUUUUUUUUUUUUUUUUUU
+[2022-12-11 22:07:49:354] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 74,checknum = 12777,payload = ....................
+[2022-12-11 22:07:49:359] [INFO]  [接收方] 接收方正确收到报文seqnum = 74,acknum = -1,checknum = 41047,payload = VVVVVVVVVVVVVVVVVVVV
+[2022-12-11 22:07:49:370] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 75,checknum = 12776,payload = ....................
+[2022-12-11 22:07:49:378] [INFO]  [接收方] 接收方正确收到报文seqnum = 75,acknum = -1,checknum = 38476,payload = WWWWWWWWWWWWWWWWWWWW
+[2022-12-11 22:07:49:387] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 76,checknum = 12775,payload = ....................
+[2022-12-11 22:07:49:399] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:74,此时的窗口内第一个分组的序号:73
+[2022-12-11 22:07:49:404] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 74,checknum = 12777,payload = ....................
+[2022-12-11 22:07:49:410] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	73	74	75	76	-	-	-	-	
+[2022-12-11 22:07:49:416] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:49:424] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	74	75	76	-	-	-	-	-	
+[2022-12-11 22:07:49:433] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:75,此时的窗口内第一个分组的序号:74
+[2022-12-11 22:07:49:438] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 75,checknum = 12776,payload = ....................
+[2022-12-11 22:07:49:444] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	74	75	76	-	-	-	-	-	
+[2022-12-11 22:07:49:453] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:49:457] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	75	76	-	-	-	-	-	-	
+[2022-12-11 22:07:49:466] [INFO]  [接收方] 接收方正确收到报文seqnum = 76,acknum = -1,checknum = 35905,payload = XXXXXXXXXXXXXXXXXXXX
+[2022-12-11 22:07:49:481] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 77,checknum = 12774,payload = ....................
+[2022-12-11 22:07:49:487] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:76,此时的窗口内第一个分组的序号:75
+[2022-12-11 22:07:49:498] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 76,checknum = 12775,payload = ....................
+[2022-12-11 22:07:49:503] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	75	76	-	-	-	-	-	-	
+[2022-12-11 22:07:49:511] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:49:521] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	76	-	-	-	-	-	-	-	
+[2022-12-11 22:07:49:532] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:77,此时的窗口内第一个分组的序号:76
+[2022-12-11 22:07:49:536] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 77,checknum = 12774,payload = ....................
+[2022-12-11 22:07:49:547] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	76	-	-	-	-	-	-	-	
+[2022-12-11 22:07:49:552] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:49:562] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:49:571] [INFO]  [发送方] 发送方发送报文:seqnum = 77,acknum = -1,checknum = 33334,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:49:581] [INFO]  [发送方] 发送方发送报文:seqnum = 78,acknum = -1,checknum = 30763,payload = ZZZZZZZZZZZZZZZZZZZZ
+[2022-12-11 22:07:49:586] [INFO]  [发送方] 发送方发送报文:seqnum = 79,acknum = -1,checknum = 29477,payload = AAAAAAAAAAAAAAAAAAAA
+[2022-12-11 22:07:49:597] [INFO]  [发送方] 发送方发送报文:seqnum = 80,acknum = -1,checknum = 26906,payload = BBBBBBBBBBBBBBBBBBBB
+[2022-12-11 22:07:49:602] [INFO]  [发送方] 发送方发送报文:seqnum = 81,acknum = -1,checknum = 24335,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:49:612] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 78,acknum = -1,checknum = 30763,payload = ZZZZZZZZZZZZZZZZZZZZ
+[2022-12-11 22:07:49:618] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 77,checknum = 12774,payload = ....................
+[2022-12-11 22:07:49:628] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:77,此时的窗口内第一个分组的序号:77
+[2022-12-11 22:07:49:639] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 79,acknum = -1,checknum = 29477,payload = AAAAAAAAAAAAAAAAAAAA
+[2022-12-11 22:07:49:648] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 77,checknum = 12774,payload = ....................
+[2022-12-11 22:07:49:657] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:77,此时的窗口内第一个分组的序号:77
+[2022-12-11 22:07:49:667] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 80,acknum = -1,checknum = 26906,payload = BBBBBBBBBBBBBBBBBBBB
+[2022-12-11 22:07:49:671] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 77,checknum = 12774,payload = ....................
+[2022-12-11 22:07:49:680] [INFO]  [发送方] 已接收到的ACK数目:3,新接收到的ACK序号:77,此时的窗口内第一个分组的序号:77
+[2022-12-11 22:07:49:688] [INFO]  [发送方] 冗余ACK大于3,快速重传当前窗口第一个报文:seqnum = 77,acknum = -1,checknum = 33334,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:49:697] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	77	78	79	80	81	-	-	-	
+[2022-12-11 22:07:49:705] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 81,acknum = -1,checknum = 24335,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:49:713] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 77,checknum = 12774,payload = ....................
+[2022-12-11 22:07:49:718] [INFO]  [接收方] 接收方正确收到报文seqnum = 77,acknum = -1,checknum = 33334,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:49:729] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 78,checknum = 12773,payload = ....................
+[2022-12-11 22:07:49:737] [INFO]  [发送方] 已接收到的ACK数目:0,新接收到的ACK序号:77,此时的窗口内第一个分组的序号:77
+[2022-12-11 22:07:49:747] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 77,checknum = 12774,payload = ....................
+[2022-12-11 22:07:49:755] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	77	78	79	80	81	-	-	-	
+[2022-12-11 22:07:49:767] [INFO]  [发送方] 向右滑动窗口长度:0
+[2022-12-11 22:07:49:772] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	77	78	79	80	81	-	-	-	
+[2022-12-11 22:07:49:782] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:78,此时的窗口内第一个分组的序号:77
+[2022-12-11 22:07:49:787] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 77,acknum = -1,checknum = 33334,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:49:800] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 77,acknum = -1,checknum = 33334,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:49:809] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 78,checknum = 12773,payload = ....................
+[2022-12-11 22:07:49:819] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:78,此时的窗口内第一个分组的序号:77
+[2022-12-11 22:07:49:826] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 78,checknum = 12773,payload = ....................
+[2022-12-11 22:07:49:837] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	77	78	79	80	81	-	-	-	
+[2022-12-11 22:07:49:843] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:49:853] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	78	79	80	81	-	-	-	-	
+[2022-12-11 22:07:49:859] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 78,acknum = -1,checknum = 30763,payload = ZZZZZZZZZZZZZZZZZZZZ
+[2022-12-11 22:07:49:870] [INFO]  [接收方] 接收方正确收到报文seqnum = 78,acknum = -1,checknum = 30763,payload = ZZZZZZZZZZZZZZZZZZZZ
+[2022-12-11 22:07:49:876] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 79,checknum = 12772,payload = ....................
+[2022-12-11 22:07:49:882] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:79,此时的窗口内第一个分组的序号:78
+[2022-12-11 22:07:49:887] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 79,checknum = 12772,payload = ....................
+[2022-12-11 22:07:49:892] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	78	79	80	81	-	-	-	-	
+[2022-12-11 22:07:49:903] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:49:907] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	79	80	81	-	-	-	-	-	
+[2022-12-11 22:07:49:919] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 79,acknum = -1,checknum = 29477,payload = AAAAAAAAAAAAAAAAAAAA
+[2022-12-11 22:07:49:927] [INFO]  [接收方] 接收方正确收到报文seqnum = 79,acknum = -1,checknum = 29477,payload = AAAAAAAAAAAAAAAAAAAA
+[2022-12-11 22:07:49:936] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 80,checknum = 12771,payload = ....................
+[2022-12-11 22:07:49:939] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:80,此时的窗口内第一个分组的序号:79
+[2022-12-11 22:07:49:951] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 80,checknum = 12771,payload = ....................
+[2022-12-11 22:07:49:955] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	79	80	81	-	-	-	-	-	
+[2022-12-11 22:07:49:963] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:49:972] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	80	81	-	-	-	-	-	-	
+[2022-12-11 22:07:49:979] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 80,acknum = -1,checknum = 26906,payload = BBBBBBBBBBBBBBBBBBBB
+[2022-12-11 22:07:49:987] [INFO]  [接收方] 接收方正确收到报文seqnum = 80,acknum = -1,checknum = 26906,payload = BBBBBBBBBBBBBBBBBBBB
+[2022-12-11 22:07:49:998] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 81,checknum = 12770,payload = ....................
+[2022-12-11 22:07:50:005] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:81,此时的窗口内第一个分组的序号:80
+[2022-12-11 22:07:50:014] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 81,checknum = 12770,payload = ....................
+[2022-12-11 22:07:50:018] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	80	81	-	-	-	-	-	-	
+[2022-12-11 22:07:50:023] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:50:032] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	81	-	-	-	-	-	-	-	
+[2022-12-11 22:07:50:037] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 81,acknum = -1,checknum = 24335,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:50:045] [INFO]  [接收方] 接收方正确收到报文seqnum = 81,acknum = -1,checknum = 24335,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:50:051] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 82,checknum = 12769,payload = ....................
+[2022-12-11 22:07:50:056] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:-999999,此时的窗口内第一个分组的序号:81
+[2022-12-11 22:07:50:064] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 81,acknum = -1,checknum = 24335,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:50:071] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 81,acknum = -1,checknum = 24335,payload = CCCCCCCCCCCCCCCCCCCC
+[2022-12-11 22:07:50:079] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 82,checknum = 12769,payload = ....................
+[2022-12-11 22:07:50:087] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:82,此时的窗口内第一个分组的序号:81
+[2022-12-11 22:07:50:096] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 82,checknum = 12769,payload = ....................
+[2022-12-11 22:07:50:102] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	81	-	-	-	-	-	-	-	
+[2022-12-11 22:07:50:106] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:50:114] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:50:120] [INFO]  [发送方] 发送方发送报文:seqnum = 82,acknum = -1,checknum = 21764,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:50:125] [INFO]  [发送方] 发送方发送报文:seqnum = 83,acknum = -1,checknum = 19193,payload = EEEEEEEEEEEEEEEEEEEE
+[2022-12-11 22:07:50:135] [INFO]  [发送方] 发送方发送报文:seqnum = 84,acknum = -1,checknum = 16622,payload = FFFFFFFFFFFFFFFFFFFF
+[2022-12-11 22:07:50:142] [INFO]  [发送方] 发送方发送报文:seqnum = 85,acknum = -1,checknum = 14051,payload = GGGGGGGGGGGGGGGGGGGG
+[2022-12-11 22:07:50:151] [INFO]  [发送方] 发送方发送报文:seqnum = 86,acknum = -1,checknum = 11480,payload = HHHHHHHHHHHHHHHHHHHH
+[2022-12-11 22:07:50:158] [INFO]  [接收方] 接收方正确收到报文seqnum = 82,acknum = -1,checknum = 21764,payload = DDDDDDDDDDDDDDDDDDDD
+[2022-12-11 22:07:50:168] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 83,checknum = 12768,payload = ....................
+[2022-12-11 22:07:50:172] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:83,此时的窗口内第一个分组的序号:82
+[2022-12-11 22:07:50:180] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 83,checknum = 12768,payload = ....................
+[2022-12-11 22:07:50:189] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	82	83	84	85	86	-	-	-	
+[2022-12-11 22:07:50:199] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:50:204] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	83	84	85	86	-	-	-	-	
+[2022-12-11 22:07:50:210] [INFO]  [接收方] 接收方正确收到报文seqnum = 83,acknum = -1,checknum = 19193,payload = EEEEEEEEEEEEEEEEEEEE
+[2022-12-11 22:07:50:224] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 84,checknum = 12767,payload = ....................
+[2022-12-11 22:07:50:233] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:84,此时的窗口内第一个分组的序号:83
+[2022-12-11 22:07:50:237] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 84,checknum = 12767,payload = ....................
+[2022-12-11 22:07:50:247] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	83	84	85	86	-	-	-	-	
+[2022-12-11 22:07:50:254] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:50:266] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	84	85	86	-	-	-	-	-	
+[2022-12-11 22:07:50:277] [INFO]  [接收方] 接收方正确收到报文seqnum = 84,acknum = -1,checknum = 16622,payload = FFFFFFFFFFFFFFFFFFFF
+[2022-12-11 22:07:50:289] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 85,checknum = 12766,payload = ....................
+[2022-12-11 22:07:50:296] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:85,此时的窗口内第一个分组的序号:84
+[2022-12-11 22:07:50:301] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 85,checknum = 12766,payload = ....................
+[2022-12-11 22:07:50:306] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	84	85	86	-	-	-	-	-	
+[2022-12-11 22:07:50:311] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:50:320] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	85	86	-	-	-	-	-	-	
+[2022-12-11 22:07:50:325] [INFO]  [接收方] 接收方正确收到报文seqnum = 85,acknum = -1,checknum = 14051,payload = GGGGGGGGGGGGGGGGGGGG
+[2022-12-11 22:07:50:337] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 86,checknum = 12765,payload = ....................
+[2022-12-11 22:07:50:340] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:86,此时的窗口内第一个分组的序号:85
+[2022-12-11 22:07:50:349] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 86,checknum = 12765,payload = ....................
+[2022-12-11 22:07:50:356] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	85	86	-	-	-	-	-	-	
+[2022-12-11 22:07:50:365] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:50:370] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	86	-	-	-	-	-	-	-	
+[2022-12-11 22:07:50:379] [INFO]  [接收方] 接收方正确收到报文seqnum = 86,acknum = -1,checknum = 11480,payload = HHHHHHHHHHHHHHHHHHHH
+[2022-12-11 22:07:50:389] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 87,checknum = 12764,payload = ....................
+[2022-12-11 22:07:50:399] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:87,此时的窗口内第一个分组的序号:86
+[2022-12-11 22:07:50:404] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 87,checknum = 12764,payload = ....................
+[2022-12-11 22:07:50:416] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	86	-	-	-	-	-	-	-	
+[2022-12-11 22:07:50:422] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:50:432] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:50:436] [INFO]  [发送方] 发送方发送报文:seqnum = 87,acknum = -1,checknum = 8909,payload = IIIIIIIIIIIIIIIIIIII
+[2022-12-11 22:07:50:440] [INFO]  [发送方] 发送方发送报文:seqnum = 88,acknum = -1,checknum = 6338,payload = JJJJJJJJJJJJJJJJJJJJ
+[2022-12-11 22:07:50:448] [INFO]  [发送方] 发送方发送报文:seqnum = 89,acknum = -1,checknum = 3767,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:50:454] [INFO]  [发送方] 发送方发送报文:seqnum = 90,acknum = -1,checknum = 1196,payload = LLLLLLLLLLLLLLLLLLLL
+[2022-12-11 22:07:50:460] [INFO]  [发送方] 发送方发送报文:seqnum = 91,acknum = -1,checknum = 64160,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:50:466] [INFO]  [接收方] 接收方正确收到报文seqnum = 87,acknum = -1,checknum = 8909,payload = IIIIIIIIIIIIIIIIIIII
+[2022-12-11 22:07:50:472] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 88,checknum = 12763,payload = ....................
+[2022-12-11 22:07:50:478] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:88,此时的窗口内第一个分组的序号:87
+[2022-12-11 22:07:50:483] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 88,checknum = 12763,payload = ....................
+[2022-12-11 22:07:50:490] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	87	88	89	90	91	-	-	-	
+[2022-12-11 22:07:50:500] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:50:511] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	88	89	90	91	-	-	-	-	
+[2022-12-11 22:07:50:519] [INFO]  [接收方] 接收方正确收到报文seqnum = 88,acknum = -1,checknum = 6338,payload = JJJJJJJJJJJJJJJJJJJJ
+[2022-12-11 22:07:50:530] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 89,checknum = 12762,payload = ....................
+[2022-12-11 22:07:50:537] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:89,此时的窗口内第一个分组的序号:88
+[2022-12-11 22:07:50:544] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 89,checknum = 12762,payload = ....................
+[2022-12-11 22:07:50:550] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	88	89	90	91	-	-	-	-	
+[2022-12-11 22:07:50:558] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:50:569] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	89	90	91	-	-	-	-	-	
+[2022-12-11 22:07:50:575] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 89,acknum = -1,checknum = 3767,payload = LKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:50:584] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 89,checknum = 12762,payload = ....................
+[2022-12-11 22:07:50:594] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:89,此时的窗口内第一个分组的序号:89
+[2022-12-11 22:07:50:605] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 90,acknum = -1,checknum = 1196,payload = LLLLLLLLLLLLLLLLLLLL
+[2022-12-11 22:07:50:614] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 89,checknum = 12762,payload = ....................
+[2022-12-11 22:07:50:619] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:89,此时的窗口内第一个分组的序号:89
+[2022-12-11 22:07:50:623] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 91,acknum = -1,checknum = 64160,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:50:632] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 89,checknum = 12762,payload = ....................
+[2022-12-11 22:07:50:637] [INFO]  [发送方] 已接收到的ACK数目:3,新接收到的ACK序号:89,此时的窗口内第一个分组的序号:89
+[2022-12-11 22:07:50:642] [INFO]  [发送方] 冗余ACK大于3,快速重传当前窗口第一个报文:seqnum = 89,acknum = -1,checknum = 3767,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:50:653] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	89	90	91	-	-	-	-	-	
+[2022-12-11 22:07:50:665] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = -999999,acknum = -1,checknum = 3767,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:50:670] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 89,checknum = 12762,payload = ....................
+[2022-12-11 22:07:50:683] [INFO]  [发送方] 已接收到的ACK数目:0,新接收到的ACK序号:89,此时的窗口内第一个分组的序号:89
+[2022-12-11 22:07:50:693] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 89,checknum = 12762,payload = ....................
+[2022-12-11 22:07:50:703] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	89	90	91	-	-	-	-	-	
+[2022-12-11 22:07:50:713] [INFO]  [发送方] 向右滑动窗口长度:0
+[2022-12-11 22:07:50:718] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	89	90	91	-	-	-	-	-	
+[2022-12-11 22:07:50:728] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 89,acknum = -1,checknum = 3767,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:50:736] [INFO]  [接收方] 接收方正确收到报文seqnum = 89,acknum = -1,checknum = 3767,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:50:742] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 90,checknum = 12761,payload = ....................
+[2022-12-11 22:07:50:750] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 89,acknum = -1,checknum = 3767,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:50:758] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 89,acknum = -1,checknum = 3767,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:50:767] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 90,checknum = 12761,payload = ....................
+[2022-12-11 22:07:50:775] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:90,此时的窗口内第一个分组的序号:89
+[2022-12-11 22:07:50:784] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 89,acknum = -1,checknum = 3767,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:50:794] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 89,acknum = -1,checknum = 3767,payload = KKKKKKKKKKKKKKKKKKKK
+[2022-12-11 22:07:50:804] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 90,checknum = 12761,payload = ....................
+[2022-12-11 22:07:50:809] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:90,此时的窗口内第一个分组的序号:89
+[2022-12-11 22:07:50:815] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 90,checknum = 12761,payload = ....................
+[2022-12-11 22:07:50:821] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	89	90	91	-	-	-	-	-	
+[2022-12-11 22:07:50:831] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:50:839] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	90	91	-	-	-	-	-	-	
+[2022-12-11 22:07:50:848] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 90,acknum = -1,checknum = 1196,payload = LLLLLLLLLLLLLLLLLLLL
+[2022-12-11 22:07:50:858] [INFO]  [接收方] 接收方正确收到报文seqnum = 90,acknum = -1,checknum = 1196,payload = LLLLLLLLLLLLLLLLLLLL
+[2022-12-11 22:07:50:869] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 91,checknum = 12760,payload = ....................
+[2022-12-11 22:07:50:872] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:91,此时的窗口内第一个分组的序号:90
+[2022-12-11 22:07:50:883] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 91,checknum = 12760,payload = ....................
+[2022-12-11 22:07:50:888] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	90	91	-	-	-	-	-	-	
+[2022-12-11 22:07:50:896] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:50:901] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	91	-	-	-	-	-	-	-	
+[2022-12-11 22:07:50:916] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 91,acknum = -1,checknum = 64160,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:50:929] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 91,acknum = -1,checknum = 64160,payload = NMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:50:938] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 91,checknum = 12760,payload = ....................
+[2022-12-11 22:07:50:948] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:91,此时的窗口内第一个分组的序号:91
+[2022-12-11 22:07:50:955] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 91,acknum = -1,checknum = 64160,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:50:965] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 91,acknum = -1,checknum = 64160,payload = NMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:50:973] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 91,checknum = 12760,payload = ....................
+[2022-12-11 22:07:50:978] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:91,此时的窗口内第一个分组的序号:91
+[2022-12-11 22:07:50:983] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 91,acknum = -1,checknum = 64160,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:50:993] [INFO]  [接收方] 接收方正确收到报文seqnum = 91,acknum = -1,checknum = 64160,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:51:003] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 92,checknum = 12759,payload = ....................
+[2022-12-11 22:07:51:008] [INFO]  [发送方] 已接收到的ACK数目:3,新接收到的ACK序号:92,此时的窗口内第一个分组的序号:91
+[2022-12-11 22:07:51:018] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 91,acknum = -1,checknum = 64160,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:51:024] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 91,acknum = -1,checknum = 64160,payload = MMMMMMMMMMMMMMMMMMMM
+[2022-12-11 22:07:51:034] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 92,checknum = 12759,payload = ....................
+[2022-12-11 22:07:51:040] [INFO]  [发送方] 已接收到的ACK数目:3,新接收到的ACK序号:92,此时的窗口内第一个分组的序号:91
+[2022-12-11 22:07:51:048] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 92,checknum = 12759,payload = ....................
+[2022-12-11 22:07:51:052] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	91	-	-	-	-	-	-	-	
+[2022-12-11 22:07:51:056] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:51:065] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:51:070] [INFO]  [发送方] 发送方发送报文:seqnum = 92,acknum = -1,checknum = 61589,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:51:075] [INFO]  [发送方] 发送方发送报文:seqnum = 93,acknum = -1,checknum = 59018,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:51:085] [INFO]  [发送方] 发送方发送报文:seqnum = 94,acknum = -1,checknum = 56447,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:51:092] [INFO]  [发送方] 发送方发送报文:seqnum = 95,acknum = -1,checknum = 53876,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:51:102] [INFO]  [发送方] 发送方发送报文:seqnum = 96,acknum = -1,checknum = 51305,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:51:108] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 92,acknum = -1,checknum = 61589,payload = ONNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:51:117] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 92,checknum = 12759,payload = ....................
+[2022-12-11 22:07:51:129] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:92,此时的窗口内第一个分组的序号:92
+[2022-12-11 22:07:51:139] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 93,acknum = -1,checknum = 59018,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:51:150] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 92,checknum = 12759,payload = ....................
+[2022-12-11 22:07:51:158] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:92,此时的窗口内第一个分组的序号:92
+[2022-12-11 22:07:51:167] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 94,acknum = -1,checknum = 56447,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:51:172] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 92,checknum = 12759,payload = ....................
+[2022-12-11 22:07:51:180] [INFO]  [发送方] 已接收到的ACK数目:3,新接收到的ACK序号:92,此时的窗口内第一个分组的序号:92
+[2022-12-11 22:07:51:184] [INFO]  [发送方] 冗余ACK大于3,快速重传当前窗口第一个报文:seqnum = 92,acknum = -1,checknum = 61589,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:51:188] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	92	93	94	95	96	-	-	-	
+[2022-12-11 22:07:51:197] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 95,acknum = -1,checknum = 53876,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:51:202] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 92,checknum = 12759,payload = ....................
+[2022-12-11 22:07:51:211] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 96,acknum = -1,checknum = 51305,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:51:216] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 92,checknum = 12759,payload = ....................
+[2022-12-11 22:07:51:221] [INFO]  [发送方] 已接收到的ACK数目:0,新接收到的ACK序号:92,此时的窗口内第一个分组的序号:92
+[2022-12-11 22:07:51:229] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 92,checknum = 12759,payload = ....................
+[2022-12-11 22:07:51:237] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	92	93	94	95	96	-	-	-	
+[2022-12-11 22:07:51:245] [INFO]  [发送方] 向右滑动窗口长度:0
+[2022-12-11 22:07:51:253] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	92	93	94	95	96	-	-	-	
+[2022-12-11 22:07:51:262] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:92,此时的窗口内第一个分组的序号:92
+[2022-12-11 22:07:51:268] [INFO]  [接收方] 接收方正确收到报文seqnum = 92,acknum = -1,checknum = 61589,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:51:274] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 93,checknum = 12758,payload = ....................
+[2022-12-11 22:07:51:282] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:93,此时的窗口内第一个分组的序号:92
+[2022-12-11 22:07:51:290] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 92,acknum = -1,checknum = 61589,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:51:298] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 92,acknum = -1,checknum = 61589,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:51:304] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 93,checknum = 12758,payload = ....................
+[2022-12-11 22:07:51:310] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 92,acknum = -1,checknum = 61589,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:51:317] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 92,acknum = -1,checknum = 61589,payload = NNNNNNNNNNNNNNNNNNNN
+[2022-12-11 22:07:51:321] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 93,checknum = 12758,payload = ....................
+[2022-12-11 22:07:51:328] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:93,此时的窗口内第一个分组的序号:92
+[2022-12-11 22:07:51:335] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 93,checknum = 12758,payload = ....................
+[2022-12-11 22:07:51:340] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	92	93	94	95	96	-	-	-	
+[2022-12-11 22:07:51:348] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:51:355] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	93	94	95	96	-	-	-	-	
+[2022-12-11 22:07:51:363] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 93,acknum = -1,checknum = 59018,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:51:368] [INFO]  [接收方] 接收方正确收到报文seqnum = 93,acknum = -1,checknum = 59018,payload = OOOOOOOOOOOOOOOOOOOO
+[2022-12-11 22:07:51:373] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 94,checknum = 12757,payload = ....................
+[2022-12-11 22:07:51:379] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:94,此时的窗口内第一个分组的序号:93
+[2022-12-11 22:07:51:384] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 94,checknum = 12757,payload = ....................
+[2022-12-11 22:07:51:390] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	93	94	95	96	-	-	-	-	
+[2022-12-11 22:07:51:400] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:51:407] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	94	95	96	-	-	-	-	-	
+[2022-12-11 22:07:51:416] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 94,acknum = -1,checknum = 56447,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:51:420] [INFO]  [接收方] 接收方正确收到报文seqnum = 94,acknum = -1,checknum = 56447,payload = PPPPPPPPPPPPPPPPPPPP
+[2022-12-11 22:07:51:431] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 95,checknum = 12756,payload = ....................
+[2022-12-11 22:07:51:434] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:95,此时的窗口内第一个分组的序号:94
+[2022-12-11 22:07:51:439] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 95,checknum = 12756,payload = ....................
+[2022-12-11 22:07:51:447] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	94	95	96	-	-	-	-	-	
+[2022-12-11 22:07:51:452] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:51:460] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	95	96	-	-	-	-	-	-	
+[2022-12-11 22:07:51:465] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 95,acknum = -1,checknum = 53876,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:51:471] [INFO]  [接收方] 接收方正确收到报文seqnum = 95,acknum = -1,checknum = 53876,payload = QQQQQQQQQQQQQQQQQQQQ
+[2022-12-11 22:07:51:478] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 96,checknum = 12755,payload = ....................
+[2022-12-11 22:07:51:485] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:96,此时的窗口内第一个分组的序号:95
+[2022-12-11 22:07:51:492] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 96,checknum = 12755,payload = ....................
+[2022-12-11 22:07:51:500] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	95	96	-	-	-	-	-	-	
+[2022-12-11 22:07:51:509] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:51:518] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	96	-	-	-	-	-	-	-	
+[2022-12-11 22:07:51:529] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 96,acknum = -1,checknum = 51305,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:51:537] [INFO]  [接收方] 接收方正确收到报文seqnum = 96,acknum = -1,checknum = 51305,payload = RRRRRRRRRRRRRRRRRRRR
+[2022-12-11 22:07:51:547] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 97,checknum = 12754,payload = ....................
+[2022-12-11 22:07:51:550] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:97,此时的窗口内第一个分组的序号:96
+[2022-12-11 22:07:51:555] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 97,checknum = 12754,payload = ....................
+[2022-12-11 22:07:51:562] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	96	-	-	-	-	-	-	-	
+[2022-12-11 22:07:51:571] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:51:582] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:51:590] [INFO]  [发送方] 发送方发送报文:seqnum = 97,acknum = -1,checknum = 48734,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:51:602] [INFO]  [发送方] 发送方发送报文:seqnum = 98,acknum = -1,checknum = 46163,payload = TTTTTTTTTTTTTTTTTTTT
+[2022-12-11 22:07:51:607] [INFO]  [发送方] 发送方发送报文:seqnum = 99,acknum = -1,checknum = 43592,payload = UUUUUUUUUUUUUUUUUUUU
+[2022-12-11 22:07:51:617] [INFO]  [发送方] 发送方发送报文:seqnum = 100,acknum = -1,checknum = 41021,payload = VVVVVVVVVVVVVVVVVVVV
+[2022-12-11 22:07:51:623] [INFO]  [发送方] 发送方发送报文:seqnum = 101,acknum = -1,checknum = 38450,payload = WWWWWWWWWWWWWWWWWWWW
+[2022-12-11 22:07:51:631] [INFO]  [接收方] 接收方正确收到报文seqnum = 97,acknum = -1,checknum = 48734,payload = SSSSSSSSSSSSSSSSSSSS
+[2022-12-11 22:07:51:637] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 98,checknum = 12753,payload = ....................
+[2022-12-11 22:07:51:647] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:98,此时的窗口内第一个分组的序号:97
+[2022-12-11 22:07:51:652] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 98,checknum = 12753,payload = ....................
+[2022-12-11 22:07:51:659] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	97	98	99	100	101	-	-	-	
+[2022-12-11 22:07:51:668] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:51:673] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	98	99	100	101	-	-	-	-	
+[2022-12-11 22:07:51:683] [INFO]  [接收方] 接收方正确收到报文seqnum = 98,acknum = -1,checknum = 46163,payload = TTTTTTTTTTTTTTTTTTTT
+[2022-12-11 22:07:51:693] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 99,checknum = 12752,payload = ....................
+[2022-12-11 22:07:51:700] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:99,此时的窗口内第一个分组的序号:98
+[2022-12-11 22:07:51:705] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 99,checknum = 12752,payload = ....................
+[2022-12-11 22:07:51:716] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	98	99	100	101	-	-	-	-	
+[2022-12-11 22:07:51:724] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:51:734] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	99	100	101	-	-	-	-	-	
+[2022-12-11 22:07:51:738] [INFO]  [接收方] 接收方正确收到报文seqnum = 99,acknum = -1,checknum = 43592,payload = UUUUUUUUUUUUUUUUUUUU
+[2022-12-11 22:07:51:750] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 100,checknum = 12751,payload = ....................
+[2022-12-11 22:07:51:753] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:100,此时的窗口内第一个分组的序号:99
+[2022-12-11 22:07:51:757] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 100,checknum = 12751,payload = ....................
+[2022-12-11 22:07:51:767] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	99	100	101	-	-	-	-	-	
+[2022-12-11 22:07:51:777] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:51:785] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	100	101	-	-	-	-	-	-	
+[2022-12-11 22:07:51:794] [INFO]  [接收方] 接收方正确收到报文seqnum = 100,acknum = -1,checknum = 41021,payload = VVVVVVVVVVVVVVVVVVVV
+[2022-12-11 22:07:51:801] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 101,checknum = 12750,payload = ....................
+[2022-12-11 22:07:51:810] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:101,此时的窗口内第一个分组的序号:100
+[2022-12-11 22:07:51:818] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 101,checknum = 12750,payload = ....................
+[2022-12-11 22:07:51:825] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	100	101	-	-	-	-	-	-	
+[2022-12-11 22:07:51:835] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:51:842] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	101	-	-	-	-	-	-	-	
+[2022-12-11 22:07:51:850] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 101,acknum = -1,checknum = 38450,payload = WWWWWWWWWWWWWWWWWWWW
+[2022-12-11 22:07:51:858] [INFO]  [接收方] 接收方正确收到报文seqnum = 101,acknum = -1,checknum = 38450,payload = WWWWWWWWWWWWWWWWWWWW
+[2022-12-11 22:07:51:867] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 102,checknum = 12749,payload = ....................
+[2022-12-11 22:07:51:876] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:102,此时的窗口内第一个分组的序号:101
+[2022-12-11 22:07:51:887] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 102,checknum = 12749,payload = ....................
+[2022-12-11 22:07:51:898] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	101	-	-	-	-	-	-	-	
+[2022-12-11 22:07:51:904] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:51:908] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	
+[2022-12-11 22:07:51:916] [INFO]  [发送方] 发送方发送报文:seqnum = 102,acknum = -1,checknum = 35879,payload = XXXXXXXXXXXXXXXXXXXX
+[2022-12-11 22:07:51:921] [INFO]  [发送方] 发送方发送报文:seqnum = 103,acknum = -1,checknum = 33308,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:51:931] [INFO]  [发送方] 发送方发送报文:seqnum = 104,acknum = -1,checknum = 30737,payload = ZZZZZZZZZZZZZZZZZZZZ
+[2022-12-11 22:07:51:936] [INFO]  [发送方] 发送方发送报文:seqnum = 105,acknum = -1,checknum = 29768,payload = EOF
+[2022-12-11 22:07:51:945] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 102,acknum = -1,checknum = 35879,payload = YXXXXXXXXXXXXXXXXXXX
+[2022-12-11 22:07:51:953] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 102,checknum = 12749,payload = ....................
+[2022-12-11 22:07:51:961] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:102,此时的窗口内第一个分组的序号:102
+[2022-12-11 22:07:51:969] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 103,acknum = -1,checknum = 33308,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:51:977] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 102,checknum = 12749,payload = ....................
+[2022-12-11 22:07:51:983] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 104,acknum = -1,checknum = 30737,payload = ZZZZZZZZZZZZZZZZZZZZ
+[2022-12-11 22:07:51:997] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 102,checknum = 12749,payload = ....................
+[2022-12-11 22:07:52:004] [INFO]  [发送方] 已接收到的ACK数目:2,新接收到的ACK序号:102,此时的窗口内第一个分组的序号:102
+[2022-12-11 22:07:52:013] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 105,acknum = -1,checknum = 29768,payload = EOF
+[2022-12-11 22:07:52:022] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 102,checknum = 12749,payload = ....................
+[2022-12-11 22:07:52:032] [INFO]  [发送方] 已接收到的ACK数目:3,新接收到的ACK序号:102,此时的窗口内第一个分组的序号:102
+[2022-12-11 22:07:52:037] [INFO]  [发送方] 冗余ACK大于3,快速重传当前窗口第一个报文:seqnum = 102,acknum = -1,checknum = 35879,payload = XXXXXXXXXXXXXXXXXXXX
+[2022-12-11 22:07:52:050] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	102	103	104	105	-	-	-	-	
+[2022-12-11 22:07:52:059] [INFO]  [发送方] 已接收到的ACK数目:0,新接收到的ACK序号:102,此时的窗口内第一个分组的序号:102
+[2022-12-11 22:07:52:066] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 102,checknum = 12749,payload = ....................
+[2022-12-11 22:07:52:074] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	102	103	104	105	-	-	-	-	
+[2022-12-11 22:07:52:084] [INFO]  [发送方] 向右滑动窗口长度:0
+[2022-12-11 22:07:52:096] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	102	103	104	105	-	-	-	-	
+[2022-12-11 22:07:52:105] [INFO]  [接收方] 接收方正确收到报文seqnum = 102,acknum = -1,checknum = 35879,payload = XXXXXXXXXXXXXXXXXXXX
+[2022-12-11 22:07:52:118] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 103,checknum = 12748,payload = ....................
+[2022-12-11 22:07:52:127] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:103,此时的窗口内第一个分组的序号:102
+[2022-12-11 22:07:52:136] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 103,checknum = 12748,payload = ....................
+[2022-12-11 22:07:52:146] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	102	103	104	105	-	-	-	-	
+[2022-12-11 22:07:52:151] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:52:156] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	103	104	105	-	-	-	-	-	
+[2022-12-11 22:07:52:166] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 103,acknum = -1,checknum = 33308,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:52:170] [INFO]  [接收方] 接收方正确收到报文seqnum = 103,acknum = -1,checknum = 33308,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:52:176] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 104,checknum = 12747,payload = ....................
+[2022-12-11 22:07:52:183] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 103,acknum = -1,checknum = 33308,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:52:187] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 103,acknum = -1,checknum = 33308,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:52:195] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 104,checknum = 12747,payload = ....................
+[2022-12-11 22:07:52:205] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 103,acknum = -1,checknum = 33308,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:52:217] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 103,acknum = -1,checknum = 33308,payload = YYYYYYYYYYYYYYYYYYYY
+[2022-12-11 22:07:52:232] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 104,checknum = 12747,payload = ....................
+[2022-12-11 22:07:52:242] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:104,此时的窗口内第一个分组的序号:103
+[2022-12-11 22:07:52:252] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 104,checknum = 12747,payload = ....................
+[2022-12-11 22:07:52:260] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	103	104	105	-	-	-	-	-	
+[2022-12-11 22:07:52:270] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:52:283] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	104	105	-	-	-	-	-	-	
+[2022-12-11 22:07:52:295] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 104,acknum = -1,checknum = 30737,payload = ZZZZZZZZZZZZZZZZZZZZ
+[2022-12-11 22:07:52:305] [INFO]  [接收方] 接收方正确收到报文seqnum = 104,acknum = -1,checknum = 30737,payload = ZZZZZZZZZZZZZZZZZZZZ
+[2022-12-11 22:07:52:318] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 105,checknum = 12746,payload = ....................
+[2022-12-11 22:07:52:328] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:105,此时的窗口内第一个分组的序号:104
+[2022-12-11 22:07:52:339] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 105,checknum = 12746,payload = ....................
+[2022-12-11 22:07:52:354] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	104	105	-	-	-	-	-	-	
+[2022-12-11 22:07:52:364] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:52:371] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	105	-	-	-	-	-	-	-	
+[2022-12-11 22:07:52:383] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 105,acknum = -1,checknum = 29768,payload = EOF
+[2022-12-11 22:07:52:389] [INFO]  [接收方] 接收方正确收到报文seqnum = 105,acknum = -1,checknum = 29768,payload = EOF
+[2022-12-11 22:07:52:400] [INFO]  [接收方] 接收方向发送方发送确认报文:seqnum = -1,acknum = 106,checknum = 12745,payload = ....................
+[2022-12-11 22:07:52:410] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:106,此时的窗口内第一个分组的序号:105
+[2022-12-11 22:07:52:419] [WARN]  [发送方] 发送方定时器超时，重发上一次发送的报文:seqnum = 105,acknum = -1,checknum = 29768,payload = EOF
+[2022-12-11 22:07:52:434] [ERROR] [接收方] 接收方未收到正确报文[报文序号错误]:seqnum = 105,acknum = -1,checknum = 29768,payload = EOF
+[2022-12-11 22:07:52:442] [INFO]  [接收方] 接收方发送冗余ACK:seqnum = -1,acknum = 106,checknum = 12745,payload = ....................
+[2022-12-11 22:07:52:450] [INFO]  [发送方] 已接收到的ACK数目:1,新接收到的ACK序号:106,此时的窗口内第一个分组的序号:105
+[2022-12-11 22:07:52:457] [INFO]  [发送方] 发送方接收到ACK报文:seqnum = -1,acknum = 106,checknum = 12745,payload = ....................
+[2022-12-11 22:07:52:463] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	105	-	-	-	-	-	-	-	
+[2022-12-11 22:07:52:472] [INFO]  [发送方] 向右滑动窗口长度:1
+[2022-12-11 22:07:52:480] [INFO]  [发送方] 当前窗口为:
+order	0	1	2	3	4	5	6	7	
+seqnum	-	-	-	-	-	-	-	-	

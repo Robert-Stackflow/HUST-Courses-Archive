@@ -1,0 +1,50 @@
+﻿  GBNRdtReceiver.cpp
+  GBNRdtSender.cpp
+  Logger.cpp
+D:\HUST-Courses\Computer-Network-Experiment\Experiment2\Rdt\Logger.cpp(22,12): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\HUST-Courses\Computer-Network-Experiment\Experiment2\Rdt\Logger.cpp(26,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\HUST-Courses\Computer-Network-Experiment\Experiment2\Rdt\Logger.cpp(51,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\HUST-Courses\Computer-Network-Experiment\Experiment2\Rdt\Logger.cpp(69,2): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\HUST-Courses\Computer-Network-Experiment\Experiment2\Rdt\Logger.cpp(97,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\HUST-Courses\Computer-Network-Experiment\Experiment2\Rdt\Logger.cpp(200,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  SRRdtReceiver.cpp
+  SRRdtSender.cpp
+  TCPReceiver.cpp
+  TCPSender.cpp
+  main.cpp
+D:\HUST-Courses\Computer-Network-Experiment\Experiment2\Rdt\main.cpp(30,6): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+netsimlib.lib(RdtReceiver.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(RdtReceiver.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+netsimlib.lib(RdtReceiver.obj) : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:ICF”规范)
+netsimlib.lib(DataStructure.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(DataStructure.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+netsimlib.lib(NetworkServiceSimulator.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(NetworkServiceSimulator.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+netsimlib.lib(RdtSender.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(RdtSender.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+netsimlib.lib(stdafx.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(stdafx.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+netsimlib.lib(Utils.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(Utils.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+netsimlib.lib(RandomEvent.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(RandomEvent.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+netsimlib.lib(RandomEventList.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(RandomEventList.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+netsimlib.lib(NetworkService.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(NetworkService.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+netsimlib.lib(FileAppMessageFeeder.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(FileAppMessageFeeder.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+netsimlib.lib(FileAppMessageWriter.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(FileAppMessageWriter.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+netsimlib.lib(NetworkServiceConfiguration.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(NetworkServiceConfiguration.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+netsimlib.lib(Tool.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“2”不匹配值“0”(GBNRdtReceiver.obj 中)
+netsimlib.lib(Tool.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MDd_DynamicDebug”不匹配值“MD_DynamicRelease”(GBNRdtReceiver.obj 中)
+LINK : warning LNK4098: 默认库“MSVCRTD”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+netsimlib.lib(NetworkServiceSimulator.obj) : error LNK2001: 无法解析的外部符号 __imp___invalid_parameter
+netsimlib.lib(FileAppMessageFeeder.obj) : error LNK2001: 无法解析的外部符号 __imp___invalid_parameter
+netsimlib.lib(FileAppMessageWriter.obj) : error LNK2001: 无法解析的外部符号 __imp___invalid_parameter
+netsimlib.lib(NetworkServiceSimulator.obj) : error LNK2001: 无法解析的外部符号 __imp___CrtDbgReport
+netsimlib.lib(FileAppMessageFeeder.obj) : error LNK2001: 无法解析的外部符号 __imp___CrtDbgReport
+netsimlib.lib(FileAppMessageWriter.obj) : error LNK2001: 无法解析的外部符号 __imp___CrtDbgReport
+D:\HUST-Courses\Computer-Network-Experiment\Experiment2\Rdt\Release\Rdt.exe : fatal error LNK1120: 2 个无法解析的外部命令

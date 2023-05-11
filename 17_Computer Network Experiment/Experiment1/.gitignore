@@ -1,0 +1,6 @@
+/SocketClient/.qtc_clangd/
+/material
+/Socket
+**/bin
+/Release
+/Server
